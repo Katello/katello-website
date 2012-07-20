@@ -28,9 +28,6 @@ if ( !defined('ABSPATH')) exit;
 		<?php while (have_posts()) : the_post(); ?>
         
         <?php $options = get_option('responsive_theme_options'); ?>
-		<?php if ($options['breadcrumb'] == 0): ?>
-		<?php echo responsive_breadcrumb_lists(); ?>
-        <?php endif; ?>
         
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <h1 class="post-title"><?php the_title(); ?></h1>
