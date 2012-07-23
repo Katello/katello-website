@@ -1077,11 +1077,17 @@ form div {
 	padding:0px 25px;
 }
 
+.center_container {
+    background: #fff url(images/groovepaper.png) repeat left;
+    border-bottom: 2px solid #C9C9C9;
+    box-shadow: 0px 1px 10px #C9C9C9;
+}
+
 #wrapper {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	background-color:#fff;
-	border:1px solid #d6d6d6;
+	//border:1px solid #d6d6d6;
 	border-radius: 6px;
 	clear:both;
 	margin: 20px auto 20px auto;
@@ -1098,6 +1104,8 @@ form div {
 
 #header {
 	margin:0;
+	margin:0 auto;
+	max-width:960px;
 }
 
 #footer {
@@ -1128,9 +1136,9 @@ form div {
     font-size: 5em;
     font-weight: bold;
     vertical-align: top;
-    line-height: 45px;
-    height: 45px;
-    margin-top: 23px;
+    line-height: 0.65em;
+    height: 0.65em;
+    margin-top: 0.35em;
     display: inline-block;
     text-shadow: 1px 1px 1px #000;
 }
@@ -1195,14 +1203,6 @@ form div {
 #content .sticky p {
 }
 
-/* =Templates
--------------------------------------------------------------- */
-.page-template-landing-page-php .menu, 
-.page-template-landing-page-php .top-menu,
-.page-template-landing-page-php .footer-menu, 
-.page-template-landing-page-php .sub-header-menu {
-	display:none;
-}
 
 /* =Author Meta (Author's Box)
 -------------------------------------------------------------- */
@@ -1236,7 +1236,7 @@ form div {
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	background-color: #fff;
-	border:1px solid #d6d6d6;
+	//border:1px solid #d6d6d6;
 	border-radius: 6px;
 	padding-bottom: 40px;
 	width:99.893617021277%;
@@ -1251,7 +1251,7 @@ form div {
 }
 
 #featured-image {
-	margin:40px 0 0 0;
+	margin: 100px 0 0 0;
 }
 
 #featured-image .fluid-width-video-wrapper {
