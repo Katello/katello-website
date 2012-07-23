@@ -1151,6 +1151,13 @@ form div {
 	margin:10px 33px 10px 0;
 }
 
+.header-tag-line {
+    clear: both;
+    font-style: italic;
+    font-size: 28px;
+    margin-left: 10px;
+}
+
 /* =Content
 -------------------------------------------------------------- */
 #content {
@@ -1503,7 +1510,7 @@ form div {
 	border:0;
 	display:block;
 	float:left;
-	margin: 0 4px;
+	margin: 0 8px;
 	padding:0;
 	position:relative;
 	z-index:5;
@@ -1580,7 +1587,7 @@ form div {
 	height:45px;
 	line-height:45px;
 	margin:0;
-	padding:0 0.6em;
+	padding:0 0.2em;
 	position:relative;
 	text-decoration:none;
 }

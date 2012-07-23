@@ -92,6 +92,10 @@ if ( !defined('ABSPATH')) exit;
 				?>
             <?php } ?>
  
+      <div class="header-tag-line">
+        <?php //bloginfo(); ?>
+      </div>
+
     </div><!-- end of #header -->
     <?php responsive_header_end(); // after header hook ?>
     
