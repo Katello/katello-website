@@ -2527,4 +2527,10 @@ BDO[DIR="rtl"] {
 	    padding:5px 15px;
     }
 }
+
+#irc-iframe {
+    width: 100%;
+    height: 100%;
+}
+
 /*"The last 29 days of the month are the hardest."- Nikola Tesla*/
