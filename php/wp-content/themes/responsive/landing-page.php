@@ -6,7 +6,7 @@ if ( !defined('ABSPATH')) exit;
 /**
  * Landing Page Template
  *
-   Template Name:  Landing Page (no menu)
+   Template Name:  Landing Page
  *
  * @file           landing-page.php
  * @package        Responsive 
@@ -27,6 +27,8 @@ if ( !defined('ABSPATH')) exit;
 
 		<?php while (have_posts()) : the_post(); ?>
         
+        <?php $options = get_option('responsive_theme_options'); ?>
+
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <h1 class="post-title"><?php the_title(); ?></h1> 
                 

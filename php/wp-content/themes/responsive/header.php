@@ -41,10 +41,9 @@ if ( !defined('ABSPATH')) exit;
 
 <body <?php body_class(); ?>>
                  
-<?php responsive_container(); // before container hook ?>
-<div id="container" class="hfeed">
          
     <?php responsive_header(); // before header hook ?>
+    <div class="center_container" >
     <div id="header">
     
         <?php if (has_nav_menu('top-menu', 'responsive')) { ?>
@@ -97,8 +96,11 @@ if ( !defined('ABSPATH')) exit;
       </div>
 
     </div><!-- end of #header -->
+    </div><!-- end of #header -->
     <?php responsive_header_end(); // after header hook ?>
     
+<?php responsive_container(); // before container hook ?>
+<div id="container" class="hfeed">
 	<?php responsive_wrapper(); // before wrapper ?>
     <div id="wrapper" class="clearfix">
     <?php responsive_in_wrapper(); // wrapper hook ?>
