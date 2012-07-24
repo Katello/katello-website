@@ -1085,7 +1085,7 @@ form div {
     background-image: url(images/square_bg.png), -webkit-linear-gradient(top, #009dcc 0%, #009dcc 50%, #006f8f 100%);
     background-image: url(images/square_bg.png), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #009dcc), color-stop(50%, #009dcc), color-stop(100%, #006f8f));
     background-image: url(images/square_bg.png), linear-gradient(top, #009dcc 0%, #009dcc 50%, #006f8f 100%);
-    border-bottom: 2px solid #009DCC;
+    border-bottom: 2px solid #006F8F;
     box-shadow: 0px 1px 5px #006F8F;
 }
 
