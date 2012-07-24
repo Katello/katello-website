@@ -23,6 +23,8 @@ if ( !defined('ABSPATH')) exit;
 
         <div id="content-full" class="grid col-940">
         
+          <?php $options = get_option('responsive_theme_options'); ?>
+
           <iframe src="http://webchat.freenode.net/?channels=#katello" id="irc-iframe" />
 
         </div><!-- end of #content-full -->
