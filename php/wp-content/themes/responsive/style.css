@@ -18,6 +18,30 @@ See: http://codex.wordpress.org/Child_Themes and http://themeid.com/forum/forum/
 CSS Rules: Sorted alphabetically for better organization.
 */
 	
+/* =Font Declarations
+-------------------------------------------------------------- */
+@font-face {
+    font-family: 'Overpass';
+    src: local("Overpass"),
+         url('fonts/overpass_regular-web.eot?#iefix') format('eot'),
+         url('fonts/overpass_regular-web.woff') format('woff'),
+         url('fonts/overpass_regular-web.ttf') format('truetype'),
+         url('fonts/overpass_regular-web.svg#webfontLTZe4IYH') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Overpass';
+    src: local("Overpass Bold"), local("OverpassBold"),
+         url('fonts/overpass_bold-web.eot?#iefix') format('eot'),
+         url('fonts/overpass_bold-web.woff') format('woff'),
+         url('fonts/overpass_bold-web.ttf') format('truetype'),
+         url('fonts/overpass_bold-web.svg#webfontzAU82Ltw') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
 /* =Reset CSS (v2.0) http://meyerweb.com/eric/tools/css/reset/
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -98,7 +122,7 @@ body {
 	-webkit-font-smoothing:antialiased;
 	background:#FFF;
 	color:#404040;
-	font-family: Interstate, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: Overpass, sans-serif;
 	font-size:14px;
 	font-smoothing:antialiased;
 	line-height:1.5em;
@@ -1144,7 +1168,7 @@ form div {
     vertical-align: top;
     line-height: 0.65em;
     height: 0.65em;
-    margin-top: 0.35em;
+    margin-top: 0.5em;
     display: inline-block;
     text-shadow: 1px 1px 1px #777777;
     color: #FFF;
