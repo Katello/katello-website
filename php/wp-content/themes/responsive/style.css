@@ -41,7 +41,47 @@ CSS Rules: Sorted alphabetically for better organization.
     font-weight: bold;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Liberation Sans';
+    src: local('Liberation Sans'), local('LiberationSans'), local('Liberation-Sans'),
+         url('LiberationSans-Regular-webfont.eot?#iefix') format('eot'),
+         url('LiberationSans-Regular-webfont.woff') format('woff'),
+         url('LiberationSans-Regular-webfont.ttf') format('truetype'),
+         url('LiberationSans-Regular-webfont.svg#webfontLfr8h6FA') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+@font-face {
+    font-family: 'Liberation Sans';
+    src: local('Liberation Sans Italic'), local('LiberationSansItalic'), local('Liberation-Sans-Italic'),
+         url('LiberationSans-Italic-webfont.woff') format('woff'),
+         url('LiberationSans-Italic-webfont.ttf') format('truetype'),
+         url('LiberationSans-Italic-webfont.svg#webfont8TmwkzPJ') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Liberation Sans';
+    src: local('Liberation Sans Bold'), local('LiberationSansBold'), local('Liberation-Sans-Bold'),
+         url('LiberationSans-Bold-webfont.woff') format('woff'),
+         url('LiberationSans-Bold-webfont.ttf') format('truetype'),
+         url('LiberationSans-Bold-webfont.svg#webfontHyWb8e07') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Liberation Sans';
+    src: local('Liberation Sans Bold Italic'), local('LiberationSansBoldItalic'), local('Liberation-Sans-Bold-Italic'),
+         url('LiberationSans-BoldItalic-webfont.woff') format('woff'),
+         url('LiberationSans-BoldItalic-webfont.ttf') format('truetype'),
+         url('LiberationSans-BoldItalic-webfont.svg#webfont8uGO27Bu') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
 /* =Reset CSS (v2.0) http://meyerweb.com/eric/tools/css/reset/
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -122,7 +162,7 @@ body {
 	-webkit-font-smoothing:antialiased;
 	background:#FFF;
 	color:#404040;
-	font-family: Overpass, sans-serif;
+	font-family: "Liberation Sans", sans-serif;
 	font-size:14px;
 	font-smoothing:antialiased;
 	line-height:1.5em;
@@ -962,6 +1002,7 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	font-weight:700;
 	line-height:1em;
     word-wrap:break-word;
+    font-family: "Overpass";
 }
 
 h1 {
@@ -1172,6 +1213,7 @@ form div {
     display: inline-block;
     text-shadow: 1px 1px 1px #777777;
     color: #FFF;
+    font-family: "Overpass";
 }
 
 .site-name {

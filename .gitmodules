@@ -1,0 +1,3 @@
+[submodule "php/wp-content/themes/responsive/converge-ui"]
+	path = php/wp-content/themes/responsive/converge-ui
+	url = git@github.com:Katello/converge-ui.git
