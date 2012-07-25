@@ -132,7 +132,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 })(jQuery);
         
 jQuery(document).ready(function() {
-    jQuery('#player').youTubeChannel({user:'youtube'});
+    jQuery('#player').youTubeChannel({user:'katelloproject'});
 });</script>
         </div><!-- end of #content-full -->
 
