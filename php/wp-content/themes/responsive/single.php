@@ -32,8 +32,6 @@ if ( !defined('ABSPATH')) exit;
         <?php endif; ?> 
           
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <h1 class="post-title"><?php the_title(); ?></h1>
-
                 <div class="post-meta">
                 <?php 
                     printf( __( '<span class="%1$s">Posted on</span> %2$s by %3$s', 'responsive' ),'meta-prep meta-prep-author',
@@ -57,6 +55,8 @@ if ( !defined('ABSPATH')) exit;
                     <?php endif; ?> 
                 </div><!-- end of .post-meta -->
                                 
+                <h1 class="post-title"><?php the_title(); ?></h1>
+
                 <div class="post-entry">
                     <?php the_content(__('Read more &#8250;', 'responsive')); ?>
                     
@@ -108,5 +108,4 @@ if ( !defined('ABSPATH')) exit;
       
         </div><!-- end of #content -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
