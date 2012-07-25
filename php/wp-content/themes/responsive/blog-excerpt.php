@@ -38,11 +38,9 @@ if ( !defined('ABSPATH')) exit;
         
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 
-                <h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'responsive'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
-                
                 <div class="post-meta">
                 <?php 
-                    printf( __( '<span class="%1$s">Posted on</span> %2$s by %3$s', 'responsive' ),'meta-prep meta-prep-author',
+                    printf( __( '%2$s by %3$s', 'responsive' ),'meta-prep meta-prep-author',
 		            sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
 			            get_permalink(),
 			            esc_attr( get_the_time() ),
@@ -62,6 +60,7 @@ if ( !defined('ABSPATH')) exit;
                         </span>
                     <?php endif; ?> 
                 </div><!-- end of .post-meta -->
+                <h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'responsive'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
                 
                 <div class="post-entry">
                     <?php if ( has_post_thumbnail()) : ?>
@@ -101,5 +100,4 @@ if ( !defined('ABSPATH')) exit;
       
         </div><!-- end of #content -->
 
-<?php get_sidebar('right'); ?>
 <?php get_footer(); ?>
