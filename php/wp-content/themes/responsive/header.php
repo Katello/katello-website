@@ -33,6 +33,7 @@ if ( !defined('ABSPATH')) exit;
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
 
 <?php wp_enqueue_style('responsive-style', get_stylesheet_uri(), false, '1.5.9');?>
 
