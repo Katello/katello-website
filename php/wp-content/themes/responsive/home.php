@@ -108,5 +108,5 @@ if ( !defined('ABSPATH')) exit;
         
         </div><!-- end of #featured -->
                
-<?php get_sidebar('home'); ?>
+//<?php get_sidebar('home'); ?>
 <?php get_footer(); ?>
