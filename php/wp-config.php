@@ -118,6 +118,9 @@ define('WPLANG', '');
  */
 define('WP_DEBUG', false);
 
+define('WP_HOME','http://www.katello.org'); 
+define('WP_SITEURL','http://www.katello.org');
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
