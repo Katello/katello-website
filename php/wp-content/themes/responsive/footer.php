@@ -106,6 +106,9 @@ if ( !defined('ABSPATH')) exit;
             <?php esc_attr_e('&copy;', 'responsive'); ?> <?php _e(date('Y')); ?><a href="<?php echo home_url('/') ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
                 <?php bloginfo('name'); ?>
             </a>
+            <a href="<?php echo home_url('/wp-login.php') ?>" title="Login">
+                Login
+            </a>
         </div><!-- end of .copyright -->
         
         <div class="grid col-300 scroll-top"><a href="#scroll-top" title="<?php esc_attr_e( 'scroll to top', 'responsive' ); ?>"><?php _e( '&uarr;', 'responsive' ); ?></a></div>
