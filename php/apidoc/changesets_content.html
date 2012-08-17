@@ -181,8 +181,8 @@ Removed product '1344606167242'</pre>
         <h3>Examples</h3>
           <pre>POST /api/changesets/2/packages/
 {
-  &quot;name&quot;: &quot;monkey-0.3-0.8.noarch.rpm&quot;,
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1344606167242&quot;,
+  &quot;name&quot;: &quot;monkey-0.3-0.8.noarch.rpm&quot;
 }
 200
 Added package 'monkey-0.3-0.8.noarch.rpm'</pre>
@@ -320,8 +320,8 @@ Package 'monkey-0.3-0.8.noarch.rpm' not found in the changeset</pre>
         <h3>Examples</h3>
           <pre>POST /api/changesets/2/errata/
 {
-  &quot;erratum_id&quot;: &quot;RHEA-2010:0001&quot;,
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1344606167242&quot;,
+  &quot;erratum_id&quot;: &quot;RHEA-2010:0001&quot;
 }
 200
 Added erratum 'RHEA-2010:0001'</pre>
@@ -459,8 +459,8 @@ Erratum 'RHEA-2010:9984' not found in the changeset</pre>
         <h3>Examples</h3>
           <pre>POST /api/changesets/2/repositories/
 {
-  &quot;repository_id&quot;: 2,
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1344606167242&quot;,
+  &quot;repository_id&quot;: 2
 }
 200
 Added repository 'repo_227e003'</pre>

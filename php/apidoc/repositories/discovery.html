@@ -46,37 +46,37 @@
     <h2>Examples</h2>
       <pre>POST /api/organizations/org_227e003/repositories/discovery
 {
-  &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
-  &quot;type&quot;: &quot;yum&quot;
+  &quot;type&quot;: &quot;yum&quot;,
+  &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;
 }
 200
 {
-  &quot;user_id&quot;: 1,
-  &quot;parameters&quot;: null,
-  &quot;task_owner_type&quot;: null,
-  &quot;organization_id&quot;: 2,
-  &quot;state&quot;: &quot;waiting&quot;,
-  &quot;finish_time&quot;: null,
-  &quot;task_owner_id&quot;: null,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
   &quot;uuid&quot;: &quot;45f57d6b-e2f1-11e1-a64d-525400b68f90&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
-  &quot;id&quot;: 1,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+  &quot;task_owner_id&quot;: null,
+  &quot;task_owner_type&quot;: null,
+  &quot;pending?&quot;: true,
   &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;id&quot;: 1,
+  &quot;state&quot;: &quot;waiting&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+  &quot;start_time&quot;: null,
+  &quot;finish_time&quot;: null,
   &quot;progress&quot;: {
     &quot;items_left&quot;: 0,
-    &quot;total_count&quot;: 0,
     &quot;total_size&quot;: 0,
-    &quot;size_left&quot;: 0
+    &quot;size_left&quot;: 0,
+    &quot;total_count&quot;: 0
   },
-  &quot;pending?&quot;: true,
+  &quot;user_id&quot;: 1,
   &quot;result&quot;: {
     &quot;errors&quot;: [
       null,
       null
     ]
   },
-  &quot;start_time&quot;: null
+  &quot;parameters&quot;: null
 }</pre>
 
 

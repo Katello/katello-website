@@ -46,33 +46,33 @@
     <h2>Examples</h2>
       <pre>POST /api/roles/6/permissions/
 {
-  &quot;organization_id&quot;: null,
   &quot;verbs&quot;: [],
-  &quot;name&quot;: &quot;all_perm_227e003&quot;,
   &quot;tags&quot;: [],
+  &quot;type&quot;: &quot;all&quot;,
+  &quot;organization_id&quot;: null,
   &quot;description&quot;: null,
-  &quot;type&quot;: &quot;all&quot;
+  &quot;name&quot;: &quot;all_perm_227e003&quot;
 }
 200
 {
+  &quot;verbs&quot;: [],
+  &quot;all_verbs&quot;: true,
+  &quot;role_id&quot;: 6,
+  &quot;tags&quot;: [],
+  &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
   &quot;resource_type_id&quot;: 1,
   &quot;organization_id&quot;: null,
-  &quot;verbs&quot;: [],
-  &quot;name&quot;: &quot;all_perm_227e003&quot;,
+  &quot;resource_type&quot;: {
+    &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
+    &quot;id&quot;: 1,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
+    &quot;name&quot;: &quot;all&quot;
+  },
   &quot;all_tags&quot;: true,
-  &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
-  &quot;all_verbs&quot;: true,
-  &quot;description&quot;: null,
-  &quot;tags&quot;: [],
   &quot;id&quot;: 11,
   &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
-  &quot;role_id&quot;: 6,
-  &quot;resource_type&quot;: {
-    &quot;name&quot;: &quot;all&quot;,
-    &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-    &quot;id&quot;: 1
-  }
+  &quot;description&quot;: null,
+  &quot;name&quot;: &quot;all_perm_227e003&quot;
 }</pre>
 
 

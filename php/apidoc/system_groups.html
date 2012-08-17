@@ -63,14 +63,14 @@
 200
 [
   {
-    &quot;organization_id&quot;: 2,
-    &quot;name&quot;: &quot;system_group_227e003&quot;,
-    &quot;max_systems&quot;: -1,
+    &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;,
     &quot;created_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
-    &quot;description&quot;: &quot;group description&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+    &quot;organization_id&quot;: 2,
     &quot;id&quot;: 1,
-    &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;
+    &quot;max_systems&quot;: -1,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+    &quot;description&quot;: &quot;group description&quot;,
+    &quot;name&quot;: &quot;system_group_227e003&quot;
   }
 ]</pre>
 
@@ -147,15 +147,15 @@
           <pre>GET /api/organizations/org_227e003/system_groups/1
 200
 {
-  &quot;organization_id&quot;: 2,
-  &quot;name&quot;: &quot;system_group_227e003&quot;,
-  &quot;max_systems&quot;: -1,
-  &quot;created_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
-  &quot;description&quot;: &quot;group description&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
-  &quot;id&quot;: 1,
   &quot;total_systems&quot;: 0,
-  &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;
+  &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;id&quot;: 1,
+  &quot;max_systems&quot;: -1,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+  &quot;description&quot;: &quot;group description&quot;,
+  &quot;name&quot;: &quot;system_group_227e003&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -445,8 +445,8 @@
 200
 [
   {
-    &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
-    &quot;id&quot;: &quot;3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;
+    &quot;id&quot;: &quot;3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;,
+    &quot;name&quot;: &quot;katello.example.com_227e003&quot;
   }
 ]</pre>
 
@@ -742,34 +742,34 @@
           <pre>GET /api/organizations/org_227e003/system_groups/1/history/1
 200
 {
-  &quot;parameters&quot;: {
-    &quot;packages&quot;: [
-      &quot;cheetah&quot;
-    ]
-  },
-  &quot;state&quot;: &quot;running&quot;,
-  &quot;finish_time&quot;: null,
+  &quot;status_message&quot;: &quot;Installing Package...&quot;,
+  &quot;pulp_id&quot;: &quot;0384935e-4216-4d38-9832-6be39e379aba&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:48:24Z&quot;,
+  &quot;task_type&quot;: &quot;package_install&quot;,
   &quot;tasks&quot;: [
     {
-      &quot;state&quot;: &quot;running&quot;,
-      &quot;finish_time&quot;: null,
       &quot;uuid&quot;: &quot;0e0f181c-e2f2-11e1-85ad-525400b68f90&quot;,
       &quot;id&quot;: 15,
+      &quot;state&quot;: &quot;running&quot;,
+      &quot;start_time&quot;: &quot;2012-08-10T13:48:24Z&quot;,
+      &quot;finish_time&quot;: null,
       &quot;progress&quot;: null,
       &quot;result&quot;: {
         &quot;errors&quot;: [
           null,
           null
         ]
-      },
-      &quot;start_time&quot;: &quot;2012-08-10T13:48:24Z&quot;
+      }
     }
   ],
-  &quot;created_at&quot;: &quot;2012-08-10T13:48:24Z&quot;,
   &quot;id&quot;: 1,
-  &quot;task_type&quot;: &quot;package_install&quot;,
-  &quot;status_message&quot;: &quot;Installing Package...&quot;,
-  &quot;pulp_id&quot;: &quot;0384935e-4216-4d38-9832-6be39e379aba&quot;
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;finish_time&quot;: null,
+  &quot;parameters&quot;: {
+    &quot;packages&quot;: [
+      &quot;cheetah&quot;
+    ]
+  }
 }</pre>
 
         <h3>Params</h3>
@@ -862,21 +862,21 @@
           <pre>POST /api/organizations/org_227e003/system_groups/
 {
   &quot;system_group&quot;: {
-    &quot;name&quot;: &quot;system_group_227e003&quot;,
     &quot;max_systems&quot;: &quot;-1&quot;,
-    &quot;description&quot;: &quot;group description&quot;
+    &quot;description&quot;: &quot;group description&quot;,
+    &quot;name&quot;: &quot;system_group_227e003&quot;
   }
 }
 200
 {
-  &quot;organization_id&quot;: 2,
-  &quot;name&quot;: &quot;system_group_227e003&quot;,
-  &quot;max_systems&quot;: -1,
+  &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;,
   &quot;created_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
-  &quot;description&quot;: &quot;group description&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+  &quot;organization_id&quot;: 2,
   &quot;id&quot;: 1,
-  &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;
+  &quot;max_systems&quot;: -1,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+  &quot;description&quot;: &quot;group description&quot;,
+  &quot;name&quot;: &quot;system_group_227e003&quot;
 }</pre>
 
         <h3>Params</h3>
