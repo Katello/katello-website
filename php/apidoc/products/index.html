@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/application.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/prettify.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/products.html'>Products</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/environments/:environment_id/products<br>
+      <small>List products</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/organizations/:organization_id/products<br>
+      <small>List products</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre>GET /api/organizations/org_227e003/products?name=fewups_product_227e003
+200
+[
+  {
+    &quot;provider_id&quot;: 3,
+    &quot;sync_plan_name&quot;: null,
+    &quot;name&quot;: &quot;fewups_product_227e003&quot;,
+    &quot;attributes&quot;: [],
+    &quot;gpg_key_name&quot;: &quot;&quot;,
+    &quot;sync_plan_id&quot;: null,
+    &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+    &quot;description&quot;: null,
+    &quot;multiplier&quot;: 1,
+    &quot;marketing_product&quot;: false,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+    &quot;id&quot;: &quot;1344606167242&quot;,
+    &quot;provider_name&quot;: &quot;yum_provider_227e003&quot;,
+    &quot;gpg_key_id&quot;: null,
+    &quot;last_sync&quot;: null,
+    &quot;productContent&quot;: [
+      {
+        &quot;enabled&quot;: true,
+        &quot;content&quot;: {
+          &quot;modifiedProductIds&quot;: [],
+          &quot;contentUrl&quot;: &quot;/custom/fewups_product_227e003/fewups_product_227e003_fakerepos_zoo5&quot;,
+          &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
+          &quot;gpgUrl&quot;: &quot;&quot;,
+          &quot;label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;,
+          &quot;id&quot;: &quot;1344606173878&quot;,
+          &quot;created&quot;: &quot;2012-08-10T13:42:53.879+0000&quot;,
+          &quot;type&quot;: &quot;yum&quot;,
+          &quot;updated&quot;: &quot;2012-08-10T13:42:53.879+0000&quot;,
+          &quot;vendor&quot;: &quot;Custom&quot;
+        }
+      }
+    ],
+    &quot;sync_state&quot;: &quot;not_synced&quot;
+  }
+]</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>environment identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>product identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/prettify.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/apipie.js"></script>
+</body>
+</html>

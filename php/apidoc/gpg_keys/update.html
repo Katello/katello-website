@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/application.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/prettify.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/gpg_keys.html'>Gpg keys</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>update</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      PUT /api/gpg_keys/:id<br>
+      <small>Update a gpg key</small>
+    </h1>
+  </div>
+
+<div>
+    Also see <a href="../../apidoc/gpg_keys/create">gpg_keys#create</a>.
+
+  
+
+    <h2>Examples</h2>
+      <pre>PUT /api/gpg_keys/2/
+{
+  &quot;gpg_key&quot;: {
+    &quot;name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;
+  }
+}
+200
+{
+  &quot;organization_id&quot;: 2,
+  &quot;name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;,
+  &quot;content&quot;: &quot;gpg create from input                   [ \u001b[32mOK\u001b[m\u000f ]\n&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:45:53Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:45:54Z&quot;,
+  &quot;id&quot;: 2
+}</pre>
+
+
+
+</div>
+
+
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/prettify.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/apipie.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/application.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/prettify.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>discovery</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      POST /api/organizations/:organization_id/repositories/discovery<br>
+      <small>Discover repository urls with metadata and find candidate repos. Supports http, https and file based urls. Async task, returns the delayed job.</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre>POST /api/organizations/org_227e003/repositories/discovery
+{
+  &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
+  &quot;type&quot;: &quot;yum&quot;
+}
+200
+{
+  &quot;user_id&quot;: 1,
+  &quot;parameters&quot;: null,
+  &quot;task_owner_type&quot;: null,
+  &quot;organization_id&quot;: 2,
+  &quot;state&quot;: &quot;waiting&quot;,
+  &quot;finish_time&quot;: null,
+  &quot;task_owner_id&quot;: null,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+  &quot;uuid&quot;: &quot;45f57d6b-e2f1-11e1-a64d-525400b68f90&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+  &quot;id&quot;: 1,
+  &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
+  &quot;progress&quot;: {
+    &quot;items_left&quot;: 0,
+    &quot;total_count&quot;: 0,
+    &quot;total_size&quot;: 0,
+    &quot;size_left&quot;: 0
+  },
+  &quot;pending?&quot;: true,
+  &quot;result&quot;: {
+    &quot;errors&quot;: [
+      null,
+      null
+    ]
+  },
+  &quot;start_time&quot;: null
+}</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>type </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>type of content to discover (supported types : &#39;yum&#39;)</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>remote url to perform discovery</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/prettify.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/apipie.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/application.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/prettify.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/products.html'>Products</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>repositories</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/environments/:environment_id/products/:id/repositories<br>
+      <small></small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/organizations/:organization_id/products/:id/repositories<br>
+      <small></small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/organizations/:organization_id/products/:id/repositories<br>
+      <small></small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre>GET /api/environments/2/products/1344606167242/repositories?include_disabled=False&amp;name=repo_227e003
+200
+[
+  {
+    &quot;minor&quot;: null,
+    &quot;name&quot;: &quot;repo_227e003&quot;,
+    &quot;enabled&quot;: true,
+    &quot;gpg_key_name&quot;: &quot;&quot;,
+    &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_repo_227e003&quot;,
+    &quot;package_count&quot;: 8,
+    &quot;library_instance_id&quot;: null,
+    &quot;created_at&quot;: &quot;2012-08-10T13:42:57Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+    &quot;id&quot;: 2,
+    &quot;major&quot;: null,
+    &quot;gpg_key_id&quot;: null,
+    &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
+    &quot;last_sync&quot;: &quot;2012-08-10T15:43:16+02:00&quot;,
+    &quot;environment_product_id&quot;: 1
+  }
+]</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>environment identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>product numeric identifier</p>
+
+        <br>
+        Value: number.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>include_disabled </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>set to True if you want to list disabled repositories</p>
+
+        <br>
+        Value: boolean
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>repository identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/prettify.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/apipie.js"></script>
+</body>
+</html>

@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet"
+          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../apidoc/stylesheets/application.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../apidoc/stylesheets/bundled/prettify.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
+  <li class='active'>System groups</li>
+</ul>
+
+<div class='page-header'>
+  <h1>
+    System groups<br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/system_groups/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/system_groups
+          </a><br>
+          <small>List system groups</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>GET /api/organizations/org_227e003/system_groups/?name=system_group_227e003
+200
+[
+  {
+    &quot;organization_id&quot;: 2,
+    &quot;name&quot;: &quot;system_group_227e003&quot;,
+    &quot;max_systems&quot;: -1,
+    &quot;created_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+    &quot;description&quot;: &quot;group description&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+    &quot;id&quot;: 1,
+    &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;
+  }
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>System group name to filter by</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/system_groups/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/system_groups/:id
+          </a><br>
+          <small>Show a system group</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>GET /api/organizations/org_227e003/system_groups/1
+200
+{
+  &quot;organization_id&quot;: 2,
+  &quot;name&quot;: &quot;system_group_227e003&quot;,
+  &quot;max_systems&quot;: -1,
+  &quot;created_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+  &quot;description&quot;: &quot;group description&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+  &quot;id&quot;: 1,
+  &quot;total_systems&quot;: 0,
+  &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Id of the system group</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/system_groups/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/organizations/:organization_id/system_groups/:id
+          </a><br>
+          <small>Update a system group</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Id of the system group</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>system_group </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>system_group[name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>System group name</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>system_group[description] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>system_group[max_systems] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Maximum number of systems in the group</p>
+
+        <br>
+        Value: Integer
+    </td>
+  </tr>
+
+  
+
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/system_groups/systems.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-systems'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/system_groups/:id/systems
+          </a><br>
+          <small>List systems in the group</small>
+        </h2>
+    </div>
+
+
+    <div id='description-systems' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Id of the system group</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/system_groups/add_systems.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-add_systems'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/organizations/:organization_id/system_groups/:id/add_systems
+          </a><br>
+          <small>Add systems to the group</small>
+        </h2>
+    </div>
+
+
+    <div id='description-add_systems' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>POST /api/organizations/org_227e003/system_groups/1/add_systems
+{
+  &quot;system_group&quot;: {
+    &quot;system_ids&quot;: [
+      &quot;3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;
+    ]
+  }
+}
+200
+[
+  {
+    &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
+    &quot;id&quot;: &quot;3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;
+  }
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Id of the system group</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>system_group </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>system_group[system_ids] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Array of system ids</p>
+
+        <br>
+        Value: Array
+    </td>
+  </tr>
+
+  
+
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/system_groups/remove_systems.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-remove_systems'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/organizations/:organization_id/system_groups/:id/remove_systems
+          </a><br>
+          <small>Remove systems from the group</small>
+        </h2>
+    </div>
+
+
+    <div id='description-remove_systems' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>POST /api/organizations/org_227e003/system_groups/1/remove_systems
+{
+  &quot;system_group&quot;: {
+    &quot;system_ids&quot;: [
+      &quot;3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;
+    ]
+  }
+}
+200
+[
+
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Id of the system group</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>system_group </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>system_group[system_ids] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Array of system ids</p>
+
+        <br>
+        Value: Array
+    </td>
+  </tr>
+
+  
+
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/system_groups/history.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-history'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/system_groups/:id/history
+          </a><br>
+          <small>History of jobs performed on a system group</small>
+        </h2>
+    </div>
+
+
+    <div id='description-history' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Id of the system group</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/system_groups/history_show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-history_show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/system_groups/:id/history
+          </a><br>
+          <small>History of a job performed on a system group</small>
+        </h2>
+    </div>
+
+
+    <div id='description-history_show' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>GET /api/organizations/org_227e003/system_groups/1/history/1
+200
+{
+  &quot;parameters&quot;: {
+    &quot;packages&quot;: [
+      &quot;cheetah&quot;
+    ]
+  },
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;finish_time&quot;: null,
+  &quot;tasks&quot;: [
+    {
+      &quot;state&quot;: &quot;running&quot;,
+      &quot;finish_time&quot;: null,
+      &quot;uuid&quot;: &quot;0e0f181c-e2f2-11e1-85ad-525400b68f90&quot;,
+      &quot;id&quot;: 15,
+      &quot;progress&quot;: null,
+      &quot;result&quot;: {
+        &quot;errors&quot;: [
+          null,
+          null
+        ]
+      },
+      &quot;start_time&quot;: &quot;2012-08-10T13:48:24Z&quot;
+    }
+  ],
+  &quot;created_at&quot;: &quot;2012-08-10T13:48:24Z&quot;,
+  &quot;id&quot;: 1,
+  &quot;task_type&quot;: &quot;package_install&quot;,
+  &quot;status_message&quot;: &quot;Installing Package...&quot;,
+  &quot;pulp_id&quot;: &quot;0384935e-4216-4d38-9832-6be39e379aba&quot;
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Id of the system group</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>job_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Id of a job for filtering</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/system_groups/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/organizations/:organization_id/system_groups
+          </a><br>
+          <small>Create a system group</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>POST /api/organizations/org_227e003/system_groups/
+{
+  &quot;system_group&quot;: {
+    &quot;name&quot;: &quot;system_group_227e003&quot;,
+    &quot;max_systems&quot;: &quot;-1&quot;,
+    &quot;description&quot;: &quot;group description&quot;
+  }
+}
+200
+{
+  &quot;organization_id&quot;: 2,
+  &quot;name&quot;: &quot;system_group_227e003&quot;,
+  &quot;max_systems&quot;: -1,
+  &quot;created_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+  &quot;description&quot;: &quot;group description&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+  &quot;id&quot;: 1,
+  &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>system_group </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>system_group[name] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>System group name</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>system_group[description] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>system_group[max_systems] </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Maximum number of systems in the group</p>
+
+        <br>
+        Value: Integer
+    </td>
+  </tr>
+
+  
+
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/system_groups/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /api/organizations/:organization_id/system_groups/:id
+          </a><br>
+          <small>Destroy a system group</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>DELETE /api/organizations/org_227e003/system_groups/1
+200
+Deleted system group '1'</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Id of the system group</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+</div>
+
+
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+    <script type="text/javascript"
+            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
+    <script type="text/javascript"
+            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
+    <script type="text/javascript"
+            src="../apidoc/javascripts/bundled/prettify.js"></script>
+    <script type="text/javascript"
+            src="../apidoc/javascripts/apipie.js"></script>
+</body>
+</html>

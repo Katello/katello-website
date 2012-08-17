@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/application.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/prettify.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/permissions.html'>Permissions</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/roles/:role_id/permissions<br>
+      <small>List permissions for a role</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre>GET /api/roles/6/permissions/
+200
+[
+  {
+    &quot;resource_type_id&quot;: 4,
+    &quot;organization_id&quot;: 2,
+    &quot;verbs&quot;: [
+      {
+        &quot;verb&quot;: &quot;read_contents&quot;,
+        &quot;verb_id&quot;: &quot;3&quot;,
+        &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+        &quot;permission_id&quot;: &quot;14&quot;,
+        &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+        &quot;id&quot;: 3
+      }
+    ],
+    &quot;name&quot;: &quot;env_perm_227e003_2&quot;,
+    &quot;all_tags&quot;: false,
+    &quot;created_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
+    &quot;all_verbs&quot;: false,
+    &quot;description&quot;: null,
+    &quot;tags&quot;: [
+      {
+        &quot;tag_id&quot;: 2,
+        &quot;formatted&quot;: {
+          &quot;name&quot;: 2,
+          &quot;display_name&quot;: &quot;Library&quot;
+        },
+        &quot;created_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
+        &quot;permission_id&quot;: 14,
+        &quot;updated_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
+        &quot;id&quot;: 1
+      }
+    ],
+    &quot;id&quot;: 14,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
+    &quot;role_id&quot;: 6,
+    &quot;resource_type&quot;: {
+      &quot;name&quot;: &quot;environments&quot;,
+      &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+      &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+      &quot;id&quot;: 4
+    }
+  },
+  {
+    &quot;resource_type_id&quot;: 4,
+    &quot;organization_id&quot;: null,
+    &quot;verbs&quot;: [
+      {
+        &quot;verb&quot;: &quot;read_contents&quot;,
+        &quot;verb_id&quot;: &quot;3&quot;,
+        &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+        &quot;permission_id&quot;: &quot;13&quot;,
+        &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+        &quot;id&quot;: 3
+      }
+    ],
+    &quot;name&quot;: &quot;env_perm_227e003&quot;,
+    &quot;all_tags&quot;: true,
+    &quot;created_at&quot;: &quot;2012-08-10T13:50:09Z&quot;,
+    &quot;all_verbs&quot;: false,
+    &quot;description&quot;: null,
+    &quot;tags&quot;: [],
+    &quot;id&quot;: 13,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:50:09Z&quot;,
+    &quot;role_id&quot;: 6,
+    &quot;resource_type&quot;: {
+      &quot;name&quot;: &quot;environments&quot;,
+      &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+      &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+      &quot;id&quot;: 4
+    }
+  },
+  {
+    &quot;resource_type_id&quot;: 1,
+    &quot;organization_id&quot;: 2,
+    &quot;verbs&quot;: [],
+    &quot;name&quot;: &quot;all_perm_227e003_2&quot;,
+    &quot;all_tags&quot;: true,
+    &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+    &quot;all_verbs&quot;: true,
+    &quot;description&quot;: null,
+    &quot;tags&quot;: [],
+    &quot;id&quot;: 12,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+    &quot;role_id&quot;: 6,
+    &quot;resource_type&quot;: {
+      &quot;name&quot;: &quot;all&quot;,
+      &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
+      &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
+      &quot;id&quot;: 1
+    }
+  },
+  {
+    &quot;resource_type_id&quot;: 1,
+    &quot;organization_id&quot;: null,
+    &quot;verbs&quot;: [],
+    &quot;name&quot;: &quot;all_perm_227e003&quot;,
+    &quot;all_tags&quot;: true,
+    &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+    &quot;all_verbs&quot;: true,
+    &quot;description&quot;: null,
+    &quot;tags&quot;: [],
+    &quot;id&quot;: 11,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+    &quot;role_id&quot;: 6,
+    &quot;resource_type&quot;: {
+      &quot;name&quot;: &quot;all&quot;,
+      &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
+      &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
+      &quot;id&quot;: 1
+    }
+  }
+]</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter by name</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter by description</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>all_verbs </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter by all_verbs flag</p>
+
+        <br>
+        Value: boolean
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>all_tags </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter by all_flags flag</p>
+
+        <br>
+        Value: boolean
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/prettify.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/apipie.js"></script>
+</body>
+</html>

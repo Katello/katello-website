@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/application.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/prettify.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>create</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      POST /api/repositories<br>
+      <small>Create a repository</small>
+    </h1>
+  </div>
+
+<div>
+    Also see <a href="../../apidoc/gpg_keys/index">gpg_keys#index</a>.
+
+  
+
+    <h2>Examples</h2>
+      <pre>POST /api/repositories/
+{
+  &quot;organization_id&quot;: &quot;org_227e003&quot;,
+  &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
+  &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5&quot;,
+  &quot;product_id&quot;: &quot;1344606167242&quot;
+}
+200
+{
+  &quot;minor&quot;: null,
+  &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
+  &quot;enabled&quot;: true,
+  &quot;gpg_key_name&quot;: &quot;&quot;,
+  &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;,
+  &quot;package_count&quot;: 0,
+  &quot;library_instance_id&quot;: null,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:53Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:54Z&quot;,
+  &quot;id&quot;: 1,
+  &quot;major&quot;: null,
+  &quot;gpg_key_id&quot;: null,
+  &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
+  &quot;last_sync&quot;: null,
+  &quot;environment_product_id&quot;: 1
+}</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of an organization the repository will be contained in</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of a product the repository will be contained in</p>
+
+        <br>
+        Value: number.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>repository source url</p>
+
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>gpg_key_name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>name of a gpg key that will be assigned to the new repository</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/bundled/prettify.js"></script>
+    <script type="text/javascript"
+            src="../../apidoc/javascripts/apipie.js"></script>
+</body>
+</html>

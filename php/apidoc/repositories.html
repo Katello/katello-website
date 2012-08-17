@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet"
+          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../apidoc/stylesheets/application.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../apidoc/stylesheets/bundled/prettify.css"/>
+    <link type="text/css" rel="stylesheet"
+          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
+  <li class='active'>Repositories</li>
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Repositories<br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/repositories
+          </a><br>
+          <small>Create a repository</small>
+        </h2>
+    </div>
+
+      Also see <a href="../apidoc/gpg_keys/index">gpg_keys#index</a>
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>POST /api/repositories/
+{
+  &quot;organization_id&quot;: &quot;org_227e003&quot;,
+  &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
+  &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5&quot;,
+  &quot;product_id&quot;: &quot;1344606167242&quot;
+}
+200
+{
+  &quot;minor&quot;: null,
+  &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
+  &quot;enabled&quot;: true,
+  &quot;gpg_key_name&quot;: &quot;&quot;,
+  &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;,
+  &quot;package_count&quot;: 0,
+  &quot;library_instance_id&quot;: null,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:53Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:54Z&quot;,
+  &quot;id&quot;: 1,
+  &quot;major&quot;: null,
+  &quot;gpg_key_id&quot;: null,
+  &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
+  &quot;last_sync&quot;: null,
+  &quot;environment_product_id&quot;: 1
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of an organization the repository will be contained in</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>id of a product the repository will be contained in</p>
+
+        <br>
+        Value: number.
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>repository source url</p>
+
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>gpg_key_name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>name of a gpg key that will be assigned to the new repository</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/repositories/:id
+          </a><br>
+          <small>Show a repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>GET /api/repositories/2/
+200
+{
+  &quot;checksum_type&quot;: &quot;sha256&quot;,
+  &quot;files&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/files/&quot;,
+  &quot;groupid&quot;: [
+    &quot;product:1344606167242&quot;,
+    &quot;env:2&quot;,
+    &quot;org:2&quot;,
+    &quot;content:1344606177624&quot;
+  ],
+  &quot;packages&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/packages/&quot;,
+  &quot;packagegroupcategories&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/packagegroupcategories/&quot;,
+  &quot;feed_ca&quot;: null,
+  &quot;minor&quot;: null,
+  &quot;name&quot;: &quot;repo_227e003&quot;,
+  &quot;files_count&quot;: 77,
+  &quot;content_types&quot;: &quot;yum&quot;,
+  &quot;clone_ids&quot;: [
+    &quot;org_227e003-env_227e003-fewups_product_227e003-repo_227e003&quot;
+  ],
+  &quot;source&quot;: {
+    &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
+    &quot;type&quot;: &quot;remote&quot;
+  },
+  &quot;enabled&quot;: true,
+  &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_repo_227e003&quot;,
+  &quot;gpg_key_name&quot;: &quot;&quot;,
+  &quot;uri_ref&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/&quot;,
+  &quot;keys&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/keys/&quot;,
+  &quot;package_count&quot;: 8,
+  &quot;library_instance_id&quot;: null,
+  &quot;_id&quot;: &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
+  &quot;distribution&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/distribution/&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:57Z&quot;,
+  &quot;distributionid&quot;: [
+    &quot;ks-Test Family-TestVariant-16-x86_64&quot;
+  ],
+  &quot;preserve_metadata&quot;: false,
+  &quot;arch&quot;: &quot;noarch&quot;,
+  &quot;filters&quot;: [],
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+  &quot;errata&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/errata/&quot;,
+  &quot;id&quot;: 2,
+  &quot;sync_schedule&quot;: null,
+  &quot;consumer_ca&quot;: null,
+  &quot;uri&quot;: &quot;https://katello.example.com/pulp/repos/org_227e003/Library/custom/fewups_product_227e003/repo_227e003/&quot;,
+  &quot;notes&quot;: {},
+  &quot;relative_path&quot;: &quot;org_227e003/Library/custom/fewups_product_227e003/repo_227e003&quot;,
+  &quot;major&quot;: null,
+  &quot;gpg_key_id&quot;: null,
+  &quot;packagegroups&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/packagegroups/&quot;,
+  &quot;consumer_cert&quot;: null,
+  &quot;sync_options&quot;: {},
+  &quot;comps&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/comps/&quot;,
+  &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
+  &quot;publish&quot;: true,
+  &quot;last_sync&quot;: &quot;2012-08-10T15:43:16+02:00&quot;,
+  &quot;next_scheduled_time&quot;: null,
+  &quot;feed_cert&quot;: null,
+  &quot;sync_state&quot;: &quot;finished&quot;,
+  &quot;environment_product_id&quot;: 1
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>repository id</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/repositories/:id
+          </a><br>
+          <small>Update a repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>PUT /api/repositories/6/
+{
+  &quot;repository&quot;: {
+    &quot;gpg_key_name&quot;: &quot;Dummy-Package-Generator&quot;
+  }
+}
+200
+{
+  &quot;checksum_type&quot;: &quot;sha256&quot;,
+  &quot;files&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/files/&quot;,
+  &quot;groupid&quot;: [
+    &quot;product:1344606356883&quot;,
+    &quot;env:2&quot;,
+    &quot;org:2&quot;,
+    &quot;content:1344606363895&quot;
+  ],
+  &quot;packages&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packages/&quot;,
+  &quot;packagegroupcategories&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packagegroupcategories/&quot;,
+  &quot;feed_ca&quot;: null,
+  &quot;minor&quot;: null,
+  &quot;name&quot;: &quot;GPG-repo-2-227e003&quot;,
+  &quot;files_count&quot;: 80,
+  &quot;content_types&quot;: &quot;yum&quot;,
+  &quot;clone_ids&quot;: [],
+  &quot;source&quot;: {
+    &quot;url&quot;: &quot;http://inecas.fedorapeople.org/fakerepos/zoo&quot;,
+    &quot;type&quot;: &quot;remote&quot;
+  },
+  &quot;enabled&quot;: true,
+  &quot;cp_label&quot;: &quot;org_227e003_GPG-product-227e003_GPG-repo-2-227e003&quot;,
+  &quot;gpg_key_name&quot;: &quot;Dummy-Package-Generator&quot;,
+  &quot;uri_ref&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/&quot;,
+  &quot;keys&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/keys/&quot;,
+  &quot;package_count&quot;: 0,
+  &quot;library_instance_id&quot;: null,
+  &quot;_id&quot;: &quot;org_227e003-GPG-product-227e003-GPG-repo-2-227e003&quot;,
+  &quot;distribution&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/distribution/&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:46:03Z&quot;,
+  &quot;distributionid&quot;: [],
+  &quot;preserve_metadata&quot;: false,
+  &quot;arch&quot;: &quot;noarch&quot;,
+  &quot;filters&quot;: [],
+  &quot;updated_at&quot;: &quot;2012-08-10T13:46:07Z&quot;,
+  &quot;errata&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/errata/&quot;,
+  &quot;id&quot;: 6,
+  &quot;sync_schedule&quot;: null,
+  &quot;consumer_ca&quot;: null,
+  &quot;uri&quot;: &quot;https://katello.example.com/pulp/repos/org_227e003/Library/custom/GPG-product-227e003/GPG-repo-2-227e003/&quot;,
+  &quot;notes&quot;: {},
+  &quot;relative_path&quot;: &quot;org_227e003/Library/custom/GPG-product-227e003/GPG-repo-2-227e003&quot;,
+  &quot;major&quot;: null,
+  &quot;gpg_key_id&quot;: 1,
+  &quot;packagegroups&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packagegroups/&quot;,
+  &quot;consumer_cert&quot;: null,
+  &quot;sync_options&quot;: {},
+  &quot;comps&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/comps/&quot;,
+  &quot;pulp_id&quot;: &quot;org_227e003-GPG-product-227e003-GPG-repo-2-227e003&quot;,
+  &quot;publish&quot;: true,
+  &quot;last_sync&quot;: null,
+  &quot;next_scheduled_time&quot;: null,
+  &quot;feed_cert&quot;: null,
+  &quot;sync_state&quot;: &quot;not_synced&quot;,
+  &quot;environment_product_id&quot;: 3
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>repository id</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>repository[gpg_key_name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>name of a gpg key that will be assigned to the repository</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /api/repositories/:id
+          </a><br>
+          <small>Destroy a repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>DELETE /api/repositories/6/
+200
+Deleted repository '6'</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/enable.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-enable'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/repositories/:id/enable
+          </a><br>
+          <small>Enable or disable a repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-enable' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>POST /api/repositories/85/enable/
+{
+  &quot;enable&quot;: true
+}
+200
+Repository 'Zoo Enterprise x86_64 6.2' enabled.</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>enable </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>flag that enables/disables the repository</p>
+
+        <br>
+        Value: boolean
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/sync_complete.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-sync_complete'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/repositories/:id/sync_complete
+          </a><br>
+          <small></small>
+        </h2>
+    </div>
+
+
+    <div id='description-sync_complete' class='collapse accordion-body'>
+      <p>This function is used by pulp for post sync actions.
+It is not authenticated, but does not accept requests unless
+they have been sent from localhost.  Since we go through apache
+HTTP<em>X</em>FORWARDED_FOR header should be set with original IP.
+Pulp blocks during the execution of this call, so <em>DO NOT</em> try to
+talk back to pulp within it.  Save that for the delayed job.
+Pulp doesn&#39;t send correct headers.&quot;</p>
+
+
+
+
+        <h3>Examples</h3>
+          <pre>POST /api/repositories/sync_complete
+{
+  &quot;task_id&quot;: &quot;4fd84a3a-e2f1-11e1-a717-525400b68f90&quot;,
+  &quot;repo_id&quot;: &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;
+}
+500
+undefined method `with_indifferent_access' for false:FalseClass</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/discovery.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-discovery'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/organizations/:organization_id/repositories/discovery
+          </a><br>
+          <small>Discover repository urls with metadata and find candidate repos. Supports http, https and file based urls. Async task, returns the delayed job.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-discovery' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>POST /api/organizations/org_227e003/repositories/discovery
+{
+  &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
+  &quot;type&quot;: &quot;yum&quot;
+}
+200
+{
+  &quot;user_id&quot;: 1,
+  &quot;parameters&quot;: null,
+  &quot;task_owner_type&quot;: null,
+  &quot;organization_id&quot;: 2,
+  &quot;state&quot;: &quot;waiting&quot;,
+  &quot;finish_time&quot;: null,
+  &quot;task_owner_id&quot;: null,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+  &quot;uuid&quot;: &quot;45f57d6b-e2f1-11e1-a64d-525400b68f90&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+  &quot;id&quot;: 1,
+  &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
+  &quot;progress&quot;: {
+    &quot;items_left&quot;: 0,
+    &quot;total_count&quot;: 0,
+    &quot;total_size&quot;: 0,
+    &quot;size_left&quot;: 0
+  },
+  &quot;pending?&quot;: true,
+  &quot;result&quot;: {
+    &quot;errors&quot;: [
+      null,
+      null
+    ]
+  },
+  &quot;start_time&quot;: null
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>type </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>type of content to discover (supported types : &#39;yum&#39;)</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>url </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>remote url to perform discovery</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/package_groups.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-package_groups'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/repositories/:id/package_groups
+          </a><br>
+          <small>List all package groups in a repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-package_groups' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>GET /api/repositories/2/package_groups
+200
+[
+  {
+    &quot;repo_defined&quot;: true,
+    &quot;immutable&quot;: true,
+    &quot;optional_package_names&quot;: [],
+    &quot;user_visible&quot;: true,
+    &quot;name&quot;: &quot;mammal&quot;,
+    &quot;default_package_names&quot;: [],
+    &quot;_id&quot;: &quot;mammal&quot;,
+    &quot;langonly&quot;: null,
+    &quot;conditional_package_names&quot;: {},
+    &quot;display_order&quot;: 1024,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;id&quot;: &quot;mammal&quot;,
+    &quot;translated_description&quot;: {},
+    &quot;translated_name&quot;: {},
+    &quot;default&quot;: true,
+    &quot;mandatory_package_names&quot;: [
+      &quot;elephant,giraffe,cheetah,lion,monkey,penguin,squirrel,walrus&quot;,
+      &quot;penguin&quot;
+    ]
+  },
+  {
+    &quot;repo_defined&quot;: true,
+    &quot;immutable&quot;: true,
+    &quot;optional_package_names&quot;: [],
+    &quot;user_visible&quot;: true,
+    &quot;name&quot;: &quot;bird&quot;,
+    &quot;default_package_names&quot;: [],
+    &quot;_id&quot;: &quot;bird&quot;,
+    &quot;langonly&quot;: null,
+    &quot;conditional_package_names&quot;: {},
+    &quot;display_order&quot;: 1024,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;id&quot;: &quot;bird&quot;,
+    &quot;translated_description&quot;: {},
+    &quot;translated_name&quot;: {},
+    &quot;default&quot;: true,
+    &quot;mandatory_package_names&quot;: [
+      &quot;penguin&quot;
+    ]
+  }
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/package_group_categories.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-package_group_categories'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/repositories/:id/package_group_categories
+          </a><br>
+          <small>List all package group categories in a repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-package_group_categories' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre>GET /api/repositories/2/package_group_categories/
+200
+[
+  {
+    &quot;repo_defined&quot;: true,
+    &quot;immutable&quot;: true,
+    &quot;name&quot;: &quot;all&quot;,
+    &quot;_id&quot;: &quot;all&quot;,
+    &quot;display_order&quot;: 99,
+    &quot;description&quot;: null,
+    &quot;id&quot;: &quot;all&quot;,
+    &quot;translated_description&quot;: {},
+    &quot;translated_name&quot;: {},
+    &quot;packagegroupids&quot;: [
+      &quot;mammal&quot;,
+      &quot;bird&quot;
+    ]
+  }
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/repositories/gpg_key_content.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-gpg_key_content'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/repositories/:id/gpg_key_content
+          </a><br>
+          <small>Return the content of a repo gpg key, used directly by yum</small>
+        </h2>
+    </div>
+
+
+    <div id='description-gpg_key_content' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+</div>
+
+
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+    <script type="text/javascript"
+            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
+    <script type="text/javascript"
+            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
+    <script type="text/javascript"
+            src="../apidoc/javascripts/bundled/prettify.js"></script>
+    <script type="text/javascript"
+            src="../apidoc/javascripts/apipie.js"></script>
+</body>
+</html>
