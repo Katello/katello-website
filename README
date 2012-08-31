@@ -1,11 +1,18 @@
-Feel free to change or remove this file, it is informational only.
+The Katello Website is a Wordpress based setup with a layout and hooks that support deployment on OpenShift.  For more information on the setup the site is based off of please see https://github.com/openshift/wordpress-example
+
+Running Locally
+===============
+
+In order to run and develop the Katello Website locally, you will need a standard Apache, PHP and MySql setup.  You will need to setup a standard MySQL server and take note of the databse name, username and password.  
+
+Clone the repository and make Apache aware the location of files.  One strategy for doing this is cloning the repository directly in to /var/www/html.  In the php/ directory copy the wp-config-sample.php to wp-config.php and set the DB_NAME, DB_USER, DB_PASSWORD and DB_HOST appropriately.  The site should be up and running locally and available for hacking.
 
 Repo layout
 ===========
 php/ - Externally exposed php code goes here
 libs/ - Additional libraries
 misc/ - For not-externally exposed php code
-../data - For persistent data (full path in environment var: OPENSHIFT_DATA_DIR)
+../data - For persistent data (NOTE: plugins are symlinked here to prevent admin console initiated updates from being overwritten) (full path in environment var: OPENSHIFT_DATA_DIR)
 deplist.txt - list of pears to install
 .openshift/action_hooks/pre_build - Script that gets run every git push before the build
 .openshift/action_hooks/build - Script that gets run every git push as part of the build process (on the CI system if available)
@@ -50,9 +57,3 @@ deplist.txt
 
 A list of pears to install, line by line on the server.  This will happen when
 the user git pushes.
-
-
-Additional information
-======================
-
-Link to additional information will be here, when we have it :)
