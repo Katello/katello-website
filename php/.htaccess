@@ -5,4 +5,14 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
+
+# START Static Page Plugin
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(.+).html$  /wp-admin/admin-ajax.php?action=static_page [L,NC,QSA]
+RewriteRule ^(.+).htm$  /wp-admin/admin-ajax.php?action=static_page [L,NC,QSA]
+RewriteRule ^(.+).shtml$  /wp-admin/admin-ajax.php?action=static_page [L,NC,QSA]
+RewriteRule ^(.+).txt$  /wp-admin/admin-ajax.php?action=static_page [L,NC,QSA]
+RewriteRule ^(.+).pdf$  /wp-admin/admin-ajax.php?action=static_page [L,NC,QSA]
 </IfModule>
+# END Static Page Plugin
