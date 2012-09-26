@@ -101,6 +101,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
 	line-height:1;
     background: #FFF;
+    padding: 0 !important;
 }
 
 ol, ul {
@@ -1136,7 +1137,7 @@ form div {
 
 /* =Globals
 -------------------------------------------------------------- */
-#container {
+#container.hfeed {
 	margin:0 auto;
 	max-width:960px;
 	padding:0px 25px;
