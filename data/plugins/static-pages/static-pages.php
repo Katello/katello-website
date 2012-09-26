@@ -42,9 +42,9 @@ function kpg_handle_static_page_action() {
 	$script='';
 	$options=kpg_static_get_options();
 	extract($options);
-	$ff=$_SERVER['SCRIPT_URL'];
-	$lf=$_SERVER['SCRIPT_URI'];
-	$root=$_SERVER['DOCUMENT_ROOT'];
+  $ff=$_SERVER['REQUEST_URI'];
+  $lf=$_ENV['OPENSHIFT_APP_DNS']; //$_SERVER['SCRIPT_URI'];
+  $root=$_ENV['OPENSHIFT_REPO_DIR'].'php/'; //$_SERVER['DOCUMENT_ROOT'];
 	$f=$root.$ff;
 	if (!file_exists($f)) {
 		echo "Can't find $ff<br/>";
