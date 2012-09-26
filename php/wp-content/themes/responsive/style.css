@@ -2450,6 +2450,11 @@ BDO[DIR="rtl"] {
     If you're working on a Child Theme, make sure that all
 	media queries are included in your style.css
 -------------------------------------------------------------- */
+
+@media (min-width: 1200px) {
+    .container { width: 940px !important; }
+}
+
 @media screen and (max-width: 980px) {
 
     body {
