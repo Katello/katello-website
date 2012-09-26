@@ -435,6 +435,19 @@ switch ($tp) {
 				}
 			}
 			$i=stripos($head,'<script',$i+7); // start again
+    }
+
+    $stylesheets="";
+    $i=stripos($head,'<link"');
+    while ($i!==false) {
+      // need to find the location of either a '/>' or a '</script'>, wichever is closer
+      $j=stripos($head,'/>',$i+5);
+      if ($j!==false) {
+        // $j is not false if we get here
+        // we hope that the script was closed with a />
+        $stylesheets.=substr($head,$i,$j+2-$i)."\r\n";
+      }       
+      $i=stripos($head,'<link',$i+5); // start again
 		}
 		
 		
@@ -466,6 +479,9 @@ switch ($tp) {
 	
     if (!empty($script)) {
 		$new_content.="
+		<!-- stylesheets go here -->
+    ".$stylesheets."
+		<!-- end of stylesheets -->";
 		<!-- scripts go here -->
 		".$script."
 		<!-- end of scripts -->";
