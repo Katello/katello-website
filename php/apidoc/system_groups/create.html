@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,24 +40,24 @@
   
 
     <h2>Examples</h2>
-      <pre>POST /api/organizations/org_227e003/system_groups/
+      <pre class="prettyprint">POST /api/organizations/org_227e003/system_groups/
 {
   &quot;system_group&quot;: {
-    &quot;max_systems&quot;: &quot;-1&quot;,
+    &quot;name&quot;: &quot;system_group_227e003&quot;,
     &quot;description&quot;: &quot;group description&quot;,
-    &quot;name&quot;: &quot;system_group_227e003&quot;
+    &quot;max_systems&quot;: &quot;-1&quot;
   }
 }
 200
 {
-  &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
-  &quot;organization_id&quot;: 2,
+  &quot;name&quot;: &quot;system_group_227e003&quot;,
   &quot;id&quot;: 1,
-  &quot;max_systems&quot;: -1,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
   &quot;description&quot;: &quot;group description&quot;,
-  &quot;name&quot;: &quot;system_group_227e003&quot;
+  &quot;max_systems&quot;: -1,
+  &quot;created_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;
 }</pre>
 
 
@@ -164,19 +160,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

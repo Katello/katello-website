@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -59,7 +55,7 @@
 
 
         <h3>Examples</h3>
-          <pre>POST /api/changesets/1/products/
+          <pre class="prettyprint">POST /api/changesets/1/products/
 {
   &quot;product_id&quot;: &quot;1344606167242&quot;
 }
@@ -119,7 +115,7 @@ Added product 'fewups_product_227e003'</pre>
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/changesets/1/products/1344606167242/
+          <pre class="prettyprint">DELETE /api/changesets/1/products/1344606167242/
 {
   &quot;content_id&quot;: &quot;1344606167242&quot;
 }
@@ -179,10 +175,10 @@ Removed product '1344606167242'</pre>
 
 
         <h3>Examples</h3>
-          <pre>POST /api/changesets/2/packages/
+          <pre class="prettyprint">POST /api/changesets/2/packages/
 {
-  &quot;product_id&quot;: &quot;1344606167242&quot;,
-  &quot;name&quot;: &quot;monkey-0.3-0.8.noarch.rpm&quot;
+  &quot;name&quot;: &quot;monkey-0.3-0.8.noarch.rpm&quot;,
+  &quot;product_id&quot;: &quot;1344606167242&quot;
 }
 200
 Added package 'monkey-0.3-0.8.noarch.rpm'</pre>
@@ -257,10 +253,10 @@ Added package 'monkey-0.3-0.8.noarch.rpm'</pre>
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/changesets/2/packages/monkey-0.3-0.8.noarch.rpm/
+          <pre class="prettyprint">DELETE /api/changesets/2/packages/monkey-0.3-0.8.noarch.rpm/
 {
-  &quot;content_id&quot;: &quot;monkey-0.3-0.8.noarch.rpm&quot;,
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1344606167242&quot;,
+  &quot;content_id&quot;: &quot;monkey-0.3-0.8.noarch.rpm&quot;
 }
 200
 Package 'monkey-0.3-0.8.noarch.rpm' not found in the changeset</pre>
@@ -318,7 +314,7 @@ Package 'monkey-0.3-0.8.noarch.rpm' not found in the changeset</pre>
 
 
         <h3>Examples</h3>
-          <pre>POST /api/changesets/2/errata/
+          <pre class="prettyprint">POST /api/changesets/2/errata/
 {
   &quot;product_id&quot;: &quot;1344606167242&quot;,
   &quot;erratum_id&quot;: &quot;RHEA-2010:0001&quot;
@@ -396,10 +392,10 @@ Added erratum 'RHEA-2010:0001'</pre>
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/changesets/2/errata/RHEA-2010:9984/
+          <pre class="prettyprint">DELETE /api/changesets/2/errata/RHEA-2010:9984/
 {
-  &quot;content_id&quot;: &quot;RHEA-2010:9984&quot;,
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1344606167242&quot;,
+  &quot;content_id&quot;: &quot;RHEA-2010:9984&quot;
 }
 200
 Erratum 'RHEA-2010:9984' not found in the changeset</pre>
@@ -446,7 +442,7 @@ Erratum 'RHEA-2010:9984' not found in the changeset</pre>
            data-parent='#accordion'>
             POST /api/changesets/:changeset_id/repositories
           </a><br>
-          <small>Add a repository to a changset</small>
+          <small>Add a repository to a changeset</small>
         </h2>
     </div>
 
@@ -457,10 +453,10 @@ Erratum 'RHEA-2010:9984' not found in the changeset</pre>
 
 
         <h3>Examples</h3>
-          <pre>POST /api/changesets/2/repositories/
+          <pre class="prettyprint">POST /api/changesets/2/repositories/
 {
-  &quot;product_id&quot;: &quot;1344606167242&quot;,
-  &quot;repository_id&quot;: 2
+  &quot;repository_id&quot;: 2,
+  &quot;product_id&quot;: &quot;1344606167242&quot;
 }
 200
 Added repository 'repo_227e003'</pre>
@@ -518,10 +514,10 @@ Added repository 'repo_227e003'</pre>
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/changesets/2/repositories/2/
+          <pre class="prettyprint">DELETE /api/changesets/2/repositories/2/
 {
-  &quot;content_id&quot;: 2,
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1344606167242&quot;,
+  &quot;content_id&quot;: 2
 }
 200
 Removed repository'2'</pre>
@@ -550,7 +546,7 @@ Removed repository'2'</pre>
 
 
         <h3>Examples</h3>
-          <pre>POST /api/changesets/3/templates/
+          <pre class="prettyprint">POST /api/changesets/3/templates/
 {
   &quot;template_id&quot;: 1
 }
@@ -610,7 +606,7 @@ Added template 'promotion_test_tpl_227e003'</pre>
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/changesets/3/templates/1/
+          <pre class="prettyprint">DELETE /api/changesets/3/templates/1/
 {
   &quot;content_id&quot;: 1
 }
@@ -715,19 +711,16 @@ Removed template '1'</pre>
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

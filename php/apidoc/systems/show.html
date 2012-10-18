@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/systems.html'>Systems</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>show</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/consumers/:id<br>
+      <small>Show a system (compatibility)</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      GET /api/systems/:id<br>
+      <small>Show a system</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre class="prettyprint">GET /api/systems/269f9e7c-debe-4b3c-b33b-92f309f882df
+200
+{
+  &quot;owner&quot;: {
+    &quot;displayName&quot;: &quot;org_manifest_227e003&quot;,
+    &quot;key&quot;: &quot;org_manifest_227e003&quot;,
+    &quot;id&quot;: &quot;ff8080813910c3d3013910ccdd67001c&quot;,
+    &quot;href&quot;: &quot;/owners/org_manifest_227e003&quot;
+  },
+  &quot;idCert&quot;: {
+    &quot;serial&quot;: {
+      &quot;serial&quot;: 375757150572080644,
+      &quot;id&quot;: 375757150572080644,
+      &quot;revoked&quot;: false,
+      &quot;collected&quot;: false,
+      &quot;updated&quot;: &quot;2012-08-10T13:52:24.099+0000&quot;,
+      &quot;created&quot;: &quot;2012-08-10T13:52:24.099+0000&quot;,
+      &quot;expiration&quot;: &quot;2028-08-10T13:52:24.099+0000&quot;
+    },
+    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\n-----END CERTIFICATE-----\n&quot;,
+    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\n-----END RSA PRIVATE KEY-----\n&quot;,
+    &quot;id&quot;: &quot;ff8080813910c3d3013910ceb07a003a&quot;,
+    &quot;updated&quot;: &quot;2012-08-10T13:52:24.698+0000&quot;,
+    &quot;created&quot;: &quot;2012-08-10T13:52:24.698+0000&quot;
+  },
+  &quot;autoheal&quot;: true,
+  &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
+  &quot;id&quot;: 2,
+  &quot;ipv4_address&quot;: null,
+  &quot;href&quot;: &quot;/consumers/269f9e7c-debe-4b3c-b33b-92f309f882df&quot;,
+  &quot;activation_key&quot;: [],
+  &quot;environment_id&quot;: 7,
+  &quot;uuid&quot;: &quot;269f9e7c-debe-4b3c-b33b-92f309f882df&quot;,
+  &quot;facts&quot;: {
+    &quot;distribution.name&quot;: &quot;Unknown&quot;,
+    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;
+  },
+  &quot;guests&quot;: [],
+  &quot;description&quot;: &quot;Initial Registration Params&quot;,
+  &quot;serviceLevel&quot;: &quot;&quot;,
+  &quot;release&quot;: &quot;&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:52:27Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:52:27Z&quot;,
+  &quot;system_template_id&quot;: null,
+  &quot;environment&quot;: {
+    &quot;prior_id&quot;: 6,
+    &quot;library&quot;: false,
+    &quot;name&quot;: &quot;env_manifest_227e003&quot;,
+    &quot;id&quot;: 7,
+    &quot;description&quot;: null,
+    &quot;prior&quot;: &quot;Library&quot;,
+    &quot;created_at&quot;: &quot;2012-08-10T13:50:26Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:50:26Z&quot;,
+    &quot;organization_id&quot;: 3,
+    &quot;organization&quot;: &quot;org_manifest_227e003&quot;
+  },
+  &quot;location&quot;: &quot;None&quot;
+}</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>UUID of the system</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

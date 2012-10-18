@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -77,22 +73,22 @@
 
 
         <h3>Examples</h3>
-          <pre>GET /api/environments/3/activation_keys/
+          <pre class="prettyprint">GET /api/environments/3/activation_keys/
 200
 [
   {
-    &quot;usage_limit&quot;: -1,
-    &quot;created_at&quot;: &quot;2012-08-10T13:43:00Z&quot;,
-    &quot;environment_id&quot;: 3,
-    &quot;pools&quot;: [],
-    &quot;organization_id&quot;: 2,
+    &quot;usage_count&quot;: 0,
+    &quot;user_id&quot;: 1,
+    &quot;name&quot;: &quot;activation_key_227e003&quot;,
     &quot;id&quot;: 1,
+    &quot;environment_id&quot;: 3,
+    &quot;usage_limit&quot;: -1,
+    &quot;description&quot;: &quot;key description&quot;,
+    &quot;pools&quot;: [],
+    &quot;created_at&quot;: &quot;2012-08-10T13:43:00Z&quot;,
     &quot;updated_at&quot;: &quot;2012-08-10T13:43:00Z&quot;,
     &quot;system_template_id&quot;: null,
-    &quot;usage_count&quot;: 0,
-    &quot;description&quot;: &quot;key description&quot;,
-    &quot;name&quot;: &quot;activation_key_227e003&quot;,
-    &quot;user_id&quot;: 1
+    &quot;organization_id&quot;: 2
   }
 ]</pre>
 
@@ -182,28 +178,28 @@
 
 
         <h3>Examples</h3>
-          <pre>POST /api/environments/3/activation_keys/
+          <pre class="prettyprint">POST /api/environments/3/activation_keys/
 {
   &quot;activation_key&quot;: {
+    &quot;name&quot;: &quot;activation_key_227e003&quot;,
     &quot;usage_limit&quot;: -1,
-    &quot;description&quot;: &quot;key description&quot;,
-    &quot;name&quot;: &quot;activation_key_227e003&quot;
+    &quot;description&quot;: &quot;key description&quot;
   }
 }
 200
 {
-  &quot;usage_limit&quot;: -1,
-  &quot;created_at&quot;: &quot;2012-08-10T13:43:00Z&quot;,
-  &quot;environment_id&quot;: 3,
-  &quot;pools&quot;: [],
-  &quot;organization_id&quot;: 2,
+  &quot;usage_count&quot;: 0,
+  &quot;user_id&quot;: 1,
+  &quot;name&quot;: &quot;activation_key_227e003&quot;,
   &quot;id&quot;: 1,
+  &quot;environment_id&quot;: 3,
+  &quot;usage_limit&quot;: -1,
+  &quot;description&quot;: &quot;key description&quot;,
+  &quot;pools&quot;: [],
+  &quot;created_at&quot;: &quot;2012-08-10T13:43:00Z&quot;,
   &quot;updated_at&quot;: &quot;2012-08-10T13:43:00Z&quot;,
   &quot;system_template_id&quot;: null,
-  &quot;usage_count&quot;: 0,
-  &quot;description&quot;: &quot;key description&quot;,
-  &quot;name&quot;: &quot;activation_key_227e003&quot;,
-  &quot;user_id&quot;: 1
+  &quot;organization_id&quot;: 2
 }</pre>
 
         <h3>Params</h3>
@@ -291,7 +287,7 @@
 
 
         <h3>Examples</h3>
-          <pre>PUT /api/activation_keys/2/
+          <pre class="prettyprint">PUT /api/activation_keys/2/
 {
   &quot;activation_key&quot;: {
     &quot;environment_id&quot;: 9
@@ -299,18 +295,18 @@
 }
 200
 {
-  &quot;usage_limit&quot;: -1,
-  &quot;created_at&quot;: &quot;2012-08-10T13:54:45Z&quot;,
-  &quot;environment_id&quot;: 9,
-  &quot;pools&quot;: [],
-  &quot;organization_id&quot;: 4,
+  &quot;usage_count&quot;: 0,
+  &quot;user_id&quot;: 1,
+  &quot;name&quot;: &quot;ak1_227e003&quot;,
   &quot;id&quot;: 2,
+  &quot;environment_id&quot;: 9,
+  &quot;usage_limit&quot;: -1,
+  &quot;description&quot;: null,
+  &quot;pools&quot;: [],
+  &quot;created_at&quot;: &quot;2012-08-10T13:54:45Z&quot;,
   &quot;updated_at&quot;: &quot;2012-08-10T13:54:45Z&quot;,
   &quot;system_template_id&quot;: null,
-  &quot;usage_count&quot;: 0,
-  &quot;description&quot;: null,
-  &quot;name&quot;: &quot;ak1_227e003&quot;,
-  &quot;user_id&quot;: 1
+  &quot;organization_id&quot;: 4
 }</pre>
 
     </div>
@@ -337,24 +333,24 @@
 
 
         <h3>Examples</h3>
-          <pre>POST /api/activation_keys/2/pools
+          <pre class="prettyprint">POST /api/activation_keys/2/pools
 {
   &quot;poolid&quot;: &quot;ff8080813910c3d3013910d0e0390063&quot;
 }
 200
 {
-  &quot;usage_limit&quot;: -1,
-  &quot;created_at&quot;: &quot;2012-08-10T13:54:45Z&quot;,
-  &quot;environment_id&quot;: 9,
-  &quot;pools&quot;: [],
-  &quot;organization_id&quot;: 4,
+  &quot;usage_count&quot;: 0,
+  &quot;user_id&quot;: 1,
+  &quot;name&quot;: &quot;ak1_227e003&quot;,
   &quot;id&quot;: 2,
+  &quot;environment_id&quot;: 9,
+  &quot;usage_limit&quot;: -1,
+  &quot;description&quot;: null,
+  &quot;pools&quot;: [],
+  &quot;created_at&quot;: &quot;2012-08-10T13:54:45Z&quot;,
   &quot;updated_at&quot;: &quot;2012-08-10T13:54:45Z&quot;,
   &quot;system_template_id&quot;: null,
-  &quot;usage_count&quot;: 0,
-  &quot;description&quot;: null,
-  &quot;name&quot;: &quot;ak1_227e003&quot;,
-  &quot;user_id&quot;: 1
+  &quot;organization_id&quot;: 4
 }</pre>
 
     </div>
@@ -405,7 +401,7 @@
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/activation_keys/1/
+          <pre class="prettyprint">DELETE /api/activation_keys/1/
 204</pre>
 
     </div>
@@ -460,19 +456,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

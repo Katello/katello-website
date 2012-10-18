@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/systems.html'>Systems</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>enabled_repos</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      PUT /api/systems/:id/enabled_repos<br>
+      <small>Update the information about enabled repositories</small>
+    </h1>
+  </div>
+
+<div>
+
+  <p>Used by katello-agent to keep the information about enabled repositories up to date.
+This information is then used for computing the errata available for the system.</p>
+
+
+    <h2>Examples</h2>
+      <pre class="prettyprint">PUT /api/systems/82b34fd1-8758-493d-8fa6-5b2b1bf8559d/enabled_repos
+{
+  &quot;enabled_repos&quot;: {
+    &quot;repos&quot;: [
+      {
+        &quot;repositoryid&quot;: &quot;zoo-enterprise&quot;
+      }
+    ]
+  }
+}
+200
+{
+  &quot;unknown_labels&quot;: [],
+  &quot;result&quot;: &quot;ok&quot;,
+  &quot;error_ids&quot;: [],
+  &quot;processed_ids&quot;: [
+    &quot;org_manifest_227e003-env_manifest_227e003-Zoo_Enterprise-Zoo_Enterprise_x86_64_6_2&quot;
+  ]
+}</pre>
+
+
+
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

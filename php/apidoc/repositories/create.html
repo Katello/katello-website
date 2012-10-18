@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,30 +41,30 @@
   
 
     <h2>Examples</h2>
-      <pre>POST /api/repositories/
+      <pre class="prettyprint">POST /api/repositories/
 {
+  &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
   &quot;product_id&quot;: &quot;1344606167242&quot;,
-  &quot;organization_id&quot;: &quot;org_227e003&quot;,
   &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5&quot;,
-  &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;
+  &quot;organization_id&quot;: &quot;org_227e003&quot;
 }
 200
 {
-  &quot;minor&quot;: null,
-  &quot;enabled&quot;: true,
-  &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:53Z&quot;,
-  &quot;gpg_key_id&quot;: null,
+  &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;,
+  &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
   &quot;id&quot;: 1,
   &quot;gpg_key_name&quot;: &quot;&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:54Z&quot;,
+  &quot;package_count&quot;: 0,
+  &quot;enabled&quot;: true,
   &quot;major&quot;: null,
   &quot;environment_product_id&quot;: 1,
-  &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
-  &quot;package_count&quot;: 0,
-  &quot;library_instance_id&quot;: null,
+  &quot;minor&quot;: null,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:53Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:54Z&quot;,
   &quot;last_sync&quot;: null,
-  &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;
+  &quot;library_instance_id&quot;: null,
+  &quot;gpg_key_id&quot;: null,
+  &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;
 }</pre>
 
 
@@ -170,19 +166,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

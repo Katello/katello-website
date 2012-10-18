@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,24 +40,24 @@
   
 
     <h2>Examples</h2>
-      <pre>POST /api/organizations/org_227e003/environments/3/changesets/
+      <pre class="prettyprint">POST /api/organizations/org_227e003/environments/3/changesets/
 {
   &quot;changeset&quot;: {
-    &quot;description&quot;: null,
-    &quot;name&quot;: &quot;changeset_227e003&quot;
+    &quot;name&quot;: &quot;changeset_227e003&quot;,
+    &quot;description&quot;: null
   }
 }
 200
 {
-  &quot;created_at&quot;: &quot;2012-08-10T13:43:17Z&quot;,
-  &quot;environment_id&quot;: 3,
+  &quot;name&quot;: &quot;changeset_227e003&quot;,
   &quot;id&quot;: 1,
+  &quot;promotion_date&quot;: null,
+  &quot;environment_id&quot;: 3,
+  &quot;description&quot;: null,
   &quot;state&quot;: &quot;new&quot;,
   &quot;task_status_id&quot;: null,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:43:17Z&quot;,
-  &quot;description&quot;: null,
-  &quot;name&quot;: &quot;changeset_227e003&quot;,
-  &quot;promotion_date&quot;: null
+  &quot;created_at&quot;: &quot;2012-08-10T13:43:17Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:43:17Z&quot;
 }</pre>
 
 
@@ -131,19 +127,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

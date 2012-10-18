@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,118 +40,118 @@
   
 
     <h2>Examples</h2>
-      <pre>GET /api/roles/6/permissions/
+      <pre class="prettyprint">GET /api/roles/6/permissions/
 200
 [
   {
     &quot;verbs&quot;: [
       {
-        &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-        &quot;id&quot;: 3,
-        &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
         &quot;verb&quot;: &quot;read_contents&quot;,
-        &quot;verb_id&quot;: &quot;3&quot;,
-        &quot;permission_id&quot;: &quot;14&quot;
+        &quot;id&quot;: 3,
+        &quot;permission_id&quot;: &quot;14&quot;,
+        &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+        &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+        &quot;verb_id&quot;: &quot;3&quot;
       }
     ],
+    &quot;all_tags&quot;: false,
+    &quot;name&quot;: &quot;env_perm_227e003_2&quot;,
+    &quot;id&quot;: 14,
     &quot;all_verbs&quot;: false,
+    &quot;resource_type_id&quot;: 4,
     &quot;role_id&quot;: 6,
+    &quot;description&quot;: null,
+    &quot;resource_type&quot;: {
+      &quot;name&quot;: &quot;environments&quot;,
+      &quot;id&quot;: 4,
+      &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+      &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;
+    },
+    &quot;created_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
     &quot;tags&quot;: [
       {
+        &quot;id&quot;: 1,
         &quot;formatted&quot;: {
-          &quot;display_name&quot;: &quot;Library&quot;,
-          &quot;name&quot;: 2
+          &quot;name&quot;: 2,
+          &quot;display_name&quot;: &quot;Library&quot;
         },
+        &quot;permission_id&quot;: 14,
         &quot;tag_id&quot;: 2,
         &quot;created_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
-        &quot;id&quot;: 1,
-        &quot;updated_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
-        &quot;permission_id&quot;: 14
+        &quot;updated_at&quot;: &quot;2012-08-10T13:50:10Z&quot;
       }
     ],
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
-    &quot;resource_type_id&quot;: 4,
-    &quot;organization_id&quot;: 2,
-    &quot;resource_type&quot;: {
-      &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-      &quot;id&quot;: 4,
-      &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-      &quot;name&quot;: &quot;environments&quot;
-    },
-    &quot;all_tags&quot;: false,
-    &quot;id&quot;: 14,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
-    &quot;description&quot;: null,
-    &quot;name&quot;: &quot;env_perm_227e003_2&quot;
+    &quot;organization_id&quot;: 2
   },
   {
     &quot;verbs&quot;: [
       {
-        &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-        &quot;id&quot;: 3,
-        &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
         &quot;verb&quot;: &quot;read_contents&quot;,
-        &quot;verb_id&quot;: &quot;3&quot;,
-        &quot;permission_id&quot;: &quot;13&quot;
+        &quot;id&quot;: 3,
+        &quot;permission_id&quot;: &quot;13&quot;,
+        &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+        &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+        &quot;verb_id&quot;: &quot;3&quot;
       }
     ],
-    &quot;all_verbs&quot;: false,
-    &quot;role_id&quot;: 6,
-    &quot;tags&quot;: [],
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:09Z&quot;,
-    &quot;resource_type_id&quot;: 4,
-    &quot;organization_id&quot;: null,
-    &quot;resource_type&quot;: {
-      &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-      &quot;id&quot;: 4,
-      &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-      &quot;name&quot;: &quot;environments&quot;
-    },
     &quot;all_tags&quot;: true,
+    &quot;name&quot;: &quot;env_perm_227e003&quot;,
     &quot;id&quot;: 13,
+    &quot;all_verbs&quot;: false,
+    &quot;resource_type_id&quot;: 4,
+    &quot;role_id&quot;: 6,
+    &quot;description&quot;: null,
+    &quot;resource_type&quot;: {
+      &quot;name&quot;: &quot;environments&quot;,
+      &quot;id&quot;: 4,
+      &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
+      &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;
+    },
+    &quot;created_at&quot;: &quot;2012-08-10T13:50:09Z&quot;,
     &quot;updated_at&quot;: &quot;2012-08-10T13:50:09Z&quot;,
-    &quot;description&quot;: null,
-    &quot;name&quot;: &quot;env_perm_227e003&quot;
+    &quot;tags&quot;: [],
+    &quot;organization_id&quot;: null
   },
   {
     &quot;verbs&quot;: [],
-    &quot;all_verbs&quot;: true,
-    &quot;role_id&quot;: 6,
-    &quot;tags&quot;: [],
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
-    &quot;resource_type_id&quot;: 1,
-    &quot;organization_id&quot;: 2,
-    &quot;resource_type&quot;: {
-      &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-      &quot;id&quot;: 1,
-      &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-      &quot;name&quot;: &quot;all&quot;
-    },
     &quot;all_tags&quot;: true,
+    &quot;name&quot;: &quot;all_perm_227e003_2&quot;,
     &quot;id&quot;: 12,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+    &quot;all_verbs&quot;: true,
+    &quot;resource_type_id&quot;: 1,
+    &quot;role_id&quot;: 6,
     &quot;description&quot;: null,
-    &quot;name&quot;: &quot;all_perm_227e003_2&quot;
+    &quot;resource_type&quot;: {
+      &quot;name&quot;: &quot;all&quot;,
+      &quot;id&quot;: 1,
+      &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
+      &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;
+    },
+    &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+    &quot;tags&quot;: [],
+    &quot;organization_id&quot;: 2
   },
   {
     &quot;verbs&quot;: [],
-    &quot;all_verbs&quot;: true,
-    &quot;role_id&quot;: 6,
-    &quot;tags&quot;: [],
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
-    &quot;resource_type_id&quot;: 1,
-    &quot;organization_id&quot;: null,
-    &quot;resource_type&quot;: {
-      &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-      &quot;id&quot;: 1,
-      &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-      &quot;name&quot;: &quot;all&quot;
-    },
     &quot;all_tags&quot;: true,
+    &quot;name&quot;: &quot;all_perm_227e003&quot;,
     &quot;id&quot;: 11,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+    &quot;all_verbs&quot;: true,
+    &quot;resource_type_id&quot;: 1,
+    &quot;role_id&quot;: 6,
     &quot;description&quot;: null,
-    &quot;name&quot;: &quot;all_perm_227e003&quot;
+    &quot;resource_type&quot;: {
+      &quot;name&quot;: &quot;all&quot;,
+      &quot;id&quot;: 1,
+      &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
+      &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;
+    },
+    &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+    &quot;tags&quot;: [],
+    &quot;organization_id&quot;: null
   }
 ]</pre>
 
@@ -244,19 +240,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

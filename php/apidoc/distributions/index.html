@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,28 +40,28 @@
   
 
     <h2>Examples</h2>
-      <pre>GET /api/repositories/2/distributions
+      <pre class="prettyprint">GET /api/repositories/2/distributions
 200
 [
   {
+    &quot;version&quot;: &quot;16&quot;,
     &quot;family&quot;: &quot;Test Family&quot;,
-    &quot;arch&quot;: &quot;x86_64&quot;,
     &quot;files&quot;: [
       &quot;/var/lib/pulp/distributions/ks-Test Family-TestVariant-16-x86_64/test2.img&quot;,
       &quot;/var/lib/pulp/distributions/ks-Test Family-TestVariant-16-x86_64/test1.img&quot;,
       &quot;/var/lib/pulp/distributions/ks-Test Family-TestVariant-16-x86_64/.treeinfo&quot;,
       &quot;/var/lib/pulp/distributions/ks-Test Family-TestVariant-16-x86_64/empty.iso&quot;
     ],
-    &quot;version&quot;: &quot;16&quot;,
+    &quot;id&quot;: &quot;ks-Test Family-TestVariant-16-x86_64&quot;,
+    &quot;arch&quot;: &quot;x86_64&quot;,
     &quot;url&quot;: [
       &quot;http://katello.example.com/pulp/ks/org_227e003/Library/custom/fewups_product_227e003/repo_227e003/&quot;,
       &quot;http://katello.example.com/pulp/ks/org_227e003/Library/custom/fewups_product_227e003/fewups_product_227e003_fakerepos_zoo5/&quot;,
       &quot;http://katello.example.com/pulp/ks/org_227e003/env_227e003/custom/fewups_product_227e003/fewups_product_227e003_fakerepos_zoo5/&quot;,
       &quot;http://katello.example.com/pulp/ks/org_227e003/env_227e003/custom/fewups_product_227e003/repo_227e003/&quot;
     ],
-    &quot;id&quot;: &quot;ks-Test Family-TestVariant-16-x86_64&quot;,
-    &quot;variant&quot;: &quot;TestVariant&quot;,
-    &quot;description&quot;: &quot;ks-Test Family-TestVariant-16-x86_64&quot;
+    &quot;description&quot;: &quot;ks-Test Family-TestVariant-16-x86_64&quot;,
+    &quot;variant&quot;: &quot;TestVariant&quot;
   }
 ]</pre>
 
@@ -74,19 +70,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

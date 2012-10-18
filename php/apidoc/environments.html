@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -93,20 +89,20 @@ no further branching of a chain is enabled.</p>
 
 
         <h3>Examples</h3>
-          <pre>GET /api/organizations/org_227e003/environments/?name=Library
+          <pre class="prettyprint">GET /api/organizations/org_227e003/environments/?name=Library
 200
 [
   {
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
-    &quot;prior&quot;: null,
-    &quot;library&quot;: true,
-    &quot;organization_id&quot;: 2,
     &quot;prior_id&quot;: null,
+    &quot;library&quot;: true,
+    &quot;name&quot;: &quot;Library&quot;,
     &quot;id&quot;: 2,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
-    &quot;organization&quot;: &quot;org_227e003&quot;,
     &quot;description&quot;: null,
-    &quot;name&quot;: &quot;Library&quot;
+    &quot;prior&quot;: null,
+    &quot;created_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
+    &quot;organization_id&quot;: 2,
+    &quot;organization&quot;: &quot;org_227e003&quot;
   }
 ]</pre>
 
@@ -267,15 +263,6 @@ no further branching of a chain is enabled.</p>
           </a><br>
           <small>Create an environment in an organization</small>
         </h2>
-        <h2>
-          <a href='#description-create'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            POST /api/organizations/:organization_id/environments
-          </a><br>
-          <small>Create an environment in an organization</small>
-        </h2>
     </div>
 
 
@@ -285,25 +272,25 @@ no further branching of a chain is enabled.</p>
 
 
         <h3>Examples</h3>
-          <pre>POST /api/organizations/org_227e003/environments/
+          <pre class="prettyprint">POST /api/organizations/org_227e003/environments/
 {
   &quot;environment&quot;: {
-    &quot;prior&quot;: 2,
-    &quot;name&quot;: &quot;env 227e003&quot;
+    &quot;name&quot;: &quot;env 227e003&quot;,
+    &quot;prior&quot;: 2
   }
 }
 200
 {
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
-  &quot;prior&quot;: &quot;Library&quot;,
-  &quot;library&quot;: false,
-  &quot;organization_id&quot;: 2,
   &quot;prior_id&quot;: 2,
+  &quot;library&quot;: false,
+  &quot;name&quot;: &quot;env 227e003&quot;,
   &quot;id&quot;: 3,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
-  &quot;organization&quot;: &quot;org_227e003&quot;,
   &quot;description&quot;: null,
-  &quot;name&quot;: &quot;env 227e003&quot;
+  &quot;prior&quot;: &quot;Library&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;organization&quot;: &quot;org_227e003&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -374,7 +361,7 @@ no further branching of a chain is enabled.</p>
     </td>
     <td>
       <p>identifier of an environment that is prior the new environment in the chain, it has to be
-either library or an envrionment at the end of the chain</p>
+either library or an environment at the end of the chain</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -420,25 +407,25 @@ either library or an envrionment at the end of the chain</p>
 
 
         <h3>Examples</h3>
-          <pre>PUT /api/organizations/org_227e003/environments/5
+          <pre class="prettyprint">PUT /api/organizations/org_227e003/environments/5
 {
   &quot;environment&quot;: {
-    &quot;description&quot;: &quot;Test environment&quot;,
-    &quot;name&quot;: &quot;tstenv_227e003&quot;
+    &quot;name&quot;: &quot;tstenv_227e003&quot;,
+    &quot;description&quot;: &quot;Test environment&quot;
   }
 }
 200
 {
-  &quot;created_at&quot;: &quot;2012-08-10T13:45:23Z&quot;,
-  &quot;prior&quot;: &quot;Library&quot;,
-  &quot;library&quot;: false,
-  &quot;organization_id&quot;: 2,
   &quot;prior_id&quot;: 2,
+  &quot;library&quot;: false,
+  &quot;name&quot;: &quot;tstenv_227e003&quot;,
   &quot;id&quot;: 5,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:45:24Z&quot;,
-  &quot;organization&quot;: &quot;org_227e003&quot;,
   &quot;description&quot;: &quot;Test environment&quot;,
-  &quot;name&quot;: &quot;tstenv_227e003&quot;
+  &quot;prior&quot;: &quot;Library&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:45:23Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:45:24Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;organization&quot;: &quot;org_227e003&quot;
 }</pre>
 
     </div>
@@ -474,7 +461,7 @@ either library or an envrionment at the end of the chain</p>
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/organizations/org_227e003/environments/5
+          <pre class="prettyprint">DELETE /api/organizations/org_227e003/environments/5
 200
 Deleted environment '5'</pre>
 
@@ -548,42 +535,42 @@ Deleted environment '5'</pre>
 
 
         <h3>Examples</h3>
-          <pre>GET /api/organizations/org_227e003/environments/2/repositories?include_disabled=False
+          <pre class="prettyprint">GET /api/organizations/org_227e003/environments/2/repositories?include_disabled=False
 200
 [
   {
-    &quot;minor&quot;: null,
-    &quot;enabled&quot;: true,
-    &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:53Z&quot;,
-    &quot;gpg_key_id&quot;: null,
+    &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;,
+    &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
     &quot;id&quot;: 1,
     &quot;gpg_key_name&quot;: &quot;&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:42:54Z&quot;,
+    &quot;package_count&quot;: 0,
+    &quot;enabled&quot;: true,
     &quot;major&quot;: null,
     &quot;environment_product_id&quot;: 1,
-    &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
-    &quot;package_count&quot;: 0,
-    &quot;library_instance_id&quot;: null,
+    &quot;minor&quot;: null,
+    &quot;created_at&quot;: &quot;2012-08-10T13:42:53Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:42:54Z&quot;,
     &quot;last_sync&quot;: null,
-    &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;
+    &quot;library_instance_id&quot;: null,
+    &quot;gpg_key_id&quot;: null,
+    &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;
   },
   {
-    &quot;minor&quot;: null,
-    &quot;enabled&quot;: true,
-    &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:57Z&quot;,
-    &quot;gpg_key_id&quot;: null,
+    &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_repo_227e003&quot;,
+    &quot;name&quot;: &quot;repo_227e003&quot;,
     &quot;id&quot;: 2,
     &quot;gpg_key_name&quot;: &quot;&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+    &quot;package_count&quot;: 0,
+    &quot;enabled&quot;: true,
     &quot;major&quot;: null,
     &quot;environment_product_id&quot;: 1,
-    &quot;name&quot;: &quot;repo_227e003&quot;,
-    &quot;package_count&quot;: 0,
-    &quot;library_instance_id&quot;: null,
+    &quot;minor&quot;: null,
+    &quot;created_at&quot;: &quot;2012-08-10T13:42:57Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
     &quot;last_sync&quot;: null,
-    &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_repo_227e003&quot;
+    &quot;library_instance_id&quot;: null,
+    &quot;gpg_key_id&quot;: null,
+    &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;
   }
 ]</pre>
 
@@ -707,19 +694,16 @@ Deleted environment '5'</pre>
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/sync_plans.html'>Sync plans</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>index</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/organizations/:organization_id/sync_plans<br>
+      <small>List sync plans</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre class="prettyprint">GET /api/organizations/org_227e003/sync_plans/
+200
+[
+  {
+    &quot;sync_date&quot;: &quot;2012-08-11T07:00:00Z&quot;,
+    &quot;name&quot;: &quot;plan_1&quot;,
+    &quot;id&quot;: 1,
+    &quot;interval&quot;: &quot;weekly&quot;,
+    &quot;description&quot;: &quot;plan 1 desc.&quot;,
+    &quot;created_at&quot;: &quot;2012-08-10T13:56:21Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:56:21Z&quot;,
+    &quot;organization_id&quot;: 2
+  },
+  {
+    &quot;sync_date&quot;: &quot;2012-08-11T07:00:00Z&quot;,
+    &quot;name&quot;: &quot;plan_2&quot;,
+    &quot;id&quot;: 2,
+    &quot;interval&quot;: &quot;none&quot;,
+    &quot;description&quot;: &quot;plan 2 desc.&quot;,
+    &quot;created_at&quot;: &quot;2012-08-10T13:56:21Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:56:21Z&quot;,
+    &quot;organization_id&quot;: 2
+  }
+]</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter by name</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sync_date </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter by sync date</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>interval </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter by interval</p>
+
+        <br>
+        Value: Must be one of: none, hourly, daily, weekly.
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

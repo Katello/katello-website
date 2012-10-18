@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
+  <li class='active'>Sync</li>
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Sync<br>
+    <small></small>
+  </h1>
+</div>
+
+  <div><p>methods for handeling repositories synchronisation. Repositories can be selecteted
+individualy by id, by product or by provider </p>
+</div>
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/providers/:provider_id/sync
+          </a><br>
+          <small>Get status of repo synchronisation for given provider</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/products/:product_id/sync
+          </a><br>
+          <small>Get status of repo synchronisation for given product</small>
+        </h2>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/repositories/:repository_id/sync
+          </a><br>
+          <small>Get status of synchronisation for given repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/repositories/2/sync
+200
+{
+  &quot;result&quot;: true,
+  &quot;task_owner_type&quot;: null,
+  &quot;user_id&quot;: 1,
+  &quot;parameters&quot;: {
+    &quot;options&quot;: {}
+  },
+  &quot;id&quot;: 3,
+  &quot;uuid&quot;: &quot;4ff91fc7-e2f1-11e1-a7ee-525400b68f90&quot;,
+  &quot;start_time&quot;: &quot;2012-08-10T13:43:05Z&quot;,
+  &quot;task_owner_id&quot;: null,
+  &quot;state&quot;: &quot;finished&quot;,
+  &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
+  &quot;finish_time&quot;: &quot;2012-08-10T13:43:16Z&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:43:05Z&quot;,
+  &quot;pending?&quot;: false,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:45:06Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;progress&quot;: {
+    &quot;total_count&quot;: 8,
+    &quot;total_size&quot;: 17872,
+    &quot;error_details&quot;: [],
+    &quot;items_left&quot;: 0,
+    &quot;size_left&quot;: 0,
+    &quot;step&quot;: &quot;Running Createrepo&quot;
+  }
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>product identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>provider_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>provider identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>repository identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/providers/:provider_id/sync
+          </a><br>
+          <small>Synchronize all provider's repositories</small>
+        </h2>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /apiorganizations/:organization_id/products/:product_id/sync
+          </a><br>
+          <small>Synchronise all repositories for given product</small>
+        </h2>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/repositories/:repository_id/sync
+          </a><br>
+          <small>Synchronise repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">POST /api/organizations/org_227e003/products/1344606167242/sync
+202
+[
+  {
+    &quot;result&quot;: {
+      &quot;errors&quot;: [
+        null,
+        null
+      ]
+    },
+    &quot;task_owner_type&quot;: null,
+    &quot;user_id&quot;: 1,
+    &quot;parameters&quot;: {
+      &quot;options&quot;: {}
+    },
+    &quot;id&quot;: 2,
+    &quot;uuid&quot;: &quot;4fd84a3a-e2f1-11e1-a717-525400b68f90&quot;,
+    &quot;start_time&quot;: null,
+    &quot;task_owner_id&quot;: null,
+    &quot;state&quot;: &quot;waiting&quot;,
+    &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
+    &quot;finish_time&quot;: null,
+    &quot;created_at&quot;: &quot;2012-08-10T13:43:05Z&quot;,
+    &quot;pending?&quot;: true,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:43:05Z&quot;,
+    &quot;organization_id&quot;: 2,
+    &quot;progress&quot;: {
+      &quot;total_count&quot;: 0,
+      &quot;total_size&quot;: 0,
+      &quot;items_left&quot;: 0,
+      &quot;size_left&quot;: 0
+    }
+  },
+  {
+    &quot;result&quot;: {
+      &quot;errors&quot;: [
+        null,
+        null
+      ]
+    },
+    &quot;task_owner_type&quot;: null,
+    &quot;user_id&quot;: 1,
+    &quot;parameters&quot;: {
+      &quot;options&quot;: {}
+    },
+    &quot;id&quot;: 3,
+    &quot;uuid&quot;: &quot;4ff91fc7-e2f1-11e1-a7ee-525400b68f90&quot;,
+    &quot;start_time&quot;: null,
+    &quot;task_owner_id&quot;: null,
+    &quot;state&quot;: &quot;waiting&quot;,
+    &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
+    &quot;finish_time&quot;: null,
+    &quot;created_at&quot;: &quot;2012-08-10T13:43:05Z&quot;,
+    &quot;pending?&quot;: true,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:43:05Z&quot;,
+    &quot;organization_id&quot;: 2,
+    &quot;progress&quot;: {
+      &quot;total_count&quot;: 0,
+      &quot;total_size&quot;: 0,
+      &quot;items_left&quot;: 0,
+      &quot;size_left&quot;: 0
+    }
+  }
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>product identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>provider_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>provider identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>repository identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/sync/cancel.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-cancel'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /api/providers/:provider_id/sync
+          </a><br>
+          <small>Cancel running synchronisation for given provider</small>
+        </h2>
+        <h2>
+          <a href='#description-cancel'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /api/organizations/:organization_id/products/:product_id/sync
+          </a><br>
+          <small>Cancel running synchronisations for given product</small>
+        </h2>
+        <h2>
+          <a href='#description-cancel'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /api/repositories/:repository_id/sync
+          </a><br>
+          <small>Cancel running synchronisation</small>
+        </h2>
+    </div>
+
+
+    <div id='description-cancel' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>product identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>provider_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>provider identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>repository identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

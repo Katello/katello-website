@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +40,7 @@
   
 
     <h2>Examples</h2>
-      <pre>PUT /api/repositories/6/
+      <pre class="prettyprint">PUT /api/repositories/6/
 {
   &quot;repository&quot;: {
     &quot;gpg_key_name&quot;: &quot;Dummy-Package-Generator&quot;
@@ -52,61 +48,61 @@
 }
 200
 {
-  &quot;minor&quot;: null,
-  &quot;comps&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/comps/&quot;,
-  &quot;arch&quot;: &quot;noarch&quot;,
-  &quot;distribution&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/distribution/&quot;,
-  &quot;distributionid&quot;: [],
-  &quot;enabled&quot;: true,
-  &quot;pulp_id&quot;: &quot;org_227e003-GPG-product-227e003-GPG-repo-2-227e003&quot;,
-  &quot;publish&quot;: true,
-  &quot;created_at&quot;: &quot;2012-08-10T13:46:03Z&quot;,
-  &quot;packagegroups&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packagegroups/&quot;,
-  &quot;source&quot;: {
-    &quot;type&quot;: &quot;remote&quot;,
-    &quot;url&quot;: &quot;http://inecas.fedorapeople.org/fakerepos/zoo&quot;
-  },
-  &quot;packagegroupcategories&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packagegroupcategories/&quot;,
-  &quot;notes&quot;: {},
-  &quot;checksum_type&quot;: &quot;sha256&quot;,
-  &quot;files&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/files/&quot;,
-  &quot;errata&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/errata/&quot;,
-  &quot;sync_schedule&quot;: null,
-  &quot;uri_ref&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/&quot;,
+  &quot;feed_ca&quot;: null,
   &quot;relative_path&quot;: &quot;org_227e003/Library/custom/GPG-product-227e003/GPG-repo-2-227e003&quot;,
-  &quot;files_count&quot;: 80,
-  &quot;filters&quot;: [],
-  &quot;content_types&quot;: &quot;yum&quot;,
-  &quot;gpg_key_id&quot;: 1,
-  &quot;uri&quot;: &quot;https://katello.example.com/pulp/repos/org_227e003/Library/custom/GPG-product-227e003/GPG-repo-2-227e003/&quot;,
   &quot;groupid&quot;: [
     &quot;product:1344606356883&quot;,
     &quot;env:2&quot;,
     &quot;org:2&quot;,
     &quot;content:1344606363895&quot;
   ],
+  &quot;packages&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packages/&quot;,
+  &quot;sync_state&quot;: &quot;not_synced&quot;,
+  &quot;preserve_metadata&quot;: false,
+  &quot;packagegroupcategories&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packagegroupcategories/&quot;,
   &quot;feed_cert&quot;: null,
-  &quot;_id&quot;: &quot;org_227e003-GPG-product-227e003-GPG-repo-2-227e003&quot;,
+  &quot;consumer_cert&quot;: null,
+  &quot;cp_label&quot;: &quot;org_227e003_GPG-product-227e003_GPG-repo-2-227e003&quot;,
+  &quot;uri_ref&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/&quot;,
+  &quot;consumer_ca&quot;: null,
+  &quot;keys&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/keys/&quot;,
+  &quot;name&quot;: &quot;GPG-repo-2-227e003&quot;,
+  &quot;files&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/files/&quot;,
   &quot;id&quot;: 6,
   &quot;gpg_key_name&quot;: &quot;Dummy-Package-Generator&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:46:07Z&quot;,
+  &quot;packagegroups&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packagegroups/&quot;,
+  &quot;checksum_type&quot;: &quot;sha256&quot;,
+  &quot;filters&quot;: [],
+  &quot;arch&quot;: &quot;noarch&quot;,
+  &quot;next_scheduled_time&quot;: null,
+  &quot;uri&quot;: &quot;https://katello.example.com/pulp/repos/org_227e003/Library/custom/GPG-product-227e003/GPG-repo-2-227e003/&quot;,
+  &quot;package_count&quot;: 0,
+  &quot;notes&quot;: {},
+  &quot;comps&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/comps/&quot;,
+  &quot;source&quot;: {
+    &quot;url&quot;: &quot;http://inecas.fedorapeople.org/fakerepos/zoo&quot;,
+    &quot;type&quot;: &quot;remote&quot;
+  },
+  &quot;enabled&quot;: true,
+  &quot;_id&quot;: &quot;org_227e003-GPG-product-227e003-GPG-repo-2-227e003&quot;,
   &quot;major&quot;: null,
   &quot;environment_product_id&quot;: 3,
-  &quot;consumer_ca&quot;: null,
-  &quot;packages&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packages/&quot;,
-  &quot;sync_options&quot;: {},
-  &quot;clone_ids&quot;: [],
-  &quot;feed_ca&quot;: null,
-  &quot;next_scheduled_time&quot;: null,
-  &quot;name&quot;: &quot;GPG-repo-2-227e003&quot;,
-  &quot;preserve_metadata&quot;: false,
-  &quot;package_count&quot;: 0,
-  &quot;consumer_cert&quot;: null,
-  &quot;library_instance_id&quot;: null,
+  &quot;minor&quot;: null,
+  &quot;files_count&quot;: 80,
+  &quot;errata&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/errata/&quot;,
+  &quot;sync_schedule&quot;: null,
+  &quot;created_at&quot;: &quot;2012-08-10T13:46:03Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:46:07Z&quot;,
   &quot;last_sync&quot;: null,
-  &quot;cp_label&quot;: &quot;org_227e003_GPG-product-227e003_GPG-repo-2-227e003&quot;,
-  &quot;keys&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/keys/&quot;,
-  &quot;sync_state&quot;: &quot;not_synced&quot;
+  &quot;distribution&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/distribution/&quot;,
+  &quot;library_instance_id&quot;: null,
+  &quot;sync_options&quot;: {},
+  &quot;publish&quot;: true,
+  &quot;content_types&quot;: &quot;yum&quot;,
+  &quot;gpg_key_id&quot;: 1,
+  &quot;distributionid&quot;: [],
+  &quot;pulp_id&quot;: &quot;org_227e003-GPG-product-227e003-GPG-repo-2-227e003&quot;,
+  &quot;clone_ids&quot;: []
 }</pre>
 
 
@@ -176,19 +172,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

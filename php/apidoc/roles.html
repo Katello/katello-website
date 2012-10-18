@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -68,15 +64,15 @@
 
 
         <h3>Examples</h3>
-          <pre>GET /api/roles/?name=tmp_permission_role_227e003
+          <pre class="prettyprint">GET /api/roles/?name=tmp_permission_role_227e003
 200
 [
   {
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
-    &quot;id&quot;: 6,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
-    &quot;description&quot;: null,
     &quot;name&quot;: &quot;tmp_permission_role_227e003&quot;,
+    &quot;id&quot;: 6,
+    &quot;description&quot;: null,
+    &quot;created_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
     &quot;locked&quot;: false
   }
 ]</pre>
@@ -173,20 +169,20 @@
 
 
         <h3>Examples</h3>
-          <pre>POST /api/roles/
+          <pre class="prettyprint">POST /api/roles/
 {
   &quot;role&quot;: {
-    &quot;description&quot;: null,
-    &quot;name&quot;: &quot;tmp_permission_role_227e003&quot;
+    &quot;name&quot;: &quot;tmp_permission_role_227e003&quot;,
+    &quot;description&quot;: null
   }
 }
 200
 {
-  &quot;created_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
-  &quot;id&quot;: 6,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
-  &quot;description&quot;: null,
   &quot;name&quot;: &quot;tmp_permission_role_227e003&quot;,
+  &quot;id&quot;: 6,
+  &quot;description&quot;: null,
+  &quot;created_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
   &quot;locked&quot;: false
 }</pre>
 
@@ -283,20 +279,20 @@
 
 
         <h3>Examples</h3>
-          <pre>PUT /api/roles/7
+          <pre class="prettyprint">PUT /api/roles/7
 {
   &quot;role&quot;: {
-    &quot;description&quot;: &quot;new description of the role&quot;,
-    &quot;name&quot;: &quot;role_&quot;
+    &quot;name&quot;: &quot;role_&quot;,
+    &quot;description&quot;: &quot;new description of the role&quot;
   }
 }
 200
 {
-  &quot;created_at&quot;: &quot;2012-08-10T13:58:00Z&quot;,
-  &quot;id&quot;: 7,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:58:02Z&quot;,
-  &quot;description&quot;: &quot;new description of the role&quot;,
   &quot;name&quot;: &quot;role_&quot;,
+  &quot;id&quot;: 7,
+  &quot;description&quot;: &quot;new description of the role&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:58:00Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:58:02Z&quot;,
   &quot;locked&quot;: false
 }</pre>
 
@@ -393,7 +389,7 @@
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/roles/7
+          <pre class="prettyprint">DELETE /api/roles/7
 200
 Deleted role '7'</pre>
 
@@ -454,19 +450,16 @@ Deleted role '7'</pre>
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

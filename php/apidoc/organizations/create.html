@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,21 +40,21 @@
   
 
     <h2>Examples</h2>
-      <pre>POST /api/organizations/
+      <pre class="prettyprint">POST /api/organizations/
 {
-  &quot;description&quot;: &quot;org description&quot;,
-  &quot;name&quot;: &quot;org_227e003&quot;
+  &quot;name&quot;: &quot;org_227e003&quot;,
+  &quot;description&quot;: &quot;org description&quot;
 }
 200
 {
-  &quot;cp_key&quot;: &quot;org_227e003&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
-  &quot;task_id&quot;: null,
-  &quot;service_levels&quot;: [],
+  &quot;name&quot;: &quot;org_227e003&quot;,
   &quot;id&quot;: 2,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
   &quot;description&quot;: &quot;org description&quot;,
-  &quot;name&quot;: &quot;org_227e003&quot;
+  &quot;task_id&quot;: null,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
+  &quot;service_levels&quot;: [],
+  &quot;label&quot;: &quot;org_227e003&quot;
 }</pre>
 
 
@@ -91,6 +87,23 @@
   
   <tr style='background-color:rgb(255,255,255);'>
     <td>
+      <strong>label </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>ASCII label to identify the organization</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
       <strong>description </strong><br>
       <small>
         optional
@@ -112,19 +125,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

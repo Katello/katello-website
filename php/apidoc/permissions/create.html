@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,35 +40,35 @@
   
 
     <h2>Examples</h2>
-      <pre>POST /api/roles/6/permissions/
+      <pre class="prettyprint">POST /api/roles/6/permissions/
 {
   &quot;verbs&quot;: [],
-  &quot;tags&quot;: [],
-  &quot;type&quot;: &quot;all&quot;,
-  &quot;organization_id&quot;: null,
+  &quot;name&quot;: &quot;all_perm_227e003&quot;,
   &quot;description&quot;: null,
-  &quot;name&quot;: &quot;all_perm_227e003&quot;
+  &quot;type&quot;: &quot;all&quot;,
+  &quot;tags&quot;: [],
+  &quot;organization_id&quot;: null
 }
 200
 {
   &quot;verbs&quot;: [],
-  &quot;all_verbs&quot;: true,
-  &quot;role_id&quot;: 6,
-  &quot;tags&quot;: [],
-  &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
-  &quot;resource_type_id&quot;: 1,
-  &quot;organization_id&quot;: null,
-  &quot;resource_type&quot;: {
-    &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-    &quot;id&quot;: 1,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-    &quot;name&quot;: &quot;all&quot;
-  },
   &quot;all_tags&quot;: true,
+  &quot;name&quot;: &quot;all_perm_227e003&quot;,
   &quot;id&quot;: 11,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+  &quot;all_verbs&quot;: true,
+  &quot;resource_type_id&quot;: 1,
+  &quot;role_id&quot;: 6,
   &quot;description&quot;: null,
-  &quot;name&quot;: &quot;all_perm_227e003&quot;
+  &quot;resource_type&quot;: {
+    &quot;name&quot;: &quot;all&quot;,
+    &quot;id&quot;: 1,
+    &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;
+  },
+  &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
+  &quot;tags&quot;: [],
+  &quot;organization_id&quot;: null
 }</pre>
 
 
@@ -185,25 +181,39 @@
   </tr>
 
   
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>all_tags </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>True if the permission should use all tags</p>
+
+        <br>
+        Value: boolean
+    </td>
+  </tr>
+
+  
 
       </tbody>
     </table>
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

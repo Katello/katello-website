@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -59,23 +55,23 @@
 
 
         <h3>Examples</h3>
-          <pre>GET /api/organizations/org_227e003/uebercert?regenerate=None
+          <pre class="prettyprint">GET /api/organizations/org_227e003/uebercert?regenerate=None
 200
 {
   &quot;serial&quot;: {
     &quot;serial&quot;: 2140559390559252253,
-    &quot;expiration&quot;: &quot;2112-08-10T13:42:41.059+0000&quot;,
-    &quot;updated&quot;: &quot;2012-08-10T13:42:43.332+0000&quot;,
     &quot;id&quot;: 2140559390559252253,
-    &quot;created&quot;: &quot;2012-08-10T13:42:43.332+0000&quot;,
     &quot;revoked&quot;: false,
-    &quot;collected&quot;: false
+    &quot;collected&quot;: false,
+    &quot;updated&quot;: &quot;2012-08-10T13:42:43.332+0000&quot;,
+    &quot;created&quot;: &quot;2012-08-10T13:42:43.332+0000&quot;,
+    &quot;expiration&quot;: &quot;2112-08-10T13:42:41.059+0000&quot;
   },
+  &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\nMIIG0DCCBbigAwIBAgIIHbTLbK7pLx0wDQYJKoZIhvcNAQEFBQAwfTELMAkGA1UE\nBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo\nMRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTEeMBwGA1UEAxMV\ncmhlbDYzLWthdDguaW5lY2FzLmN6MCAXDTEyMDgxMDEzNDI0MVoYDzIxMTIwODEw\nMTM0MjQxWjArMSkwJwYDVQQDEyBmZjgwODA4MTM5MTBjM2QzMDEzOTEwYzVjYjY2\nMDAwOTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANOH587u34QCl1lS\n4YqxgKf/TUOK9YKZN+HSZI3cs/vH7jqkXd2dH26GIio4euYSOwlGs2DNHVN7GTKd\nhXimmleLpKOr5P2I+L4AzUdh7CwdSqiWZGE7a3kKqDVi6shhVKYObbJ69cOlJbWt\nMbstCEujvspirnfsmRWjkjoUd7wfmDaGQmWT8+W8TXQ+kIln8stUNczh645n4VQd\nw46QSkIBswY3dr99d10l3Wv++neSgGfP6y84jusMMac0Ri0GI7L8DFzXImaN/l/s\nqOIbWrKBBmx9+x82Z7mzFomo4yOFwi4Ik/u2mKoeqbcEqHsdVElEhr/rcn2RaSQW\nkpmBhq0CAwEAAaOCA6IwggOeMBEGCWCGSAGG+EIBAQQEAwIFoDALBgNVHQ8EBAMC\nBLAwgbAGA1UdIwSBqDCBpYAUyWJNwXtzHBXWcAAxLQXys9f04oShgYGkfzB9MQsw\nCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcTB1Jh\nbGVpZ2gxEDAOBgNVBAoTB1JlZCBIYXQxETAPBgNVBAsTCENsb3VkIEJVMR4wHAYD\nVQQDExVyaGVsNjMta2F0OC5pbmVjYXMuY3qCCQCySNeEniLL0jAdBgNVHQ4EFgQU\nW/VVEqoWrRZFpSzf2yF8YQYdUaYwEwYDVR0lBAwwCgYIKwYBBQUHAwIwLwYQKwYB\nBAGSCAkBp5GGl5EYAQQbDBlvcmdfMjI3ZTAwM191ZWJlcl9wcm9kdWN0MBYGECsG\nAQQBkggJAaeRhpeRGAMEAgwAMBYGECsGAQQBkggJAaeRhpeRGAIEAgwAMBkGECsG\nAQQBkggJAqeRhpeRHwEEBQwDeXVtMCQGESsGAQQBkggJAqeRhpeRHwEBBA8MDXVl\nYmVyX2NvbnRlbnQwMgYRKwYBBAGSCAkCp5GGl5EfAQIEHQwbMTM0NDYwNjE2MTA0\nOF91ZWJlcl9jb250ZW50MB0GESsGAQQBkggJAqeRhpeRHwEFBAgMBkN1c3RvbTAj\nBhErBgEEAZIICQKnkYaXkR8BBgQODAwvb3JnXzIyN2UwMDMwFwYRKwYBBAGSCAkC\np5GGl5EfAQcEAgwAMBgGESsGAQQBkggJAqeRhpeRHwEIBAMMATEwKQYKKwYBBAGS\nCAkEAQQbDBlvcmdfMjI3ZTAwM191ZWJlcl9wcm9kdWN0MDAGCisGAQQBkggJBAIE\nIgwgZmY4MDgwODEzOTEwYzNkMzAxMzkxMGM1YzhiMDAwMDUwHQYKKwYBBAGSCAkE\nAwQPDA0xMzQ0NjA2MTYxMDQ4MBEGCisGAQQBkggJBAUEAwwBMTAkBgorBgEEAZII\nCQQGBBYMFDIwMTItMDgtMTBUMTM6NDI6NDFaMCQGCisGAQQBkggJBAcEFgwUMjEx\nMi0wOC0xMFQxMzo0Mjo0MVowEQYKKwYBBAGSCAkEDAQDDAEwMBEGCisGAQQBkggJ\nBA4EAwwBMDARBgorBgEEAZIICQQLBAMMATEwNAYKKwYBBAGSCAkFAQQmDCQ0M2Iw\nNTRiMi0yZGQ1LTQyNzAtODU4Zi03NTM5NDAwZjM5YTIwDQYJKoZIhvcNAQEFBQAD\nggEBABRG4zWXgy7NVXoMtsYOtqvnYX7XzzMSSrljGqa3DRpWsTLYTNfkyRgODlXP\nqAGN8z0ITgbgpUyqX5Ehvfo7j5gly0CdPZu54gPS3MBVxxSbrTTQ0vl91zPusA9W\n9/ZzIREdcpDaTJzPL3o2mBw9IrwXHtjDotZjXQj8Yw5cjiaIYIDb9PG9EgDaTHTr\nsBMJSg+Z7EMdxxMFNZY8AJrxL2c+Cis8eP0IXvUtLgYwlQ1X1hqovrQZbJK1YIFc\nem9FfbssaBnY1DnW1j8JZAUoZ6Dc0VAHZdHIXjJeahoN9RDXHvUcGFIan41vcwM9\n4lgwKGnTV67bozjBm+s8eek+sW8=\n-----END CERTIFICATE-----\n&quot;,
   &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEA04fnzu7fhAKXWVLhirGAp/9NQ4r1gpk34dJkjdyz+8fuOqRd\n3Z0fboYiKjh65hI7CUazYM0dU3sZMp2FeKaaV4uko6vk/Yj4vgDNR2HsLB1KqJZk\nYTtreQqoNWLqyGFUpg5tsnr1w6Ulta0xuy0IS6O+ymKud+yZFaOSOhR3vB+YNoZC\nZZPz5bxNdD6QiWfyy1Q1zOHrjmfhVB3DjpBKQgGzBjd2v313XSXda/76d5KAZ8/r\nLziO6wwxpzRGLQYjsvwMXNciZo3+X+yo4htasoEGbH37HzZnubMWiajjI4XCLgiT\n+7aYqh6ptwSoex1USUSGv+tyfZFpJBaSmYGGrQIDAQABAoIBAF3tkjxsC6pFsEkE\nqYv5h8SRdBCS6rOkL5FB6E6p+u3JeHpntBqNA4EDZLZUwBXbcIWM9Gf+jJAeMDEu\niy7o484N/vyCfrsqEDHmj0CsNb/c/eLgbRBT30QvPEQAeXqi5YCbFZDUUr8eXSFQ\nF64ir/VOb5DUwt4TnGJkcLEDl6tbmWoAOWCmHpOqdR4BU2tqIWZXqeUPIxfDAq72\nxpFdPhW3/XbGBFiRPkNrckarlK06xUWZyKr+kQCc8rVKCAiVwVkZAHbZTusQzC4Y\n3lCEzg2ToU7az2+HRMMbJYFt0bxnGFytgFSrNdUOdXB3oPj0FpDTdhK9W63tjAu5\nlTuul60CgYEA8Cp+B8bFJsNMbLyLCrE+Te/3N2GD+1tPhaXt2WIXkSSxpjzlKRo9\ncygdbVjgguEXSwjX7b5Nbus8dG1XwF3RxprfjJoz1G0WFRsuSQEaQUpqIMXBD29v\npPxS0U8CDnop9dwQ9DMotfz0tuaULbSVHvFta5j6JjcQ0Gmbj+OuSPMCgYEA4Xoc\nji8FR2D5ZwQ7FsAAXIz0m24F+evNw89kQHz3H1ydaKDuM6d4c0oIqQ9vMZVXsNd4\nBLfWX356q3sBTwZ+xxKDbV4AuK/d6N+j0BtjerKO8zZCV2b7+IwhrLzce1pdDKL9\nBoD+vvMdWM6DIlEr43z/kqprAAMbXs6TdSo+2d8CgYEAyv7/m88UoRj+JgKPe7Ao\nu3OS/8p65iBd7Nc9XTqeNN5REfPytnUpb4Z+qQgwbC+ZoqCM8rShepl2depd+4jR\nYQ9S2OMV3/18ZsacrrQx3vHpFl5QOp20Pj3QOn6PfHEhumASLHZ5eKmgpl/q617x\nlD/4frPE7DwrCB3bkRmfHKUCgYBgu1aM2TdWjA/zVilTdUOycPZvyB/gPH2mR88m\nq3YJil4tiP0oQ+y06UoV3X1CtGNOhuIChCwAA+70qmzBTnQNS6/+t5lvomN9iJRq\nr5VaCkixptGHVbM7ykKYLN4aPYY16abLp4OiwAITG2W+zzwY+INclKga9TpEzjMM\nzPbx2QKBgGbn+Rop8m09d/xaiRdoedRuaaIf5fH/nGb3BpUXe6Y3PYwbl5lXb41M\nUKdjr/S+rl1rVJOq0en8uVNOh+nPeBfd5DQ6v6zk679X6nuLxzlHUlhpN3Y6QFR7\nZtikyjWc7jNdm495jW3lRTmI/LvFTjGB9LSp0/E76euOYa1tItaj\n-----END RSA PRIVATE KEY-----\n&quot;,
   &quot;id&quot;: &quot;ff8080813910c3d3013910c5d1e8000b&quot;,
   &quot;updated&quot;: &quot;2012-08-10T13:42:43.432+0000&quot;,
-  &quot;created&quot;: &quot;2012-08-10T13:42:43.432+0000&quot;,
-  &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\nMIIG0DCCBbigAwIBAgIIHbTLbK7pLx0wDQYJKoZIhvcNAQEFBQAwfTELMAkGA1UE\nBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo\nMRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTEeMBwGA1UEAxMV\ncmhlbDYzLWthdDguaW5lY2FzLmN6MCAXDTEyMDgxMDEzNDI0MVoYDzIxMTIwODEw\nMTM0MjQxWjArMSkwJwYDVQQDEyBmZjgwODA4MTM5MTBjM2QzMDEzOTEwYzVjYjY2\nMDAwOTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANOH587u34QCl1lS\n4YqxgKf/TUOK9YKZN+HSZI3cs/vH7jqkXd2dH26GIio4euYSOwlGs2DNHVN7GTKd\nhXimmleLpKOr5P2I+L4AzUdh7CwdSqiWZGE7a3kKqDVi6shhVKYObbJ69cOlJbWt\nMbstCEujvspirnfsmRWjkjoUd7wfmDaGQmWT8+W8TXQ+kIln8stUNczh645n4VQd\nw46QSkIBswY3dr99d10l3Wv++neSgGfP6y84jusMMac0Ri0GI7L8DFzXImaN/l/s\nqOIbWrKBBmx9+x82Z7mzFomo4yOFwi4Ik/u2mKoeqbcEqHsdVElEhr/rcn2RaSQW\nkpmBhq0CAwEAAaOCA6IwggOeMBEGCWCGSAGG+EIBAQQEAwIFoDALBgNVHQ8EBAMC\nBLAwgbAGA1UdIwSBqDCBpYAUyWJNwXtzHBXWcAAxLQXys9f04oShgYGkfzB9MQsw\nCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcTB1Jh\nbGVpZ2gxEDAOBgNVBAoTB1JlZCBIYXQxETAPBgNVBAsTCENsb3VkIEJVMR4wHAYD\nVQQDExVyaGVsNjMta2F0OC5pbmVjYXMuY3qCCQCySNeEniLL0jAdBgNVHQ4EFgQU\nW/VVEqoWrRZFpSzf2yF8YQYdUaYwEwYDVR0lBAwwCgYIKwYBBQUHAwIwLwYQKwYB\nBAGSCAkBp5GGl5EYAQQbDBlvcmdfMjI3ZTAwM191ZWJlcl9wcm9kdWN0MBYGECsG\nAQQBkggJAaeRhpeRGAMEAgwAMBYGECsGAQQBkggJAaeRhpeRGAIEAgwAMBkGECsG\nAQQBkggJAqeRhpeRHwEEBQwDeXVtMCQGESsGAQQBkggJAqeRhpeRHwEBBA8MDXVl\nYmVyX2NvbnRlbnQwMgYRKwYBBAGSCAkCp5GGl5EfAQIEHQwbMTM0NDYwNjE2MTA0\nOF91ZWJlcl9jb250ZW50MB0GESsGAQQBkggJAqeRhpeRHwEFBAgMBkN1c3RvbTAj\nBhErBgEEAZIICQKnkYaXkR8BBgQODAwvb3JnXzIyN2UwMDMwFwYRKwYBBAGSCAkC\np5GGl5EfAQcEAgwAMBgGESsGAQQBkggJAqeRhpeRHwEIBAMMATEwKQYKKwYBBAGS\nCAkEAQQbDBlvcmdfMjI3ZTAwM191ZWJlcl9wcm9kdWN0MDAGCisGAQQBkggJBAIE\nIgwgZmY4MDgwODEzOTEwYzNkMzAxMzkxMGM1YzhiMDAwMDUwHQYKKwYBBAGSCAkE\nAwQPDA0xMzQ0NjA2MTYxMDQ4MBEGCisGAQQBkggJBAUEAwwBMTAkBgorBgEEAZII\nCQQGBBYMFDIwMTItMDgtMTBUMTM6NDI6NDFaMCQGCisGAQQBkggJBAcEFgwUMjEx\nMi0wOC0xMFQxMzo0Mjo0MVowEQYKKwYBBAGSCAkEDAQDDAEwMBEGCisGAQQBkggJ\nBA4EAwwBMDARBgorBgEEAZIICQQLBAMMATEwNAYKKwYBBAGSCAkFAQQmDCQ0M2Iw\nNTRiMi0yZGQ1LTQyNzAtODU4Zi03NTM5NDAwZjM5YTIwDQYJKoZIhvcNAQEFBQAD\nggEBABRG4zWXgy7NVXoMtsYOtqvnYX7XzzMSSrljGqa3DRpWsTLYTNfkyRgODlXP\nqAGN8z0ITgbgpUyqX5Ehvfo7j5gly0CdPZu54gPS3MBVxxSbrTTQ0vl91zPusA9W\n9/ZzIREdcpDaTJzPL3o2mBw9IrwXHtjDotZjXQj8Yw5cjiaIYIDb9PG9EgDaTHTr\nsBMJSg+Z7EMdxxMFNZY8AJrxL2c+Cis8eP0IXvUtLgYwlQ1X1hqovrQZbJK1YIFc\nem9FfbssaBnY1DnW1j8JZAUoZ6Dc0VAHZdHIXjJeahoN9RDXHvUcGFIan41vcwM9\n4lgwKGnTV67bozjBm+s8eek+sW8=\n-----END CERTIFICATE-----\n&quot;
+  &quot;created&quot;: &quot;2012-08-10T13:42:43.432+0000&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -111,19 +107,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>
