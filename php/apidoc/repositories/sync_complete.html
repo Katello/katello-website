@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <a href='../../apidoc/repositories.html'>
+      Repositories
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>sync_complete</li>
@@ -37,13 +40,13 @@
 
 <div>
 
-  <p>This function is used by pulp for post sync actions.
-It is not authenticated, but does not accept requests unless
-they have been sent from localhost.  Since we go through apache
-HTTP<em>X</em>FORWARDED_FOR header should be set with original IP.
-Pulp blocks during the execution of this call, so <em>DO NOT</em> try to
-talk back to pulp within it.  Save that for the delayed job.
-Pulp doesn&#39;t send correct headers.&quot;</p>
+  
+<p>This function is used by pulp for post sync actions. It is not
+authenticated, but does not accept requests unless they have been sent from
+localhost.  Since we go through apache HTTP_X_FORWARDED_FOR header should
+be set with original IP. Pulp blocks during the execution of this call, so
+*DO NOT* try to talk back to pulp within it.  Save that for the delayed
+job. Pulp doesn’t send correct headers.“</p>
 
 
     <h2>Examples</h2>

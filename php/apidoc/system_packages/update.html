@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/system_packages.html'>System packages</a>
+    <a href='../../apidoc/system_packages.html'>
+      System packages
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
@@ -48,34 +51,34 @@
 }
 202
 {
-  &quot;result_description&quot;: &quot;&quot;,
+  &quot;id&quot;: 11,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:47:09Z&quot;,
+  &quot;uuid&quot;: &quot;e15873ca-e2f1-11e1-a0a5-525400b68f90&quot;,
+  &quot;progress&quot;: null,
+  &quot;user_id&quot;: 1,
+  &quot;pending?&quot;: true,
+  &quot;start_time&quot;: null,
+  &quot;system_name&quot;: &quot;katello.example.com_227e003&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:47:09Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;task_owner_type&quot;: &quot;System&quot;,
+  &quot;state&quot;: &quot;waiting&quot;,
+  &quot;task_owner_id&quot;: 1,
+  &quot;parameters&quot;: {
+    &quot;packages&quot;: [
+      &quot;cheetah&quot;
+    ]
+  },
   &quot;result&quot;: {
     &quot;errors&quot;: [
       null,
       null
     ]
   },
-  &quot;task_owner_type&quot;: &quot;System&quot;,
-  &quot;user_id&quot;: 1,
-  &quot;parameters&quot;: {
-    &quot;packages&quot;: [
-      &quot;cheetah&quot;
-    ]
-  },
-  &quot;id&quot;: 11,
-  &quot;uuid&quot;: &quot;e15873ca-e2f1-11e1-a0a5-525400b68f90&quot;,
-  &quot;start_time&quot;: null,
-  &quot;task_owner_id&quot;: 1,
   &quot;description&quot;: &quot;Package Update: cheetah&quot;,
-  &quot;state&quot;: &quot;waiting&quot;,
-  &quot;task_type&quot;: &quot;package_update&quot;,
+  &quot;result_description&quot;: &quot;&quot;,
   &quot;finish_time&quot;: null,
-  &quot;system_name&quot;: &quot;katello.example.com_227e003&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:47:09Z&quot;,
-  &quot;pending?&quot;: true,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:47:09Z&quot;,
-  &quot;organization_id&quot;: 2,
-  &quot;progress&quot;: null
+  &quot;task_type&quot;: &quot;package_update&quot;
 }</pre>
 
 
@@ -98,7 +101,8 @@
       </small>
     </td>
     <td>
-      <p>system identifier</p>
+      
+<p>system identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -115,7 +119,8 @@
       </small>
     </td>
     <td>
-      <p>list of packages names</p>
+      
+<p>list of packages names</p>
 
         <br>
         Value: Array

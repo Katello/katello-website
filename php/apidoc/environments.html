@@ -17,41 +17,48 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Environments</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Environments
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Environments<br>
+    Environments
+    <br>
     <small></small>
   </h1>
 </div>
 
-  <div><h1>Description</h1>
+  <div>
+<p># Description</p>
 
 <p>An environment is a basic organization structure that groups systems,
-products, repositories, templates etc.  Every system belongs to one environment
-and it&#39;s isolated inside so that it can see only content that is in its
+products, repositories, etc.  Every system belongs to one environment and
+it’s isolated inside so that it can see only content that is in its
 environment.</p>
 
-<h2>Chains</h2>
+<p>## Chains</p>
 
 <p>Environments are ordered into chains and their content (propducts,
-repositories, tempaltes, packages) can be moved to an environment only from its
-prior environment. You can have for example chain like:</p>
+repositories, tempaltes, packages) can be moved to an environment only from
+its prior environment. You can have for example chain like:</p>
 
-<pre><code>Library -&gt; Development -&gt; Testing -&gt; Production
-</code></pre>
+<pre>Library -&gt; Development -&gt; Testing -&gt; Production</pre>
 
 <p>Each change in an environment is done through a changeset in an action
 called promotion.</p>
 
-<h2>Library</h2>
+<p>## Library</p>
 
 <p>Library is a special environment that has no ascendant: all the content
-starts in this environment. More chains can start from the library environment but
-no further branching of a chain is enabled.</p>
+starts in this environment. More chains can start from the library
+environment but no further branching of a chain is enabled.</p>
 </div>
 
 
@@ -71,15 +78,6 @@ no further branching of a chain is enabled.</p>
           </a><br>
           <small>List environments in an organization</small>
         </h2>
-        <h2>
-          <a href='#description-index'
-           class='accordion-toggle'
-           data-toggle='collapse'
-           data-parent='#accordion'>
-            GET /api/owners/:organization_id/environments
-          </a><br>
-          <small>List environments for RHSM</small>
-        </h2>
     </div>
 
 
@@ -89,20 +87,21 @@ no further branching of a chain is enabled.</p>
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/organizations/org_227e003/environments/?name=Library
+          <pre class="prettyprint">GET /api/organizations/org_q5ktCr6jM1oN/environments/?name=Library
 200
 [
   {
-    &quot;prior_id&quot;: null,
-    &quot;library&quot;: true,
     &quot;name&quot;: &quot;Library&quot;,
-    &quot;id&quot;: 2,
-    &quot;description&quot;: null,
+    &quot;id&quot;: 6,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:05Z&quot;,
+    &quot;prior_id&quot;: null,
+    &quot;label&quot;: &quot;Library&quot;,
+    &quot;organization&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+    &quot;organization_id&quot;: 4,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:05Z&quot;,
     &quot;prior&quot;: null,
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
-    &quot;organization_id&quot;: 2,
-    &quot;organization&quot;: &quot;org_227e003&quot;
+    &quot;library&quot;: true,
+    &quot;description&quot;: null
   }
 ]</pre>
 
@@ -124,7 +123,8 @@ no further branching of a chain is enabled.</p>
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -141,7 +141,8 @@ no further branching of a chain is enabled.</p>
       </small>
     </td>
     <td>
-      <p>set true if you want to see only library environment</p>
+      
+<p>set true if you want to see only library environment</p>
 
         <br>
         Value: boolean
@@ -158,7 +159,98 @@ no further branching of a chain is enabled.</p>
       </small>
     </td>
     <td>
-      <p>filter only environments with this identifier</p>
+      
+<p>filter only environments with this identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/environments/rhsm_index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-rhsm_index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/owners/:organization_id/environments
+          </a><br>
+          <small>List environments for RHSM</small>
+        </h2>
+    </div>
+
+
+    <div id='description-rhsm_index' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>organization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>library </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>set true if you want to see only library environment</p>
+
+        <br>
+        Value: boolean
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>filter only environments with this identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -220,7 +312,8 @@ no further branching of a chain is enabled.</p>
       </small>
     </td>
     <td>
-      <p>environment identifier</p>
+      
+<p>environment identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -237,7 +330,8 @@ no further branching of a chain is enabled.</p>
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -272,25 +366,26 @@ no further branching of a chain is enabled.</p>
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/organizations/org_227e003/environments/
+          <pre class="prettyprint">POST /api/organizations/org_q5ktCr6jM1oN/environments/
 {
   &quot;environment&quot;: {
-    &quot;name&quot;: &quot;env 227e003&quot;,
-    &quot;prior&quot;: 2
+    &quot;name&quot;: &quot;env q5ktCr6jM1oN&quot;,
+    &quot;prior&quot;: 6
   }
 }
 200
 {
-  &quot;prior_id&quot;: 2,
-  &quot;library&quot;: false,
-  &quot;name&quot;: &quot;env 227e003&quot;,
-  &quot;id&quot;: 3,
-  &quot;description&quot;: null,
+  &quot;name&quot;: &quot;env q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 7,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:40:08Z&quot;,
+  &quot;prior_id&quot;: 6,
+  &quot;label&quot;: &quot;env_q5ktCr6jM1oN&quot;,
+  &quot;organization&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+  &quot;organization_id&quot;: 4,
+  &quot;created_at&quot;: &quot;2013-03-20T19:40:08Z&quot;,
   &quot;prior&quot;: &quot;Library&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
-  &quot;organization_id&quot;: 2,
-  &quot;organization&quot;: &quot;org_227e003&quot;
+  &quot;library&quot;: false,
+  &quot;description&quot;: null
 }</pre>
 
         <h3>Params</h3>
@@ -311,7 +406,8 @@ no further branching of a chain is enabled.</p>
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -323,7 +419,7 @@ no further branching of a chain is enabled.</p>
     <td>
       <strong>environment </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -338,12 +434,13 @@ no further branching of a chain is enabled.</p>
     <td>
       <strong>environment[name] </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
     <td>
-      <p>name of the environment (identifier)</p>
+      
+<p>name of the environment (identifier)</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -353,15 +450,33 @@ no further branching of a chain is enabled.</p>
   
   <tr style='background-color:rgb(250,250,250);'>
     <td>
-      <strong>environment[prior] </strong><br>
+      <strong>environment[description] </strong><br>
       <small>
         optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>environment[prior] </strong><br>
+      <small>
+        required
         
       </small>
     </td>
     <td>
-      <p>identifier of an environment that is prior the new environment in the chain, it has to be
-either library or an environment at the end of the chain</p>
+      
+<p>identifier of an environment that is prior the new environment in the
+chain, it has to be either library or an environment at the end of the
+chain</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -399,7 +514,6 @@ either library or an environment at the end of the chain</p>
         </h2>
     </div>
 
-      Also see <a href="../apidoc/environments/create">environments#create</a>
 
     <div id='description-update' class='collapse accordion-body'>
       
@@ -407,27 +521,90 @@ either library or an environment at the end of the chain</p>
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/organizations/org_227e003/environments/5
+          <pre class="prettyprint">PUT /api/organizations/org_q5ktCr6jM1oN/environments/9
 {
   &quot;environment&quot;: {
-    &quot;name&quot;: &quot;tstenv_227e003&quot;,
+    &quot;name&quot;: &quot;tstenv_q5ktCr6jM1oN&quot;,
     &quot;description&quot;: &quot;Test environment&quot;
   }
 }
 200
 {
-  &quot;prior_id&quot;: 2,
-  &quot;library&quot;: false,
-  &quot;name&quot;: &quot;tstenv_227e003&quot;,
-  &quot;id&quot;: 5,
-  &quot;description&quot;: &quot;Test environment&quot;,
+  &quot;name&quot;: &quot;tstenv_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 9,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:42:23Z&quot;,
+  &quot;prior_id&quot;: 6,
+  &quot;label&quot;: &quot;tstenv_q5ktCr6jM1oN&quot;,
+  &quot;organization&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+  &quot;organization_id&quot;: 4,
+  &quot;created_at&quot;: &quot;2013-03-20T19:42:22Z&quot;,
   &quot;prior&quot;: &quot;Library&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:45:23Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:45:24Z&quot;,
-  &quot;organization_id&quot;: 2,
-  &quot;organization&quot;: &quot;org_227e003&quot;
+  &quot;library&quot;: false,
+  &quot;description&quot;: &quot;Test environment&quot;
 }</pre>
 
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>environment[name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>name of the environment (identifier)</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>environment[description] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+
+          </tbody>
+        </table>
     </div>
     <hr>
     <div class='pull-right small'>
@@ -461,9 +638,9 @@ either library or an environment at the end of the chain</p>
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/organizations/org_227e003/environments/5
+          <pre class="prettyprint">DELETE /api/organizations/org_q5ktCr6jM1oN/environments/9
 200
-Deleted environment '5'</pre>
+Deleted environment '9'</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -483,7 +660,8 @@ Deleted environment '5'</pre>
       </small>
     </td>
     <td>
-      <p>environment identifier</p>
+      
+<p>environment identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -500,7 +678,8 @@ Deleted environment '5'</pre>
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -535,42 +714,54 @@ Deleted environment '5'</pre>
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/organizations/org_227e003/environments/2/repositories?include_disabled=False
+          <pre class="prettyprint">GET /api/organizations/org_q5ktCr6jM1oN/environments/6/repositories?include_disabled=False
 200
 [
   {
-    &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;,
-    &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
-    &quot;id&quot;: 1,
-    &quot;gpg_key_name&quot;: &quot;&quot;,
-    &quot;package_count&quot;: 0,
-    &quot;enabled&quot;: true,
-    &quot;major&quot;: null,
-    &quot;environment_product_id&quot;: 1,
-    &quot;minor&quot;: null,
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:53Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:42:54Z&quot;,
-    &quot;last_sync&quot;: null,
-    &quot;library_instance_id&quot;: null,
+    &quot;name&quot;: &quot;fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+    &quot;id&quot;: 3,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:16Z&quot;,
+    &quot;pulp_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+    &quot;feed&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
     &quot;gpg_key_id&quot;: null,
-    &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;
+    &quot;major&quot;: null,
+    &quot;last_sync&quot;: null,
+    &quot;label&quot;: &quot;fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+    &quot;library_instance_id&quot;: null,
+    &quot;environment_product_id&quot;: 2,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:16Z&quot;,
+    &quot;content_view_version_id&quot;: 5,
+    &quot;gpg_key_name&quot;: &quot;&quot;,
+    &quot;cp_label&quot;: &quot;org_label_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+    &quot;minor&quot;: null,
+    &quot;content_id&quot;: &quot;1363808416654&quot;,
+    &quot;relative_path&quot;: &quot;org_label_q5ktCr6jM1oN/Library/custom/fewups_product_q5ktCr6jM1oN/fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+    &quot;arch&quot;: &quot;noarch&quot;,
+    &quot;package_count&quot;: 0,
+    &quot;enabled&quot;: true
   },
   {
-    &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_repo_227e003&quot;,
-    &quot;name&quot;: &quot;repo_227e003&quot;,
-    &quot;id&quot;: 2,
-    &quot;gpg_key_name&quot;: &quot;&quot;,
-    &quot;package_count&quot;: 0,
-    &quot;enabled&quot;: true,
-    &quot;major&quot;: null,
-    &quot;environment_product_id&quot;: 1,
-    &quot;minor&quot;: null,
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:57Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
-    &quot;last_sync&quot;: null,
-    &quot;library_instance_id&quot;: null,
+    &quot;name&quot;: &quot;repo_q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 4,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:18Z&quot;,
+    &quot;pulp_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+    &quot;feed&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
     &quot;gpg_key_id&quot;: null,
-    &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;
+    &quot;major&quot;: null,
+    &quot;last_sync&quot;: null,
+    &quot;label&quot;: &quot;repo_q5ktCr6jM1oN&quot;,
+    &quot;library_instance_id&quot;: null,
+    &quot;environment_product_id&quot;: 2,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:18Z&quot;,
+    &quot;content_view_version_id&quot;: 5,
+    &quot;gpg_key_name&quot;: &quot;&quot;,
+    &quot;cp_label&quot;: &quot;org_label_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_repo_q5ktCr6jM1oN&quot;,
+    &quot;minor&quot;: null,
+    &quot;content_id&quot;: &quot;1363808418240&quot;,
+    &quot;relative_path&quot;: &quot;org_label_q5ktCr6jM1oN/Library/custom/fewups_product_q5ktCr6jM1oN/repo_q5ktCr6jM1oN&quot;,
+    &quot;arch&quot;: &quot;noarch&quot;,
+    &quot;package_count&quot;: 0,
+    &quot;enabled&quot;: true
   }
 ]</pre>
 
@@ -592,7 +783,8 @@ Deleted environment '5'</pre>
       </small>
     </td>
     <td>
-      <p>environment identifier</p>
+      
+<p>environment identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -609,7 +801,8 @@ Deleted environment '5'</pre>
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -626,7 +819,8 @@ Deleted environment '5'</pre>
       </small>
     </td>
     <td>
-      <p>set to true if you want to see also disabled repositories</p>
+      
+<p>set to true if you want to see also disabled repositories</p>
 
         <br>
         Value: boolean
@@ -660,6 +854,12 @@ Deleted environment '5'</pre>
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/environments/6/releases
+200
+{
+  &quot;releases&quot;: []
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -679,7 +879,8 @@ Deleted environment '5'</pre>
       </small>
     </td>
     <td>
-      <p>environment identifier</p>
+      
+<p>environment identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..

@@ -17,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Errata</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Errata
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Errata<br>
+    Errata
+    <br>
     <small></small>
   </h1>
 </div>
@@ -59,7 +66,8 @@
 
 
     <div id='description-index' class='collapse accordion-body'>
-      <p>Either :repoid or :product_id is required.</p>
+      
+<p>Either :repoid or :product_id is required.</p>
 
 
 
@@ -75,60 +83,104 @@
           <br>
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/errata?environment_id=2
+          <pre class="prettyprint">GET /api/errata?environment_id=6
 200
 [
   {
-    &quot;id&quot;: &quot;RHEA-2010:0001&quot;,
-    &quot;_id&quot;: &quot;RHEA-2010:0001&quot;,
-    &quot;severity&quot;: &quot;&quot;,
-    &quot;type&quot;: &quot;security&quot;,
+    &quot;_href&quot;: &quot;/pulp/api/v2/content/units/erratum/4e2df9de-0dfd-484c-8513-f83430598c77/&quot;,
+    &quot;rights&quot;: &quot;&quot;,
+    &quot;id&quot;: &quot;4e2df9de-0dfd-484c-8513-f83430598c77&quot;,
+    &quot;errata_id_sort&quot;: &quot;RHEA-2010:0001&quot;,
+    &quot;repoids&quot;: [
+      &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+      &quot;org_label_q5ktCr6jM1oN-env_q5ktCr6jM1oN-Default_View_for_env_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+      &quot;org_label_q5ktCr6jM1oN-env_q5ktCr6jM1oN-Default_View_for_env_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+      &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;
+    ],
+    &quot;_index&quot;: &quot;katello_errata&quot;,
+    &quot;from_str&quot;: &quot;lzap+pub@redhat.com&quot;,
+    &quot;updated&quot;: &quot;&quot;,
     &quot;title&quot;: &quot;Empty errata&quot;,
-    &quot;repoids&quot;: [
-      &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-      &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
-      &quot;org_227e003-env_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-      &quot;org_227e003-env_227e003-fewups_product_227e003-repo_227e003&quot;
-    ]
+    &quot;_content_type_id&quot;: &quot;erratum&quot;,
+    &quot;_type&quot;: &quot;errata&quot;,
+    &quot;version&quot;: &quot;1&quot;,
+    &quot;product_ids&quot;: [
+      2
+    ],
+    &quot;release&quot;: &quot;1&quot;,
+    &quot;sort&quot;: [
+      &quot;RHEA-2010:0001&quot;
+    ],
+    &quot;errata_id&quot;: &quot;RHEA-2010:0001&quot;,
+    &quot;references&quot;: [],
+    &quot;pushcount&quot;: 1,
+    &quot;id_title&quot;: &quot;RHEA-2010:0001 : Empty errata&quot;,
+    &quot;solution&quot;: &quot;&quot;,
+    &quot;type&quot;: &quot;security&quot;,
+    &quot;severity&quot;: &quot;&quot;,
+    &quot;issued&quot;: &quot;2010-01-01 01:01:01&quot;,
+    &quot;children&quot;: {},
+    &quot;summary&quot;: &quot;&quot;,
+    &quot;pkglist&quot;: [],
+    &quot;description&quot;: &quot;Empty errata&quot;,
+    &quot;status&quot;: &quot;stable&quot;,
+    &quot;reboot_suggested&quot;: false
   },
   {
-    &quot;id&quot;: &quot;RHEA-2010:0002&quot;,
-    &quot;_id&quot;: &quot;RHEA-2010:0002&quot;,
-    &quot;severity&quot;: &quot;&quot;,
-    &quot;type&quot;: &quot;security&quot;,
+    &quot;_href&quot;: &quot;/pulp/api/v2/content/units/erratum/2ee1b389-d10f-45b5-9909-6106b2c3e5b7/&quot;,
+    &quot;rights&quot;: &quot;&quot;,
+    &quot;id&quot;: &quot;2ee1b389-d10f-45b5-9909-6106b2c3e5b7&quot;,
+    &quot;errata_id_sort&quot;: &quot;RHEA-2010:0002&quot;,
+    &quot;repoids&quot;: [
+      &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+      &quot;org_label_q5ktCr6jM1oN-env_q5ktCr6jM1oN-Default_View_for_env_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+      &quot;org_label_q5ktCr6jM1oN-env_q5ktCr6jM1oN-Default_View_for_env_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+      &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;
+    ],
+    &quot;_index&quot;: &quot;katello_errata&quot;,
+    &quot;from_str&quot;: &quot;lzap+pub@redhat.com&quot;,
+    &quot;updated&quot;: &quot;&quot;,
     &quot;title&quot;: &quot;One package errata&quot;,
-    &quot;repoids&quot;: [
-      &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-      &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
-      &quot;org_227e003-env_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-      &quot;org_227e003-env_227e003-fewups_product_227e003-repo_227e003&quot;
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;RHEA-2010:0001&quot;,
-    &quot;_id&quot;: &quot;RHEA-2010:0001&quot;,
-    &quot;severity&quot;: &quot;&quot;,
+    &quot;_content_type_id&quot;: &quot;erratum&quot;,
+    &quot;_type&quot;: &quot;errata&quot;,
+    &quot;version&quot;: &quot;1&quot;,
+    &quot;product_ids&quot;: [
+      2
+    ],
+    &quot;release&quot;: &quot;1&quot;,
+    &quot;sort&quot;: [
+      &quot;RHEA-2010:0002&quot;
+    ],
+    &quot;errata_id&quot;: &quot;RHEA-2010:0002&quot;,
+    &quot;references&quot;: [],
+    &quot;pushcount&quot;: 1,
+    &quot;id_title&quot;: &quot;RHEA-2010:0002 : One package errata&quot;,
+    &quot;solution&quot;: &quot;&quot;,
     &quot;type&quot;: &quot;security&quot;,
-    &quot;title&quot;: &quot;Empty errata&quot;,
-    &quot;repoids&quot;: [
-      &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-      &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
-      &quot;org_227e003-env_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-      &quot;org_227e003-env_227e003-fewups_product_227e003-repo_227e003&quot;
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;RHEA-2010:0002&quot;,
-    &quot;_id&quot;: &quot;RHEA-2010:0002&quot;,
     &quot;severity&quot;: &quot;&quot;,
-    &quot;type&quot;: &quot;security&quot;,
-    &quot;title&quot;: &quot;One package errata&quot;,
-    &quot;repoids&quot;: [
-      &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-      &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
-      &quot;org_227e003-env_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-      &quot;org_227e003-env_227e003-fewups_product_227e003-repo_227e003&quot;
-    ]
+    &quot;issued&quot;: &quot;2010-01-01 01:01:01&quot;,
+    &quot;children&quot;: {},
+    &quot;summary&quot;: &quot;&quot;,
+    &quot;pkglist&quot;: [
+      {
+        &quot;name&quot;: &quot;1&quot;,
+        &quot;short&quot;: &quot;&quot;,
+        &quot;packages&quot;: [
+          {
+            &quot;name&quot;: &quot;elephant&quot;,
+            &quot;version&quot;: &quot;0.3&quot;,
+            &quot;src&quot;: &quot;http://www.fedoraproject.org&quot;,
+            &quot;release&quot;: &quot;0.8&quot;,
+            &quot;epoch&quot;: null,
+            &quot;filename&quot;: &quot;elephant-0.3-0.8.noarch.rpm&quot;,
+            &quot;arch&quot;: &quot;noarch&quot;
+          }
+        ]
+      }
+    ],
+    &quot;description&quot;: &quot;One package errata&quot;,
+    &quot;status&quot;: &quot;stable&quot;,
+    &quot;reboot_suggested&quot;: false
   }
 ]</pre>
 
@@ -150,7 +202,8 @@
       </small>
     </td>
     <td>
-      <p>Id of environment containing the errata.</p>
+      
+<p>Id of environment containing the errata.</p>
 
         <br>
         Value: number.
@@ -167,7 +220,8 @@
       </small>
     </td>
     <td>
-      <p>The product which contains the errata.</p>
+      
+<p>The product which contains the errata.</p>
 
         <br>
         Value: number.
@@ -184,7 +238,8 @@
       </small>
     </td>
     <td>
-      <p>Id of repository containing the errata.</p>
+      
+<p>Id of repository containing the errata.</p>
 
         <br>
         Value: number.
@@ -201,7 +256,9 @@
       </small>
     </td>
     <td>
-      <p>Severity of errata. Usually one of: Critical, Important, Moderate, Low. Case insensitive.</p>
+      
+<p>Severity of errata. Usually one of: Critical, Important, Moderate, Low.
+Case insensitive.</p>
 
         <br>
         Value: String
@@ -218,7 +275,9 @@
       </small>
     </td>
     <td>
-      <p>Type of errata. Usually one of: security, bugfix, enhancement. Case insensitive.</p>
+      
+<p>Type of errata. Usually one of: security, bugfix, enhancement. Case
+insensitive.</p>
 
         <br>
         Value: String
@@ -260,53 +319,53 @@
           <br>
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/repositories/2/errata/RHEA-2010:0002/
+          <pre class="prettyprint">GET /api/repositories/4/errata/2ee1b389-d10f-45b5-9909-6106b2c3e5b7/
 200
 {
-  &quot;pushcount&quot;: 1,
-  &quot;references&quot;: [],
-  &quot;version&quot;: &quot;1&quot;,
-  &quot;repo_defined&quot;: true,
+  &quot;_href&quot;: &quot;/pulp/api/v2/content/units/erratum/2ee1b389-d10f-45b5-9909-6106b2c3e5b7/&quot;,
   &quot;rights&quot;: &quot;&quot;,
-  &quot;issued&quot;: &quot;2010-01-01 01:01:01&quot;,
-  &quot;id&quot;: &quot;RHEA-2010:0002&quot;,
+  &quot;id&quot;: &quot;2ee1b389-d10f-45b5-9909-6106b2c3e5b7&quot;,
+  &quot;repoids&quot;: [
+    &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+    &quot;org_label_q5ktCr6jM1oN-env_q5ktCr6jM1oN-Default_View_for_env_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+    &quot;org_label_q5ktCr6jM1oN-env_q5ktCr6jM1oN-Default_View_for_env_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+    &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;
+  ],
   &quot;from_str&quot;: &quot;lzap+pub@redhat.com&quot;,
-  &quot;immutable&quot;: true,
+  &quot;updated&quot;: &quot;&quot;,
+  &quot;title&quot;: &quot;One package errata&quot;,
+  &quot;_content_type_id&quot;: &quot;erratum&quot;,
+  &quot;version&quot;: &quot;1&quot;,
+  &quot;release&quot;: &quot;1&quot;,
+  &quot;errata_id&quot;: &quot;RHEA-2010:0002&quot;,
+  &quot;references&quot;: [],
+  &quot;pushcount&quot;: 1,
+  &quot;solution&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;security&quot;,
+  &quot;severity&quot;: &quot;&quot;,
+  &quot;issued&quot;: &quot;2010-01-01 01:01:01&quot;,
+  &quot;children&quot;: {},
   &quot;summary&quot;: &quot;&quot;,
-  &quot;description&quot;: &quot;One package errata&quot;,
   &quot;pkglist&quot;: [
     {
+      &quot;name&quot;: &quot;1&quot;,
+      &quot;short&quot;: &quot;&quot;,
       &quot;packages&quot;: [
         {
-          &quot;version&quot;: &quot;0.3&quot;,
           &quot;name&quot;: &quot;elephant&quot;,
-          &quot;filename&quot;: &quot;elephant-0.3-0.8.noarch.rpm&quot;,
+          &quot;version&quot;: &quot;0.3&quot;,
           &quot;src&quot;: &quot;http://www.fedoraproject.org&quot;,
-          &quot;arch&quot;: &quot;noarch&quot;,
           &quot;release&quot;: &quot;0.8&quot;,
-          &quot;epoch&quot;: null
+          &quot;epoch&quot;: null,
+          &quot;filename&quot;: &quot;elephant-0.3-0.8.noarch.rpm&quot;,
+          &quot;arch&quot;: &quot;noarch&quot;
         }
-      ],
-      &quot;name&quot;: &quot;1&quot;,
-      &quot;short&quot;: &quot;&quot;
+      ]
     }
   ],
-  &quot;_id&quot;: &quot;RHEA-2010:0002&quot;,
-  &quot;severity&quot;: &quot;&quot;,
+  &quot;description&quot;: &quot;One package errata&quot;,
   &quot;status&quot;: &quot;stable&quot;,
-  &quot;solution&quot;: &quot;&quot;,
-  &quot;release&quot;: &quot;1&quot;,
-  &quot;updated&quot;: &quot;&quot;,
-  &quot;type&quot;: &quot;security&quot;,
-  &quot;_ns&quot;: &quot;errata&quot;,
-  &quot;reboot_suggested&quot;: false,
-  &quot;title&quot;: &quot;One package errata&quot;,
-  &quot;repoids&quot;: [
-    &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-    &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
-    &quot;org_227e003-env_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
-    &quot;org_227e003-env_227e003-fewups_product_227e003-repo_227e003&quot;
-  ]
+  &quot;reboot_suggested&quot;: false
 }</pre>
 
     </div>

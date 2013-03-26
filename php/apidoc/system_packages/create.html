@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/system_packages.html'>System packages</a>
+    <a href='../../apidoc/system_packages.html'>
+      System packages
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
@@ -48,34 +51,34 @@
 }
 202
 {
-  &quot;result_description&quot;: &quot;&quot;,
+  &quot;id&quot;: 10,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:46:40Z&quot;,
+  &quot;uuid&quot;: &quot;d03b47f5-e2f1-11e1-b07c-525400b68f90&quot;,
+  &quot;progress&quot;: null,
+  &quot;user_id&quot;: 1,
+  &quot;pending?&quot;: true,
+  &quot;start_time&quot;: null,
+  &quot;system_name&quot;: &quot;katello.example.com_227e003&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:46:40Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;task_owner_type&quot;: &quot;System&quot;,
+  &quot;state&quot;: &quot;waiting&quot;,
+  &quot;task_owner_id&quot;: 1,
+  &quot;parameters&quot;: {
+    &quot;packages&quot;: [
+      &quot;cheetah&quot;
+    ]
+  },
   &quot;result&quot;: {
     &quot;errors&quot;: [
       null,
       null
     ]
   },
-  &quot;task_owner_type&quot;: &quot;System&quot;,
-  &quot;user_id&quot;: 1,
-  &quot;parameters&quot;: {
-    &quot;packages&quot;: [
-      &quot;cheetah&quot;
-    ]
-  },
-  &quot;id&quot;: 10,
-  &quot;uuid&quot;: &quot;d03b47f5-e2f1-11e1-b07c-525400b68f90&quot;,
-  &quot;start_time&quot;: null,
-  &quot;task_owner_id&quot;: 1,
   &quot;description&quot;: &quot;Package Install: cheetah&quot;,
-  &quot;state&quot;: &quot;waiting&quot;,
-  &quot;task_type&quot;: &quot;package_install&quot;,
+  &quot;result_description&quot;: &quot;&quot;,
   &quot;finish_time&quot;: null,
-  &quot;system_name&quot;: &quot;katello.example.com_227e003&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:46:40Z&quot;,
-  &quot;pending?&quot;: true,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:46:40Z&quot;,
-  &quot;organization_id&quot;: 2,
-  &quot;progress&quot;: null
+  &quot;task_type&quot;: &quot;package_install&quot;
 }</pre>
 
 
@@ -98,27 +101,11 @@
       </small>
     </td>
     <td>
-      <p>system identifier</p>
+      
+<p>system identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
-    </td>
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>groups </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      <p>list of groups names</p>
-
-        <br>
-        Value: Array
     </td>
   </tr>
 
@@ -132,7 +119,26 @@
       </small>
     </td>
     <td>
-      <p>list of packages names</p>
+      
+<p>List of package names</p>
+
+        <br>
+        Value: Array
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>groups </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>List of package group names</p>
 
         <br>
         Value: Array

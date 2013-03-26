@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/sync.html'>Sync</a>
+    <a href='../../apidoc/sync.html'>
+      Sync
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
@@ -52,34 +55,31 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/repositories/2/sync
+      <pre class="prettyprint">GET /api/repositories/4/sync
 200
 {
-  &quot;result&quot;: true,
-  &quot;task_owner_type&quot;: null,
-  &quot;user_id&quot;: 1,
-  &quot;parameters&quot;: {
-    &quot;options&quot;: {}
-  },
-  &quot;id&quot;: 3,
-  &quot;uuid&quot;: &quot;4ff91fc7-e2f1-11e1-a7ee-525400b68f90&quot;,
-  &quot;start_time&quot;: &quot;2012-08-10T13:43:05Z&quot;,
-  &quot;task_owner_id&quot;: null,
-  &quot;state&quot;: &quot;finished&quot;,
-  &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
-  &quot;finish_time&quot;: &quot;2012-08-10T13:43:16Z&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:43:05Z&quot;,
+  &quot;uuid&quot;: null,
+  &quot;updated_at&quot;: null,
   &quot;pending?&quot;: false,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:45:06Z&quot;,
-  &quot;organization_id&quot;: 2,
+  &quot;user_id&quot;: 0,
   &quot;progress&quot;: {
-    &quot;total_count&quot;: 8,
+    &quot;step&quot;: 0,
+    &quot;total_count&quot;: 11,
+    &quot;size_left&quot;: 0,
     &quot;total_size&quot;: 17872,
     &quot;error_details&quot;: [],
-    &quot;items_left&quot;: 0,
-    &quot;size_left&quot;: 0,
-    &quot;step&quot;: &quot;Running Createrepo&quot;
-  }
+    &quot;items_left&quot;: 0
+  },
+  &quot;start_time&quot;: null,
+  &quot;organization_id&quot;: null,
+  &quot;created_at&quot;: null,
+  &quot;task_owner_type&quot;: null,
+  &quot;task_owner_id&quot;: null,
+  &quot;state&quot;: &quot;finished&quot;,
+  &quot;result&quot;: &quot;success&quot;,
+  &quot;parameters&quot;: null,
+  &quot;task_type&quot;: null,
+  &quot;finish_time&quot;: null
 }</pre>
 
 
@@ -102,7 +102,8 @@
       </small>
     </td>
     <td>
-      <p>oranization identifier</p>
+      
+<p>oranization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -119,7 +120,8 @@
       </small>
     </td>
     <td>
-      <p>product identifier</p>
+      
+<p>product identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -136,7 +138,8 @@
       </small>
     </td>
     <td>
-      <p>provider identifier</p>
+      
+<p>provider identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -153,7 +156,8 @@
       </small>
     </td>
     <td>
-      <p>repository identifier</p>
+      
+<p>repository identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..

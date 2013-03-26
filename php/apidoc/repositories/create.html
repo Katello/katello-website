@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <a href='../../apidoc/repositories.html'>
+      Repositories
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
@@ -36,35 +39,42 @@
   </div>
 
 <div>
-    Also see <a href="../../apidoc/gpg_keys/index">gpg_keys#index</a>.
+    Also see <a href="../../apidoc/gpg_keys/index.html">gpg_keys#index</a>.
 
   
 
     <h2>Examples</h2>
       <pre class="prettyprint">POST /api/repositories/
 {
-  &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
-  &quot;product_id&quot;: &quot;1344606167242&quot;,
-  &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5&quot;,
-  &quot;organization_id&quot;: &quot;org_227e003&quot;
+  &quot;name&quot;: &quot;fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+  &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
+  &quot;product_id&quot;: &quot;1363808411864&quot;,
+  &quot;label&quot;: &quot;fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+  &quot;organization_id&quot;: &quot;org_q5ktCr6jM1oN&quot;
 }
 200
 {
-  &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;,
-  &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
-  &quot;id&quot;: 1,
-  &quot;gpg_key_name&quot;: &quot;&quot;,
-  &quot;package_count&quot;: 0,
-  &quot;enabled&quot;: true,
-  &quot;major&quot;: null,
-  &quot;environment_product_id&quot;: 1,
-  &quot;minor&quot;: null,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:53Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:54Z&quot;,
-  &quot;last_sync&quot;: null,
-  &quot;library_instance_id&quot;: null,
+  &quot;name&quot;: &quot;fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+  &quot;id&quot;: 3,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:40:16Z&quot;,
+  &quot;pulp_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+  &quot;feed&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
   &quot;gpg_key_id&quot;: null,
-  &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;
+  &quot;major&quot;: null,
+  &quot;last_sync&quot;: null,
+  &quot;label&quot;: &quot;fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+  &quot;library_instance_id&quot;: null,
+  &quot;environment_product_id&quot;: 2,
+  &quot;created_at&quot;: &quot;2013-03-20T19:40:16Z&quot;,
+  &quot;content_view_version_id&quot;: 5,
+  &quot;gpg_key_name&quot;: &quot;&quot;,
+  &quot;cp_label&quot;: &quot;org_label_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+  &quot;minor&quot;: null,
+  &quot;content_id&quot;: &quot;1363808416654&quot;,
+  &quot;relative_path&quot;: &quot;org_label_q5ktCr6jM1oN/Library/custom/fewups_product_q5ktCr6jM1oN/fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+  &quot;arch&quot;: &quot;noarch&quot;,
+  &quot;package_count&quot;: 0,
+  &quot;enabled&quot;: true
 }</pre>
 
 
@@ -103,7 +113,8 @@
       </small>
     </td>
     <td>
-      <p>id of an organization the repository will be contained in</p>
+      
+<p>id of an organization the repository will be contained in</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -120,7 +131,8 @@
       </small>
     </td>
     <td>
-      <p>id of a product the repository will be contained in</p>
+      
+<p>id of a product the repository will be contained in</p>
 
         <br>
         Value: number.
@@ -137,7 +149,8 @@
       </small>
     </td>
     <td>
-      <p>repository source url</p>
+      
+<p>repository source url</p>
 
     </td>
   </tr>
@@ -152,7 +165,8 @@
       </small>
     </td>
     <td>
-      <p>name of a gpg key that will be assigned to the new repository</p>
+      
+<p>name of a gpg key that will be assigned to the new repository</p>
 
         <br>
         Value: String

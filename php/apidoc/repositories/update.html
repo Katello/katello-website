@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <a href='../../apidoc/repositories.html'>
+      Repositories
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
@@ -40,69 +43,18 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">PUT /api/repositories/6/
+      <pre class="prettyprint">PUT /api/repositories/8/
 {
   &quot;repository&quot;: {
     &quot;gpg_key_name&quot;: &quot;Dummy-Package-Generator&quot;
   }
 }
-200
+500
 {
-  &quot;feed_ca&quot;: null,
-  &quot;relative_path&quot;: &quot;org_227e003/Library/custom/GPG-product-227e003/GPG-repo-2-227e003&quot;,
-  &quot;groupid&quot;: [
-    &quot;product:1344606356883&quot;,
-    &quot;env:2&quot;,
-    &quot;org:2&quot;,
-    &quot;content:1344606363895&quot;
+  &quot;errors&quot;: [
+    &quot;wrong status line: \&quot;HTTP/1.1 -1 \&quot;&quot;
   ],
-  &quot;packages&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packages/&quot;,
-  &quot;sync_state&quot;: &quot;not_synced&quot;,
-  &quot;preserve_metadata&quot;: false,
-  &quot;packagegroupcategories&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packagegroupcategories/&quot;,
-  &quot;feed_cert&quot;: null,
-  &quot;consumer_cert&quot;: null,
-  &quot;cp_label&quot;: &quot;org_227e003_GPG-product-227e003_GPG-repo-2-227e003&quot;,
-  &quot;uri_ref&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/&quot;,
-  &quot;consumer_ca&quot;: null,
-  &quot;keys&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/keys/&quot;,
-  &quot;name&quot;: &quot;GPG-repo-2-227e003&quot;,
-  &quot;files&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/files/&quot;,
-  &quot;id&quot;: 6,
-  &quot;gpg_key_name&quot;: &quot;Dummy-Package-Generator&quot;,
-  &quot;packagegroups&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/packagegroups/&quot;,
-  &quot;checksum_type&quot;: &quot;sha256&quot;,
-  &quot;filters&quot;: [],
-  &quot;arch&quot;: &quot;noarch&quot;,
-  &quot;next_scheduled_time&quot;: null,
-  &quot;uri&quot;: &quot;https://katello.example.com/pulp/repos/org_227e003/Library/custom/GPG-product-227e003/GPG-repo-2-227e003/&quot;,
-  &quot;package_count&quot;: 0,
-  &quot;notes&quot;: {},
-  &quot;comps&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/comps/&quot;,
-  &quot;source&quot;: {
-    &quot;url&quot;: &quot;http://inecas.fedorapeople.org/fakerepos/zoo&quot;,
-    &quot;type&quot;: &quot;remote&quot;
-  },
-  &quot;enabled&quot;: true,
-  &quot;_id&quot;: &quot;org_227e003-GPG-product-227e003-GPG-repo-2-227e003&quot;,
-  &quot;major&quot;: null,
-  &quot;environment_product_id&quot;: 3,
-  &quot;minor&quot;: null,
-  &quot;files_count&quot;: 80,
-  &quot;errata&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/errata/&quot;,
-  &quot;sync_schedule&quot;: null,
-  &quot;created_at&quot;: &quot;2012-08-10T13:46:03Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:46:07Z&quot;,
-  &quot;last_sync&quot;: null,
-  &quot;distribution&quot;: &quot;/pulp/api/repositories/org_227e003-GPG-product-227e003-GPG-repo-2-227e003/distribution/&quot;,
-  &quot;library_instance_id&quot;: null,
-  &quot;sync_options&quot;: {},
-  &quot;publish&quot;: true,
-  &quot;content_types&quot;: &quot;yum&quot;,
-  &quot;gpg_key_id&quot;: 1,
-  &quot;distributionid&quot;: [],
-  &quot;pulp_id&quot;: &quot;org_227e003-GPG-product-227e003-GPG-repo-2-227e003&quot;,
-  &quot;clone_ids&quot;: []
+  &quot;displayMessage&quot;: &quot;wrong status line: \&quot;HTTP/1.1 -1 \&quot;&quot;
 }</pre>
 
 
@@ -125,7 +77,8 @@
       </small>
     </td>
     <td>
-      <p>repository id</p>
+      
+<p>repository id</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -157,7 +110,8 @@
       </small>
     </td>
     <td>
-      <p>name of a gpg key that will be assigned to the repository</p>
+      
+<p>name of a gpg key that will be assigned to the repository</p>
 
         <br>
         Value: String

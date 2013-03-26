@@ -17,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Roles</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Roles
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Roles<br>
+    Roles
+    <br>
     <small></small>
   </h1>
 </div>
@@ -64,16 +71,16 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/roles/?name=tmp_permission_role_227e003
+          <pre class="prettyprint">GET /api/roles/?name=tmp_permission_role_q5ktCr6jM1oN
 200
 [
   {
-    &quot;name&quot;: &quot;tmp_permission_role_227e003&quot;,
-    &quot;id&quot;: 6,
-    &quot;description&quot;: null,
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
-    &quot;locked&quot;: false
+    &quot;name&quot;: &quot;tmp_permission_role_q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 8,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:43:19Z&quot;,
+    &quot;created_at&quot;: &quot;2013-03-20T19:43:19Z&quot;,
+    &quot;locked&quot;: false,
+    &quot;description&quot;: null
   }
 ]</pre>
 
@@ -172,18 +179,18 @@
           <pre class="prettyprint">POST /api/roles/
 {
   &quot;role&quot;: {
-    &quot;name&quot;: &quot;tmp_permission_role_227e003&quot;,
+    &quot;name&quot;: &quot;tmp_permission_role_q5ktCr6jM1oN&quot;,
     &quot;description&quot;: null
   }
 }
 200
 {
-  &quot;name&quot;: &quot;tmp_permission_role_227e003&quot;,
-  &quot;id&quot;: 6,
-  &quot;description&quot;: null,
-  &quot;created_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:50:06Z&quot;,
-  &quot;locked&quot;: false
+  &quot;name&quot;: &quot;tmp_permission_role_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 8,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:43:19Z&quot;,
+  &quot;created_at&quot;: &quot;2013-03-20T19:43:19Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;description&quot;: null
 }</pre>
 
         <h3>Params</h3>
@@ -199,7 +206,7 @@
     <td>
       <strong>role </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -212,10 +219,10 @@
 
     <tr style='background-color:rgb(250,250,250);'>
     <td>
-      <strong>role[description] </strong><br>
+      <strong>role[name] </strong><br>
       <small>
-        optional
-        , nil allowed
+        required
+        
       </small>
     </td>
     <td>
@@ -228,10 +235,10 @@
   
   <tr style='background-color:rgb(250,250,250);'>
     <td>
-      <strong>role[name] </strong><br>
+      <strong>role[description] </strong><br>
       <small>
-        required
-        
+        optional
+        , nil allowed
       </small>
     </td>
     <td>
@@ -279,7 +286,7 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/roles/7
+          <pre class="prettyprint">PUT /api/roles/9
 {
   &quot;role&quot;: {
     &quot;name&quot;: &quot;role_&quot;,
@@ -289,11 +296,11 @@
 200
 {
   &quot;name&quot;: &quot;role_&quot;,
-  &quot;id&quot;: 7,
-  &quot;description&quot;: &quot;new description of the role&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:58:00Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:58:02Z&quot;,
-  &quot;locked&quot;: false
+  &quot;id&quot;: 9,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:47:09Z&quot;,
+  &quot;created_at&quot;: &quot;2013-03-20T19:47:07Z&quot;,
+  &quot;locked&quot;: false,
+  &quot;description&quot;: &quot;new description of the role&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -309,7 +316,7 @@
     <td>
       <strong>role </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -322,10 +329,10 @@
 
     <tr style='background-color:rgb(250,250,250);'>
     <td>
-      <strong>role[description] </strong><br>
+      <strong>role[name] </strong><br>
       <small>
         optional
-        , nil allowed
+        
       </small>
     </td>
     <td>
@@ -338,10 +345,10 @@
   
   <tr style='background-color:rgb(250,250,250);'>
     <td>
-      <strong>role[name] </strong><br>
+      <strong>role[description] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
@@ -389,9 +396,9 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/roles/7
+          <pre class="prettyprint">DELETE /api/roles/9
 200
-Deleted role '7'</pre>
+Deleted role '9'</pre>
 
     </div>
     <hr>
@@ -416,6 +423,321 @@ Deleted role '7'</pre>
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/roles/available_verbs/
+200
+{
+  &quot;users&quot;: {
+    &quot;name&quot;: &quot;Users&quot;,
+    &quot;no_tag_verbs&quot;: [
+      &quot;create&quot;
+    ],
+    &quot;global&quot;: true,
+    &quot;tags&quot;: [],
+    &quot;verbs&quot;: [
+      {
+        &quot;name&quot;: &quot;create&quot;,
+        &quot;display_name&quot;: &quot;Administer Users&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete&quot;,
+        &quot;display_name&quot;: &quot;Delete Users&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update&quot;,
+        &quot;display_name&quot;: &quot;Modify Users&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read&quot;,
+        &quot;display_name&quot;: &quot;Read Users&quot;
+      }
+    ]
+  },
+  &quot;providers&quot;: {
+    &quot;name&quot;: &quot;Providers&quot;,
+    &quot;no_tag_verbs&quot;: [
+      &quot;create&quot;
+    ],
+    &quot;global&quot;: false,
+    &quot;tags&quot;: [],
+    &quot;verbs&quot;: [
+      {
+        &quot;name&quot;: &quot;create&quot;,
+        &quot;display_name&quot;: &quot;Administer Providers&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete&quot;,
+        &quot;display_name&quot;: &quot;Delete Providers&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update&quot;,
+        &quot;display_name&quot;: &quot;Modify Providers and Administer Products&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read&quot;,
+        &quot;display_name&quot;: &quot;Read Providers&quot;
+      }
+    ]
+  },
+  &quot;content_view_definitions&quot;: {
+    &quot;name&quot;: &quot;Content View Defintions&quot;,
+    &quot;no_tag_verbs&quot;: [
+      &quot;create&quot;
+    ],
+    &quot;global&quot;: false,
+    &quot;tags&quot;: [],
+    &quot;verbs&quot;: [
+      {
+        &quot;name&quot;: &quot;create&quot;,
+        &quot;display_name&quot;: &quot;Administer Content View Definitions&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete&quot;,
+        &quot;display_name&quot;: &quot;Delete Content View Definitions&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update&quot;,
+        &quot;display_name&quot;: &quot;Modify Content View Defintions&quot;
+      },
+      {
+        &quot;name&quot;: &quot;publish&quot;,
+        &quot;display_name&quot;: &quot;Publish Content View Definitions&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read&quot;,
+        &quot;display_name&quot;: &quot;Read Content View Definitions&quot;
+      }
+    ]
+  },
+  &quot;roles&quot;: {
+    &quot;name&quot;: &quot;Roles&quot;,
+    &quot;no_tag_verbs&quot;: [
+      &quot;create&quot;
+    ],
+    &quot;global&quot;: true,
+    &quot;tags&quot;: [],
+    &quot;verbs&quot;: [
+      {
+        &quot;name&quot;: &quot;create&quot;,
+        &quot;display_name&quot;: &quot;Administer Roles&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete&quot;,
+        &quot;display_name&quot;: &quot;Delete Roles&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update&quot;,
+        &quot;display_name&quot;: &quot;Modify Roles&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read&quot;,
+        &quot;display_name&quot;: &quot;Read Roles&quot;
+      }
+    ]
+  },
+  &quot;organizations&quot;: {
+    &quot;name&quot;: &quot;Organizations&quot;,
+    &quot;no_tag_verbs&quot;: [
+      &quot;create&quot;
+    ],
+    &quot;global&quot;: false,
+    &quot;tags&quot;: [],
+    &quot;verbs&quot;: [
+      {
+        &quot;name&quot;: &quot;gpg&quot;,
+        &quot;display_name&quot;: &quot;Administer GPG Keys&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete_distributors&quot;,
+        &quot;display_name&quot;: &quot;Delete Distributors&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete_systems&quot;,
+        &quot;display_name&quot;: &quot;Delete Systems&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update_distributors&quot;,
+        &quot;display_name&quot;: &quot;Modify Distributors&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update&quot;,
+        &quot;display_name&quot;: &quot;Modify Organization and Administer Environments&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update_systems&quot;,
+        &quot;display_name&quot;: &quot;Modify Systems&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read_distributors&quot;,
+        &quot;display_name&quot;: &quot;Read Distributors&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read&quot;,
+        &quot;display_name&quot;: &quot;Read Organization&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read_systems&quot;,
+        &quot;display_name&quot;: &quot;Read Systems&quot;
+      },
+      {
+        &quot;name&quot;: &quot;register_distributors&quot;,
+        &quot;display_name&quot;: &quot;Register Distributors&quot;
+      },
+      {
+        &quot;name&quot;: &quot;register_systems&quot;,
+        &quot;display_name&quot;: &quot;Register Systems&quot;
+      },
+      {
+        &quot;name&quot;: &quot;sync&quot;,
+        &quot;display_name&quot;: &quot;Sync Products&quot;
+      }
+    ]
+  },
+  &quot;content_views&quot;: {
+    &quot;name&quot;: &quot;Content View&quot;,
+    &quot;no_tag_verbs&quot;: [],
+    &quot;global&quot;: false,
+    &quot;tags&quot;: [],
+    &quot;verbs&quot;: [
+      {
+        &quot;name&quot;: &quot;promote&quot;,
+        &quot;display_name&quot;: &quot;Promote Content Views&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read&quot;,
+        &quot;display_name&quot;: &quot;Read Content Views&quot;
+      },
+      {
+        &quot;name&quot;: &quot;subscribe&quot;,
+        &quot;display_name&quot;: &quot;Subscribe Systems To Content Views&quot;
+      }
+    ]
+  },
+  &quot;activation_keys&quot;: {
+    &quot;name&quot;: &quot;Activation Keys&quot;,
+    &quot;no_tag_verbs&quot;: [
+      &quot;read_all&quot;,
+      &quot;manage_all&quot;
+    ],
+    &quot;global&quot;: false,
+    &quot;tags&quot;: [],
+    &quot;verbs&quot;: [
+      {
+        &quot;name&quot;: &quot;manage_all&quot;,
+        &quot;display_name&quot;: &quot;Administer Activation Keys&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read_all&quot;,
+        &quot;display_name&quot;: &quot;Read Activation Keys&quot;
+      }
+    ]
+  },
+  &quot;system_groups&quot;: {
+    &quot;name&quot;: &quot;System Groups&quot;,
+    &quot;no_tag_verbs&quot;: [
+      &quot;create&quot;
+    ],
+    &quot;global&quot;: false,
+    &quot;tags&quot;: [],
+    &quot;verbs&quot;: [
+      {
+        &quot;name&quot;: &quot;create&quot;,
+        &quot;display_name&quot;: &quot;Administer System Groups&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete&quot;,
+        &quot;display_name&quot;: &quot;Delete System Group&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete_systems&quot;,
+        &quot;display_name&quot;: &quot;Delete Systems in System Group&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update&quot;,
+        &quot;display_name&quot;: &quot;Modify System Group details and system membership&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update_systems&quot;,
+        &quot;display_name&quot;: &quot;Modify Systems in System Group&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read&quot;,
+        &quot;display_name&quot;: &quot;Read System Group&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read_systems&quot;,
+        &quot;display_name&quot;: &quot;Read Systems in System Group&quot;
+      }
+    ]
+  },
+  &quot;all&quot;: {
+    &quot;name&quot;: &quot;All&quot;,
+    &quot;no_tag_verbs&quot;: [],
+    &quot;global&quot;: false,
+    &quot;tags&quot;: [],
+    &quot;verbs&quot;: []
+  },
+  &quot;environments&quot;: {
+    &quot;name&quot;: &quot;Environments&quot;,
+    &quot;no_tag_verbs&quot;: {},
+    &quot;global&quot;: false,
+    &quot;tags&quot;: [],
+    &quot;verbs&quot;: [
+      {
+        &quot;name&quot;: &quot;manage_changesets&quot;,
+        &quot;display_name&quot;: &quot;Administer Changesets in Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete_changesets&quot;,
+        &quot;display_name&quot;: &quot;Delete Content from Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update_distributors&quot;,
+        &quot;display_name&quot;: &quot;Modify Distributors in Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;update_systems&quot;,
+        &quot;display_name&quot;: &quot;Modify Systems in Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;promote_changesets&quot;,
+        &quot;display_name&quot;: &quot;Promote Content to Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read_changesets&quot;,
+        &quot;display_name&quot;: &quot;Read Changesets in Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read_distributors&quot;,
+        &quot;display_name&quot;: &quot;Read Distributors in Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read_contents&quot;,
+        &quot;display_name&quot;: &quot;Read Environment Contents&quot;
+      },
+      {
+        &quot;name&quot;: &quot;read_systems&quot;,
+        &quot;display_name&quot;: &quot;Read Systems in Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;register_distributors&quot;,
+        &quot;display_name&quot;: &quot;Register Distributors in Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;register_systems&quot;,
+        &quot;display_name&quot;: &quot;Register Systems in Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete_distributors&quot;,
+        &quot;display_name&quot;: &quot;Remove Distributors in Environment&quot;
+      },
+      {
+        &quot;name&quot;: &quot;delete_systems&quot;,
+        &quot;display_name&quot;: &quot;Remove Systems in Environment&quot;
+      }
+    ]
+  }
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -435,7 +757,8 @@ Deleted role '7'</pre>
       </small>
     </td>
     <td>
-      <p>With this option specified the listed tags are scoped to the organization.</p>
+      
+<p>With this option specified the listed tags are scoped to the organization.</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..

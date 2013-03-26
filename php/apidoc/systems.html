@@ -17,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Systems</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Systems
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Systems<br>
+    Systems
+    <br>
     <small></small>
   </h1>
 </div>
@@ -66,74 +73,74 @@
         <h3>Examples</h3>
           <pre class="prettyprint">POST /api/environments/3/consumers
 {
+  &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
   &quot;installedProducts&quot;: [
     {
-      &quot;productName&quot;: &quot;Red Hat Enterprise Linux Server&quot;,
-      &quot;productId&quot;: &quot;69&quot;
+      &quot;productId&quot;: &quot;69&quot;,
+      &quot;productName&quot;: &quot;Red Hat Enterprise Linux Server&quot;
     }
   ],
-  &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
+  &quot;type&quot;: &quot;system&quot;,
   &quot;facts&quot;: {
-    &quot;net.interface.lo.ipv4_address&quot;: &quot;127.0.0.1&quot;,
-    &quot;net.interface.eth0.ipv4_broadcast&quot;: &quot;192.168.122.255&quot;
-  },
-  &quot;type&quot;: &quot;system&quot;
+    &quot;net.interface.eth0.ipv4_broadcast&quot;: &quot;192.168.122.255&quot;,
+    &quot;net.interface.lo.ipv4_address&quot;: &quot;127.0.0.1&quot;
+  }
 }
 200
 {
-  &quot;owner&quot;: {
-    &quot;displayName&quot;: &quot;org_227e003&quot;,
-    &quot;key&quot;: &quot;org_227e003&quot;,
-    &quot;id&quot;: &quot;ff8080813910c3d3013910c5c1460003&quot;,
-    &quot;href&quot;: &quot;/owners/org_227e003&quot;
-  },
-  &quot;idCert&quot;: {
-    &quot;serial&quot;: {
-      &quot;serial&quot;: 5585057444669292718,
-      &quot;id&quot;: 5585057444669292718,
-      &quot;revoked&quot;: false,
-      &quot;collected&quot;: false,
-      &quot;updated&quot;: &quot;2012-08-10T13:46:32.358+0000&quot;,
-      &quot;created&quot;: &quot;2012-08-10T13:46:32.358+0000&quot;,
-      &quot;expiration&quot;: &quot;2028-08-10T13:46:32.358+0000&quot;
-    },
-    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\n-----END CERTIFICATE-----\n&quot;,
-    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\n-----END RSA PRIVATE KEY-----\n&quot;,
-    &quot;id&quot;: &quot;ff8080813910c3d3013910c952dd0018&quot;,
-    &quot;updated&quot;: &quot;2012-08-10T13:46:33.053+0000&quot;,
-    &quot;created&quot;: &quot;2012-08-10T13:46:33.053+0000&quot;
-  },
-  &quot;autoheal&quot;: true,
   &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
   &quot;id&quot;: 1,
-  &quot;ipv4_address&quot;: &quot;127.0.0.1&quot;,
-  &quot;href&quot;: &quot;/consumers/3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;,
-  &quot;activation_key&quot;: [],
-  &quot;environment_id&quot;: 3,
-  &quot;uuid&quot;: &quot;3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;,
-  &quot;facts&quot;: {
-    &quot;net.interface.lo.ipv4_address&quot;: &quot;127.0.0.1&quot;,
-    &quot;net.interface.eth0.ipv4_broadcast&quot;: &quot;192.168.122.255&quot;
-  },
-  &quot;description&quot;: &quot;Initial Registration Params&quot;,
-  &quot;serviceLevel&quot;: &quot;&quot;,
-  &quot;release&quot;: &quot;&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:46:33Z&quot;,
   &quot;updated_at&quot;: &quot;2012-08-10T13:46:33Z&quot;,
   &quot;system_template_id&quot;: null,
+  &quot;uuid&quot;: &quot;3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;,
   &quot;environment&quot;: {
-    &quot;prior_id&quot;: 2,
-    &quot;library&quot;: false,
     &quot;name&quot;: &quot;env 227e003&quot;,
     &quot;id&quot;: 3,
-    &quot;description&quot;: null,
-    &quot;prior&quot;: &quot;Library&quot;,
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
     &quot;updated_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
+    &quot;prior_id&quot;: 2,
+    &quot;created_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
     &quot;organization_id&quot;: 2,
-    &quot;organization&quot;: &quot;org_227e003&quot;
+    &quot;organization&quot;: &quot;org_227e003&quot;,
+    &quot;prior&quot;: &quot;Library&quot;,
+    &quot;library&quot;: false,
+    &quot;description&quot;: null
   },
-  &quot;location&quot;: &quot;None&quot;
+  &quot;ipv4_address&quot;: &quot;127.0.0.1&quot;,
+  &quot;idCert&quot;: {
+    &quot;id&quot;: &quot;ff8080813910c3d3013910c952dd0018&quot;,
+    &quot;updated&quot;: &quot;2012-08-10T13:46:33.053+0000&quot;,
+    &quot;created&quot;: &quot;2012-08-10T13:46:33.053+0000&quot;,
+    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\n-----END CERTIFICATE-----\n&quot;,
+    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\n-----END RSA PRIVATE KEY-----\n&quot;,
+    &quot;serial&quot;: {
+      &quot;id&quot;: 5585057444669292718,
+      &quot;updated&quot;: &quot;2012-08-10T13:46:32.358+0000&quot;,
+      &quot;created&quot;: &quot;2012-08-10T13:46:32.358+0000&quot;,
+      &quot;expiration&quot;: &quot;2028-08-10T13:46:32.358+0000&quot;,
+      &quot;revoked&quot;: false,
+      &quot;collected&quot;: false,
+      &quot;serial&quot;: 5585057444669292718
+    }
+  },
+  &quot;release&quot;: &quot;&quot;,
+  &quot;href&quot;: &quot;/consumers/3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:46:33Z&quot;,
+  &quot;owner&quot;: {
+    &quot;id&quot;: &quot;ff8080813910c3d3013910c5c1460003&quot;,
+    &quot;href&quot;: &quot;/owners/org_227e003&quot;,
+    &quot;displayName&quot;: &quot;org_227e003&quot;,
+    &quot;key&quot;: &quot;org_227e003&quot;
+  },
+  &quot;serviceLevel&quot;: &quot;&quot;,
+  &quot;facts&quot;: {
+    &quot;net.interface.eth0.ipv4_broadcast&quot;: &quot;192.168.122.255&quot;,
+    &quot;net.interface.lo.ipv4_address&quot;: &quot;127.0.0.1&quot;
+  },
+  &quot;activation_key&quot;: [],
+  &quot;autoheal&quot;: true,
+  &quot;location&quot;: &quot;None&quot;,
+  &quot;description&quot;: &quot;Initial Registration Params&quot;,
+  &quot;environment_id&quot;: 3
 }</pre>
 
         <h3>Params</h3>
@@ -150,11 +157,12 @@
       <strong>facts </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
-      <p>Key-value hash of system-specific facts</p>
+      
+<p>Key-value hash of system-specific facts</p>
 
         <br>
         Value: Hash
@@ -167,11 +175,12 @@
       <strong>installedProducts </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
-      <p>List of products installed on the system</p>
+      
+<p>List of products installed on the system</p>
 
         <br>
         Value: Array
@@ -188,7 +197,8 @@
       </small>
     </td>
     <td>
-      <p>Name of the system</p>
+      
+<p>Name of the system</p>
 
         <br>
         Value: String
@@ -205,7 +215,8 @@
       </small>
     </td>
     <td>
-      <p>Type of the system, it should always be &#39;system&#39;</p>
+      
+<p>Type of the system, it should always be ‘system’</p>
 
         <br>
         Value: String
@@ -222,10 +233,61 @@
       </small>
     </td>
     <td>
-      <p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
+      
+<p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
 
         <br>
         Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Physical of the system</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
     </td>
   </tr>
 
@@ -252,10 +314,11 @@
 
 
     <div id='description-hypervisors_update' class='collapse accordion-body'>
-      <p>Takes a hash representing the mapping: host system having geust systems, e.g.:</p>
+      
+<p>Takes a hash representing the mapping: host system having geust systems,
+e.g.:</p>
 
-<pre><code>{ &quot;host-uuid&quot;: [&quot;guest-uuid-1&quot;, &quot;guest-uuid-2&#39;] }
-</code></pre>
+<pre>{ &quot;host-uuid&quot;: [&quot;guest-uuid-1&quot;, &quot;guest-uuid-2'] }</pre>
 
 <p>See virt-who tool for more details.</p>
 
@@ -296,72 +359,78 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/environments/7/systems
+          <pre class="prettyprint">POST /api/environments/11/systems
 {
-  &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
-  &quot;facts&quot;: {
-    &quot;distribution.name&quot;: &quot;Unknown&quot;,
-    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;
-  },
+  &quot;name&quot;: &quot;katello2_q5ktCr6jM1oN&quot;,
   &quot;serviceLevel&quot;: &quot;SELF-SUPPORT&quot;,
-  &quot;cp_type&quot;: &quot;system&quot;
+  &quot;cp_type&quot;: &quot;system&quot;,
+  &quot;facts&quot;: {
+    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;,
+    &quot;distribution.name&quot;: &quot;Unknown&quot;
+  }
 }
 200
 {
-  &quot;owner&quot;: {
-    &quot;displayName&quot;: &quot;org_manifest_227e003&quot;,
-    &quot;key&quot;: &quot;org_manifest_227e003&quot;,
-    &quot;id&quot;: &quot;ff8080813910c3d3013910ccdd67001c&quot;,
-    &quot;href&quot;: &quot;/owners/org_manifest_227e003&quot;
+  &quot;name&quot;: &quot;katello2_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 1,
+  &quot;uuid&quot;: &quot;99911dd0-cd39-4808-ae6f-94e0e31acb77&quot;,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:45:13Z&quot;,
+  &quot;guests&quot;: [],
+  &quot;ipv4_address&quot;: null,
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;env_manifest_q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 11,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:43:34Z&quot;,
+    &quot;prior_id&quot;: 10,
+    &quot;label&quot;: &quot;env_manifest_q5ktCr6jM1oN&quot;,
+    &quot;organization&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;organization_id&quot;: 5,
+    &quot;created_at&quot;: &quot;2013-03-20T19:43:34Z&quot;,
+    &quot;prior&quot;: &quot;Library&quot;,
+    &quot;library&quot;: false,
+    &quot;description&quot;: null
   },
   &quot;idCert&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d895577c50098&quot;,
+    &quot;updated&quot;: &quot;2013-03-20T19:45:12.645+0000&quot;,
+    &quot;created&quot;: &quot;2013-03-20T19:45:12.645+0000&quot;,
+    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\nMIIERDCCAyygAwIBAgIIItQbbMBAcRYwDQYJKoZIhvcNAQEFBQAwbDELMAkGA1UE\nBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo\nMRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTENMAsGA1UEAxME\ndm0xNjAeFw0xMzAzMjAxOTQ1MTFaFw0yOTAzMjAxOTQ1MTFaMC8xLTArBgNVBAMT\nJDk5OTExZGQwLWNkMzktNDgwOC1hZTZmLTk0ZTBlMzFhY2I3NzCCASIwDQYJKoZI\nhvcNAQEBBQADggEPADCCAQoCggEBAJwEIpGwaYRexGozE1HFKd1ezWu1H8+Ei512\nkTaC+B9KkBUoOzCiqsOq/Hn6In0mCQjKcWFOAoXlXAcutQDpExCIiU4Be2J3OXVR\nwE/C/O9jCuFCBvc93Cw2t7weiuJGnyzdqyhkfrGSncH/h4gUrVEIXdT/TFy9897U\nQsJoRfHXLuoVX+wowmcGvlYcKdoB8G2OJvj6VnHBhDu7BeUn6USk0Pw+rLLg7xzN\nmdowgnnRYezKipX2kPI3f4Un7mtoGRJHFQ+rrpfza7HRGO9/JtFtI/EXrNUDHb9y\nfZhR9Bs3WwNWRsNJziR5xK3DDwY7gKug2eWSEiRa5gt76rUaYzECAwEAAaOCASUw\nggEhMBEGCWCGSAGG+EIBAQQEAwIFoDALBgNVHQ8EBAMCBLAwgZ4GA1UdIwSBljCB\nk4AUUpS69JtZPdsFTyVQYBDAwLX8PX6hcKRuMGwxCzAJBgNVBAYTAlVTMRcwFQYD\nVQQIEw5Ob3J0aCBDYXJvbGluYTEQMA4GA1UEBxMHUmFsZWlnaDEQMA4GA1UEChMH\nUmVkIEhhdDERMA8GA1UECxMIQ2xvdWQgQlUxDTALBgNVBAMTBHZtMTaCCQDEm+bk\nF7paPjAdBgNVHQ4EFgQUnee7jecoW1gcoUAIX3q6gt99MAcwEwYDVR0lBAwwCgYI\nKwYBBQUHAwIwKgYDVR0RBCMwIaQfMB0xGzAZBgNVBAMMEmYxNnAyX3E1a3RDcjZq\nTTFvTjANBgkqhkiG9w0BAQUFAAOCAQEAM6jtTyMKXaDk/xNjfbHhDKyTuKyAhAFs\niUPwLwaMTESi5XAvuH6SdZBEngxaFn1gLwcbhLsto8KdSccqVGmtwJcbc9Ga7Eln\nu23IcbQCneZcd3d+Jg4MeKx8+Ma4evHxywzVlBqqhPlYoYhe+rf7f0sgMU/5W4pq\nbH3mlIUvaLw5TZNOH6VjqNO783r5lThOqgSHZ8PXrfrZh5DlyywgZT8xmYGVm4VN\nz4eBob6S+mYt3Jd7vugpjWmj6rYtJjnSlaA/R7OoGO/1JAnj4sfJ0Hhlg+/M2HxN\nvpKeNqOEuj+I6wo1s40umj9SgXSw4Dn6K9FAF/1jDoD0w/00ZP5kHA==\n-----END CERTIFICATE-----\n&quot;,
+    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAnAQikbBphF7EajMTUcUp3V7Na7Ufz4SLnXaRNoL4H0qQFSg7\nMKKqw6r8efoifSYJCMpxYU4CheVcBy61AOkTEIiJTgF7Ync5dVHAT8L872MK4UIG\n9z3cLDa3vB6K4kafLN2rKGR+sZKdwf+HiBStUQhd1P9MXL3z3tRCwmhF8dcu6hVf\n7CjCZwa+Vhwp2gHwbY4m+PpWccGEO7sF5SfpRKTQ/D6ssuDvHM2Z2jCCedFh7MqK\nlfaQ8jd/hSfua2gZEkcVD6uul/NrsdEY738m0W0j8Res1QMdv3J9mFH0GzdbA1ZG\nw0nOJHnErcMPBjuAq6DZ5ZISJFrmC3vqtRpjMQIDAQABAoIBAQCH+y6qLsl5HyQw\nr/25upAnqvZ+Vyq3s34Aq5QboAFlPJbiaeNVG6Kc0o4mPncK/zjGmbRCrDyUuXkB\npZsLhRohwe9ytuX0x5ekArIMkxXkDD4yYVsy6Y7aVoLECxbf68/WygnhNd4bJYAs\n02wslmENjK5D9JR5DPLel8DsMvgrtQvLJ0Q+mMvE4iH8sqtane5qzVlnmT1mt4w9\nvs9Ul1HQQxZ9xtgTNS5h8p4F4r/8ApdIe9KTJcccUxDVkCvQLK+U5m+E00FW4RVc\nJcNcXichrkrSuQqvjquOckPW5KNKywIaPCtlYxj3dqwmPfpzrddgYc4cQMPy9bUv\nzxKjWTBBAoGBAP/6QFB26boGRw6cZ901auhWTITyrtDLCCIPgjYWCyFxxIv01trH\n2nLJlAmn+Ybbp/aFnknvC+JjiPcy50jET+lciwUSV2V3H4EUSpdZ7peCTRXX7K7V\nheW6nutw1YfE+mVDy3P37bfDwZTAUJHa+LNfQhaL/2rU/vK4adRs57x5AoGBAJwH\no4yR9LX4N7v07oMboKPnP9JFPgXtVXNOFeT1/1IIX+2Kv+ij31uN4awo6EMcd6WE\nXungkD1d4SzXmxz/zH7r7EZdcxeb8pMmL48D7dgtkr1o0nHzYeb635SkEQuDET7r\nib2RBN8lqmF7cyPhnt6bDy3YGMEnHWvDhlBWFT55AoGBAO58tl0BXSMu5BcNy4sC\nULdkZ+hZvlvTPaGWN2eyw+4F8+u9UkwFdVYKzrzsXgOyNNvug5o4eCcVOy+somVe\nWWF/EhrIitqC0LxPLmuyoyNPiAg440/EqfpuE9AhkR/seqnMLwq9zCGw5XN0ddxe\nWeWsc4NULcTX6ywyeo8qZAFpAoGAaQOnKvwtVLAsat+uDCXzF32T8eTSmtCi+4kp\nqUF8R20Fi24gPebVdNxocCPUNx8Y1BjkfMq8qeDepfyzFHCB5UbKbo2E4fX+7NT9\nm2cMlLwPkFXVlgY19W0SQAuwwSvE1rFWsnTBb6L9KsEYvKSk9bQtIjDYcF/wKFCf\nvMBDahkCgYBoH0XsOHVwVaNHGICgpMiR5iXkenGMQRUvsSGBniHaDa449LPJYjQr\nkDzHql8w3sy7JWqinBI2WUt8NXA1T2styaJxRlgITUZNSRm95l0IQVr34zkCbsdc\nGJDbZb4oxsymc06DwhTPhbfajTg8jZS6vZplKiD6MbQlGGYRW6lZxQ==\n-----END RSA PRIVATE KEY-----\n&quot;,
     &quot;serial&quot;: {
-      &quot;serial&quot;: 375757150572080644,
-      &quot;id&quot;: 375757150572080644,
-      &quot;revoked&quot;: false,
+      &quot;id&quot;: 2509661046248075542,
+      &quot;updated&quot;: &quot;2013-03-20T19:45:11.805+0000&quot;,
+      &quot;created&quot;: &quot;2013-03-20T19:45:11.805+0000&quot;,
+      &quot;expiration&quot;: &quot;2029-03-20T19:45:11.805+0000&quot;,
       &quot;collected&quot;: false,
-      &quot;updated&quot;: &quot;2012-08-10T13:52:24.099+0000&quot;,
-      &quot;created&quot;: &quot;2012-08-10T13:52:24.099+0000&quot;,
-      &quot;expiration&quot;: &quot;2028-08-10T13:52:24.099+0000&quot;
-    },
-    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\n-----END CERTIFICATE-----\n&quot;,
-    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\n-----END RSA PRIVATE KEY-----\n&quot;,
-    &quot;id&quot;: &quot;ff8080813910c3d3013910ceb07a003a&quot;,
-    &quot;updated&quot;: &quot;2012-08-10T13:52:24.698+0000&quot;,
-    &quot;created&quot;: &quot;2012-08-10T13:52:24.698+0000&quot;
+      &quot;revoked&quot;: false,
+      &quot;serial&quot;: 2509661046248075542
+    }
   },
-  &quot;autoheal&quot;: true,
-  &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
-  &quot;id&quot;: 2,
-  &quot;ipv4_address&quot;: null,
-  &quot;href&quot;: &quot;/consumers/269f9e7c-debe-4b3c-b33b-92f309f882df&quot;,
-  &quot;activation_key&quot;: [],
-  &quot;environment_id&quot;: 7,
-  &quot;uuid&quot;: &quot;269f9e7c-debe-4b3c-b33b-92f309f882df&quot;,
-  &quot;facts&quot;: {
-    &quot;distribution.name&quot;: &quot;Unknown&quot;,
-    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;
-  },
-  &quot;guests&quot;: [],
-  &quot;description&quot;: &quot;Initial Registration Params&quot;,
-  &quot;serviceLevel&quot;: &quot;&quot;,
   &quot;release&quot;: &quot;&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:52:27Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:52:27Z&quot;,
-  &quot;system_template_id&quot;: null,
-  &quot;environment&quot;: {
-    &quot;prior_id&quot;: 6,
-    &quot;library&quot;: false,
-    &quot;name&quot;: &quot;env_manifest_227e003&quot;,
-    &quot;id&quot;: 7,
-    &quot;description&quot;: null,
-    &quot;prior&quot;: &quot;Library&quot;,
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:26Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:26Z&quot;,
-    &quot;organization_id&quot;: 3,
-    &quot;organization&quot;: &quot;org_manifest_227e003&quot;
+  &quot;releaseVer&quot;: {
+    &quot;id&quot;: null,
+    &quot;releaseVer&quot;: &quot;&quot;
   },
-  &quot;location&quot;: &quot;None&quot;
+  &quot;href&quot;: &quot;/consumers/99911dd0-cd39-4808-ae6f-94e0e31acb77&quot;,
+  &quot;owner&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d8953f47b007a&quot;,
+    &quot;href&quot;: &quot;/owners/org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;displayName&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;key&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;
+  },
+  &quot;created_at&quot;: &quot;2013-03-20T19:45:13Z&quot;,
+  &quot;serviceLevel&quot;: &quot;&quot;,
+  &quot;activation_key&quot;: [],
+  &quot;autoheal&quot;: true,
+  &quot;facts&quot;: {
+    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;,
+    &quot;distribution.name&quot;: &quot;Unknown&quot;,
+    &quot;network.hostname&quot;: &quot;katello2_q5ktCr6jM1oN&quot;
+  },
+  &quot;location&quot;: &quot;None&quot;,
+  &quot;description&quot;: &quot;Initial Registration Params&quot;,
+  &quot;environment_id&quot;: 11,
+  &quot;content_view_id&quot;: null
 }</pre>
 
         <h3>Params</h3>
@@ -394,11 +463,12 @@
       <strong>facts </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
-      <p>Key-value hash of system-specific facts</p>
+      
+<p>Key-value hash of system-specific facts</p>
 
         <br>
         Value: Hash
@@ -411,11 +481,12 @@
       <strong>installedProducts </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
-      <p>List of products installed on the system</p>
+      
+<p>List of products installed on the system</p>
 
         <br>
         Value: Array
@@ -432,7 +503,8 @@
       </small>
     </td>
     <td>
-      <p>Name of the system</p>
+      
+<p>Name of the system</p>
 
         <br>
         Value: String
@@ -449,7 +521,8 @@
       </small>
     </td>
     <td>
-      <p>Type of the system, it should always be &#39;system&#39;</p>
+      
+<p>Type of the system, it should always be ‘system’</p>
 
         <br>
         Value: String
@@ -466,10 +539,61 @@
       </small>
     </td>
     <td>
-      <p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
+      
+<p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
 
         <br>
         Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Physical of the system</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
     </td>
   </tr>
 
@@ -496,7 +620,8 @@
 
 
     <div id='description-regenerate_identity_certificates' class='collapse accordion-body'>
-      <p>Schedules the consumer identity certificate regeneration</p>
+      
+<p>Schedules the consumer identity certificate regeneration</p>
 
 
 
@@ -520,7 +645,8 @@
       </small>
     </td>
     <td>
-      <p>UUID of the consumer</p>
+      
+<p>UUID of the consumer</p>
 
         <br>
         Value: String
@@ -564,66 +690,72 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/systems/269f9e7c-debe-4b3c-b33b-92f309f882df
+          <pre class="prettyprint">PUT /api/systems/99911dd0-cd39-4808-ae6f-94e0e31acb77
 {
   &quot;serviceLevel&quot;: &quot;SELF-SUPPORT&quot;
 }
 200
 {
-  &quot;owner&quot;: {
-    &quot;displayName&quot;: &quot;org_manifest_227e003&quot;,
-    &quot;key&quot;: &quot;org_manifest_227e003&quot;,
-    &quot;id&quot;: &quot;ff8080813910c3d3013910ccdd67001c&quot;,
-    &quot;href&quot;: &quot;/owners/org_manifest_227e003&quot;
+  &quot;name&quot;: &quot;katello2_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 1,
+  &quot;uuid&quot;: &quot;99911dd0-cd39-4808-ae6f-94e0e31acb77&quot;,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:45:13Z&quot;,
+  &quot;guests&quot;: [],
+  &quot;ipv4_address&quot;: null,
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;env_manifest_q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 11,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:43:34Z&quot;,
+    &quot;prior_id&quot;: 10,
+    &quot;label&quot;: &quot;env_manifest_q5ktCr6jM1oN&quot;,
+    &quot;organization&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;organization_id&quot;: 5,
+    &quot;created_at&quot;: &quot;2013-03-20T19:43:34Z&quot;,
+    &quot;prior&quot;: &quot;Library&quot;,
+    &quot;library&quot;: false,
+    &quot;description&quot;: null
   },
   &quot;idCert&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d895577c50098&quot;,
+    &quot;updated&quot;: &quot;2013-03-20T19:45:12.645+0000&quot;,
+    &quot;created&quot;: &quot;2013-03-20T19:45:12.645+0000&quot;,
+    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\nMIIERDCCAyygAwIBAgIIItQbbMBAcRYwDQYJKoZIhvcNAQEFBQAwbDELMAkGA1UE\nBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo\nMRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTENMAsGA1UEAxME\ndm0xNjAeFw0xMzAzMjAxOTQ1MTFaFw0yOTAzMjAxOTQ1MTFaMC8xLTArBgNVBAMT\nJDk5OTExZGQwLWNkMzktNDgwOC1hZTZmLTk0ZTBlMzFhY2I3NzCCASIwDQYJKoZI\nhvcNAQEBBQADggEPADCCAQoCggEBAJwEIpGwaYRexGozE1HFKd1ezWu1H8+Ei512\nkTaC+B9KkBUoOzCiqsOq/Hn6In0mCQjKcWFOAoXlXAcutQDpExCIiU4Be2J3OXVR\nwE/C/O9jCuFCBvc93Cw2t7weiuJGnyzdqyhkfrGSncH/h4gUrVEIXdT/TFy9897U\nQsJoRfHXLuoVX+wowmcGvlYcKdoB8G2OJvj6VnHBhDu7BeUn6USk0Pw+rLLg7xzN\nmdowgnnRYezKipX2kPI3f4Un7mtoGRJHFQ+rrpfza7HRGO9/JtFtI/EXrNUDHb9y\nfZhR9Bs3WwNWRsNJziR5xK3DDwY7gKug2eWSEiRa5gt76rUaYzECAwEAAaOCASUw\nggEhMBEGCWCGSAGG+EIBAQQEAwIFoDALBgNVHQ8EBAMCBLAwgZ4GA1UdIwSBljCB\nk4AUUpS69JtZPdsFTyVQYBDAwLX8PX6hcKRuMGwxCzAJBgNVBAYTAlVTMRcwFQYD\nVQQIEw5Ob3J0aCBDYXJvbGluYTEQMA4GA1UEBxMHUmFsZWlnaDEQMA4GA1UEChMH\nUmVkIEhhdDERMA8GA1UECxMIQ2xvdWQgQlUxDTALBgNVBAMTBHZtMTaCCQDEm+bk\nF7paPjAdBgNVHQ4EFgQUnee7jecoW1gcoUAIX3q6gt99MAcwEwYDVR0lBAwwCgYI\nKwYBBQUHAwIwKgYDVR0RBCMwIaQfMB0xGzAZBgNVBAMMEmYxNnAyX3E1a3RDcjZq\nTTFvTjANBgkqhkiG9w0BAQUFAAOCAQEAM6jtTyMKXaDk/xNjfbHhDKyTuKyAhAFs\niUPwLwaMTESi5XAvuH6SdZBEngxaFn1gLwcbhLsto8KdSccqVGmtwJcbc9Ga7Eln\nu23IcbQCneZcd3d+Jg4MeKx8+Ma4evHxywzVlBqqhPlYoYhe+rf7f0sgMU/5W4pq\nbH3mlIUvaLw5TZNOH6VjqNO783r5lThOqgSHZ8PXrfrZh5DlyywgZT8xmYGVm4VN\nz4eBob6S+mYt3Jd7vugpjWmj6rYtJjnSlaA/R7OoGO/1JAnj4sfJ0Hhlg+/M2HxN\nvpKeNqOEuj+I6wo1s40umj9SgXSw4Dn6K9FAF/1jDoD0w/00ZP5kHA==\n-----END CERTIFICATE-----\n&quot;,
+    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAnAQikbBphF7EajMTUcUp3V7Na7Ufz4SLnXaRNoL4H0qQFSg7\nMKKqw6r8efoifSYJCMpxYU4CheVcBy61AOkTEIiJTgF7Ync5dVHAT8L872MK4UIG\n9z3cLDa3vB6K4kafLN2rKGR+sZKdwf+HiBStUQhd1P9MXL3z3tRCwmhF8dcu6hVf\n7CjCZwa+Vhwp2gHwbY4m+PpWccGEO7sF5SfpRKTQ/D6ssuDvHM2Z2jCCedFh7MqK\nlfaQ8jd/hSfua2gZEkcVD6uul/NrsdEY738m0W0j8Res1QMdv3J9mFH0GzdbA1ZG\nw0nOJHnErcMPBjuAq6DZ5ZISJFrmC3vqtRpjMQIDAQABAoIBAQCH+y6qLsl5HyQw\nr/25upAnqvZ+Vyq3s34Aq5QboAFlPJbiaeNVG6Kc0o4mPncK/zjGmbRCrDyUuXkB\npZsLhRohwe9ytuX0x5ekArIMkxXkDD4yYVsy6Y7aVoLECxbf68/WygnhNd4bJYAs\n02wslmENjK5D9JR5DPLel8DsMvgrtQvLJ0Q+mMvE4iH8sqtane5qzVlnmT1mt4w9\nvs9Ul1HQQxZ9xtgTNS5h8p4F4r/8ApdIe9KTJcccUxDVkCvQLK+U5m+E00FW4RVc\nJcNcXichrkrSuQqvjquOckPW5KNKywIaPCtlYxj3dqwmPfpzrddgYc4cQMPy9bUv\nzxKjWTBBAoGBAP/6QFB26boGRw6cZ901auhWTITyrtDLCCIPgjYWCyFxxIv01trH\n2nLJlAmn+Ybbp/aFnknvC+JjiPcy50jET+lciwUSV2V3H4EUSpdZ7peCTRXX7K7V\nheW6nutw1YfE+mVDy3P37bfDwZTAUJHa+LNfQhaL/2rU/vK4adRs57x5AoGBAJwH\no4yR9LX4N7v07oMboKPnP9JFPgXtVXNOFeT1/1IIX+2Kv+ij31uN4awo6EMcd6WE\nXungkD1d4SzXmxz/zH7r7EZdcxeb8pMmL48D7dgtkr1o0nHzYeb635SkEQuDET7r\nib2RBN8lqmF7cyPhnt6bDy3YGMEnHWvDhlBWFT55AoGBAO58tl0BXSMu5BcNy4sC\nULdkZ+hZvlvTPaGWN2eyw+4F8+u9UkwFdVYKzrzsXgOyNNvug5o4eCcVOy+somVe\nWWF/EhrIitqC0LxPLmuyoyNPiAg440/EqfpuE9AhkR/seqnMLwq9zCGw5XN0ddxe\nWeWsc4NULcTX6ywyeo8qZAFpAoGAaQOnKvwtVLAsat+uDCXzF32T8eTSmtCi+4kp\nqUF8R20Fi24gPebVdNxocCPUNx8Y1BjkfMq8qeDepfyzFHCB5UbKbo2E4fX+7NT9\nm2cMlLwPkFXVlgY19W0SQAuwwSvE1rFWsnTBb6L9KsEYvKSk9bQtIjDYcF/wKFCf\nvMBDahkCgYBoH0XsOHVwVaNHGICgpMiR5iXkenGMQRUvsSGBniHaDa449LPJYjQr\nkDzHql8w3sy7JWqinBI2WUt8NXA1T2styaJxRlgITUZNSRm95l0IQVr34zkCbsdc\nGJDbZb4oxsymc06DwhTPhbfajTg8jZS6vZplKiD6MbQlGGYRW6lZxQ==\n-----END RSA PRIVATE KEY-----\n&quot;,
     &quot;serial&quot;: {
-      &quot;serial&quot;: 375757150572080644,
-      &quot;id&quot;: 375757150572080644,
-      &quot;revoked&quot;: false,
+      &quot;id&quot;: 2509661046248075542,
+      &quot;updated&quot;: &quot;2013-03-20T19:45:11.805+0000&quot;,
+      &quot;created&quot;: &quot;2013-03-20T19:45:11.805+0000&quot;,
+      &quot;expiration&quot;: &quot;2029-03-20T19:45:11.805+0000&quot;,
       &quot;collected&quot;: false,
-      &quot;updated&quot;: &quot;2012-08-10T13:52:24.099+0000&quot;,
-      &quot;created&quot;: &quot;2012-08-10T13:52:24.099+0000&quot;,
-      &quot;expiration&quot;: &quot;2028-08-10T13:52:24.099+0000&quot;
-    },
-    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\n-----END CERTIFICATE-----\n&quot;,
-    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\n-----END RSA PRIVATE KEY-----\n&quot;,
-    &quot;id&quot;: &quot;ff8080813910c3d3013910ceb07a003a&quot;,
-    &quot;updated&quot;: &quot;2012-08-10T13:52:24.698+0000&quot;,
-    &quot;created&quot;: &quot;2012-08-10T13:52:24.698+0000&quot;
+      &quot;revoked&quot;: false,
+      &quot;serial&quot;: 2509661046248075542
+    }
   },
-  &quot;autoheal&quot;: true,
-  &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
-  &quot;id&quot;: 2,
-  &quot;ipv4_address&quot;: null,
-  &quot;href&quot;: &quot;/consumers/269f9e7c-debe-4b3c-b33b-92f309f882df&quot;,
-  &quot;activation_key&quot;: [],
-  &quot;environment_id&quot;: 7,
-  &quot;uuid&quot;: &quot;269f9e7c-debe-4b3c-b33b-92f309f882df&quot;,
-  &quot;facts&quot;: {
-    &quot;distribution.name&quot;: &quot;Unknown&quot;,
-    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;
-  },
-  &quot;guests&quot;: [],
-  &quot;description&quot;: &quot;Initial Registration Params&quot;,
-  &quot;serviceLevel&quot;: &quot;SELF-SUPPORT&quot;,
   &quot;release&quot;: &quot;&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:52:27Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:52:27Z&quot;,
-  &quot;system_template_id&quot;: null,
-  &quot;environment&quot;: {
-    &quot;prior_id&quot;: 6,
-    &quot;library&quot;: false,
-    &quot;name&quot;: &quot;env_manifest_227e003&quot;,
-    &quot;id&quot;: 7,
-    &quot;description&quot;: null,
-    &quot;prior&quot;: &quot;Library&quot;,
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:26Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:26Z&quot;,
-    &quot;organization_id&quot;: 3,
-    &quot;organization&quot;: &quot;org_manifest_227e003&quot;
+  &quot;releaseVer&quot;: {
+    &quot;id&quot;: null,
+    &quot;releaseVer&quot;: &quot;&quot;
   },
-  &quot;location&quot;: &quot;None&quot;
+  &quot;href&quot;: &quot;/consumers/99911dd0-cd39-4808-ae6f-94e0e31acb77&quot;,
+  &quot;owner&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d8953f47b007a&quot;,
+    &quot;href&quot;: &quot;/owners/org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;displayName&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;key&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;
+  },
+  &quot;created_at&quot;: &quot;2013-03-20T19:45:13Z&quot;,
+  &quot;serviceLevel&quot;: &quot;SELF-SUPPORT&quot;,
+  &quot;activation_key&quot;: [],
+  &quot;autoheal&quot;: true,
+  &quot;facts&quot;: {
+    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;,
+    &quot;distribution.name&quot;: &quot;Unknown&quot;,
+    &quot;network.hostname&quot;: &quot;katello2_q5ktCr6jM1oN&quot;
+  },
+  &quot;location&quot;: &quot;None&quot;,
+  &quot;description&quot;: &quot;Initial Registration Params&quot;,
+  &quot;environment_id&quot;: 11,
+  &quot;content_view_id&quot;: null
 }</pre>
 
         <h3>Params</h3>
@@ -640,11 +772,12 @@
       <strong>facts </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
-      <p>Key-value hash of system-specific facts</p>
+      
+<p>Key-value hash of system-specific facts</p>
 
         <br>
         Value: Hash
@@ -657,11 +790,12 @@
       <strong>installedProducts </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
-      <p>List of products installed on the system</p>
+      
+<p>List of products installed on the system</p>
 
         <br>
         Value: Array
@@ -678,7 +812,26 @@
       </small>
     </td>
     <td>
-      <p>Name of the system</p>
+      
+<p>Name of the system</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>type </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Type of the system, it should always be ‘system’</p>
 
         <br>
         Value: String
@@ -695,24 +848,8 @@
       </small>
     </td>
     <td>
-      <p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
-
-        <br>
-        Value: String
-    </td>
-  </tr>
-
-  
-  <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>releaseVer </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      <p>Release of the os. The $releasever variable in repo url will be replaced with this value</p>
+      
+<p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
 
         <br>
         Value: String
@@ -729,10 +866,43 @@
       </small>
     </td>
     <td>
-      <p>Physical of the system</p>
+      
+<p>Physical of the system</p>
 
         <br>
         Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
     </td>
   </tr>
 
@@ -782,34 +952,36 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/organizations/org_227e003/systems?name=katello.example.com_227e003
+          <pre class="prettyprint">GET /api/organizations/org_manifest_q5ktCr6jM1oN/systems?name=katello2_q5ktCr6jM1oN
 200
 [
   {
-    &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
+    &quot;name&quot;: &quot;katello2_q5ktCr6jM1oN&quot;,
     &quot;id&quot;: 1,
-    &quot;ipv4_address&quot;: &quot;127.0.0.1&quot;,
-    &quot;activation_key&quot;: [],
-    &quot;environment_id&quot;: 3,
-    &quot;uuid&quot;: &quot;3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;,
-    &quot;description&quot;: &quot;Initial Registration Params&quot;,
-    &quot;serviceLevel&quot;: &quot;&quot;,
-    &quot;created_at&quot;: &quot;2012-08-10T13:46:33Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:46:33Z&quot;,
-    &quot;system_template_id&quot;: null,
+    &quot;uuid&quot;: &quot;99911dd0-cd39-4808-ae6f-94e0e31acb77&quot;,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:45:13Z&quot;,
+    &quot;guests&quot;: [],
+    &quot;ipv4_address&quot;: null,
     &quot;environment&quot;: {
-      &quot;prior_id&quot;: 2,
-      &quot;library&quot;: false,
-      &quot;name&quot;: &quot;env 227e003&quot;,
-      &quot;id&quot;: 3,
-      &quot;description&quot;: null,
+      &quot;name&quot;: &quot;env_manifest_q5ktCr6jM1oN&quot;,
+      &quot;id&quot;: 11,
+      &quot;updated_at&quot;: &quot;2013-03-20T19:43:34Z&quot;,
+      &quot;prior_id&quot;: 10,
+      &quot;label&quot;: &quot;env_manifest_q5ktCr6jM1oN&quot;,
+      &quot;organization&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;,
+      &quot;organization_id&quot;: 5,
+      &quot;created_at&quot;: &quot;2013-03-20T19:43:34Z&quot;,
       &quot;prior&quot;: &quot;Library&quot;,
-      &quot;created_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
-      &quot;organization_id&quot;: 2,
-      &quot;organization&quot;: &quot;org_227e003&quot;
+      &quot;library&quot;: false,
+      &quot;description&quot;: null
     },
-    &quot;location&quot;: &quot;None&quot;
+    &quot;created_at&quot;: &quot;2013-03-20T19:45:13Z&quot;,
+    &quot;serviceLevel&quot;: &quot;&quot;,
+    &quot;activation_key&quot;: [],
+    &quot;location&quot;: &quot;None&quot;,
+    &quot;description&quot;: &quot;Initial Registration Params&quot;,
+    &quot;environment_id&quot;: 11,
+    &quot;content_view_id&quot;: null
   }
 ]</pre>
 
@@ -831,7 +1003,8 @@
       </small>
     </td>
     <td>
-      <p>Filter systems by name</p>
+      
+<p>Filter systems by name</p>
 
         <br>
         Value: String
@@ -848,7 +1021,26 @@
       </small>
     </td>
     <td>
-      <p>Filter systems by subscribed pool</p>
+      
+<p>Filter systems by subscribed pool</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>search </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter systems by advanced search query</p>
 
         <br>
         Value: String
@@ -892,63 +1084,69 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/systems/269f9e7c-debe-4b3c-b33b-92f309f882df
+          <pre class="prettyprint">GET /api/systems/99911dd0-cd39-4808-ae6f-94e0e31acb77
 200
 {
-  &quot;owner&quot;: {
-    &quot;displayName&quot;: &quot;org_manifest_227e003&quot;,
-    &quot;key&quot;: &quot;org_manifest_227e003&quot;,
-    &quot;id&quot;: &quot;ff8080813910c3d3013910ccdd67001c&quot;,
-    &quot;href&quot;: &quot;/owners/org_manifest_227e003&quot;
+  &quot;name&quot;: &quot;katello2_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 1,
+  &quot;uuid&quot;: &quot;99911dd0-cd39-4808-ae6f-94e0e31acb77&quot;,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:45:13Z&quot;,
+  &quot;guests&quot;: [],
+  &quot;ipv4_address&quot;: null,
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;env_manifest_q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 11,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:43:34Z&quot;,
+    &quot;prior_id&quot;: 10,
+    &quot;label&quot;: &quot;env_manifest_q5ktCr6jM1oN&quot;,
+    &quot;organization&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;organization_id&quot;: 5,
+    &quot;created_at&quot;: &quot;2013-03-20T19:43:34Z&quot;,
+    &quot;prior&quot;: &quot;Library&quot;,
+    &quot;library&quot;: false,
+    &quot;description&quot;: null
   },
   &quot;idCert&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d895577c50098&quot;,
+    &quot;updated&quot;: &quot;2013-03-20T19:45:12.645+0000&quot;,
+    &quot;created&quot;: &quot;2013-03-20T19:45:12.645+0000&quot;,
+    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\nMIIERDCCAyygAwIBAgIIItQbbMBAcRYwDQYJKoZIhvcNAQEFBQAwbDELMAkGA1UE\nBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo\nMRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTENMAsGA1UEAxME\ndm0xNjAeFw0xMzAzMjAxOTQ1MTFaFw0yOTAzMjAxOTQ1MTFaMC8xLTArBgNVBAMT\nJDk5OTExZGQwLWNkMzktNDgwOC1hZTZmLTk0ZTBlMzFhY2I3NzCCASIwDQYJKoZI\nhvcNAQEBBQADggEPADCCAQoCggEBAJwEIpGwaYRexGozE1HFKd1ezWu1H8+Ei512\nkTaC+B9KkBUoOzCiqsOq/Hn6In0mCQjKcWFOAoXlXAcutQDpExCIiU4Be2J3OXVR\nwE/C/O9jCuFCBvc93Cw2t7weiuJGnyzdqyhkfrGSncH/h4gUrVEIXdT/TFy9897U\nQsJoRfHXLuoVX+wowmcGvlYcKdoB8G2OJvj6VnHBhDu7BeUn6USk0Pw+rLLg7xzN\nmdowgnnRYezKipX2kPI3f4Un7mtoGRJHFQ+rrpfza7HRGO9/JtFtI/EXrNUDHb9y\nfZhR9Bs3WwNWRsNJziR5xK3DDwY7gKug2eWSEiRa5gt76rUaYzECAwEAAaOCASUw\nggEhMBEGCWCGSAGG+EIBAQQEAwIFoDALBgNVHQ8EBAMCBLAwgZ4GA1UdIwSBljCB\nk4AUUpS69JtZPdsFTyVQYBDAwLX8PX6hcKRuMGwxCzAJBgNVBAYTAlVTMRcwFQYD\nVQQIEw5Ob3J0aCBDYXJvbGluYTEQMA4GA1UEBxMHUmFsZWlnaDEQMA4GA1UEChMH\nUmVkIEhhdDERMA8GA1UECxMIQ2xvdWQgQlUxDTALBgNVBAMTBHZtMTaCCQDEm+bk\nF7paPjAdBgNVHQ4EFgQUnee7jecoW1gcoUAIX3q6gt99MAcwEwYDVR0lBAwwCgYI\nKwYBBQUHAwIwKgYDVR0RBCMwIaQfMB0xGzAZBgNVBAMMEmYxNnAyX3E1a3RDcjZq\nTTFvTjANBgkqhkiG9w0BAQUFAAOCAQEAM6jtTyMKXaDk/xNjfbHhDKyTuKyAhAFs\niUPwLwaMTESi5XAvuH6SdZBEngxaFn1gLwcbhLsto8KdSccqVGmtwJcbc9Ga7Eln\nu23IcbQCneZcd3d+Jg4MeKx8+Ma4evHxywzVlBqqhPlYoYhe+rf7f0sgMU/5W4pq\nbH3mlIUvaLw5TZNOH6VjqNO783r5lThOqgSHZ8PXrfrZh5DlyywgZT8xmYGVm4VN\nz4eBob6S+mYt3Jd7vugpjWmj6rYtJjnSlaA/R7OoGO/1JAnj4sfJ0Hhlg+/M2HxN\nvpKeNqOEuj+I6wo1s40umj9SgXSw4Dn6K9FAF/1jDoD0w/00ZP5kHA==\n-----END CERTIFICATE-----\n&quot;,
+    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAnAQikbBphF7EajMTUcUp3V7Na7Ufz4SLnXaRNoL4H0qQFSg7\nMKKqw6r8efoifSYJCMpxYU4CheVcBy61AOkTEIiJTgF7Ync5dVHAT8L872MK4UIG\n9z3cLDa3vB6K4kafLN2rKGR+sZKdwf+HiBStUQhd1P9MXL3z3tRCwmhF8dcu6hVf\n7CjCZwa+Vhwp2gHwbY4m+PpWccGEO7sF5SfpRKTQ/D6ssuDvHM2Z2jCCedFh7MqK\nlfaQ8jd/hSfua2gZEkcVD6uul/NrsdEY738m0W0j8Res1QMdv3J9mFH0GzdbA1ZG\nw0nOJHnErcMPBjuAq6DZ5ZISJFrmC3vqtRpjMQIDAQABAoIBAQCH+y6qLsl5HyQw\nr/25upAnqvZ+Vyq3s34Aq5QboAFlPJbiaeNVG6Kc0o4mPncK/zjGmbRCrDyUuXkB\npZsLhRohwe9ytuX0x5ekArIMkxXkDD4yYVsy6Y7aVoLECxbf68/WygnhNd4bJYAs\n02wslmENjK5D9JR5DPLel8DsMvgrtQvLJ0Q+mMvE4iH8sqtane5qzVlnmT1mt4w9\nvs9Ul1HQQxZ9xtgTNS5h8p4F4r/8ApdIe9KTJcccUxDVkCvQLK+U5m+E00FW4RVc\nJcNcXichrkrSuQqvjquOckPW5KNKywIaPCtlYxj3dqwmPfpzrddgYc4cQMPy9bUv\nzxKjWTBBAoGBAP/6QFB26boGRw6cZ901auhWTITyrtDLCCIPgjYWCyFxxIv01trH\n2nLJlAmn+Ybbp/aFnknvC+JjiPcy50jET+lciwUSV2V3H4EUSpdZ7peCTRXX7K7V\nheW6nutw1YfE+mVDy3P37bfDwZTAUJHa+LNfQhaL/2rU/vK4adRs57x5AoGBAJwH\no4yR9LX4N7v07oMboKPnP9JFPgXtVXNOFeT1/1IIX+2Kv+ij31uN4awo6EMcd6WE\nXungkD1d4SzXmxz/zH7r7EZdcxeb8pMmL48D7dgtkr1o0nHzYeb635SkEQuDET7r\nib2RBN8lqmF7cyPhnt6bDy3YGMEnHWvDhlBWFT55AoGBAO58tl0BXSMu5BcNy4sC\nULdkZ+hZvlvTPaGWN2eyw+4F8+u9UkwFdVYKzrzsXgOyNNvug5o4eCcVOy+somVe\nWWF/EhrIitqC0LxPLmuyoyNPiAg440/EqfpuE9AhkR/seqnMLwq9zCGw5XN0ddxe\nWeWsc4NULcTX6ywyeo8qZAFpAoGAaQOnKvwtVLAsat+uDCXzF32T8eTSmtCi+4kp\nqUF8R20Fi24gPebVdNxocCPUNx8Y1BjkfMq8qeDepfyzFHCB5UbKbo2E4fX+7NT9\nm2cMlLwPkFXVlgY19W0SQAuwwSvE1rFWsnTBb6L9KsEYvKSk9bQtIjDYcF/wKFCf\nvMBDahkCgYBoH0XsOHVwVaNHGICgpMiR5iXkenGMQRUvsSGBniHaDa449LPJYjQr\nkDzHql8w3sy7JWqinBI2WUt8NXA1T2styaJxRlgITUZNSRm95l0IQVr34zkCbsdc\nGJDbZb4oxsymc06DwhTPhbfajTg8jZS6vZplKiD6MbQlGGYRW6lZxQ==\n-----END RSA PRIVATE KEY-----\n&quot;,
     &quot;serial&quot;: {
-      &quot;serial&quot;: 375757150572080644,
-      &quot;id&quot;: 375757150572080644,
-      &quot;revoked&quot;: false,
+      &quot;id&quot;: 2509661046248075542,
+      &quot;updated&quot;: &quot;2013-03-20T19:45:11.805+0000&quot;,
+      &quot;created&quot;: &quot;2013-03-20T19:45:11.805+0000&quot;,
+      &quot;expiration&quot;: &quot;2029-03-20T19:45:11.805+0000&quot;,
       &quot;collected&quot;: false,
-      &quot;updated&quot;: &quot;2012-08-10T13:52:24.099+0000&quot;,
-      &quot;created&quot;: &quot;2012-08-10T13:52:24.099+0000&quot;,
-      &quot;expiration&quot;: &quot;2028-08-10T13:52:24.099+0000&quot;
-    },
-    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\n-----END CERTIFICATE-----\n&quot;,
-    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\n-----END RSA PRIVATE KEY-----\n&quot;,
-    &quot;id&quot;: &quot;ff8080813910c3d3013910ceb07a003a&quot;,
-    &quot;updated&quot;: &quot;2012-08-10T13:52:24.698+0000&quot;,
-    &quot;created&quot;: &quot;2012-08-10T13:52:24.698+0000&quot;
+      &quot;revoked&quot;: false,
+      &quot;serial&quot;: 2509661046248075542
+    }
   },
-  &quot;autoheal&quot;: true,
-  &quot;name&quot;: &quot;katello.example.com_227e003&quot;,
-  &quot;id&quot;: 2,
-  &quot;ipv4_address&quot;: null,
-  &quot;href&quot;: &quot;/consumers/269f9e7c-debe-4b3c-b33b-92f309f882df&quot;,
-  &quot;activation_key&quot;: [],
-  &quot;environment_id&quot;: 7,
-  &quot;uuid&quot;: &quot;269f9e7c-debe-4b3c-b33b-92f309f882df&quot;,
-  &quot;facts&quot;: {
-    &quot;distribution.name&quot;: &quot;Unknown&quot;,
-    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;
-  },
-  &quot;guests&quot;: [],
-  &quot;description&quot;: &quot;Initial Registration Params&quot;,
-  &quot;serviceLevel&quot;: &quot;&quot;,
   &quot;release&quot;: &quot;&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:52:27Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:52:27Z&quot;,
-  &quot;system_template_id&quot;: null,
-  &quot;environment&quot;: {
-    &quot;prior_id&quot;: 6,
-    &quot;library&quot;: false,
-    &quot;name&quot;: &quot;env_manifest_227e003&quot;,
-    &quot;id&quot;: 7,
-    &quot;description&quot;: null,
-    &quot;prior&quot;: &quot;Library&quot;,
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:26Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:26Z&quot;,
-    &quot;organization_id&quot;: 3,
-    &quot;organization&quot;: &quot;org_manifest_227e003&quot;
+  &quot;releaseVer&quot;: {
+    &quot;id&quot;: null,
+    &quot;releaseVer&quot;: &quot;&quot;
   },
-  &quot;location&quot;: &quot;None&quot;
+  &quot;href&quot;: &quot;/consumers/99911dd0-cd39-4808-ae6f-94e0e31acb77&quot;,
+  &quot;owner&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d8953f47b007a&quot;,
+    &quot;href&quot;: &quot;/owners/org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;displayName&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;key&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;
+  },
+  &quot;created_at&quot;: &quot;2013-03-20T19:45:13Z&quot;,
+  &quot;serviceLevel&quot;: &quot;&quot;,
+  &quot;activation_key&quot;: [],
+  &quot;autoheal&quot;: true,
+  &quot;facts&quot;: {
+    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;,
+    &quot;distribution.name&quot;: &quot;Unknown&quot;,
+    &quot;network.hostname&quot;: &quot;katello2_q5ktCr6jM1oN&quot;
+  },
+  &quot;location&quot;: &quot;None&quot;,
+  &quot;description&quot;: &quot;Initial Registration Params&quot;,
+  &quot;environment_id&quot;: 11,
+  &quot;content_view_id&quot;: null
 }</pre>
 
         <h3>Params</h3>
@@ -969,7 +1167,8 @@
       </small>
     </td>
     <td>
-      <p>UUID of the system</p>
+      
+<p>UUID of the system</p>
 
         <br>
         Value: String
@@ -1013,7 +1212,7 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/consumers/3050eb45-0ec4-43ea-8913-83635f06a2b7
+          <pre class="prettyprint">DELETE /api/systems/99911dd0-cd39-4808-ae6f-94e0e31acb77
 204</pre>
 
         <h3>Params</h3>
@@ -1034,7 +1233,8 @@
       </small>
     </td>
     <td>
-      <p>UUID of the system</p>
+      
+<p>UUID of the system</p>
 
         <br>
         Value: String
@@ -1069,21 +1269,38 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/systems/d2a99f27-6c0d-41de-9f3d-3279e4fbadd4/pools
+          <pre class="prettyprint">GET /api/systems/a4359041-7d76-4e08-8dbe-324fdb6a8545/pools?no_overlap=False&amp;match_system=False&amp;match_installed=False
 200
 {
   &quot;pools&quot;: [
     {
-      &quot;multiEntitlement&quot;: false,
-      &quot;poolId&quot;: &quot;ff8080813910c3d3013910c5e47b000d&quot;,
-      &quot;endDate&quot;: &quot;2042-08-03&quot;,
-      &quot;sockets&quot;: &quot;&quot;,
-      &quot;supportLevel&quot;: &quot;&quot;,
+      &quot;consumed&quot;: 0,
+      &quot;attributes&quot;: [],
       &quot;providedProducts&quot;: [],
       &quot;quantity&quot;: -1,
-      &quot;poolName&quot;: &quot;fewups_product_227e003&quot;,
-      &quot;startDate&quot;: &quot;2012-08-10&quot;,
-      &quot;consumed&quot;: 0
+      &quot;activeSubscription&quot;: true,
+      &quot;id&quot;: &quot;ff8080813d88c59c013d8950e19f0072&quot;,
+      &quot;productAttributes&quot;: [],
+      &quot;productId&quot;: &quot;1363808411864&quot;,
+      &quot;accountNumber&quot;: &quot;&quot;,
+      &quot;subscriptionSubKey&quot;: &quot;master&quot;,
+      &quot;updated&quot;: &quot;2013-03-20T19:40:12.063+0000&quot;,
+      &quot;contractNumber&quot;: &quot;&quot;,
+      &quot;endDate&quot;: &quot;2043-03-13T00:00:00.000+0000&quot;,
+      &quot;created&quot;: &quot;2013-03-20T19:40:12.063+0000&quot;,
+      &quot;restrictedToUsername&quot;: null,
+      &quot;startDate&quot;: &quot;2013-03-20T00:00:00.000+0000&quot;,
+      &quot;sourceEntitlement&quot;: null,
+      &quot;href&quot;: &quot;/pools/ff8080813d88c59c013d8950e19f0072&quot;,
+      &quot;subscriptionId&quot;: &quot;ff8080813d88c59c013d8950e12b0071&quot;,
+      &quot;owner&quot;: {
+        &quot;id&quot;: &quot;ff8080813d88c59c013d8950c6400068&quot;,
+        &quot;href&quot;: &quot;/owners/org_label_q5ktCr6jM1oN&quot;,
+        &quot;displayName&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+        &quot;key&quot;: &quot;org_label_q5ktCr6jM1oN&quot;
+      },
+      &quot;productName&quot;: &quot;fewups_product_q5ktCr6jM1oN&quot;,
+      &quot;exported&quot;: 0
     }
   ]
 }</pre>
@@ -1106,7 +1323,8 @@
       </small>
     </td>
     <td>
-      <p>UUID of the system</p>
+      
+<p>UUID of the system</p>
 
         <br>
         Value: String
@@ -1136,13 +1354,14 @@
 
 
     <div id='description-releases' class='collapse accordion-body'>
-      <p>A hint for choosing the right value for the releaseVer param</p>
+      
+<p>A hint for choosing the right value for the releaseVer param</p>
 
 
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/systems/d2a99f27-6c0d-41de-9f3d-3279e4fbadd4/releases
+          <pre class="prettyprint">GET /api/systems/a4359041-7d76-4e08-8dbe-324fdb6a8545/releases
 200
 {
   &quot;releases&quot;: []
@@ -1166,7 +1385,8 @@
       </small>
     </td>
     <td>
-      <p>UUID of the system</p>
+      
+<p>UUID of the system</p>
 
         <br>
         Value: String
@@ -1201,7 +1421,7 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/systems/d2a99f27-6c0d-41de-9f3d-3279e4fbadd4/packages
+          <pre class="prettyprint">GET /api/systems/a4359041-7d76-4e08-8dbe-324fdb6a8545/packages
 200
 [
 
@@ -1225,7 +1445,8 @@
       </small>
     </td>
     <td>
-      <p>UUID of the system</p>
+      
+<p>UUID of the system</p>
 
         <br>
         Value: String
@@ -1278,7 +1499,8 @@
       </small>
     </td>
     <td>
-      <p>UUID of the system</p>
+      
+<p>UUID of the system</p>
 
         <br>
         Value: String
@@ -1340,7 +1562,8 @@
       </small>
     </td>
     <td>
-      <p>UUID of the system</p>
+      
+<p>UUID of the system</p>
 
         <br>
         Value: String
@@ -1426,7 +1649,8 @@
       </small>
     </td>
     <td>
-      <p>Name of the system</p>
+      
+<p>Name of the system</p>
 
         <br>
         Value: String
@@ -1443,7 +1667,8 @@
       </small>
     </td>
     <td>
-      <p>UUID of the system</p>
+      
+<p>UUID of the system</p>
 
         <br>
         Value: String
@@ -1481,34 +1706,34 @@
           <pre class="prettyprint">GET /api/systems/tasks/d03b47f5-e2f1-11e1-b07c-525400b68f90
 200
 {
-  &quot;result_description&quot;: &quot;&quot;,
+  &quot;id&quot;: 10,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:46:42Z&quot;,
+  &quot;uuid&quot;: &quot;d03b47f5-e2f1-11e1-b07c-525400b68f90&quot;,
+  &quot;progress&quot;: null,
+  &quot;user_id&quot;: 1,
+  &quot;pending?&quot;: true,
+  &quot;start_time&quot;: null,
+  &quot;system_name&quot;: &quot;katello.example.com_227e003&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:46:40Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;task_owner_type&quot;: &quot;System&quot;,
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;task_owner_id&quot;: 1,
+  &quot;parameters&quot;: {
+    &quot;packages&quot;: [
+      &quot;cheetah&quot;
+    ]
+  },
   &quot;result&quot;: {
     &quot;errors&quot;: [
       null,
       null
     ]
   },
-  &quot;task_owner_type&quot;: &quot;System&quot;,
-  &quot;user_id&quot;: 1,
-  &quot;parameters&quot;: {
-    &quot;packages&quot;: [
-      &quot;cheetah&quot;
-    ]
-  },
-  &quot;id&quot;: 10,
-  &quot;uuid&quot;: &quot;d03b47f5-e2f1-11e1-b07c-525400b68f90&quot;,
-  &quot;start_time&quot;: null,
-  &quot;task_owner_id&quot;: 1,
   &quot;description&quot;: &quot;Package Install: cheetah&quot;,
-  &quot;state&quot;: &quot;running&quot;,
-  &quot;task_type&quot;: &quot;package_install&quot;,
+  &quot;result_description&quot;: &quot;&quot;,
   &quot;finish_time&quot;: null,
-  &quot;system_name&quot;: &quot;katello.example.com_227e003&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:46:40Z&quot;,
-  &quot;pending?&quot;: true,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:46:42Z&quot;,
-  &quot;organization_id&quot;: 2,
-  &quot;progress&quot;: null
+  &quot;task_type&quot;: &quot;package_install&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -1529,7 +1754,8 @@
       </small>
     </td>
     <td>
-      <p>UUID of the task</p>
+      
+<p>UUID of the task</p>
 
         <br>
         Value: String
@@ -1559,8 +1785,10 @@
 
 
     <div id='description-enabled_repos' class='collapse accordion-body'>
-      <p>Used by katello-agent to keep the information about enabled repositories up to date.
-This information is then used for computing the errata available for the system.</p>
+      
+<p>Used by katello-agent to keep the information about enabled repositories up
+to date. This information is then used for computing the errata available
+for the system.</p>
 
 
 
@@ -1578,12 +1806,12 @@ This information is then used for computing the errata available for the system.
 }
 200
 {
-  &quot;unknown_labels&quot;: [],
-  &quot;result&quot;: &quot;ok&quot;,
-  &quot;error_ids&quot;: [],
   &quot;processed_ids&quot;: [
     &quot;org_manifest_227e003-env_manifest_227e003-Zoo_Enterprise-Zoo_Enterprise_x86_64_6_2&quot;
-  ]
+  ],
+  &quot;unknown_labels&quot;: [],
+  &quot;error_ids&quot;: [],
+  &quot;result&quot;: &quot;ok&quot;
 }</pre>
 
     </div>
@@ -1609,6 +1837,78 @@ This information is then used for computing the errata available for the system.
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">POST /api/systems/a4359041-7d76-4e08-8dbe-324fdb6a8545/system_groups/
+{
+  &quot;system&quot;: {
+    &quot;system_group_ids&quot;: [
+      1
+    ]
+  }
+}
+200
+{
+  &quot;name&quot;: &quot;admin_system_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 2,
+  &quot;uuid&quot;: &quot;a4359041-7d76-4e08-8dbe-324fdb6a8545&quot;,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:46:16Z&quot;,
+  &quot;guests&quot;: [],
+  &quot;ipv4_address&quot;: null,
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;env q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 7,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:08Z&quot;,
+    &quot;prior_id&quot;: 6,
+    &quot;label&quot;: &quot;env_q5ktCr6jM1oN&quot;,
+    &quot;organization&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+    &quot;organization_id&quot;: 4,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:08Z&quot;,
+    &quot;prior&quot;: &quot;Library&quot;,
+    &quot;library&quot;: false,
+    &quot;description&quot;: null
+  },
+  &quot;idCert&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d89566f5700aa&quot;,
+    &quot;updated&quot;: &quot;2013-03-20T19:46:16.023+0000&quot;,
+    &quot;created&quot;: &quot;2013-03-20T19:46:16.023+0000&quot;,
+    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\nMIIESzCCAzOgAwIBAgIIdhc52QggAkUwDQYJKoZIhvcNAQEFBQAwbDELMAkGA1UE\nBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo\nMRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTENMAsGA1UEAxME\ndm0xNjAeFw0xMzAzMjAxOTQ2MTVaFw0yOTAzMjAxOTQ2MTVaMC8xLTArBgNVBAMT\nJGE0MzU5MDQxLTdkNzYtNGUwOC04ZGJlLTMyNGZkYjZhODU0NTCCASIwDQYJKoZI\nhvcNAQEBBQADggEPADCCAQoCggEBAJeFDbmKCqkxh2OMhOQVffsnG5ojMnl8NIKf\nyp/n3NBflpZfGzVEr5JIujfw85UrRZOTt2AaWXwwE/7S0KPlzRryx+6/OWWwJU6c\ndhlsSKMB4v8rF26HV1cdRxHxKBx1Gcriozum/x2gC+lkvWAON75AmpQ54atSzF36\n6JE+Y2U2PetGHwUAL+GPQ9UZwp/DGrbXIuLbjSW+Zv102KWA9xY7V8Yo/jA7p80k\nxh0UZprvSq/YA5bZ4oiv0Kuyhk55eX52BVbD9X4+OyLFEr3JkJl/SCvdpxWRLYly\n7sDk8EN0+61qCO+hSOrdZ7Na4UPcnU/7Qu1eWKKvfTw/DJjv7AsCAwEAAaOCASww\nggEoMBEGCWCGSAGG+EIBAQQEAwIFoDALBgNVHQ8EBAMCBLAwgZ4GA1UdIwSBljCB\nk4AUUpS69JtZPdsFTyVQYBDAwLX8PX6hcKRuMGwxCzAJBgNVBAYTAlVTMRcwFQYD\nVQQIEw5Ob3J0aCBDYXJvbGluYTEQMA4GA1UEBxMHUmFsZWlnaDEQMA4GA1UEChMH\nUmVkIEhhdDERMA8GA1UECxMIQ2xvdWQgQlUxDTALBgNVBAMTBHZtMTaCCQDEm+bk\nF7paPjAdBgNVHQ4EFgQUtpjH8RQQpFWeTq6/zUw+nN5wubkwEwYDVR0lBAwwCgYI\nKwYBBQUHAwIwMQYDVR0RBCowKKQmMCQxIjAgBgNVBAMMGWFkbWluX3N5c3RlbV9x\nNWt0Q3I2ak0xb04wDQYJKoZIhvcNAQEFBQADggEBAFdb3zEQeM3PdSMj2tSLoL/0\nYIr8Skrg6wc8vCRicWacJwYJOd8Tdrb3Lq6wrB9hxOcep14NDdd9SpxNkUS7yLoH\n1dL2Y4aeyi1DsE18wWvnXJqGSTQo6I5pSvnjF1f69EfELZzI++gX4NNo60hteoqy\ns1yCC6g8KSmOIl7FB6kzU7emJ6ghHGB4dRJweqTT+0+jueCpGZ5bki75ylUyCukV\nMtjAr4U28VJyd6H5mL5vIvT4pMpVFMOttTl+gyJ2m8ayclAJ/nEwj62UW428nO0p\n9kR1pv0SjDfOf8Hu3Wa7Kx/WhbnLYQKfzMZm5Nc3upIUbwGE6ZUgPWhMAm9w4IA=\n-----END CERTIFICATE-----\n&quot;,
+    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAl4UNuYoKqTGHY4yE5BV9+ycbmiMyeXw0gp/Kn+fc0F+Wll8b\nNUSvkki6N/DzlStFk5O3YBpZfDAT/tLQo+XNGvLH7r85ZbAlTpx2GWxIowHi/ysX\nbodXVx1HEfEoHHUZyuKjO6b/HaAL6WS9YA43vkCalDnhq1LMXfrokT5jZTY960Yf\nBQAv4Y9D1RnCn8Mattci4tuNJb5m/XTYpYD3FjtXxij+MDunzSTGHRRmmu9Kr9gD\nltniiK/Qq7KGTnl5fnYFVsP1fj47IsUSvcmQmX9IK92nFZEtiXLuwOTwQ3T7rWoI\n76FI6t1ns1rhQ9ydT/tC7V5Yoq99PD8MmO/sCwIDAQABAoIBADI7cyxivlwPRoJT\nUK9JDMYZ1gXIy3AJJGN11DglJ0iRmBvsFdoYFljZ8ZqgMDDw8pUVcMLUmXwZeFeP\nzom3osLfYDcfgEjdF9Ey/9g31PDtrDLKN292QRdpZmllWNXuYImpj1I0b/mDWM+c\njUfuDr7tLhIcClvBDG3PxBB67Xrc+RwaUI0CqrRxDoOKeoTc3CISJWS3EdWgG2TY\nGWZEKWWBCQZFomFEwCzPSUxviytbJpN0Q8lFyg3SlJf+n1K6ok1K9+6j/h57VTus\n4dz8ATm/Y0YG6tGR2dg7ABfoPMPt1E/yWzilcoeDgLFgEchpxffoPr9ghSAPxfYR\nWvjjeuECgYEAxsnbBqBwMVaDssuI/eCrKqhy49Y5cxG3kABdoNlYvO4UDlfWP5U1\npmSIEEytc3W0EinN5960+HkwXNPNQuKyQetdIxOF09mpgocV2MQVuTweMfsGjYsa\n8kVCOgevh72/gEcl2PAhY0E+63SR64Rkx/gqMUYf6GA9AXpvKvVj7tECgYEAwyCT\np61ILtCo0TvLce87jnZDcy1WD/vxnoDoiFO7jHZKWHY+wO2JCMcmbHWDYsNQejRO\nPnu9bJGkBU3iO0NpXlcS1jOwyl0gRv0Z+GIlEcAWIC1x0Y4tX/3fqV28ke+jl95q\nzAje4tvZCtPfamnNXtBop+W5RxieyR+S9AdQ/BsCgYA2OND5WcHAc2yw1DulpCaM\nGC5eXwyEioybRr5DJYXC4t2tm9/gr/5WSI2khIW7PJvFaIm1eVW7gLLkXxFZ8SPW\nPzDEZIrYYkKOS/J1kearA+7oiyQab5sGAkYyNe53BBa8EqwMJFO3ExDqgH1c1Fv4\n/4PitNH3PGjnglHYUd7UQQKBgBJeCagZ9pZ5i7qOT1s9MrT5SuYXmWdNxvOtnLXg\nc+IH7H2hO8z7Tw/ldyd0dFainfuy2r6k9TK4DuF08Fu1v8Bin+JL4VNbKsOj5YLs\n8iJWm36R6InaQUks45XUvgBat2J/TDxChYCDQ03ynbAtn2hSY9eSFzurBJ9X+oRA\nAA6LAoGBAIJMUu3QvEX48rMmhJwfmXySwdjVa8hrLlqtslIC6aQxakVsO/5gZTlK\nq3mHyEdI9ctRe7v/2S3Mpl1+8yz3q6nTZn333ABwXxdJKPaalFkzHjZOOxdHLBf3\n1N4h4sgTHo2XNsVZpAwH38di7h2EPHRT1O+ptQWH+3dxcBf7xpQT\n-----END RSA PRIVATE KEY-----\n&quot;,
+    &quot;serial&quot;: {
+      &quot;id&quot;: 8509333625246843461,
+      &quot;updated&quot;: &quot;2013-03-20T19:46:15.202+0000&quot;,
+      &quot;created&quot;: &quot;2013-03-20T19:46:15.202+0000&quot;,
+      &quot;expiration&quot;: &quot;2029-03-20T19:46:15.202+0000&quot;,
+      &quot;collected&quot;: false,
+      &quot;revoked&quot;: false,
+      &quot;serial&quot;: 8509333625246843461
+    }
+  },
+  &quot;release&quot;: &quot;&quot;,
+  &quot;releaseVer&quot;: {
+    &quot;id&quot;: null,
+    &quot;releaseVer&quot;: &quot;&quot;
+  },
+  &quot;href&quot;: &quot;/consumers/a4359041-7d76-4e08-8dbe-324fdb6a8545&quot;,
+  &quot;owner&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d8950c6400068&quot;,
+    &quot;href&quot;: &quot;/owners/org_label_q5ktCr6jM1oN&quot;,
+    &quot;displayName&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+    &quot;key&quot;: &quot;org_label_q5ktCr6jM1oN&quot;
+  },
+  &quot;created_at&quot;: &quot;2013-03-20T19:46:16Z&quot;,
+  &quot;serviceLevel&quot;: &quot;&quot;,
+  &quot;activation_key&quot;: [],
+  &quot;autoheal&quot;: true,
+  &quot;facts&quot;: {
+    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;,
+    &quot;distribution.name&quot;: &quot;Unknown&quot;,
+    &quot;network.hostname&quot;: &quot;admin_system_q5ktCr6jM1oN&quot;
+  },
+  &quot;location&quot;: &quot;None&quot;,
+  &quot;description&quot;: &quot;Initial Registration Params&quot;,
+  &quot;environment_id&quot;: 7,
+  &quot;content_view_id&quot;: null
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -1643,7 +1943,8 @@ This information is then used for computing the errata available for the system.
       </small>
     </td>
     <td>
-      <p>List of group ids to add the system to</p>
+      
+<p>List of group ids to add the system to</p>
 
         <br>
         Value: Array
@@ -1678,6 +1979,78 @@ This information is then used for computing the errata available for the system.
 
 
 
+        <h3>Examples</h3>
+          <pre class="prettyprint">DELETE /api/systems/a4359041-7d76-4e08-8dbe-324fdb6a8545/system_groups/
+{
+  &quot;system&quot;: {
+    &quot;system_group_ids&quot;: [
+      1
+    ]
+  }
+}
+200
+{
+  &quot;name&quot;: &quot;admin_system_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 2,
+  &quot;uuid&quot;: &quot;a4359041-7d76-4e08-8dbe-324fdb6a8545&quot;,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:46:16Z&quot;,
+  &quot;guests&quot;: [],
+  &quot;ipv4_address&quot;: null,
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;env q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 7,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:08Z&quot;,
+    &quot;prior_id&quot;: 6,
+    &quot;label&quot;: &quot;env_q5ktCr6jM1oN&quot;,
+    &quot;organization&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+    &quot;organization_id&quot;: 4,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:08Z&quot;,
+    &quot;prior&quot;: &quot;Library&quot;,
+    &quot;library&quot;: false,
+    &quot;description&quot;: null
+  },
+  &quot;idCert&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d89566f5700aa&quot;,
+    &quot;updated&quot;: &quot;2013-03-20T19:46:16.023+0000&quot;,
+    &quot;created&quot;: &quot;2013-03-20T19:46:16.023+0000&quot;,
+    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\nMIIESzCCAzOgAwIBAgIIdhc52QggAkUwDQYJKoZIhvcNAQEFBQAwbDELMAkGA1UE\nBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo\nMRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTENMAsGA1UEAxME\ndm0xNjAeFw0xMzAzMjAxOTQ2MTVaFw0yOTAzMjAxOTQ2MTVaMC8xLTArBgNVBAMT\nJGE0MzU5MDQxLTdkNzYtNGUwOC04ZGJlLTMyNGZkYjZhODU0NTCCASIwDQYJKoZI\nhvcNAQEBBQADggEPADCCAQoCggEBAJeFDbmKCqkxh2OMhOQVffsnG5ojMnl8NIKf\nyp/n3NBflpZfGzVEr5JIujfw85UrRZOTt2AaWXwwE/7S0KPlzRryx+6/OWWwJU6c\ndhlsSKMB4v8rF26HV1cdRxHxKBx1Gcriozum/x2gC+lkvWAON75AmpQ54atSzF36\n6JE+Y2U2PetGHwUAL+GPQ9UZwp/DGrbXIuLbjSW+Zv102KWA9xY7V8Yo/jA7p80k\nxh0UZprvSq/YA5bZ4oiv0Kuyhk55eX52BVbD9X4+OyLFEr3JkJl/SCvdpxWRLYly\n7sDk8EN0+61qCO+hSOrdZ7Na4UPcnU/7Qu1eWKKvfTw/DJjv7AsCAwEAAaOCASww\nggEoMBEGCWCGSAGG+EIBAQQEAwIFoDALBgNVHQ8EBAMCBLAwgZ4GA1UdIwSBljCB\nk4AUUpS69JtZPdsFTyVQYBDAwLX8PX6hcKRuMGwxCzAJBgNVBAYTAlVTMRcwFQYD\nVQQIEw5Ob3J0aCBDYXJvbGluYTEQMA4GA1UEBxMHUmFsZWlnaDEQMA4GA1UEChMH\nUmVkIEhhdDERMA8GA1UECxMIQ2xvdWQgQlUxDTALBgNVBAMTBHZtMTaCCQDEm+bk\nF7paPjAdBgNVHQ4EFgQUtpjH8RQQpFWeTq6/zUw+nN5wubkwEwYDVR0lBAwwCgYI\nKwYBBQUHAwIwMQYDVR0RBCowKKQmMCQxIjAgBgNVBAMMGWFkbWluX3N5c3RlbV9x\nNWt0Q3I2ak0xb04wDQYJKoZIhvcNAQEFBQADggEBAFdb3zEQeM3PdSMj2tSLoL/0\nYIr8Skrg6wc8vCRicWacJwYJOd8Tdrb3Lq6wrB9hxOcep14NDdd9SpxNkUS7yLoH\n1dL2Y4aeyi1DsE18wWvnXJqGSTQo6I5pSvnjF1f69EfELZzI++gX4NNo60hteoqy\ns1yCC6g8KSmOIl7FB6kzU7emJ6ghHGB4dRJweqTT+0+jueCpGZ5bki75ylUyCukV\nMtjAr4U28VJyd6H5mL5vIvT4pMpVFMOttTl+gyJ2m8ayclAJ/nEwj62UW428nO0p\n9kR1pv0SjDfOf8Hu3Wa7Kx/WhbnLYQKfzMZm5Nc3upIUbwGE6ZUgPWhMAm9w4IA=\n-----END CERTIFICATE-----\n&quot;,
+    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAl4UNuYoKqTGHY4yE5BV9+ycbmiMyeXw0gp/Kn+fc0F+Wll8b\nNUSvkki6N/DzlStFk5O3YBpZfDAT/tLQo+XNGvLH7r85ZbAlTpx2GWxIowHi/ysX\nbodXVx1HEfEoHHUZyuKjO6b/HaAL6WS9YA43vkCalDnhq1LMXfrokT5jZTY960Yf\nBQAv4Y9D1RnCn8Mattci4tuNJb5m/XTYpYD3FjtXxij+MDunzSTGHRRmmu9Kr9gD\nltniiK/Qq7KGTnl5fnYFVsP1fj47IsUSvcmQmX9IK92nFZEtiXLuwOTwQ3T7rWoI\n76FI6t1ns1rhQ9ydT/tC7V5Yoq99PD8MmO/sCwIDAQABAoIBADI7cyxivlwPRoJT\nUK9JDMYZ1gXIy3AJJGN11DglJ0iRmBvsFdoYFljZ8ZqgMDDw8pUVcMLUmXwZeFeP\nzom3osLfYDcfgEjdF9Ey/9g31PDtrDLKN292QRdpZmllWNXuYImpj1I0b/mDWM+c\njUfuDr7tLhIcClvBDG3PxBB67Xrc+RwaUI0CqrRxDoOKeoTc3CISJWS3EdWgG2TY\nGWZEKWWBCQZFomFEwCzPSUxviytbJpN0Q8lFyg3SlJf+n1K6ok1K9+6j/h57VTus\n4dz8ATm/Y0YG6tGR2dg7ABfoPMPt1E/yWzilcoeDgLFgEchpxffoPr9ghSAPxfYR\nWvjjeuECgYEAxsnbBqBwMVaDssuI/eCrKqhy49Y5cxG3kABdoNlYvO4UDlfWP5U1\npmSIEEytc3W0EinN5960+HkwXNPNQuKyQetdIxOF09mpgocV2MQVuTweMfsGjYsa\n8kVCOgevh72/gEcl2PAhY0E+63SR64Rkx/gqMUYf6GA9AXpvKvVj7tECgYEAwyCT\np61ILtCo0TvLce87jnZDcy1WD/vxnoDoiFO7jHZKWHY+wO2JCMcmbHWDYsNQejRO\nPnu9bJGkBU3iO0NpXlcS1jOwyl0gRv0Z+GIlEcAWIC1x0Y4tX/3fqV28ke+jl95q\nzAje4tvZCtPfamnNXtBop+W5RxieyR+S9AdQ/BsCgYA2OND5WcHAc2yw1DulpCaM\nGC5eXwyEioybRr5DJYXC4t2tm9/gr/5WSI2khIW7PJvFaIm1eVW7gLLkXxFZ8SPW\nPzDEZIrYYkKOS/J1kearA+7oiyQab5sGAkYyNe53BBa8EqwMJFO3ExDqgH1c1Fv4\n/4PitNH3PGjnglHYUd7UQQKBgBJeCagZ9pZ5i7qOT1s9MrT5SuYXmWdNxvOtnLXg\nc+IH7H2hO8z7Tw/ldyd0dFainfuy2r6k9TK4DuF08Fu1v8Bin+JL4VNbKsOj5YLs\n8iJWm36R6InaQUks45XUvgBat2J/TDxChYCDQ03ynbAtn2hSY9eSFzurBJ9X+oRA\nAA6LAoGBAIJMUu3QvEX48rMmhJwfmXySwdjVa8hrLlqtslIC6aQxakVsO/5gZTlK\nq3mHyEdI9ctRe7v/2S3Mpl1+8yz3q6nTZn333ABwXxdJKPaalFkzHjZOOxdHLBf3\n1N4h4sgTHo2XNsVZpAwH38di7h2EPHRT1O+ptQWH+3dxcBf7xpQT\n-----END RSA PRIVATE KEY-----\n&quot;,
+    &quot;serial&quot;: {
+      &quot;id&quot;: 8509333625246843461,
+      &quot;updated&quot;: &quot;2013-03-20T19:46:15.202+0000&quot;,
+      &quot;created&quot;: &quot;2013-03-20T19:46:15.202+0000&quot;,
+      &quot;expiration&quot;: &quot;2029-03-20T19:46:15.202+0000&quot;,
+      &quot;collected&quot;: false,
+      &quot;revoked&quot;: false,
+      &quot;serial&quot;: 8509333625246843461
+    }
+  },
+  &quot;release&quot;: &quot;&quot;,
+  &quot;releaseVer&quot;: {
+    &quot;id&quot;: null,
+    &quot;releaseVer&quot;: &quot;&quot;
+  },
+  &quot;href&quot;: &quot;/consumers/a4359041-7d76-4e08-8dbe-324fdb6a8545&quot;,
+  &quot;owner&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d8950c6400068&quot;,
+    &quot;href&quot;: &quot;/owners/org_label_q5ktCr6jM1oN&quot;,
+    &quot;displayName&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+    &quot;key&quot;: &quot;org_label_q5ktCr6jM1oN&quot;
+  },
+  &quot;created_at&quot;: &quot;2013-03-20T19:46:16Z&quot;,
+  &quot;serviceLevel&quot;: &quot;&quot;,
+  &quot;activation_key&quot;: [],
+  &quot;autoheal&quot;: true,
+  &quot;facts&quot;: {
+    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;,
+    &quot;distribution.name&quot;: &quot;Unknown&quot;,
+    &quot;network.hostname&quot;: &quot;admin_system_q5ktCr6jM1oN&quot;
+  },
+  &quot;location&quot;: &quot;None&quot;,
+  &quot;description&quot;: &quot;Initial Registration Params&quot;,
+  &quot;environment_id&quot;: 7,
+  &quot;content_view_id&quot;: null
+}</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -1712,7 +2085,8 @@ This information is then used for computing the errata available for the system.
       </small>
     </td>
     <td>
-      <p>List of group ids to add the system to</p>
+      
+<p>List of group ids to add the system to</p>
 
         <br>
         Value: Array

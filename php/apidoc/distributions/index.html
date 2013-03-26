@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/distributions.html'>Distributions</a>
+    <a href='../../apidoc/distributions.html'>
+      Distributions
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
@@ -40,28 +43,53 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/repositories/2/distributions
+      <pre class="prettyprint">GET /api/repositories/4/distributions
 200
 [
   {
-    &quot;version&quot;: &quot;16&quot;,
-    &quot;family&quot;: &quot;Test Family&quot;,
-    &quot;files&quot;: [
-      &quot;/var/lib/pulp/distributions/ks-Test Family-TestVariant-16-x86_64/test2.img&quot;,
-      &quot;/var/lib/pulp/distributions/ks-Test Family-TestVariant-16-x86_64/test1.img&quot;,
-      &quot;/var/lib/pulp/distributions/ks-Test Family-TestVariant-16-x86_64/.treeinfo&quot;,
-      &quot;/var/lib/pulp/distributions/ks-Test Family-TestVariant-16-x86_64/empty.iso&quot;
-    ],
     &quot;id&quot;: &quot;ks-Test Family-TestVariant-16-x86_64&quot;,
-    &quot;arch&quot;: &quot;x86_64&quot;,
-    &quot;url&quot;: [
-      &quot;http://katello.example.com/pulp/ks/org_227e003/Library/custom/fewups_product_227e003/repo_227e003/&quot;,
-      &quot;http://katello.example.com/pulp/ks/org_227e003/Library/custom/fewups_product_227e003/fewups_product_227e003_fakerepos_zoo5/&quot;,
-      &quot;http://katello.example.com/pulp/ks/org_227e003/env_227e003/custom/fewups_product_227e003/fewups_product_227e003_fakerepos_zoo5/&quot;,
-      &quot;http://katello.example.com/pulp/ks/org_227e003/env_227e003/custom/fewups_product_227e003/repo_227e003/&quot;
+    &quot;version&quot;: &quot;16&quot;,
+    &quot;files&quot;: [
+      {
+        &quot;item_type&quot;: &quot;tree_file&quot;,
+        &quot;pkgpath&quot;: &quot;/var/lib/pulp/content/distribution/ks-Test Family-TestVariant-16-x86_64/images&quot;,
+        &quot;checksum&quot;: &quot;e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855&quot;,
+        &quot;checksumtype&quot;: &quot;sha256&quot;,
+        &quot;relativepath&quot;: &quot;images/test2.img&quot;,
+        &quot;size&quot;: 0,
+        &quot;filename&quot;: &quot;test2.img&quot;,
+        &quot;fileName&quot;: &quot;test2.img&quot;,
+        &quot;downloadurl&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5//images/test2.img&quot;,
+        &quot;savepath&quot;: &quot;/var/lib/pulp/working/repos/org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN/importers/yum_importer/org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN/images&quot;
+      },
+      {
+        &quot;item_type&quot;: &quot;tree_file&quot;,
+        &quot;pkgpath&quot;: &quot;/var/lib/pulp/content/distribution/ks-Test Family-TestVariant-16-x86_64&quot;,
+        &quot;checksum&quot;: &quot;e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855&quot;,
+        &quot;checksumtype&quot;: &quot;sha256&quot;,
+        &quot;relativepath&quot;: &quot;empty.iso&quot;,
+        &quot;size&quot;: 0,
+        &quot;filename&quot;: &quot;empty.iso&quot;,
+        &quot;fileName&quot;: &quot;empty.iso&quot;,
+        &quot;downloadurl&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5//empty.iso&quot;,
+        &quot;savepath&quot;: &quot;/var/lib/pulp/working/repos/org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN/importers/yum_importer/org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN/&quot;
+      },
+      {
+        &quot;item_type&quot;: &quot;tree_file&quot;,
+        &quot;pkgpath&quot;: &quot;/var/lib/pulp/content/distribution/ks-Test Family-TestVariant-16-x86_64/images&quot;,
+        &quot;checksum&quot;: &quot;e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855&quot;,
+        &quot;checksumtype&quot;: &quot;sha256&quot;,
+        &quot;relativepath&quot;: &quot;images/test1.img&quot;,
+        &quot;size&quot;: 0,
+        &quot;filename&quot;: &quot;test1.img&quot;,
+        &quot;fileName&quot;: &quot;test1.img&quot;,
+        &quot;downloadurl&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5//images/test1.img&quot;,
+        &quot;savepath&quot;: &quot;/var/lib/pulp/working/repos/org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN/importers/yum_importer/org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN/images&quot;
+      }
     ],
-    &quot;description&quot;: &quot;ks-Test Family-TestVariant-16-x86_64&quot;,
-    &quot;variant&quot;: &quot;TestVariant&quot;
+    &quot;variant&quot;: &quot;TestVariant&quot;,
+    &quot;family&quot;: &quot;Test Family&quot;,
+    &quot;arch&quot;: &quot;x86_64&quot;
   }
 ]</pre>
 

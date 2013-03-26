@@ -17,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Ping</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Ping
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Ping<br>
+    Ping
+    <br>
     <small></small>
   </h1>
 </div>
@@ -51,6 +58,8 @@
 
     <div id='description-index' class='collapse accordion-body'>
       
+<p>This service is only available for authenticated users</p>
+
 
 
 
@@ -58,33 +67,37 @@
           <pre class="prettyprint">GET /api/ping/
 200
 {
-  &quot;result&quot;: &quot;fail&quot;,
   &quot;status&quot;: {
-    &quot;elasticsearch&quot;: {
-      &quot;result&quot;: &quot;ok&quot;,
-      &quot;duration_ms&quot;: &quot;15&quot;
-    },
-    &quot;candlepin&quot;: {
-      &quot;result&quot;: &quot;ok&quot;,
-      &quot;duration_ms&quot;: &quot;191&quot;
-    },
     &quot;pulp_auth&quot;: {
-      &quot;result&quot;: &quot;ok&quot;,
-      &quot;duration_ms&quot;: &quot;183&quot;
+      &quot;duration_ms&quot;: &quot;61&quot;,
+      &quot;result&quot;: &quot;ok&quot;
     },
-    &quot;pulp&quot;: {
-      &quot;result&quot;: &quot;ok&quot;,
-      &quot;duration_ms&quot;: &quot;99&quot;
+    &quot;elasticsearch&quot;: {
+      &quot;duration_ms&quot;: &quot;22&quot;,
+      &quot;result&quot;: &quot;ok&quot;
     },
-    &quot;candlepin_auth&quot;: {
-      &quot;result&quot;: &quot;ok&quot;,
-      &quot;duration_ms&quot;: &quot;83&quot;
+    &quot;foreman_auth&quot;: {
+      &quot;message&quot;: &quot;Connection refused - connect(2)&quot;,
+      &quot;result&quot;: &quot;FAIL&quot;
     },
     &quot;katello_jobs&quot;: {
-      &quot;result&quot;: &quot;fail&quot;,
-      &quot;message&quot;: &quot;katello-jobs service not running&quot;
+      &quot;message&quot;: &quot;katello-jobs service not running&quot;,
+      &quot;result&quot;: &quot;FAIL&quot;
+    },
+    &quot;candlepin&quot;: {
+      &quot;duration_ms&quot;: &quot;25&quot;,
+      &quot;result&quot;: &quot;ok&quot;
+    },
+    &quot;candlepin_auth&quot;: {
+      &quot;duration_ms&quot;: &quot;174&quot;,
+      &quot;result&quot;: &quot;ok&quot;
+    },
+    &quot;pulp&quot;: {
+      &quot;duration_ms&quot;: &quot;53&quot;,
+      &quot;result&quot;: &quot;ok&quot;
     }
-  }
+  },
+  &quot;result&quot;: &quot;FAIL&quot;
 }</pre>
 
     </div>
@@ -107,6 +120,8 @@
 
     <div id='description-status' class='collapse accordion-body'>
       
+<p>This service is also available for unauthenticated users</p>
+
 
 
 
@@ -131,6 +146,8 @@
 
     <div id='description-version' class='collapse accordion-body'>
       
+<p>This service is only available for authenticated users</p>
+
 
 
 

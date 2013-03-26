@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <a href='../../apidoc/repositories.html'>
+      Repositories
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>show</li>
@@ -40,68 +43,80 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/repositories/2/
+      <pre class="prettyprint">GET /api/repositories/4/
 200
 {
-  &quot;feed_ca&quot;: null,
-  &quot;relative_path&quot;: &quot;org_227e003/Library/custom/fewups_product_227e003/repo_227e003&quot;,
-  &quot;groupid&quot;: [
-    &quot;product:1344606167242&quot;,
-    &quot;env:2&quot;,
-    &quot;org:2&quot;,
-    &quot;content:1344606177624&quot;
-  ],
-  &quot;packages&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/packages/&quot;,
-  &quot;sync_state&quot;: &quot;finished&quot;,
-  &quot;preserve_metadata&quot;: false,
-  &quot;packagegroupcategories&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/packagegroupcategories/&quot;,
-  &quot;feed_cert&quot;: null,
-  &quot;consumer_cert&quot;: null,
-  &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_repo_227e003&quot;,
-  &quot;uri_ref&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/&quot;,
-  &quot;consumer_ca&quot;: null,
-  &quot;keys&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/keys/&quot;,
-  &quot;name&quot;: &quot;repo_227e003&quot;,
-  &quot;files&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/files/&quot;,
-  &quot;id&quot;: 2,
-  &quot;gpg_key_name&quot;: &quot;&quot;,
-  &quot;packagegroups&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/packagegroups/&quot;,
-  &quot;checksum_type&quot;: &quot;sha256&quot;,
-  &quot;filters&quot;: [],
-  &quot;arch&quot;: &quot;noarch&quot;,
-  &quot;next_scheduled_time&quot;: null,
-  &quot;uri&quot;: &quot;https://katello.example.com/pulp/repos/org_227e003/Library/custom/fewups_product_227e003/repo_227e003/&quot;,
-  &quot;package_count&quot;: 8,
-  &quot;notes&quot;: {},
-  &quot;comps&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/comps/&quot;,
-  &quot;source&quot;: {
-    &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
-    &quot;type&quot;: &quot;remote&quot;
+  &quot;name&quot;: &quot;repo_q5ktCr6jM1oN&quot;,
+  &quot;_href&quot;: &quot;/pulp/api/v2/repositories/org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN/&quot;,
+  &quot;id&quot;: 4,
+  &quot;_id&quot;: {
+    &quot;$oid&quot;: &quot;514a10a21f6d6e60de0000e9&quot;
   },
-  &quot;enabled&quot;: true,
-  &quot;_id&quot;: &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
-  &quot;major&quot;: null,
-  &quot;environment_product_id&quot;: 1,
-  &quot;minor&quot;: null,
-  &quot;files_count&quot;: 77,
-  &quot;errata&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/errata/&quot;,
-  &quot;sync_schedule&quot;: null,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:57Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
-  &quot;last_sync&quot;: &quot;2012-08-10T15:43:16+02:00&quot;,
-  &quot;distribution&quot;: &quot;/pulp/api/repositories/org_227e003-fewups_product_227e003-repo_227e003/distribution/&quot;,
-  &quot;library_instance_id&quot;: null,
-  &quot;sync_options&quot;: {},
-  &quot;publish&quot;: true,
-  &quot;content_types&quot;: &quot;yum&quot;,
-  &quot;gpg_key_id&quot;: null,
-  &quot;distributionid&quot;: [
-    &quot;ks-Test Family-TestVariant-16-x86_64&quot;
+  &quot;notes&quot;: {},
+  &quot;updated_at&quot;: &quot;2013-03-20T19:40:18Z&quot;,
+  &quot;pulp_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+  &quot;feed&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
+  &quot;distributors&quot;: [
+    {
+      &quot;id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+      &quot;_id&quot;: {
+        &quot;$oid&quot;: &quot;514a10a21f6d6e60de0000eb&quot;
+      },
+      &quot;auto_publish&quot;: false,
+      &quot;repo_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+      &quot;config&quot;: {
+        &quot;http&quot;: false,
+        &quot;relative_url&quot;: &quot;org_label_q5ktCr6jM1oN/Library/custom/fewups_product_q5ktCr6jM1oN/repo_q5ktCr6jM1oN&quot;,
+        &quot;https&quot;: true,
+        &quot;protected&quot;: true
+      },
+      &quot;_ns&quot;: &quot;repo_distributors&quot;,
+      &quot;scheduled_publishes&quot;: [],
+      &quot;last_publish&quot;: null,
+      &quot;distributor_type_id&quot;: &quot;yum_distributor&quot;
+    }
   ],
-  &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;,
-  &quot;clone_ids&quot;: [
-    &quot;org_227e003-env_227e003-fewups_product_227e003-repo_227e003&quot;
-  ]
+  &quot;content_unit_count&quot;: 14,
+  &quot;gpg_key_id&quot;: null,
+  &quot;_ns&quot;: &quot;repos&quot;,
+  &quot;scratchpad&quot;: {
+    &quot;repodata&quot;: {},
+    &quot;checksum_type&quot;: &quot;sha256&quot;
+  },
+  &quot;major&quot;: null,
+  &quot;last_sync&quot;: &quot;2013-03-20T15:40:29-04:00&quot;,
+  &quot;label&quot;: &quot;repo_q5ktCr6jM1oN&quot;,
+  &quot;display_name&quot;: &quot;repo_q5ktCr6jM1oN&quot;,
+  &quot;library_instance_id&quot;: null,
+  &quot;environment_product_id&quot;: 2,
+  &quot;created_at&quot;: &quot;2013-03-20T19:40:18Z&quot;,
+  &quot;content_view_version_id&quot;: 5,
+  &quot;gpg_key_name&quot;: &quot;&quot;,
+  &quot;cp_label&quot;: &quot;org_label_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_repo_q5ktCr6jM1oN&quot;,
+  &quot;sync_state&quot;: &quot;finished&quot;,
+  &quot;minor&quot;: null,
+  &quot;content_id&quot;: &quot;1363808418240&quot;,
+  &quot;importers&quot;: [
+    {
+      &quot;id&quot;: &quot;yum_importer&quot;,
+      &quot;_id&quot;: {
+        &quot;$oid&quot;: &quot;514a10a21f6d6e60de0000ea&quot;
+      },
+      &quot;repo_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+      &quot;config&quot;: {
+        &quot;feed_url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;
+      },
+      &quot;_ns&quot;: &quot;repo_importers&quot;,
+      &quot;last_sync&quot;: &quot;2013-03-20T15:40:29-04:00&quot;,
+      &quot;importer_type_id&quot;: &quot;yum_importer&quot;,
+      &quot;scheduled_syncs&quot;: []
+    }
+  ],
+  &quot;relative_path&quot;: &quot;org_label_q5ktCr6jM1oN/Library/custom/fewups_product_q5ktCr6jM1oN/repo_q5ktCr6jM1oN&quot;,
+  &quot;arch&quot;: &quot;noarch&quot;,
+  &quot;description&quot;: null,
+  &quot;package_count&quot;: 8,
+  &quot;enabled&quot;: true
 }</pre>
 
 
@@ -124,7 +139,8 @@
       </small>
     </td>
     <td>
-      <p>repository id</p>
+      
+<p>repository id</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..

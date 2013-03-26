@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/subscriptions.html'>Subscriptions</a>
+    <a href='../../apidoc/subscriptions.html'>
+      Subscriptions
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
@@ -40,67 +43,73 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">POST /api/systems/d2a99f27-6c0d-41de-9f3d-3279e4fbadd4/subscriptions
+      <pre class="prettyprint">POST /api/systems/a4359041-7d76-4e08-8dbe-324fdb6a8545/subscriptions
 {
-  &quot;pool&quot;: &quot;ff8080813910c3d3013910c5e47b000d&quot;,
-  &quot;quantity&quot;: 1
+  &quot;quantity&quot;: 1,
+  &quot;pool&quot;: &quot;ff8080813d88c59c013d8950e19f0072&quot;
 }
 200
 {
-  &quot;owner&quot;: {
-    &quot;displayName&quot;: &quot;org_227e003&quot;,
-    &quot;key&quot;: &quot;org_227e003&quot;,
-    &quot;id&quot;: &quot;ff8080813910c3d3013910c5c1460003&quot;,
-    &quot;href&quot;: &quot;/owners/org_227e003&quot;
+  &quot;name&quot;: &quot;admin_system_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 2,
+  &quot;uuid&quot;: &quot;a4359041-7d76-4e08-8dbe-324fdb6a8545&quot;,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:46:16Z&quot;,
+  &quot;guests&quot;: [],
+  &quot;ipv4_address&quot;: null,
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;env q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 7,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:08Z&quot;,
+    &quot;prior_id&quot;: 6,
+    &quot;label&quot;: &quot;env_q5ktCr6jM1oN&quot;,
+    &quot;organization&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+    &quot;organization_id&quot;: 4,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:08Z&quot;,
+    &quot;prior&quot;: &quot;Library&quot;,
+    &quot;library&quot;: false,
+    &quot;description&quot;: null
   },
   &quot;idCert&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d89566f5700aa&quot;,
+    &quot;updated&quot;: &quot;2013-03-20T19:46:16.023+0000&quot;,
+    &quot;created&quot;: &quot;2013-03-20T19:46:16.023+0000&quot;,
+    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\nMIIESzCCAzOgAwIBAgIIdhc52QggAkUwDQYJKoZIhvcNAQEFBQAwbDELMAkGA1UE\nBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo\nMRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTENMAsGA1UEAxME\ndm0xNjAeFw0xMzAzMjAxOTQ2MTVaFw0yOTAzMjAxOTQ2MTVaMC8xLTArBgNVBAMT\nJGE0MzU5MDQxLTdkNzYtNGUwOC04ZGJlLTMyNGZkYjZhODU0NTCCASIwDQYJKoZI\nhvcNAQEBBQADggEPADCCAQoCggEBAJeFDbmKCqkxh2OMhOQVffsnG5ojMnl8NIKf\nyp/n3NBflpZfGzVEr5JIujfw85UrRZOTt2AaWXwwE/7S0KPlzRryx+6/OWWwJU6c\ndhlsSKMB4v8rF26HV1cdRxHxKBx1Gcriozum/x2gC+lkvWAON75AmpQ54atSzF36\n6JE+Y2U2PetGHwUAL+GPQ9UZwp/DGrbXIuLbjSW+Zv102KWA9xY7V8Yo/jA7p80k\nxh0UZprvSq/YA5bZ4oiv0Kuyhk55eX52BVbD9X4+OyLFEr3JkJl/SCvdpxWRLYly\n7sDk8EN0+61qCO+hSOrdZ7Na4UPcnU/7Qu1eWKKvfTw/DJjv7AsCAwEAAaOCASww\nggEoMBEGCWCGSAGG+EIBAQQEAwIFoDALBgNVHQ8EBAMCBLAwgZ4GA1UdIwSBljCB\nk4AUUpS69JtZPdsFTyVQYBDAwLX8PX6hcKRuMGwxCzAJBgNVBAYTAlVTMRcwFQYD\nVQQIEw5Ob3J0aCBDYXJvbGluYTEQMA4GA1UEBxMHUmFsZWlnaDEQMA4GA1UEChMH\nUmVkIEhhdDERMA8GA1UECxMIQ2xvdWQgQlUxDTALBgNVBAMTBHZtMTaCCQDEm+bk\nF7paPjAdBgNVHQ4EFgQUtpjH8RQQpFWeTq6/zUw+nN5wubkwEwYDVR0lBAwwCgYI\nKwYBBQUHAwIwMQYDVR0RBCowKKQmMCQxIjAgBgNVBAMMGWFkbWluX3N5c3RlbV9x\nNWt0Q3I2ak0xb04wDQYJKoZIhvcNAQEFBQADggEBAFdb3zEQeM3PdSMj2tSLoL/0\nYIr8Skrg6wc8vCRicWacJwYJOd8Tdrb3Lq6wrB9hxOcep14NDdd9SpxNkUS7yLoH\n1dL2Y4aeyi1DsE18wWvnXJqGSTQo6I5pSvnjF1f69EfELZzI++gX4NNo60hteoqy\ns1yCC6g8KSmOIl7FB6kzU7emJ6ghHGB4dRJweqTT+0+jueCpGZ5bki75ylUyCukV\nMtjAr4U28VJyd6H5mL5vIvT4pMpVFMOttTl+gyJ2m8ayclAJ/nEwj62UW428nO0p\n9kR1pv0SjDfOf8Hu3Wa7Kx/WhbnLYQKfzMZm5Nc3upIUbwGE6ZUgPWhMAm9w4IA=\n-----END CERTIFICATE-----\n&quot;,
+    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAl4UNuYoKqTGHY4yE5BV9+ycbmiMyeXw0gp/Kn+fc0F+Wll8b\nNUSvkki6N/DzlStFk5O3YBpZfDAT/tLQo+XNGvLH7r85ZbAlTpx2GWxIowHi/ysX\nbodXVx1HEfEoHHUZyuKjO6b/HaAL6WS9YA43vkCalDnhq1LMXfrokT5jZTY960Yf\nBQAv4Y9D1RnCn8Mattci4tuNJb5m/XTYpYD3FjtXxij+MDunzSTGHRRmmu9Kr9gD\nltniiK/Qq7KGTnl5fnYFVsP1fj47IsUSvcmQmX9IK92nFZEtiXLuwOTwQ3T7rWoI\n76FI6t1ns1rhQ9ydT/tC7V5Yoq99PD8MmO/sCwIDAQABAoIBADI7cyxivlwPRoJT\nUK9JDMYZ1gXIy3AJJGN11DglJ0iRmBvsFdoYFljZ8ZqgMDDw8pUVcMLUmXwZeFeP\nzom3osLfYDcfgEjdF9Ey/9g31PDtrDLKN292QRdpZmllWNXuYImpj1I0b/mDWM+c\njUfuDr7tLhIcClvBDG3PxBB67Xrc+RwaUI0CqrRxDoOKeoTc3CISJWS3EdWgG2TY\nGWZEKWWBCQZFomFEwCzPSUxviytbJpN0Q8lFyg3SlJf+n1K6ok1K9+6j/h57VTus\n4dz8ATm/Y0YG6tGR2dg7ABfoPMPt1E/yWzilcoeDgLFgEchpxffoPr9ghSAPxfYR\nWvjjeuECgYEAxsnbBqBwMVaDssuI/eCrKqhy49Y5cxG3kABdoNlYvO4UDlfWP5U1\npmSIEEytc3W0EinN5960+HkwXNPNQuKyQetdIxOF09mpgocV2MQVuTweMfsGjYsa\n8kVCOgevh72/gEcl2PAhY0E+63SR64Rkx/gqMUYf6GA9AXpvKvVj7tECgYEAwyCT\np61ILtCo0TvLce87jnZDcy1WD/vxnoDoiFO7jHZKWHY+wO2JCMcmbHWDYsNQejRO\nPnu9bJGkBU3iO0NpXlcS1jOwyl0gRv0Z+GIlEcAWIC1x0Y4tX/3fqV28ke+jl95q\nzAje4tvZCtPfamnNXtBop+W5RxieyR+S9AdQ/BsCgYA2OND5WcHAc2yw1DulpCaM\nGC5eXwyEioybRr5DJYXC4t2tm9/gr/5WSI2khIW7PJvFaIm1eVW7gLLkXxFZ8SPW\nPzDEZIrYYkKOS/J1kearA+7oiyQab5sGAkYyNe53BBa8EqwMJFO3ExDqgH1c1Fv4\n/4PitNH3PGjnglHYUd7UQQKBgBJeCagZ9pZ5i7qOT1s9MrT5SuYXmWdNxvOtnLXg\nc+IH7H2hO8z7Tw/ldyd0dFainfuy2r6k9TK4DuF08Fu1v8Bin+JL4VNbKsOj5YLs\n8iJWm36R6InaQUks45XUvgBat2J/TDxChYCDQ03ynbAtn2hSY9eSFzurBJ9X+oRA\nAA6LAoGBAIJMUu3QvEX48rMmhJwfmXySwdjVa8hrLlqtslIC6aQxakVsO/5gZTlK\nq3mHyEdI9ctRe7v/2S3Mpl1+8yz3q6nTZn333ABwXxdJKPaalFkzHjZOOxdHLBf3\n1N4h4sgTHo2XNsVZpAwH38di7h2EPHRT1O+ptQWH+3dxcBf7xpQT\n-----END RSA PRIVATE KEY-----\n&quot;,
     &quot;serial&quot;: {
-      &quot;serial&quot;: 633745815739335707,
-      &quot;id&quot;: 633745815739335707,
-      &quot;revoked&quot;: false,
+      &quot;id&quot;: 8509333625246843461,
+      &quot;updated&quot;: &quot;2013-03-20T19:46:15.202+0000&quot;,
+      &quot;created&quot;: &quot;2013-03-20T19:46:15.202+0000&quot;,
+      &quot;expiration&quot;: &quot;2029-03-20T19:46:15.202+0000&quot;,
       &quot;collected&quot;: false,
-      &quot;updated&quot;: &quot;2012-08-10T13:56:31.120+0000&quot;,
-      &quot;created&quot;: &quot;2012-08-10T13:56:31.120+0000&quot;,
-      &quot;expiration&quot;: &quot;2028-08-10T13:56:31.094+0000&quot;
-    },
-    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\nMIIEaTCCA1GgAwIBAgIICMuEdjEIhBswDQYJKoZIhvcNAQEFBQAwfTELMAkGA1UE\nBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo\nMRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTEeMBwGA1UEAxMV\ncmhlbDYzLWthdDguaW5lY2FzLmN6MB4XDTEyMDgxMDEzNTYzMVoXDTI4MDgxMDEz\nNTYzMVowLzEtMCsGA1UEAxMkZDJhOTlmMjctNmMwZC00MWRlLTlmM2QtMzI3OWU0\nZmJhZGQ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp95esmGZsOnt\nZSgSBAYmNceQ3D77s6hBuQ8RytPRQlo+BBv9/jWD/Qg8q627J55N0O4VKNX3o8NN\nTuULZ3wRpmUnG28n9NjBkMhYMVxVflnxXGI6I3P+eh0ExLBO0JKm0Ozvh7/96mbr\nrnRH3Ky3SAiYehcb+IoFPOlK8emxW4H32NT9+kvgX7os5cq+DTMIC+DUU3k1IOd8\nd+nIymD97McXAd+eBoi1r2hjLfHboRLT5lmpi/yHcd9V0zMDfL0u2ccrh1szz6Gd\nmJ0o3TRq3NyotTt9K+8bDArwL+MZd9Wd3EDlw/SBSqLMJw6QGGGcD9MNeKbyzipB\nA8TyMB2uWwIDAQABo4IBOTCCATUwEQYJYIZIAYb4QgEBBAQDAgWgMAsGA1UdDwQE\nAwIEsDCBsAYDVR0jBIGoMIGlgBTJYk3Be3McFdZwADEtBfKz1/TihKGBgaR/MH0x\nCzAJBgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEQMA4GA1UEBxMH\nUmFsZWlnaDEQMA4GA1UEChMHUmVkIEhhdDERMA8GA1UECxMIQ2xvdWQgQlUxHjAc\nBgNVBAMTFXJoZWw2My1rYXQ4LmluZWNhcy5jeoIJALJI14SeIsvSMB0GA1UdDgQW\nBBSao4lqdqR/nkWXNh9n3OmZkdj5XzATBgNVHSUEDDAKBggrBgEFBQcDAjAsBgNV\nHREEJTAjpCEwHzEdMBsGA1UEAwwUYWRtaW5fc3lzdGVtXzIyN2UwMDMwDQYJKoZI\nhvcNAQEFBQADggEBAAl4TZON4y5lPUOjwTFYo3MdU4K8JPS+K0aIIndHCu7qCm/6\nrMl+OgFfRquGGXEQ7T6fPzw3kXx1XFYi1+TUgqKIQzUgyjOSHXzGz3NuiQAu4kGF\nQ9soPF5rTEc6QzWcWODhLdxAxwJNcVEXBgnMBdLCELRhOwi0NAP8N2ftRSRyM69Z\nNS2a5yl4kK60MFKJfbsSt+WsDX1SzLFIUihx6W+pmiBaYtAgmjBhIgMD9poJ0wHl\nDiohTPxQloZnmyYUv88Z2UHeVbkiNf5MC6qQBNZW7KSsU0MTbfIiNSjIKemh4+af\nKVB+MYhjNlr/Hkf17J5FSQmBjntx4ATN5and45c=\n-----END CERTIFICATE-----\n&quot;,
-    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAp95esmGZsOntZSgSBAYmNceQ3D77s6hBuQ8RytPRQlo+BBv9\n/jWD/Qg8q627J55N0O4VKNX3o8NNTuULZ3wRpmUnG28n9NjBkMhYMVxVflnxXGI6\nI3P+eh0ExLBO0JKm0Ozvh7/96mbrrnRH3Ky3SAiYehcb+IoFPOlK8emxW4H32NT9\n+kvgX7os5cq+DTMIC+DUU3k1IOd8d+nIymD97McXAd+eBoi1r2hjLfHboRLT5lmp\ni/yHcd9V0zMDfL0u2ccrh1szz6GdmJ0o3TRq3NyotTt9K+8bDArwL+MZd9Wd3EDl\nw/SBSqLMJw6QGGGcD9MNeKbyzipBA8TyMB2uWwIDAQABAoIBAQCkaSOAPB0l64bJ\nqzwx2r/zrjiPrdQhemqcUEkRyPFLtkzFA5F5N3rFCRs63dXOkLoQJg5tR1radn6y\nBZxsx1QWDz4FHZIZuW2jWsUd2xwUuwysebwNWx7jBKbV6QPYPbnKKDTVVNHgkNrF\nqzdyx2pez6Re92E6xBsrNCZl1ocRYhx+kyFTWDQZ3lPHI4Ki/l7s4BrUn0Ipmwy0\nOt0RYmSgljgapLioz4jn//hoR7Nl/HMjWw3DYnYiYWL/bkIHq46IgrW9uX6A4AHk\nL2sZIwzKIfBzEhG8qF5toXiftA3hGA+7y03l+fMjZJJpZ+Vpc8fxnq2bOrZvzhRJ\nfc6W22iBAoGBANG2sC8FIqSENJuRETLUAHSDvzfNL8QD+UMg6/ons7/k3cj0Fua9\n0qhPO7NayHQUGhGUNMU8mUEe+0rIOX4qzT/21p6ugpp2r4r7ZU1lxAW4VRgzaFve\nynu8foiRpN4yAIpRmvtToJLPJrUjo94w0a9n98arO+Ism1iGAD/5dYvBAoGBAMzr\nV2aoEXYkligZvnRTBqxDNF6qmK/p/5+4NIKYvWtDSFEHmlF8wh9C43ywc2K30bJb\nNnzqGlNl8e3WQXXzAyLf0uNJ6zQoWoEnhVZ4DHWaFERckEMhr4QhUecVwljgsCcl\nF7p8W3kbokqCzqzwCmiyFpIG6LH6QtBrWYt++DEbAoGBAJPkGsE+BN0yIotmtVM7\n8Io6croeaEX6a2ksqV2DbB6yfrl9cT0NtqZdIgPszJoXpv6onsJNZuJmv95P70OL\nWa13HIlRFedqNYd0nE8FqkRCZzgm4LyRFAhIuI8E7tiHOJxSylHc+sstbOWnGaPS\nl7z0O+cN0LBCttapwTlcacnBAoGAGwvs60W/mEJX907+jkfvF4l/PgdyQ7W04ZXk\niGA0kBW/U8KXIa4/yPSBJhH8CMmOSeY0GOSlOOC5v9SJq1G51j6IjStSef3hhC59\nMN6DdnoxtpwpBlNJ4TysnL2Ie0acuW3x5dFIGYIGN6NwN+8u0IbA5+E1kVggvXWN\nyhWmGIUCgYBOyh3umRnQV/zf9nOfNd6kdfdomiP2sbI8AxB5mHYGFWwu4hvWL3WY\ni7UAzsaAvCBfYxmqGjccOO6Vj4w4scL+87mjAZ+K+x3WYNqUE2LNkUERTadoIv4D\nEHhokZe9wq7fAUecJdRLD5uUprFt956p5f7afTkWMTnkX4v+Ki9Pwg==\n-----END RSA PRIVATE KEY-----\n&quot;,
-    &quot;id&quot;: &quot;ff8080813910c3d3013910d273e200a5&quot;,
-    &quot;updated&quot;: &quot;2012-08-10T13:56:31.330+0000&quot;,
-    &quot;created&quot;: &quot;2012-08-10T13:56:31.330+0000&quot;
+      &quot;revoked&quot;: false,
+      &quot;serial&quot;: 8509333625246843461
+    }
   },
-  &quot;autoheal&quot;: true,
-  &quot;name&quot;: &quot;admin_system_227e003&quot;,
-  &quot;id&quot;: 10,
-  &quot;ipv4_address&quot;: null,
-  &quot;href&quot;: &quot;/consumers/d2a99f27-6c0d-41de-9f3d-3279e4fbadd4&quot;,
-  &quot;activation_key&quot;: [],
-  &quot;environment_id&quot;: 3,
-  &quot;uuid&quot;: &quot;d2a99f27-6c0d-41de-9f3d-3279e4fbadd4&quot;,
-  &quot;facts&quot;: {
-    &quot;distribution.name&quot;: &quot;Unknown&quot;,
-    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;
-  },
-  &quot;guests&quot;: [],
-  &quot;description&quot;: &quot;Initial Registration Params&quot;,
-  &quot;serviceLevel&quot;: &quot;&quot;,
   &quot;release&quot;: &quot;&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:56:31Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:56:31Z&quot;,
-  &quot;system_template_id&quot;: null,
-  &quot;environment&quot;: {
-    &quot;prior_id&quot;: 2,
-    &quot;library&quot;: false,
-    &quot;name&quot;: &quot;env 227e003&quot;,
-    &quot;id&quot;: 3,
-    &quot;description&quot;: null,
-    &quot;prior&quot;: &quot;Library&quot;,
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:42:44Z&quot;,
-    &quot;organization_id&quot;: 2,
-    &quot;organization&quot;: &quot;org_227e003&quot;
+  &quot;releaseVer&quot;: {
+    &quot;id&quot;: null,
+    &quot;releaseVer&quot;: &quot;&quot;
   },
-  &quot;location&quot;: &quot;None&quot;
+  &quot;href&quot;: &quot;/consumers/a4359041-7d76-4e08-8dbe-324fdb6a8545&quot;,
+  &quot;owner&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d8950c6400068&quot;,
+    &quot;href&quot;: &quot;/owners/org_label_q5ktCr6jM1oN&quot;,
+    &quot;displayName&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+    &quot;key&quot;: &quot;org_label_q5ktCr6jM1oN&quot;
+  },
+  &quot;created_at&quot;: &quot;2013-03-20T19:46:16Z&quot;,
+  &quot;serviceLevel&quot;: &quot;&quot;,
+  &quot;activation_key&quot;: [],
+  &quot;autoheal&quot;: true,
+  &quot;facts&quot;: {
+    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;,
+    &quot;distribution.name&quot;: &quot;Unknown&quot;,
+    &quot;network.hostname&quot;: &quot;admin_system_q5ktCr6jM1oN&quot;
+  },
+  &quot;location&quot;: &quot;None&quot;,
+  &quot;description&quot;: &quot;Initial Registration Params&quot;,
+  &quot;environment_id&quot;: 7,
+  &quot;content_view_id&quot;: null
 }</pre>
 
 
@@ -123,7 +132,8 @@
       </small>
     </td>
     <td>
-      <p>System uuid</p>
+      
+<p>System uuid</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -140,7 +150,8 @@
       </small>
     </td>
     <td>
-      <p>Subscription Pool uuid</p>
+      
+<p>Subscription Pool uuid</p>
 
         <br>
         Value: String
@@ -157,7 +168,8 @@
       </small>
     </td>
     <td>
-      <p>Number of subscription to use</p>
+      
+<p>Number of subscription to use</p>
 
         <br>
         Value: number.

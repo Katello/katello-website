@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/sync.html'>Sync</a>
+    <a href='../../apidoc/sync.html'>
+      Sync
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
@@ -52,68 +55,72 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">POST /api/organizations/org_227e003/products/1344606167242/sync
+      <pre class="prettyprint">POST /api/organizations/org_q5ktCr6jM1oN/products/1363808411864/sync
 202
 [
   {
+    &quot;id&quot;: 4,
+    &quot;uuid&quot;: &quot;974e91bc-23b7-4030-92a2-e9137615f30b&quot;,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:26Z&quot;,
+    &quot;pending?&quot;: true,
+    &quot;user_id&quot;: 1,
+    &quot;progress&quot;: {
+      &quot;step&quot;: 0,
+      &quot;total_count&quot;: 0,
+      &quot;size_left&quot;: 0,
+      &quot;total_size&quot;: 0,
+      &quot;error_details&quot;: [],
+      &quot;items_left&quot;: 0
+    },
+    &quot;start_time&quot;: null,
+    &quot;organization_id&quot;: 4,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:26Z&quot;,
+    &quot;task_owner_type&quot;: null,
+    &quot;task_owner_id&quot;: null,
+    &quot;state&quot;: &quot;waiting&quot;,
     &quot;result&quot;: {
       &quot;errors&quot;: [
         null,
         null
       ]
     },
-    &quot;task_owner_type&quot;: null,
-    &quot;user_id&quot;: 1,
     &quot;parameters&quot;: {
       &quot;options&quot;: {}
     },
-    &quot;id&quot;: 2,
-    &quot;uuid&quot;: &quot;4fd84a3a-e2f1-11e1-a717-525400b68f90&quot;,
-    &quot;start_time&quot;: null,
-    &quot;task_owner_id&quot;: null,
-    &quot;state&quot;: &quot;waiting&quot;,
     &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
-    &quot;finish_time&quot;: null,
-    &quot;created_at&quot;: &quot;2012-08-10T13:43:05Z&quot;,
-    &quot;pending?&quot;: true,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:43:05Z&quot;,
-    &quot;organization_id&quot;: 2,
-    &quot;progress&quot;: {
-      &quot;total_count&quot;: 0,
-      &quot;total_size&quot;: 0,
-      &quot;items_left&quot;: 0,
-      &quot;size_left&quot;: 0
-    }
+    &quot;finish_time&quot;: null
   },
   {
+    &quot;id&quot;: 5,
+    &quot;uuid&quot;: &quot;ba71aac3-3106-441b-a95b-70931842a981&quot;,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:27Z&quot;,
+    &quot;pending?&quot;: true,
+    &quot;user_id&quot;: 1,
+    &quot;progress&quot;: {
+      &quot;step&quot;: 0,
+      &quot;total_count&quot;: 0,
+      &quot;size_left&quot;: 0,
+      &quot;total_size&quot;: 0,
+      &quot;error_details&quot;: [],
+      &quot;items_left&quot;: 0
+    },
+    &quot;start_time&quot;: null,
+    &quot;organization_id&quot;: 4,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:27Z&quot;,
+    &quot;task_owner_type&quot;: null,
+    &quot;task_owner_id&quot;: null,
+    &quot;state&quot;: &quot;waiting&quot;,
     &quot;result&quot;: {
       &quot;errors&quot;: [
         null,
         null
       ]
     },
-    &quot;task_owner_type&quot;: null,
-    &quot;user_id&quot;: 1,
     &quot;parameters&quot;: {
       &quot;options&quot;: {}
     },
-    &quot;id&quot;: 3,
-    &quot;uuid&quot;: &quot;4ff91fc7-e2f1-11e1-a7ee-525400b68f90&quot;,
-    &quot;start_time&quot;: null,
-    &quot;task_owner_id&quot;: null,
-    &quot;state&quot;: &quot;waiting&quot;,
     &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
-    &quot;finish_time&quot;: null,
-    &quot;created_at&quot;: &quot;2012-08-10T13:43:05Z&quot;,
-    &quot;pending?&quot;: true,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:43:05Z&quot;,
-    &quot;organization_id&quot;: 2,
-    &quot;progress&quot;: {
-      &quot;total_count&quot;: 0,
-      &quot;total_size&quot;: 0,
-      &quot;items_left&quot;: 0,
-      &quot;size_left&quot;: 0
-    }
+    &quot;finish_time&quot;: null
   }
 ]</pre>
 
@@ -137,7 +144,8 @@
       </small>
     </td>
     <td>
-      <p>oranization identifier</p>
+      
+<p>oranization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -154,7 +162,8 @@
       </small>
     </td>
     <td>
-      <p>product identifier</p>
+      
+<p>product identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -171,7 +180,8 @@
       </small>
     </td>
     <td>
-      <p>provider identifier</p>
+      
+<p>provider identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -188,7 +198,8 @@
       </small>
     </td>
     <td>
-      <p>repository identifier</p>
+      
+<p>repository identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..

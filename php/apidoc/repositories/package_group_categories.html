@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <a href='../../apidoc/repositories.html'>
+      Repositories
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>package_group_categories</li>
@@ -40,23 +43,25 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/repositories/2/package_group_categories/
+      <pre class="prettyprint">GET /api/repositories/4/package_group_categories/
 200
 [
   {
-    &quot;repo_defined&quot;: true,
-    &quot;translated_name&quot;: {},
-    &quot;name&quot;: &quot;all&quot;,
     &quot;id&quot;: &quot;all&quot;,
-    &quot;display_order&quot;: 99,
-    &quot;immutable&quot;: true,
+    &quot;_id&quot;: &quot;997f9224-cd15-4cda-aeda-59e63cad77e9&quot;,
+    &quot;name&quot;: &quot;all&quot;,
+    &quot;repo_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+    &quot;_content_type_id&quot;: &quot;package_category&quot;,
     &quot;translated_description&quot;: {},
-    &quot;description&quot;: null,
-    &quot;_id&quot;: &quot;all&quot;,
+    &quot;_ns&quot;: &quot;units_package_category&quot;,
     &quot;packagegroupids&quot;: [
       &quot;mammal&quot;,
       &quot;bird&quot;
-    ]
+    ],
+    &quot;translated_name&quot;: {},
+    &quot;_storage_path&quot;: null,
+    &quot;description&quot;: null,
+    &quot;display_order&quot;: 99
   }
 ]</pre>
 

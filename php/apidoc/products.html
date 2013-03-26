@@ -17,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Products</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Products
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Products<br>
+    Products
+    <br>
     <small></small>
   </h1>
 </div>
@@ -55,56 +62,60 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/organizations/org_227e003/products/1344606167242/
+          <pre class="prettyprint">GET /api/organizations/org_q5ktCr6jM1oN/products/1363808411864/
 200
 {
-  &quot;sync_plan_id&quot;: null,
+  &quot;id&quot;: &quot;1363808411864&quot;,
   &quot;attributes&quot;: [],
-  &quot;sync_state&quot;: &quot;finished&quot;,
+  &quot;sync_plan_id&quot;: null,
+  &quot;name&quot;: &quot;fewups_product_q5ktCr6jM1oN&quot;,
+  &quot;cdn_import_success&quot;: true,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:40:12Z&quot;,
+  &quot;provider_id&quot;: 6,
   &quot;marketing_product&quot;: false,
-  &quot;name&quot;: &quot;fewups_product_227e003&quot;,
-  &quot;id&quot;: &quot;1344606167242&quot;,
-  &quot;gpg_key_name&quot;: &quot;&quot;,
-  &quot;description&quot;: null,
+  &quot;sync_plan_name&quot;: null,
+  &quot;gpg_key_id&quot;: null,
+  &quot;last_sync&quot;: &quot;2013-03-20T15:42:29-04:00&quot;,
   &quot;multiplier&quot;: 1,
-  &quot;provider_id&quot;: 3,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
-  &quot;last_sync&quot;: &quot;2012-08-10T15:45:36+02:00&quot;,
+  &quot;label&quot;: &quot;fewups_product_q5ktCr6jM1oN&quot;,
+  &quot;created_at&quot;: &quot;2013-03-20T19:40:12Z&quot;,
+  &quot;gpg_key_name&quot;: &quot;&quot;,
+  &quot;sync_state&quot;: &quot;finished&quot;,
+  &quot;description&quot;: null,
   &quot;productContent&quot;: [
     {
       &quot;content&quot;: {
-        &quot;name&quot;: &quot;repo_227e003&quot;,
-        &quot;id&quot;: &quot;1344606177624&quot;,
         &quot;gpgUrl&quot;: &quot;&quot;,
-        &quot;vendor&quot;: &quot;Custom&quot;,
-        &quot;updated&quot;: &quot;2012-08-10T13:42:57.624+0000&quot;,
-        &quot;modifiedProductIds&quot;: [],
+        &quot;id&quot;: &quot;1363808418240&quot;,
+        &quot;name&quot;: &quot;repo_q5ktCr6jM1oN&quot;,
+        &quot;updated&quot;: &quot;2013-03-20T19:40:18.240+0000&quot;,
+        &quot;created&quot;: &quot;2013-03-20T19:40:18.240+0000&quot;,
+        &quot;label&quot;: &quot;org_label_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_repo_q5ktCr6jM1oN&quot;,
         &quot;type&quot;: &quot;yum&quot;,
-        &quot;created&quot;: &quot;2012-08-10T13:42:57.624+0000&quot;,
-        &quot;contentUrl&quot;: &quot;/custom/fewups_product_227e003/repo_227e003&quot;,
-        &quot;label&quot;: &quot;org_227e003_fewups_product_227e003_repo_227e003&quot;
+        &quot;modifiedProductIds&quot;: [],
+        &quot;vendor&quot;: &quot;Custom&quot;,
+        &quot;contentUrl&quot;: &quot;/custom/fewups_product_q5ktCr6jM1oN/repo_q5ktCr6jM1oN&quot;
       },
+      &quot;product_id&quot;: 2,
       &quot;enabled&quot;: true
     },
     {
       &quot;content&quot;: {
-        &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
-        &quot;id&quot;: &quot;1344606173878&quot;,
         &quot;gpgUrl&quot;: &quot;&quot;,
-        &quot;vendor&quot;: &quot;Custom&quot;,
-        &quot;updated&quot;: &quot;2012-08-10T13:42:53.879+0000&quot;,
-        &quot;modifiedProductIds&quot;: [],
+        &quot;id&quot;: &quot;1363808416654&quot;,
+        &quot;name&quot;: &quot;fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+        &quot;updated&quot;: &quot;2013-03-20T19:40:16.654+0000&quot;,
+        &quot;created&quot;: &quot;2013-03-20T19:40:16.654+0000&quot;,
+        &quot;label&quot;: &quot;org_label_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
         &quot;type&quot;: &quot;yum&quot;,
-        &quot;created&quot;: &quot;2012-08-10T13:42:53.879+0000&quot;,
-        &quot;contentUrl&quot;: &quot;/custom/fewups_product_227e003/fewups_product_227e003_fakerepos_zoo5&quot;,
-        &quot;label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;
+        &quot;modifiedProductIds&quot;: [],
+        &quot;vendor&quot;: &quot;Custom&quot;,
+        &quot;contentUrl&quot;: &quot;/custom/fewups_product_q5ktCr6jM1oN/fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;
       },
+      &quot;product_id&quot;: 2,
       &quot;enabled&quot;: true
     }
-  ],
-  &quot;gpg_key_id&quot;: null,
-  &quot;sync_plan_name&quot;: null
+  ]
 }</pre>
 
         <h3>Params</h3>
@@ -125,7 +136,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -142,7 +154,8 @@
       </small>
     </td>
     <td>
-      <p>product numeric identifier</p>
+      
+<p>product numeric identifier</p>
 
         <br>
         Value: number.
@@ -177,7 +190,7 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">PUT /api/organizations/org_227e003/products/1344606356883/
+          <pre class="prettyprint">PUT /api/organizations/org_q5ktCr6jM1oN/products/1363808564411/
 {
   &quot;product&quot;: {
     &quot;gpg_key_name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;
@@ -185,53 +198,57 @@
 }
 200
 {
-  &quot;sync_plan_id&quot;: null,
+  &quot;id&quot;: &quot;1363808564411&quot;,
   &quot;attributes&quot;: [],
-  &quot;sync_state&quot;: &quot;not_synced&quot;,
+  &quot;sync_plan_id&quot;: null,
+  &quot;name&quot;: &quot;GPG-product-q5ktCr6jM1oN&quot;,
+  &quot;cdn_import_success&quot;: true,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:42:51Z&quot;,
+  &quot;provider_id&quot;: 6,
   &quot;marketing_product&quot;: false,
-  &quot;name&quot;: &quot;GPG-product-227e003&quot;,
-  &quot;id&quot;: &quot;1344606356883&quot;,
-  &quot;gpg_key_name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;,
-  &quot;description&quot;: null,
-  &quot;multiplier&quot;: 1,
-  &quot;provider_id&quot;: 3,
-  &quot;created_at&quot;: &quot;2012-08-10T13:45:57Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:46:09Z&quot;,
+  &quot;sync_plan_name&quot;: null,
+  &quot;gpg_key_id&quot;: 2,
   &quot;last_sync&quot;: null,
+  &quot;multiplier&quot;: 1,
+  &quot;label&quot;: &quot;GPG-product-q5ktCr6jM1oN_1363808564411&quot;,
+  &quot;created_at&quot;: &quot;2013-03-20T19:42:44Z&quot;,
+  &quot;gpg_key_name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;,
+  &quot;sync_state&quot;: &quot;not_synced&quot;,
+  &quot;description&quot;: null,
   &quot;productContent&quot;: [
     {
       &quot;content&quot;: {
-        &quot;name&quot;: &quot;GPG-repo-2-227e003&quot;,
-        &quot;id&quot;: &quot;1344606367395&quot;,
-        &quot;gpgUrl&quot;: &quot;https://katello.example.com/katello/api/repositories/6/gpg_key_content&quot;,
-        &quot;vendor&quot;: &quot;Custom&quot;,
-        &quot;updated&quot;: &quot;2012-08-10T13:46:07.395+0000&quot;,
-        &quot;modifiedProductIds&quot;: [],
+        &quot;gpgUrl&quot;: &quot;&quot;,
+        &quot;id&quot;: &quot;1363808567833&quot;,
+        &quot;name&quot;: &quot;GPG-repo-2-q5ktCr6jM1oN&quot;,
+        &quot;updated&quot;: &quot;2013-03-20T19:42:47.833+0000&quot;,
+        &quot;created&quot;: &quot;2013-03-20T19:42:47.833+0000&quot;,
+        &quot;label&quot;: &quot;org_label_q5ktCr6jM1oN_GPG-product-q5ktCr6jM1oN_GPG-repo-2-q5ktCr6jM1oN&quot;,
         &quot;type&quot;: &quot;yum&quot;,
-        &quot;created&quot;: &quot;2012-08-10T13:46:07.395+0000&quot;,
-        &quot;contentUrl&quot;: &quot;/custom/GPG-product-227e003/GPG-repo-2-227e003&quot;,
-        &quot;label&quot;: &quot;org_227e003_GPG-product-227e003_GPG-repo-2-227e003&quot;
+        &quot;modifiedProductIds&quot;: [],
+        &quot;vendor&quot;: &quot;Custom&quot;,
+        &quot;contentUrl&quot;: &quot;/custom/GPG-product-q5ktCr6jM1oN/GPG-repo-2-q5ktCr6jM1oN&quot;
       },
+      &quot;product_id&quot;: 3,
       &quot;enabled&quot;: true
     },
     {
       &quot;content&quot;: {
-        &quot;name&quot;: &quot;GPG-repo-227e003&quot;,
-        &quot;id&quot;: &quot;1344606360376&quot;,
-        &quot;gpgUrl&quot;: &quot;https://katello.example.com/katello/api/repositories/5/gpg_key_content&quot;,
-        &quot;vendor&quot;: &quot;Custom&quot;,
-        &quot;updated&quot;: &quot;2012-08-10T13:46:00.376+0000&quot;,
-        &quot;modifiedProductIds&quot;: [],
+        &quot;gpgUrl&quot;: &quot;&quot;,
+        &quot;id&quot;: &quot;1363808565431&quot;,
+        &quot;name&quot;: &quot;GPG-repo-q5ktCr6jM1oN&quot;,
+        &quot;updated&quot;: &quot;2013-03-20T19:42:45.431+0000&quot;,
+        &quot;created&quot;: &quot;2013-03-20T19:42:45.431+0000&quot;,
+        &quot;label&quot;: &quot;org_label_q5ktCr6jM1oN_GPG-product-q5ktCr6jM1oN_GPG-repo-q5ktCr6jM1oN&quot;,
         &quot;type&quot;: &quot;yum&quot;,
-        &quot;created&quot;: &quot;2012-08-10T13:46:00.376+0000&quot;,
-        &quot;contentUrl&quot;: &quot;/custom/GPG-product-227e003/GPG-repo-227e003&quot;,
-        &quot;label&quot;: &quot;org_227e003_GPG-product-227e003_GPG-repo-227e003&quot;
+        &quot;modifiedProductIds&quot;: [],
+        &quot;vendor&quot;: &quot;Custom&quot;,
+        &quot;contentUrl&quot;: &quot;/custom/GPG-product-q5ktCr6jM1oN/GPG-repo-q5ktCr6jM1oN&quot;
       },
+      &quot;product_id&quot;: 3,
       &quot;enabled&quot;: true
     }
-  ],
-  &quot;gpg_key_id&quot;: 2,
-  &quot;sync_plan_name&quot;: null
+  ]
 }</pre>
 
         <h3>Params</h3>
@@ -252,7 +269,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -269,7 +287,8 @@
       </small>
     </td>
     <td>
-      <p>product numeric identifier</p>
+      
+<p>product numeric identifier</p>
 
         <br>
         Value: number.
@@ -281,7 +300,7 @@
     <td>
       <strong>product </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -297,14 +316,33 @@
       <strong>product[gpg_key_name] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
-      <p>identifier of the gpg key</p>
+      
+<p>identifier of the gpg key</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>product[description] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Product description</p>
+
+        <br>
+        Value: String
     </td>
   </tr>
 
@@ -318,7 +356,8 @@
       </small>
     </td>
     <td>
-      <p>set to true to recursive update gpg key</p>
+      
+<p>set to true to recursive update gpg key</p>
 
         <br>
         Value: boolean
@@ -363,43 +402,46 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/organizations/org_227e003/products?name=fewups_product_227e003
+          <pre class="prettyprint">GET /api/organizations/org_q5ktCr6jM1oN/products?name=fewups_product_q5ktCr6jM1oN
 200
 [
   {
-    &quot;sync_plan_id&quot;: null,
+    &quot;id&quot;: &quot;1363808411864&quot;,
     &quot;attributes&quot;: [],
-    &quot;sync_state&quot;: &quot;not_synced&quot;,
+    &quot;sync_plan_id&quot;: null,
+    &quot;name&quot;: &quot;fewups_product_q5ktCr6jM1oN&quot;,
+    &quot;cdn_import_success&quot;: true,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:12Z&quot;,
+    &quot;provider_id&quot;: 6,
     &quot;marketing_product&quot;: false,
-    &quot;provider_name&quot;: &quot;yum_provider_227e003&quot;,
-    &quot;name&quot;: &quot;fewups_product_227e003&quot;,
-    &quot;id&quot;: &quot;1344606167242&quot;,
-    &quot;gpg_key_name&quot;: &quot;&quot;,
-    &quot;description&quot;: null,
-    &quot;multiplier&quot;: 1,
-    &quot;provider_id&quot;: 3,
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+    &quot;sync_plan_name&quot;: null,
+    &quot;gpg_key_id&quot;: null,
     &quot;last_sync&quot;: null,
+    &quot;provider_name&quot;: &quot;yum_provider_q5ktCr6jM1oN&quot;,
+    &quot;multiplier&quot;: 1,
+    &quot;label&quot;: &quot;fewups_product_q5ktCr6jM1oN&quot;,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:12Z&quot;,
+    &quot;gpg_key_name&quot;: &quot;&quot;,
+    &quot;sync_state&quot;: &quot;not_synced&quot;,
+    &quot;description&quot;: null,
     &quot;productContent&quot;: [
       {
         &quot;content&quot;: {
-          &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
-          &quot;id&quot;: &quot;1344606173878&quot;,
           &quot;gpgUrl&quot;: &quot;&quot;,
-          &quot;vendor&quot;: &quot;Custom&quot;,
-          &quot;updated&quot;: &quot;2012-08-10T13:42:53.879+0000&quot;,
-          &quot;modifiedProductIds&quot;: [],
+          &quot;id&quot;: &quot;1363808416654&quot;,
+          &quot;name&quot;: &quot;fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+          &quot;updated&quot;: &quot;2013-03-20T19:40:16.654+0000&quot;,
+          &quot;created&quot;: &quot;2013-03-20T19:40:16.654+0000&quot;,
+          &quot;label&quot;: &quot;org_label_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
           &quot;type&quot;: &quot;yum&quot;,
-          &quot;created&quot;: &quot;2012-08-10T13:42:53.879+0000&quot;,
-          &quot;contentUrl&quot;: &quot;/custom/fewups_product_227e003/fewups_product_227e003_fakerepos_zoo5&quot;,
-          &quot;label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;
+          &quot;modifiedProductIds&quot;: [],
+          &quot;vendor&quot;: &quot;Custom&quot;,
+          &quot;contentUrl&quot;: &quot;/custom/fewups_product_q5ktCr6jM1oN/fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;
         },
+        &quot;product_id&quot;: 2,
         &quot;enabled&quot;: true
       }
-    ],
-    &quot;gpg_key_id&quot;: null,
-    &quot;sync_plan_name&quot;: null
+    ]
   }
 ]</pre>
 
@@ -421,7 +463,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -438,7 +481,8 @@
       </small>
     </td>
     <td>
-      <p>environment identifier</p>
+      
+<p>environment identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -455,7 +499,8 @@
       </small>
     </td>
     <td>
-      <p>product identifier</p>
+      
+<p>product identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -490,9 +535,9 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/organizations/org_227e003/products/1344606356883/
+          <pre class="prettyprint">DELETE /api/organizations/org_q5ktCr6jM1oN/products/1363808564411/
 200
-Deleted product '1344606356883'</pre>
+Deleted product '1363808564411'</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -512,7 +557,8 @@ Deleted product '1344606356883'</pre>
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -529,7 +575,8 @@ Deleted product '1344606356883'</pre>
       </small>
     </td>
     <td>
-      <p>product numeric identifier</p>
+      
+<p>product numeric identifier</p>
 
         <br>
         Value: number.
@@ -582,25 +629,31 @@ Deleted product '1344606356883'</pre>
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/environments/2/products/1344606167242/repositories?include_disabled=False&amp;name=repo_227e003
+          <pre class="prettyprint">GET /api/environments/6/products/1363808411864/repositories?include_disabled=False&amp;name=repo_q5ktCr6jM1oN
 200
 [
   {
-    &quot;cp_label&quot;: &quot;org_227e003_fewups_product_227e003_repo_227e003&quot;,
-    &quot;name&quot;: &quot;repo_227e003&quot;,
-    &quot;id&quot;: 2,
-    &quot;gpg_key_name&quot;: &quot;&quot;,
-    &quot;package_count&quot;: 8,
-    &quot;enabled&quot;: true,
-    &quot;major&quot;: null,
-    &quot;environment_product_id&quot;: 1,
-    &quot;minor&quot;: null,
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:57Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
-    &quot;last_sync&quot;: &quot;2012-08-10T15:43:16+02:00&quot;,
-    &quot;library_instance_id&quot;: null,
+    &quot;name&quot;: &quot;repo_q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 4,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:18Z&quot;,
+    &quot;pulp_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+    &quot;feed&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
     &quot;gpg_key_id&quot;: null,
-    &quot;pulp_id&quot;: &quot;org_227e003-fewups_product_227e003-repo_227e003&quot;
+    &quot;major&quot;: null,
+    &quot;last_sync&quot;: &quot;2013-03-20T15:40:29-04:00&quot;,
+    &quot;label&quot;: &quot;repo_q5ktCr6jM1oN&quot;,
+    &quot;library_instance_id&quot;: null,
+    &quot;environment_product_id&quot;: 2,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:18Z&quot;,
+    &quot;content_view_version_id&quot;: 5,
+    &quot;gpg_key_name&quot;: &quot;&quot;,
+    &quot;cp_label&quot;: &quot;org_label_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_repo_q5ktCr6jM1oN&quot;,
+    &quot;minor&quot;: null,
+    &quot;content_id&quot;: &quot;1363808418240&quot;,
+    &quot;relative_path&quot;: &quot;org_label_q5ktCr6jM1oN/Library/custom/fewups_product_q5ktCr6jM1oN/repo_q5ktCr6jM1oN&quot;,
+    &quot;arch&quot;: &quot;noarch&quot;,
+    &quot;package_count&quot;: 8,
+    &quot;enabled&quot;: true
   }
 ]</pre>
 
@@ -622,7 +675,8 @@ Deleted product '1344606356883'</pre>
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -639,7 +693,8 @@ Deleted product '1344606356883'</pre>
       </small>
     </td>
     <td>
-      <p>environment identifier</p>
+      
+<p>environment identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -656,7 +711,8 @@ Deleted product '1344606356883'</pre>
       </small>
     </td>
     <td>
-      <p>product numeric identifier</p>
+      
+<p>product numeric identifier</p>
 
         <br>
         Value: number.
@@ -673,7 +729,8 @@ Deleted product '1344606356883'</pre>
       </small>
     </td>
     <td>
-      <p>set to True if you want to list disabled repositories</p>
+      
+<p>set to True if you want to list disabled repositories</p>
 
         <br>
         Value: boolean
@@ -690,7 +747,8 @@ Deleted product '1344606356883'</pre>
       </small>
     </td>
     <td>
-      <p>repository identifier</p>
+      
+<p>repository identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -725,7 +783,7 @@ Deleted product '1344606356883'</pre>
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/organizations/org_227e003/products/1344606167242/sync_plan
+          <pre class="prettyprint">POST /api/organizations/org_q5ktCr6jM1oN/products/1363808411864/sync_plan
 {
   &quot;plan_id&quot;: 1
 }
@@ -750,7 +808,8 @@ Synchronization plan assigned.</pre>
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -767,7 +826,8 @@ Synchronization plan assigned.</pre>
       </small>
     </td>
     <td>
-      <p>product numeric identifier</p>
+      
+<p>product numeric identifier</p>
 
         <br>
         Value: number.
@@ -784,7 +844,8 @@ Synchronization plan assigned.</pre>
       </small>
     </td>
     <td>
-      <p>Plan numeric identifier</p>
+      
+<p>Plan numeric identifier</p>
 
         <br>
         Value: number.
@@ -819,7 +880,7 @@ Synchronization plan assigned.</pre>
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/organizations/org_227e003/products/1344606167242/sync_plan
+          <pre class="prettyprint">DELETE /api/organizations/org_q5ktCr6jM1oN/products/1363808411864/sync_plan
 200
 Synchronization plan removed.</pre>
 
@@ -841,7 +902,8 @@ Synchronization plan removed.</pre>
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -858,7 +920,8 @@ Synchronization plan removed.</pre>
       </small>
     </td>
     <td>
-      <p>product numeric identifier</p>
+      
+<p>product numeric identifier</p>
 
         <br>
         Value: number.
@@ -875,10 +938,137 @@ Synchronization plan removed.</pre>
       </small>
     </td>
     <td>
-      <p>Plan numeric identifier</p>
+      
+<p>Plan numeric identifier</p>
 
         <br>
         Value: number.
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/products/list_content_view_definition_products.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-list_content_view_definition_products'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/content_view_definitions/:content_view_definition_id/products
+          </a><br>
+          <small>Get products for content view definition</small>
+        </h2>
+    </div>
+
+
+    <div id='description-list_content_view_definition_products' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_definition_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>content view definition identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/products/update_content_view_definition_products.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update_content_view_definition_products'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/content_view_definitions/:content_view_definition_id/products
+          </a><br>
+          <small>Update products for content view definition</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update_content_view_definition_products' class='collapse accordion-body'>
+      
+
+
+
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_definition_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>content view definition identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>products </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Updated list of products</p>
+
+        <br>
+        Value: Array
     </td>
   </tr>
 

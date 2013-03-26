@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/organizations.html'>Organizations</a>
+    <a href='../../apidoc/organizations.html'>
+      Organizations
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
@@ -40,7 +43,7 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">PUT /api/organizations/org_227e003
+      <pre class="prettyprint">PUT /api/organizations/org_q5ktCr6jM1oN
 {
   &quot;organization&quot;: {
     &quot;description&quot;: &quot;org description 2&quot;
@@ -77,6 +80,24 @@ true</pre>
 
     <tr style='background-color:rgb(250,250,250);'>
     <td>
+      <strong>organization[name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>name for the organization</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
       <strong>organization[description] </strong><br>
       <small>
         optional
@@ -84,8 +105,7 @@ true</pre>
       </small>
     </td>
     <td>
-      <p>description</p>
-
+      
         <br>
         Value: String
     </td>

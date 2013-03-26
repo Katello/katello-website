@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/permissions.html'>Permissions</a>
+    <a href='../../apidoc/permissions.html'>
+      Permissions
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
@@ -40,35 +43,35 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">POST /api/roles/6/permissions/
+      <pre class="prettyprint">POST /api/roles/8/permissions/
 {
-  &quot;verbs&quot;: [],
-  &quot;name&quot;: &quot;all_perm_227e003&quot;,
-  &quot;description&quot;: null,
-  &quot;type&quot;: &quot;all&quot;,
+  &quot;name&quot;: &quot;all_perm_q5ktCr6jM1oN&quot;,
   &quot;tags&quot;: [],
-  &quot;organization_id&quot;: null
+  &quot;verbs&quot;: [],
+  &quot;organization_id&quot;: null,
+  &quot;type&quot;: &quot;all&quot;,
+  &quot;description&quot;: null
 }
 200
 {
-  &quot;verbs&quot;: [],
-  &quot;all_tags&quot;: true,
-  &quot;name&quot;: &quot;all_perm_227e003&quot;,
+  &quot;name&quot;: &quot;all_perm_q5ktCr6jM1oN&quot;,
   &quot;id&quot;: 11,
-  &quot;all_verbs&quot;: true,
-  &quot;resource_type_id&quot;: 1,
-  &quot;role_id&quot;: 6,
-  &quot;description&quot;: null,
+  &quot;all_tags&quot;: true,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:43:20Z&quot;,
   &quot;resource_type&quot;: {
     &quot;name&quot;: &quot;all&quot;,
     &quot;id&quot;: 1,
-    &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;
+    &quot;updated_at&quot;: &quot;2013-03-20T17:09:38Z&quot;,
+    &quot;created_at&quot;: &quot;2013-03-20T17:09:38Z&quot;
   },
-  &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
   &quot;tags&quot;: [],
-  &quot;organization_id&quot;: null
+  &quot;role_id&quot;: 8,
+  &quot;verbs&quot;: [],
+  &quot;organization_id&quot;: null,
+  &quot;created_at&quot;: &quot;2013-03-20T19:43:20Z&quot;,
+  &quot;resource_type_id&quot;: 1,
+  &quot;description&quot;: null,
+  &quot;all_verbs&quot;: true
 }</pre>
 
 
@@ -139,7 +142,8 @@
       </small>
     </td>
     <td>
-      <p>array of tag ids</p>
+      
+<p>array of tag ids</p>
 
         <br>
         Value: Array
@@ -156,7 +160,8 @@
       </small>
     </td>
     <td>
-      <p>name of a resource or &#39;all&#39;</p>
+      
+<p>name of a resource or ‘all’</p>
 
         <br>
         Value: String
@@ -173,7 +178,8 @@
       </small>
     </td>
     <td>
-      <p>array of permission verbs</p>
+      
+<p>array of permission verbs</p>
 
         <br>
         Value: Array
@@ -190,7 +196,8 @@
       </small>
     </td>
     <td>
-      <p>True if the permission should use all tags</p>
+      
+<p>True if the permission should use all tags</p>
 
         <br>
         Value: boolean

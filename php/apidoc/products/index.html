@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/products.html'>Products</a>
+    <a href='../../apidoc/products.html'>
+      Products
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
@@ -46,43 +49,46 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/organizations/org_227e003/products?name=fewups_product_227e003
+      <pre class="prettyprint">GET /api/organizations/org_q5ktCr6jM1oN/products?name=fewups_product_q5ktCr6jM1oN
 200
 [
   {
-    &quot;sync_plan_id&quot;: null,
+    &quot;id&quot;: &quot;1363808411864&quot;,
     &quot;attributes&quot;: [],
-    &quot;sync_state&quot;: &quot;not_synced&quot;,
+    &quot;sync_plan_id&quot;: null,
+    &quot;name&quot;: &quot;fewups_product_q5ktCr6jM1oN&quot;,
+    &quot;cdn_import_success&quot;: true,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:40:12Z&quot;,
+    &quot;provider_id&quot;: 6,
     &quot;marketing_product&quot;: false,
-    &quot;provider_name&quot;: &quot;yum_provider_227e003&quot;,
-    &quot;name&quot;: &quot;fewups_product_227e003&quot;,
-    &quot;id&quot;: &quot;1344606167242&quot;,
-    &quot;gpg_key_name&quot;: &quot;&quot;,
-    &quot;description&quot;: null,
-    &quot;multiplier&quot;: 1,
-    &quot;provider_id&quot;: 3,
-    &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+    &quot;sync_plan_name&quot;: null,
+    &quot;gpg_key_id&quot;: null,
     &quot;last_sync&quot;: null,
+    &quot;provider_name&quot;: &quot;yum_provider_q5ktCr6jM1oN&quot;,
+    &quot;multiplier&quot;: 1,
+    &quot;label&quot;: &quot;fewups_product_q5ktCr6jM1oN&quot;,
+    &quot;created_at&quot;: &quot;2013-03-20T19:40:12Z&quot;,
+    &quot;gpg_key_name&quot;: &quot;&quot;,
+    &quot;sync_state&quot;: &quot;not_synced&quot;,
+    &quot;description&quot;: null,
     &quot;productContent&quot;: [
       {
         &quot;content&quot;: {
-          &quot;name&quot;: &quot;fewups_product_227e003_fakerepos_zoo5&quot;,
-          &quot;id&quot;: &quot;1344606173878&quot;,
           &quot;gpgUrl&quot;: &quot;&quot;,
-          &quot;vendor&quot;: &quot;Custom&quot;,
-          &quot;updated&quot;: &quot;2012-08-10T13:42:53.879+0000&quot;,
-          &quot;modifiedProductIds&quot;: [],
+          &quot;id&quot;: &quot;1363808416654&quot;,
+          &quot;name&quot;: &quot;fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
+          &quot;updated&quot;: &quot;2013-03-20T19:40:16.654+0000&quot;,
+          &quot;created&quot;: &quot;2013-03-20T19:40:16.654+0000&quot;,
+          &quot;label&quot;: &quot;org_label_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;,
           &quot;type&quot;: &quot;yum&quot;,
-          &quot;created&quot;: &quot;2012-08-10T13:42:53.879+0000&quot;,
-          &quot;contentUrl&quot;: &quot;/custom/fewups_product_227e003/fewups_product_227e003_fakerepos_zoo5&quot;,
-          &quot;label&quot;: &quot;org_227e003_fewups_product_227e003_fewups_product_227e003_fakerepos_zoo5&quot;
+          &quot;modifiedProductIds&quot;: [],
+          &quot;vendor&quot;: &quot;Custom&quot;,
+          &quot;contentUrl&quot;: &quot;/custom/fewups_product_q5ktCr6jM1oN/fewups_product_q5ktCr6jM1oN_fakerepos_zoo5_&quot;
         },
+        &quot;product_id&quot;: 2,
         &quot;enabled&quot;: true
       }
-    ],
-    &quot;gpg_key_id&quot;: null,
-    &quot;sync_plan_name&quot;: null
+    ]
   }
 ]</pre>
 
@@ -106,7 +112,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -123,7 +130,8 @@
       </small>
     </td>
     <td>
-      <p>environment identifier</p>
+      
+<p>environment identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -140,7 +148,8 @@
       </small>
     </td>
     <td>
-      <p>product identifier</p>
+      
+<p>product identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..

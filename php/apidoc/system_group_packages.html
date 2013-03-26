@@ -17,18 +17,26 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>System group packages</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    System group packages
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    System group packages<br>
+    System group packages
+    <br>
     <small></small>
   </h1>
 </div>
 
-  <div><p>methods for handling packages on system group level</p>
+  <div>
+<p>methods for handling packages on system group level</p>
 </div>
 
 
@@ -65,34 +73,34 @@
 }
 202
 {
-  &quot;parameters&quot;: {
-    &quot;packages&quot;: [
-      &quot;cheetah&quot;
-    ]
-  },
-  &quot;status_message&quot;: &quot;Installing Package...&quot;,
   &quot;id&quot;: 1,
-  &quot;state&quot;: &quot;running&quot;,
-  &quot;task_type&quot;: &quot;package_install&quot;,
-  &quot;finish_time&quot;: null,
   &quot;tasks&quot;: [
     {
+      &quot;id&quot;: 15,
+      &quot;uuid&quot;: &quot;0e0f181c-e2f2-11e1-85ad-525400b68f90&quot;,
+      &quot;progress&quot;: null,
+      &quot;start_time&quot;: null,
+      &quot;state&quot;: &quot;waiting&quot;,
       &quot;result&quot;: {
         &quot;errors&quot;: [
           null,
           null
         ]
       },
-      &quot;id&quot;: 15,
-      &quot;start_time&quot;: null,
-      &quot;uuid&quot;: &quot;0e0f181c-e2f2-11e1-85ad-525400b68f90&quot;,
-      &quot;state&quot;: &quot;waiting&quot;,
-      &quot;finish_time&quot;: null,
-      &quot;progress&quot;: null
+      &quot;finish_time&quot;: null
     }
   ],
+  &quot;pulp_id&quot;: &quot;0384935e-4216-4d38-9832-6be39e379aba&quot;,
+  &quot;status_message&quot;: &quot;Installing Package...&quot;,
   &quot;created_at&quot;: &quot;2012-08-10T13:48:24Z&quot;,
-  &quot;pulp_id&quot;: &quot;0384935e-4216-4d38-9832-6be39e379aba&quot;
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;parameters&quot;: {
+    &quot;packages&quot;: [
+      &quot;cheetah&quot;
+    ]
+  },
+  &quot;finish_time&quot;: null,
+  &quot;task_type&quot;: &quot;package_install&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -113,7 +121,8 @@
       </small>
     </td>
     <td>
-      <p>oranization identifier</p>
+      
+<p>oranization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -130,7 +139,8 @@
       </small>
     </td>
     <td>
-      <p>system_group identifier</p>
+      
+<p>system_group identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -147,7 +157,8 @@
       </small>
     </td>
     <td>
-      <p>List of package names to install</p>
+      
+<p>List of package names</p>
 
         <br>
         Value: Array
@@ -164,7 +175,8 @@
       </small>
     </td>
     <td>
-      <p>List of package group names to install</p>
+      
+<p>List of package group names</p>
 
         <br>
         Value: Array
@@ -207,34 +219,34 @@
 }
 202
 {
-  &quot;parameters&quot;: {
-    &quot;packages&quot;: [
-      &quot;cheetah&quot;
-    ]
-  },
-  &quot;status_message&quot;: &quot;Updating Package...&quot;,
   &quot;id&quot;: 2,
-  &quot;state&quot;: &quot;running&quot;,
-  &quot;task_type&quot;: &quot;package_update&quot;,
-  &quot;finish_time&quot;: null,
   &quot;tasks&quot;: [
     {
+      &quot;id&quot;: 16,
+      &quot;uuid&quot;: &quot;1cb315cf-e2f2-11e1-a5a0-525400b68f90&quot;,
+      &quot;progress&quot;: null,
+      &quot;start_time&quot;: null,
+      &quot;state&quot;: &quot;waiting&quot;,
       &quot;result&quot;: {
         &quot;errors&quot;: [
           null,
           null
         ]
       },
-      &quot;id&quot;: 16,
-      &quot;start_time&quot;: null,
-      &quot;uuid&quot;: &quot;1cb315cf-e2f2-11e1-a5a0-525400b68f90&quot;,
-      &quot;state&quot;: &quot;waiting&quot;,
-      &quot;finish_time&quot;: null,
-      &quot;progress&quot;: null
+      &quot;finish_time&quot;: null
     }
   ],
+  &quot;pulp_id&quot;: &quot;efe07dec-a694-452e-9de1-a0cf4e429da1&quot;,
+  &quot;status_message&quot;: &quot;Updating Package...&quot;,
   &quot;created_at&quot;: &quot;2012-08-10T13:48:48Z&quot;,
-  &quot;pulp_id&quot;: &quot;efe07dec-a694-452e-9de1-a0cf4e429da1&quot;
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;parameters&quot;: {
+    &quot;packages&quot;: [
+      &quot;cheetah&quot;
+    ]
+  },
+  &quot;finish_time&quot;: null,
+  &quot;task_type&quot;: &quot;package_update&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -255,7 +267,8 @@
       </small>
     </td>
     <td>
-      <p>oranization identifier</p>
+      
+<p>oranization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -272,7 +285,8 @@
       </small>
     </td>
     <td>
-      <p>system_group identifier</p>
+      
+<p>system_group identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -289,7 +303,8 @@
       </small>
     </td>
     <td>
-      <p>List of package names to install</p>
+      
+<p>List of package names</p>
 
         <br>
         Value: Array
@@ -306,7 +321,8 @@
       </small>
     </td>
     <td>
-      <p>List of package group names to install</p>
+      
+<p>List of package group names</p>
 
         <br>
         Value: Array
@@ -349,34 +365,34 @@
 }
 202
 {
-  &quot;parameters&quot;: {
-    &quot;packages&quot;: [
-      &quot;cheetah&quot;
-    ]
-  },
-  &quot;status_message&quot;: &quot;Removing Package...&quot;,
   &quot;id&quot;: 3,
-  &quot;state&quot;: &quot;running&quot;,
-  &quot;task_type&quot;: &quot;package_remove&quot;,
-  &quot;finish_time&quot;: null,
   &quot;tasks&quot;: [
     {
+      &quot;id&quot;: 17,
+      &quot;uuid&quot;: &quot;1e087d07-e2f2-11e1-ae5e-525400b68f90&quot;,
+      &quot;progress&quot;: null,
+      &quot;start_time&quot;: null,
+      &quot;state&quot;: &quot;waiting&quot;,
       &quot;result&quot;: {
         &quot;errors&quot;: [
           null,
           null
         ]
       },
-      &quot;id&quot;: 17,
-      &quot;start_time&quot;: null,
-      &quot;uuid&quot;: &quot;1e087d07-e2f2-11e1-ae5e-525400b68f90&quot;,
-      &quot;state&quot;: &quot;waiting&quot;,
-      &quot;finish_time&quot;: null,
-      &quot;progress&quot;: null
+      &quot;finish_time&quot;: null
     }
   ],
+  &quot;pulp_id&quot;: &quot;c5846b6b-7415-4fb1-b7ca-1b6fec9d7520&quot;,
+  &quot;status_message&quot;: &quot;Removing Package...&quot;,
   &quot;created_at&quot;: &quot;2012-08-10T13:48:51Z&quot;,
-  &quot;pulp_id&quot;: &quot;c5846b6b-7415-4fb1-b7ca-1b6fec9d7520&quot;
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;parameters&quot;: {
+    &quot;packages&quot;: [
+      &quot;cheetah&quot;
+    ]
+  },
+  &quot;finish_time&quot;: null,
+  &quot;task_type&quot;: &quot;package_remove&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -397,7 +413,8 @@
       </small>
     </td>
     <td>
-      <p>oranization identifier</p>
+      
+<p>oranization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -414,7 +431,8 @@
       </small>
     </td>
     <td>
-      <p>system_group identifier</p>
+      
+<p>system_group identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -431,7 +449,8 @@
       </small>
     </td>
     <td>
-      <p>List of package names to install</p>
+      
+<p>List of package names</p>
 
         <br>
         Value: Array
@@ -448,7 +467,8 @@
       </small>
     </td>
     <td>
-      <p>List of package group names to install</p>
+      
+<p>List of package group names</p>
 
         <br>
         Value: Array

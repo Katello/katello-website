@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <a href='../../apidoc/repositories.html'>
+      Repositories
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>package_groups</li>
@@ -40,49 +43,53 @@
   
 
     <h2>Examples</h2>
-      <pre class="prettyprint">GET /api/repositories/2/package_groups
+      <pre class="prettyprint">GET /api/repositories/4/package_groups
 200
 [
   {
+    &quot;name&quot;: &quot;bird&quot;,
+    &quot;id&quot;: &quot;bird&quot;,
+    &quot;_id&quot;: &quot;cff91b6b-e415-4076-984d-8fb991f77763&quot;,
     &quot;default&quot;: true,
+    &quot;user_visible&quot;: true,
+    &quot;repo_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+    &quot;_content_type_id&quot;: &quot;package_group&quot;,
+    &quot;translated_description&quot;: {},
+    &quot;_ns&quot;: &quot;units_package_group&quot;,
+    &quot;langonly&quot;: null,
+    &quot;translated_name&quot;: {},
+    &quot;conditional_package_names&quot;: [],
+    &quot;optional_package_names&quot;: [],
+    &quot;mandatory_package_names&quot;: [
+      &quot;penguin&quot;
+    ],
+    &quot;_storage_path&quot;: null,
+    &quot;default_package_names&quot;: [],
+    &quot;description&quot;: &quot;&quot;,
+    &quot;display_order&quot;: 1024
+  },
+  {
+    &quot;name&quot;: &quot;mammal&quot;,
+    &quot;id&quot;: &quot;mammal&quot;,
+    &quot;_id&quot;: &quot;b45659d6-df2e-4067-a071-2efd58272bbe&quot;,
+    &quot;default&quot;: true,
+    &quot;user_visible&quot;: true,
+    &quot;repo_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+    &quot;_content_type_id&quot;: &quot;package_group&quot;,
+    &quot;translated_description&quot;: {},
+    &quot;_ns&quot;: &quot;units_package_group&quot;,
+    &quot;langonly&quot;: null,
+    &quot;translated_name&quot;: {},
+    &quot;conditional_package_names&quot;: [],
     &quot;optional_package_names&quot;: [],
     &quot;mandatory_package_names&quot;: [
       &quot;elephant,giraffe,cheetah,lion,monkey,penguin,squirrel,walrus&quot;,
       &quot;penguin&quot;
     ],
-    &quot;user_visible&quot;: true,
-    &quot;repo_defined&quot;: true,
-    &quot;translated_name&quot;: {},
-    &quot;name&quot;: &quot;mammal&quot;,
-    &quot;langonly&quot;: null,
-    &quot;id&quot;: &quot;mammal&quot;,
-    &quot;display_order&quot;: 1024,
-    &quot;immutable&quot;: true,
-    &quot;translated_description&quot;: {},
-    &quot;conditional_package_names&quot;: {},
+    &quot;_storage_path&quot;: null,
+    &quot;default_package_names&quot;: [],
     &quot;description&quot;: &quot;&quot;,
-    &quot;_id&quot;: &quot;mammal&quot;,
-    &quot;default_package_names&quot;: []
-  },
-  {
-    &quot;default&quot;: true,
-    &quot;optional_package_names&quot;: [],
-    &quot;mandatory_package_names&quot;: [
-      &quot;penguin&quot;
-    ],
-    &quot;user_visible&quot;: true,
-    &quot;repo_defined&quot;: true,
-    &quot;translated_name&quot;: {},
-    &quot;name&quot;: &quot;bird&quot;,
-    &quot;langonly&quot;: null,
-    &quot;id&quot;: &quot;bird&quot;,
-    &quot;display_order&quot;: 1024,
-    &quot;immutable&quot;: true,
-    &quot;translated_description&quot;: {},
-    &quot;conditional_package_names&quot;: {},
-    &quot;description&quot;: &quot;&quot;,
-    &quot;_id&quot;: &quot;bird&quot;,
-    &quot;default_package_names&quot;: []
+    &quot;display_order&quot;: 1024
   }
 ]</pre>
 

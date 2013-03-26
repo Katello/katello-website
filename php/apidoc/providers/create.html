@@ -18,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/providers.html'>Providers</a>
+    <a href='../../apidoc/providers.html'>
+      Providers
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
@@ -43,26 +46,30 @@
       <pre class="prettyprint">POST /api/providers/
 {
   &quot;provider&quot;: {
-    &quot;name&quot;: &quot;yum_provider_227e003&quot;,
-    &quot;repository_url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
+    &quot;name&quot;: &quot;yum_provider_q5ktCr6jM1oN&quot;,
+    &quot;provider_type&quot;: &quot;Custom&quot;,
     &quot;description&quot;: &quot;prov description&quot;,
-    &quot;provider_type&quot;: &quot;Custom&quot;
+    &quot;repository_url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;
   },
-  &quot;organization_id&quot;: &quot;org_227e003&quot;
+  &quot;organization_id&quot;: &quot;org_q5ktCr6jM1oN&quot;
 }
 200
 {
-  &quot;sync_state&quot;: &quot;not_synced&quot;,
-  &quot;name&quot;: &quot;yum_provider_227e003&quot;,
-  &quot;id&quot;: 3,
-  &quot;repository_url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
-  &quot;description&quot;: &quot;prov description&quot;,
-  &quot;task_status_id&quot;: null,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:46Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:46Z&quot;,
-  &quot;last_sync&quot;: null,
+  &quot;name&quot;: &quot;yum_provider_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 6,
+  &quot;discovery_task_id&quot;: null,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:40:10Z&quot;,
+  &quot;organization_label&quot;: &quot;org_label_q5ktCr6jM1oN&quot;,
+  &quot;discovery_url&quot;: null,
+  &quot;discovered_repos&quot;: null,
   &quot;provider_type&quot;: &quot;Custom&quot;,
-  &quot;organization_id&quot;: 2
+  &quot;last_sync&quot;: null,
+  &quot;task_status_id&quot;: null,
+  &quot;organization_id&quot;: 4,
+  &quot;created_at&quot;: &quot;2013-03-20T19:40:10Z&quot;,
+  &quot;sync_state&quot;: &quot;not_synced&quot;,
+  &quot;repository_url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
+  &quot;description&quot;: &quot;prov description&quot;
 }</pre>
 
 
@@ -85,7 +92,8 @@
       </small>
     </td>
     <td>
-      <p>Organization identifier</p>
+      
+<p>Organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -117,7 +125,8 @@
       </small>
     </td>
     <td>
-      <p>Provider name</p>
+      
+<p>Provider name</p>
 
         <br>
         Value: String
@@ -130,11 +139,30 @@
       <strong>provider[description] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
-      <p>Provider description</p>
+      
+<p>Provider description</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>provider[repository_url] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Repository URL</p>
 
         <br>
         Value: String
@@ -154,23 +182,6 @@
       
         <br>
         Value: Must be one of: Red Hat, Custom.
-    </td>
-  </tr>
-
-  
-  <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>provider[repository_url] </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      <p>Repository URL</p>
-
-        <br>
-        Value: String
     </td>
   </tr>
 

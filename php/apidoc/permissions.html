@@ -17,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Permissions</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Permissions
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Permissions<br>
+    Permissions
+    <br>
     <small></small>
   </h1>
 </div>
@@ -55,118 +62,118 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/roles/6/permissions/
+          <pre class="prettyprint">GET /api/roles/8/permissions/
 200
 [
   {
-    &quot;verbs&quot;: [
-      {
-        &quot;verb&quot;: &quot;read_contents&quot;,
-        &quot;id&quot;: 3,
-        &quot;permission_id&quot;: &quot;14&quot;,
-        &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-        &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-        &quot;verb_id&quot;: &quot;3&quot;
-      }
-    ],
-    &quot;all_tags&quot;: false,
-    &quot;name&quot;: &quot;env_perm_227e003_2&quot;,
+    &quot;name&quot;: &quot;env_perm_q5ktCr6jM1oN_2&quot;,
     &quot;id&quot;: 14,
-    &quot;all_verbs&quot;: false,
-    &quot;resource_type_id&quot;: 4,
-    &quot;role_id&quot;: 6,
-    &quot;description&quot;: null,
+    &quot;all_tags&quot;: null,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:43:22Z&quot;,
     &quot;resource_type&quot;: {
       &quot;name&quot;: &quot;environments&quot;,
-      &quot;id&quot;: 4,
-      &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;
+      &quot;id&quot;: 3,
+      &quot;updated_at&quot;: &quot;2013-03-20T17:09:38Z&quot;,
+      &quot;created_at&quot;: &quot;2013-03-20T17:09:38Z&quot;
     },
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
     &quot;tags&quot;: [
       {
         &quot;id&quot;: 1,
+        &quot;updated_at&quot;: &quot;2013-03-20T19:43:22Z&quot;,
+        &quot;permission_id&quot;: 14,
         &quot;formatted&quot;: {
-          &quot;name&quot;: 2,
+          &quot;name&quot;: 6,
           &quot;display_name&quot;: &quot;Library&quot;
         },
-        &quot;permission_id&quot;: 14,
-        &quot;tag_id&quot;: 2,
-        &quot;created_at&quot;: &quot;2012-08-10T13:50:10Z&quot;,
-        &quot;updated_at&quot;: &quot;2012-08-10T13:50:10Z&quot;
+        &quot;created_at&quot;: &quot;2013-03-20T19:43:22Z&quot;,
+        &quot;tag_id&quot;: 6
       }
     ],
-    &quot;organization_id&quot;: 2
-  },
-  {
+    &quot;role_id&quot;: 8,
     &quot;verbs&quot;: [
       {
-        &quot;verb&quot;: &quot;read_contents&quot;,
-        &quot;id&quot;: 3,
-        &quot;permission_id&quot;: &quot;13&quot;,
-        &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-        &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-        &quot;verb_id&quot;: &quot;3&quot;
+        &quot;id&quot;: 4,
+        &quot;updated_at&quot;: &quot;2013-03-20T17:09:38Z&quot;,
+        &quot;permission_id&quot;: &quot;14&quot;,
+        &quot;created_at&quot;: &quot;2013-03-20T17:09:38Z&quot;,
+        &quot;verb_id&quot;: &quot;4&quot;,
+        &quot;verb&quot;: &quot;read_contents&quot;
       }
     ],
-    &quot;all_tags&quot;: true,
-    &quot;name&quot;: &quot;env_perm_227e003&quot;,
-    &quot;id&quot;: 13,
-    &quot;all_verbs&quot;: false,
-    &quot;resource_type_id&quot;: 4,
-    &quot;role_id&quot;: 6,
+    &quot;organization_id&quot;: 4,
+    &quot;created_at&quot;: &quot;2013-03-20T19:43:22Z&quot;,
+    &quot;resource_type_id&quot;: 3,
     &quot;description&quot;: null,
+    &quot;all_verbs&quot;: false
+  },
+  {
+    &quot;name&quot;: &quot;env_perm_q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 13,
+    &quot;all_tags&quot;: true,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:43:22Z&quot;,
     &quot;resource_type&quot;: {
       &quot;name&quot;: &quot;environments&quot;,
-      &quot;id&quot;: 4,
-      &quot;created_at&quot;: &quot;2012-08-10T13:41:09Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-08-10T13:41:09Z&quot;
+      &quot;id&quot;: 3,
+      &quot;updated_at&quot;: &quot;2013-03-20T17:09:38Z&quot;,
+      &quot;created_at&quot;: &quot;2013-03-20T17:09:38Z&quot;
     },
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:09Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:09Z&quot;,
     &quot;tags&quot;: [],
-    &quot;organization_id&quot;: null
+    &quot;role_id&quot;: 8,
+    &quot;verbs&quot;: [
+      {
+        &quot;id&quot;: 4,
+        &quot;updated_at&quot;: &quot;2013-03-20T17:09:38Z&quot;,
+        &quot;permission_id&quot;: &quot;13&quot;,
+        &quot;created_at&quot;: &quot;2013-03-20T17:09:38Z&quot;,
+        &quot;verb_id&quot;: &quot;4&quot;,
+        &quot;verb&quot;: &quot;read_contents&quot;
+      }
+    ],
+    &quot;organization_id&quot;: null,
+    &quot;created_at&quot;: &quot;2013-03-20T19:43:22Z&quot;,
+    &quot;resource_type_id&quot;: 3,
+    &quot;description&quot;: null,
+    &quot;all_verbs&quot;: false
   },
   {
-    &quot;verbs&quot;: [],
-    &quot;all_tags&quot;: true,
-    &quot;name&quot;: &quot;all_perm_227e003_2&quot;,
+    &quot;name&quot;: &quot;all_perm_q5ktCr6jM1oN_2&quot;,
     &quot;id&quot;: 12,
-    &quot;all_verbs&quot;: true,
-    &quot;resource_type_id&quot;: 1,
-    &quot;role_id&quot;: 6,
-    &quot;description&quot;: null,
+    &quot;all_tags&quot;: true,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:43:21Z&quot;,
     &quot;resource_type&quot;: {
       &quot;name&quot;: &quot;all&quot;,
       &quot;id&quot;: 1,
-      &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;
+      &quot;updated_at&quot;: &quot;2013-03-20T17:09:38Z&quot;,
+      &quot;created_at&quot;: &quot;2013-03-20T17:09:38Z&quot;
     },
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
     &quot;tags&quot;: [],
-    &quot;organization_id&quot;: 2
+    &quot;role_id&quot;: 8,
+    &quot;verbs&quot;: [],
+    &quot;organization_id&quot;: 4,
+    &quot;created_at&quot;: &quot;2013-03-20T19:43:21Z&quot;,
+    &quot;resource_type_id&quot;: 1,
+    &quot;description&quot;: null,
+    &quot;all_verbs&quot;: true
   },
   {
-    &quot;verbs&quot;: [],
-    &quot;all_tags&quot;: true,
-    &quot;name&quot;: &quot;all_perm_227e003&quot;,
+    &quot;name&quot;: &quot;all_perm_q5ktCr6jM1oN&quot;,
     &quot;id&quot;: 11,
-    &quot;all_verbs&quot;: true,
-    &quot;resource_type_id&quot;: 1,
-    &quot;role_id&quot;: 6,
-    &quot;description&quot;: null,
+    &quot;all_tags&quot;: true,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:43:20Z&quot;,
     &quot;resource_type&quot;: {
       &quot;name&quot;: &quot;all&quot;,
       &quot;id&quot;: 1,
-      &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-      &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;
+      &quot;updated_at&quot;: &quot;2013-03-20T17:09:38Z&quot;,
+      &quot;created_at&quot;: &quot;2013-03-20T17:09:38Z&quot;
     },
-    &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
     &quot;tags&quot;: [],
-    &quot;organization_id&quot;: null
+    &quot;role_id&quot;: 8,
+    &quot;verbs&quot;: [],
+    &quot;organization_id&quot;: null,
+    &quot;created_at&quot;: &quot;2013-03-20T19:43:20Z&quot;,
+    &quot;resource_type_id&quot;: 1,
+    &quot;description&quot;: null,
+    &quot;all_verbs&quot;: true
   }
 ]</pre>
 
@@ -188,7 +195,8 @@
       </small>
     </td>
     <td>
-      <p>filter by name</p>
+      
+<p>filter by name</p>
 
         <br>
         Value: String
@@ -205,7 +213,8 @@
       </small>
     </td>
     <td>
-      <p>filter by description</p>
+      
+<p>filter by description</p>
 
         <br>
         Value: String
@@ -222,7 +231,8 @@
       </small>
     </td>
     <td>
-      <p>filter by all_verbs flag</p>
+      
+<p>filter by all_verbs flag</p>
 
         <br>
         Value: boolean
@@ -239,7 +249,8 @@
       </small>
     </td>
     <td>
-      <p>filter by all_flags flag</p>
+      
+<p>filter by all_flags flag</p>
 
         <br>
         Value: boolean
@@ -298,35 +309,35 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">POST /api/roles/6/permissions/
+          <pre class="prettyprint">POST /api/roles/8/permissions/
 {
-  &quot;verbs&quot;: [],
-  &quot;name&quot;: &quot;all_perm_227e003&quot;,
-  &quot;description&quot;: null,
-  &quot;type&quot;: &quot;all&quot;,
+  &quot;name&quot;: &quot;all_perm_q5ktCr6jM1oN&quot;,
   &quot;tags&quot;: [],
-  &quot;organization_id&quot;: null
+  &quot;verbs&quot;: [],
+  &quot;organization_id&quot;: null,
+  &quot;type&quot;: &quot;all&quot;,
+  &quot;description&quot;: null
 }
 200
 {
-  &quot;verbs&quot;: [],
-  &quot;all_tags&quot;: true,
-  &quot;name&quot;: &quot;all_perm_227e003&quot;,
+  &quot;name&quot;: &quot;all_perm_q5ktCr6jM1oN&quot;,
   &quot;id&quot;: 11,
-  &quot;all_verbs&quot;: true,
-  &quot;resource_type_id&quot;: 1,
-  &quot;role_id&quot;: 6,
-  &quot;description&quot;: null,
+  &quot;all_tags&quot;: true,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:43:20Z&quot;,
   &quot;resource_type&quot;: {
     &quot;name&quot;: &quot;all&quot;,
     &quot;id&quot;: 1,
-    &quot;created_at&quot;: &quot;2012-08-10T13:41:08Z&quot;,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:41:08Z&quot;
+    &quot;updated_at&quot;: &quot;2013-03-20T17:09:38Z&quot;,
+    &quot;created_at&quot;: &quot;2013-03-20T17:09:38Z&quot;
   },
-  &quot;created_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:50:08Z&quot;,
   &quot;tags&quot;: [],
-  &quot;organization_id&quot;: null
+  &quot;role_id&quot;: 8,
+  &quot;verbs&quot;: [],
+  &quot;organization_id&quot;: null,
+  &quot;created_at&quot;: &quot;2013-03-20T19:43:20Z&quot;,
+  &quot;resource_type_id&quot;: 1,
+  &quot;description&quot;: null,
+  &quot;all_verbs&quot;: true
 }</pre>
 
         <h3>Params</h3>
@@ -395,7 +406,8 @@
       </small>
     </td>
     <td>
-      <p>array of tag ids</p>
+      
+<p>array of tag ids</p>
 
         <br>
         Value: Array
@@ -412,7 +424,8 @@
       </small>
     </td>
     <td>
-      <p>name of a resource or &#39;all&#39;</p>
+      
+<p>name of a resource or ‘all’</p>
 
         <br>
         Value: String
@@ -429,7 +442,8 @@
       </small>
     </td>
     <td>
-      <p>array of permission verbs</p>
+      
+<p>array of permission verbs</p>
 
         <br>
         Value: Array
@@ -446,7 +460,8 @@
       </small>
     </td>
     <td>
-      <p>True if the permission should use all tags</p>
+      
+<p>True if the permission should use all tags</p>
 
         <br>
         Value: boolean
@@ -481,7 +496,7 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">DELETE /api/roles/6/permissions/11
+          <pre class="prettyprint">DELETE /api/roles/8/permissions/11
 200
 Deleted permission '11'</pre>
 

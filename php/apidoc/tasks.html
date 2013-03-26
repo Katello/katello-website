@@ -17,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Tasks</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Tasks
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Tasks<br>
+    Tasks
+    <br>
     <small></small>
   </h1>
 </div>
@@ -73,7 +80,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -108,37 +116,25 @@
 
 
         <h3>Examples</h3>
-          <pre class="prettyprint">GET /api/tasks/45f57d6b-e2f1-11e1-a64d-525400b68f90
+          <pre class="prettyprint">GET /api/tasks/c03f7282-1f20-4b37-87fc-f5525daa632f
 200
 {
-  &quot;result&quot;: {
-    &quot;errors&quot;: [
-      null,
-      null
-    ]
-  },
-  &quot;task_owner_type&quot;: null,
-  &quot;user_id&quot;: 1,
-  &quot;parameters&quot;: null,
-  &quot;id&quot;: 1,
-  &quot;uuid&quot;: &quot;45f57d6b-e2f1-11e1-a64d-525400b68f90&quot;,
-  &quot;start_time&quot;: null,
-  &quot;task_owner_id&quot;: null,
-  &quot;state&quot;: &quot;running&quot;,
-  &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
-  &quot;finish_time&quot;: null,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+  &quot;id&quot;: 3,
+  &quot;uuid&quot;: &quot;c03f7282-1f20-4b37-87fc-f5525daa632f&quot;,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:40:13Z&quot;,
   &quot;pending?&quot;: true,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:50Z&quot;,
-  &quot;organization_id&quot;: 2,
-  &quot;progress&quot;: {
-    &quot;total_count&quot;: 0,
-    &quot;total_size&quot;: 0,
-    &quot;error_details&quot;: [],
-    &quot;items_left&quot;: 0,
-    &quot;size_left&quot;: 0,
-    &quot;step&quot;: 0
-  }
+  &quot;user_id&quot;: 1,
+  &quot;progress&quot;: null,
+  &quot;start_time&quot;: null,
+  &quot;organization_id&quot;: 4,
+  &quot;created_at&quot;: &quot;2013-03-20T19:40:13Z&quot;,
+  &quot;task_owner_type&quot;: null,
+  &quot;task_owner_id&quot;: null,
+  &quot;state&quot;: &quot;waiting&quot;,
+  &quot;result&quot;: null,
+  &quot;parameters&quot;: null,
+  &quot;task_type&quot;: &quot;TaskStatus&quot;,
+  &quot;finish_time&quot;: null
 }</pre>
 
         <h3>Params</h3>
@@ -159,7 +155,8 @@
       </small>
     </td>
     <td>
-      <p>task identifier</p>
+      
+<p>task identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
