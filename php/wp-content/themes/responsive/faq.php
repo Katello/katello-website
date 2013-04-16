@@ -30,7 +30,7 @@ if ( !defined('ABSPATH')) exit;
             <strong>Q.)</strong>&nbsp;Does Katello work on CentOS?<br>
             <strong>A.)</strong>&nbsp;Theoretically it will work on CentOS, but we’re not officially supporting it yet. Please give it a try, and patches are welcome!</p>
             <p><strong>Q.)</strong>&nbsp;What about Spacewalk?<br>
-            <strong>A.)</strong>&nbsp;The Satellite product will continue to use the upstream Spacewalk project. Similarly the Katello project will be an upstream component of the CloudForms product. We first announced the Katello project and the future of Satellite at the 2011 Red Hat Summit. You can review those presentation slides here:&nbsp;<a target="_blank" href="http://www.redhat.com/summit/2011/presentations/summit/whats_next/thursday/summit-2011.warner_sanders_t_1400_future_of_satellite-v7.pdf" title="The Future of Red Hat Network Satellite - A New Architecture Enabling Traditional Datacenters &amp; the Cloud ">The Future of Red Hat Network Satellite: A New Architecture Enabling Traditional Datacenters &amp; the Cloud</a></p>
+				    <strong>A.)</strong> The Spacewalk project will continue to be the upstream community project for the Satellite version 5 offering.  The Katello project is now an upstream component for the next generation release of Satellite, yet to be released into market.  Stay tuned for updates and announcements on how Katello will contribute to the next generation Satellite offering.<br/></p>
             <p><strong>Q.)</strong>&nbsp;How do I get started?<br>
             <strong>A.)</strong>&nbsp;<a href="https://fedorahosted.org/katello/wiki/Install">Click here. Do it now!</a></p>
             <p><strong>Q.)</strong>&nbsp;How is Katello licensed?<br>
