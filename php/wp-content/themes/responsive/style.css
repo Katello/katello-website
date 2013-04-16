@@ -1681,7 +1681,7 @@ form div {
     color: #FFF;
 }
 
-.menu .current_page_item a {
+.menu .current_page_item a, .menu .current-menu-item a {
     border-bottom: 3px solid #FFF;
     color: #FFF;
 }

@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Crls</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Crls
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Crls<br>
+    Crls
+    <br>
     <small></small>
   </h1>
 </div>
@@ -59,23 +62,26 @@
 
 
         <h3>Examples</h3>
-          <pre>GET /api/crls/
+          <pre class="prettyprint">GET /api/crls/
 200
 -----BEGIN X509 CRL-----
-MIICjDCCAXQCAQEwDQYJKoZIhvcNAQEFBQAwfTELMAkGA1UEBhMCVVMxFzAVBgNV
+MIIDETCCAfkCAQEwDQYJKoZIhvcNAQEFBQAwbDELMAkGA1UEBhMCVVMxFzAVBgNV
 BAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdoMRAwDgYDVQQKEwdS
-ZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTEeMBwGA1UEAxMVcmhlbDYzLWthdDgu
-aW5lY2FzLmN6Fw0xMjA4MTAxMzQzMDNaFw0xMjA4MTExMzQzMDNaoIHCMIG/MIGw
-BgNVHSMEgagwgaWAFMliTcF7cxwV1nAAMS0F8rPX9OKEoYGBpH8wfTELMAkGA1UE
-BhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo
-MRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTEeMBwGA1UEAxMV
-cmhlbDYzLWthdDguaW5lY2FzLmN6ggkAskjXhJ4iy9IwCgYDVR0UBAMCAQEwDQYJ
-KoZIhvcNAQEFBQADggEBAC33nZagQA9O2kLnpNcvh0TcJipMutvycmTA2MeMPXAW
-oAi1n7K2xbGW/PcRVHWNVSghtJCizB0YVpCEiu0Wlk4k0eoUijLzDKnlSU2UCa3X
-zdJMKoazEaWQTDdT9qIGHbAPb2sLy9sr+G1XQ4HVnzvKRxSbr128R0z9qfI2846p
-iKiODEaqETCMY2zLlCwm/wYYjrXf87HN5RkfyrWjZFqlFYBFfbjHZvQ3NN3DvDcN
-ZKUGZ7qvdS2yRWuhBkANq2eJqYU54u3IK/zoZKi5pRUNoO3B8f3ztlk+7ZTMDK23
-FySrbxcOW3hYc7aB3mnCATECnG/MfiGoeqfGZsl0cBw=
+ZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTENMAsGA1UEAxMEdm0xNhcNMTMwMzIw
+MTk0MDIzWhcNMTMwMzIxMTk0MDIzWjCBpDAnAggBrMIv2JRZzxcNMTMwMjEyMTcw
+MDAwWjAMMAoGA1UdFQQDCgEJMCcCCBxtjyPc3yfGFw0xMzAyMTIxNzAwMDBaMAww
+CgYDVR0VBAMKAQkwJwIIUyJvDPQ8xo8XDTEzMDIxMjE3MDAwMFowDDAKBgNVHRUE
+AwoBCTAnAgghyLLy0TClBxcNMTMwMzIwMTk0MDIzWjAMMAoGA1UdFQQDCgEJoIGx
+MIGuMIGeBgNVHSMEgZYwgZOAFFKUuvSbWT3bBU8lUGAQwMC1/D1+oXCkbjBsMQsw
+CQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcTB1Jh
+bGVpZ2gxEDAOBgNVBAoTB1JlZCBIYXQxETAPBgNVBAsTCENsb3VkIEJVMQ0wCwYD
+VQQDEwR2bTE2ggkAxJvm5Be6Wj4wCwYDVR0UBAQCAgCkMA0GCSqGSIb3DQEBBQUA
+A4IBAQBN1I020NyqJ4gYFIIQmpuLKVITe+pDdvNd1wvk+9dkq2c1IlOgSGXk366m
+XpuJvecOvFlGitHQIiYO+eYxdSmRgQzqqk+WI84bVMODZsrjQfaeFu3GGP9HtPge
+pZm20XrAdUz2HG3kfxXAd/f47lZwjJ/2joeKYwjJPNrUbURSy6TUICRkiE2Gc6+C
+Wz4YuWc8VrjpNky/CJ/87JyHjjPHDiYgYMC7v1XH6MUrT89Njri5fQC83/1IvXEm
+j+cG3aQnKSpP+ooXAuPJYptsadI4YVSXp4qe1i9RVFTS91xGMMoCo204la+YPO/X
+a2Csof+RvmWXU5fEf6UOmjp2tUv1
 -----END X509 CRL-----
 </pre>
 
@@ -83,19 +89,16 @@ FySrbxcOW3hYc7aB3mnCATECnG/MfiGoeqfGZsl0cBw=
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

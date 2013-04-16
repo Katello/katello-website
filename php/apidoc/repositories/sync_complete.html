@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <a href='../../apidoc/repositories.html'>
+      Repositories
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>sync_complete</li>
@@ -41,17 +40,17 @@
 
 <div>
 
-  <p>This function is used by pulp for post sync actions.
-It is not authenticated, but does not accept requests unless
-they have been sent from localhost.  Since we go through apache
-HTTP<em>X</em>FORWARDED_FOR header should be set with original IP.
-Pulp blocks during the execution of this call, so <em>DO NOT</em> try to
-talk back to pulp within it.  Save that for the delayed job.
-Pulp doesn&#39;t send correct headers.&quot;</p>
+  
+<p>This function is used by pulp for post sync actions. It is not
+authenticated, but does not accept requests unless they have been sent from
+localhost.  Since we go through apache HTTP_X_FORWARDED_FOR header should
+be set with original IP. Pulp blocks during the execution of this call, so
+*DO NOT* try to talk back to pulp within it.  Save that for the delayed
+job. Pulp doesn’t send correct headers.“</p>
 
 
     <h2>Examples</h2>
-      <pre>POST /api/repositories/sync_complete
+      <pre class="prettyprint">POST /api/repositories/sync_complete
 {
   &quot;repo_id&quot;: &quot;org_227e003-fewups_product_227e003-fewups_product_227e003_fakerepos_zoo5&quot;,
   &quot;task_id&quot;: &quot;4fd84a3a-e2f1-11e1-a717-525400b68f90&quot;
@@ -92,19 +91,16 @@ undefined method `with_indifferent_access' for false:FalseClass</pre>
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

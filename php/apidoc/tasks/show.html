@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/tasks.html'>
+      Tasks
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>show</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/tasks/:id<br>
+      <small>Show a task info</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre class="prettyprint">GET /api/tasks/c03f7282-1f20-4b37-87fc-f5525daa632f
+200
+{
+  &quot;id&quot;: 3,
+  &quot;uuid&quot;: &quot;c03f7282-1f20-4b37-87fc-f5525daa632f&quot;,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:40:13Z&quot;,
+  &quot;pending?&quot;: true,
+  &quot;user_id&quot;: 1,
+  &quot;progress&quot;: null,
+  &quot;start_time&quot;: null,
+  &quot;organization_id&quot;: 4,
+  &quot;created_at&quot;: &quot;2013-03-20T19:40:13Z&quot;,
+  &quot;task_owner_type&quot;: null,
+  &quot;task_owner_id&quot;: null,
+  &quot;state&quot;: &quot;waiting&quot;,
+  &quot;result&quot;: null,
+  &quot;parameters&quot;: null,
+  &quot;task_type&quot;: &quot;TaskStatus&quot;,
+  &quot;finish_time&quot;: null
+}</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>task identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

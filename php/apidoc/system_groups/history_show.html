@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/system_groups.html'>System groups</a>
+    <a href='../../apidoc/system_groups.html'>
+      System groups
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>history_show</li>
@@ -44,37 +43,37 @@
   
 
     <h2>Examples</h2>
-      <pre>GET /api/organizations/org_227e003/system_groups/1/history/1
+      <pre class="prettyprint">GET /api/organizations/org_227e003/system_groups/1/history/1
 200
 {
-  &quot;status_message&quot;: &quot;Installing Package...&quot;,
-  &quot;pulp_id&quot;: &quot;0384935e-4216-4d38-9832-6be39e379aba&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:48:24Z&quot;,
-  &quot;task_type&quot;: &quot;package_install&quot;,
+  &quot;id&quot;: 1,
   &quot;tasks&quot;: [
     {
-      &quot;uuid&quot;: &quot;0e0f181c-e2f2-11e1-85ad-525400b68f90&quot;,
       &quot;id&quot;: 15,
-      &quot;state&quot;: &quot;running&quot;,
-      &quot;start_time&quot;: &quot;2012-08-10T13:48:24Z&quot;,
-      &quot;finish_time&quot;: null,
+      &quot;uuid&quot;: &quot;0e0f181c-e2f2-11e1-85ad-525400b68f90&quot;,
       &quot;progress&quot;: null,
+      &quot;start_time&quot;: &quot;2012-08-10T13:48:24Z&quot;,
+      &quot;state&quot;: &quot;running&quot;,
       &quot;result&quot;: {
         &quot;errors&quot;: [
           null,
           null
         ]
-      }
+      },
+      &quot;finish_time&quot;: null
     }
   ],
-  &quot;id&quot;: 1,
+  &quot;pulp_id&quot;: &quot;0384935e-4216-4d38-9832-6be39e379aba&quot;,
+  &quot;status_message&quot;: &quot;Installing Package...&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:48:24Z&quot;,
   &quot;state&quot;: &quot;running&quot;,
-  &quot;finish_time&quot;: null,
   &quot;parameters&quot;: {
     &quot;packages&quot;: [
       &quot;cheetah&quot;
     ]
-  }
+  },
+  &quot;finish_time&quot;: null,
+  &quot;task_type&quot;: &quot;package_install&quot;
 }</pre>
 
 
@@ -97,7 +96,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -114,7 +114,8 @@
       </small>
     </td>
     <td>
-      <p>Id of the system group</p>
+      
+<p>Id of the system group</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -131,7 +132,8 @@
       </small>
     </td>
     <td>
-      <p>Id of a job for filtering</p>
+      
+<p>Id of a job for filtering</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -145,19 +147,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

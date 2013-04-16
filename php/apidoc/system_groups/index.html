@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/system_groups.html'>System groups</a>
+    <a href='../../apidoc/system_groups.html'>
+      System groups
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>index</li>
@@ -44,18 +43,18 @@
   
 
     <h2>Examples</h2>
-      <pre>GET /api/organizations/org_227e003/system_groups/?name=system_group_227e003
+      <pre class="prettyprint">GET /api/organizations/org_q5ktCr6jM1oN/system_groups/?name=system_group_q5ktCr6jM1oN
 200
 [
   {
-    &quot;pulp_id&quot;: &quot;org_227e003-system_group_227e003-9b0aed1f&quot;,
-    &quot;created_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
-    &quot;organization_id&quot;: 2,
+    &quot;name&quot;: &quot;system_group_q5ktCr6jM1oN&quot;,
     &quot;id&quot;: 1,
-    &quot;max_systems&quot;: -1,
-    &quot;updated_at&quot;: &quot;2012-08-10T13:48:21Z&quot;,
-    &quot;description&quot;: &quot;group description&quot;,
-    &quot;name&quot;: &quot;system_group_227e003&quot;
+    &quot;updated_at&quot;: &quot;2013-03-20T19:46:23Z&quot;,
+    &quot;pulp_id&quot;: &quot;org_label_q5ktCr6jM1oN-system_group_q5ktCr6jM1oN-9caa630b&quot;,
+    &quot;organization_id&quot;: 4,
+    &quot;created_at&quot;: &quot;2013-03-20T19:46:23Z&quot;,
+    &quot;description&quot;: null,
+    &quot;max_systems&quot;: -1
   }
 ]</pre>
 
@@ -79,7 +78,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -96,7 +96,8 @@
       </small>
     </td>
     <td>
-      <p>System group name to filter by</p>
+      
+<p>System group name to filter by</p>
 
         <br>
         Value: String
@@ -110,19 +111,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

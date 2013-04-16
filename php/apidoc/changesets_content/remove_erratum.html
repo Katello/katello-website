@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/changesets_content.html'>Changesets content</a>
+    <a href='../../apidoc/changesets_content.html'>
+      Changesets content
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>remove_erratum</li>
@@ -44,13 +43,13 @@
   
 
     <h2>Examples</h2>
-      <pre>DELETE /api/changesets/2/errata/RHEA-2010:9984/
+      <pre class="prettyprint">DELETE /api/changesets/2/errata/RHEA-2010:0001/
 {
-  &quot;content_id&quot;: &quot;RHEA-2010:9984&quot;,
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1363808411864&quot;,
+  &quot;content_id&quot;: &quot;RHEA-2010:0001&quot;
 }
 200
-Erratum 'RHEA-2010:9984' not found in the changeset</pre>
+Removed erratum 'RHEA-2010:0001'</pre>
 
 
 
@@ -72,7 +71,8 @@ Erratum 'RHEA-2010:9984' not found in the changeset</pre>
       </small>
     </td>
     <td>
-      <p>The product which contains the errata</p>
+      
+<p>The product which contains the errata</p>
 
         <br>
         Value: number.
@@ -86,19 +86,16 @@ Erratum 'RHEA-2010:9984' not found in the changeset</pre>
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/templates.html'>Templates</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>export</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/templates/:id/export<br>
+      <small>Export template as TDL or JSON</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre class="prettyprint">GET /api/templates/5/export
+200
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;template&gt;&lt;name&gt;template_227e003&lt;/name&gt;&lt;os&gt;&lt;name&gt;Test Family&lt;/name&gt;&lt;version&gt;16&lt;/version&gt;&lt;arch&gt;x86_64&lt;/arch&gt;&lt;install type=&quot;url&quot;&gt;&lt;url&gt;&lt;/url&gt;&lt;/install&gt;&lt;rootpw&gt;redhat&lt;/rootpw&gt;&lt;/os&gt;&lt;description&gt;template description&lt;/description&gt;&lt;packages&gt;&lt;package name=&quot;cheetah&quot;/&gt;&lt;package name=&quot;@mammal&quot;/&gt;&lt;/packages&gt;&lt;repositories&gt;&lt;repository name=&quot;repo_227e003&quot;&gt;&lt;url&gt;https://katello.example.com/pulp/repos/org_227e003/env_227e003/custom/fewups_product_227e003/repo_227e003/&lt;/url&gt;&lt;persisted&gt;No&lt;/persisted&gt;&lt;clientcert&gt;-----BEGIN CERTIFICATE-----
+MIIG0DCCBbigAwIBAgIIHbTLbK7pLx0wDQYJKoZIhvcNAQEFBQAwfTELMAkGA1UE
+BhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo
+MRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTEeMBwGA1UEAxMV
+cmhlbDYzLWthdDguaW5lY2FzLmN6MCAXDTEyMDgxMDEzNDI0MVoYDzIxMTIwODEw
+MTM0MjQxWjArMSkwJwYDVQQDEyBmZjgwODA4MTM5MTBjM2QzMDEzOTEwYzVjYjY2
+MDAwOTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANOH587u34QCl1lS
+4YqxgKf/TUOK9YKZN+HSZI3cs/vH7jqkXd2dH26GIio4euYSOwlGs2DNHVN7GTKd
+hXimmleLpKOr5P2I+L4AzUdh7CwdSqiWZGE7a3kKqDVi6shhVKYObbJ69cOlJbWt
+MbstCEujvspirnfsmRWjkjoUd7wfmDaGQmWT8+W8TXQ+kIln8stUNczh645n4VQd
+w46QSkIBswY3dr99d10l3Wv++neSgGfP6y84jusMMac0Ri0GI7L8DFzXImaN/l/s
+qOIbWrKBBmx9+x82Z7mzFomo4yOFwi4Ik/u2mKoeqbcEqHsdVElEhr/rcn2RaSQW
+kpmBhq0CAwEAAaOCA6IwggOeMBEGCWCGSAGG+EIBAQQEAwIFoDALBgNVHQ8EBAMC
+BLAwgbAGA1UdIwSBqDCBpYAUyWJNwXtzHBXWcAAxLQXys9f04oShgYGkfzB9MQsw
+CQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcTB1Jh
+bGVpZ2gxEDAOBgNVBAoTB1JlZCBIYXQxETAPBgNVBAsTCENsb3VkIEJVMR4wHAYD
+VQQDExVyaGVsNjMta2F0OC5pbmVjYXMuY3qCCQCySNeEniLL0jAdBgNVHQ4EFgQU
+W/VVEqoWrRZFpSzf2yF8YQYdUaYwEwYDVR0lBAwwCgYIKwYBBQUHAwIwLwYQKwYB
+BAGSCAkBp5GGl5EYAQQbDBlvcmdfMjI3ZTAwM191ZWJlcl9wcm9kdWN0MBYGECsG
+AQQBkggJAaeRhpeRGAMEAgwAMBYGECsGAQQBkggJAaeRhpeRGAIEAgwAMBkGECsG
+AQQBkggJAqeRhpeRHwEEBQwDeXVtMCQGESsGAQQBkggJAqeRhpeRHwEBBA8MDXVl
+YmVyX2NvbnRlbnQwMgYRKwYBBAGSCAkCp5GGl5EfAQIEHQwbMTM0NDYwNjE2MTA0
+OF91ZWJlcl9jb250ZW50MB0GESsGAQQBkggJAqeRhpeRHwEFBAgMBkN1c3RvbTAj
+BhErBgEEAZIICQKnkYaXkR8BBgQODAwvb3JnXzIyN2UwMDMwFwYRKwYBBAGSCAkC
+p5GGl5EfAQcEAgwAMBgGESsGAQQBkggJAqeRhpeRHwEIBAMMATEwKQYKKwYBBAGS
+CAkEAQQbDBlvcmdfMjI3ZTAwM191ZWJlcl9wcm9kdWN0MDAGCisGAQQBkggJBAIE
+IgwgZmY4MDgwODEzOTEwYzNkMzAxMzkxMGM1YzhiMDAwMDUwHQYKKwYBBAGSCAkE
+AwQPDA0xMzQ0NjA2MTYxMDQ4MBEGCisGAQQBkggJBAUEAwwBMTAkBgorBgEEAZII
+CQQGBBYMFDIwMTItMDgtMTBUMTM6NDI6NDFaMCQGCisGAQQBkggJBAcEFgwUMjEx
+Mi0wOC0xMFQxMzo0Mjo0MVowEQYKKwYBBAGSCAkEDAQDDAEwMBEGCisGAQQBkggJ
+BA4EAwwBMDARBgorBgEEAZIICQQLBAMMATEwNAYKKwYBBAGSCAkFAQQmDCQ0M2Iw
+NTRiMi0yZGQ1LTQyNzAtODU4Zi03NTM5NDAwZjM5YTIwDQYJKoZIhvcNAQEFBQAD
+ggEBABRG4zWXgy7NVXoMtsYOtqvnYX7XzzMSSrljGqa3DRpWsTLYTNfkyRgODlXP
+qAGN8z0ITgbgpUyqX5Ehvfo7j5gly0CdPZu54gPS3MBVxxSbrTTQ0vl91zPusA9W
+9/ZzIREdcpDaTJzPL3o2mBw9IrwXHtjDotZjXQj8Yw5cjiaIYIDb9PG9EgDaTHTr
+sBMJSg+Z7EMdxxMFNZY8AJrxL2c+Cis8eP0IXvUtLgYwlQ1X1hqovrQZbJK1YIFc
+em9FfbssaBnY1DnW1j8JZAUoZ6Dc0VAHZdHIXjJeahoN9RDXHvUcGFIan41vcwM9
+4lgwKGnTV67bozjBm+s8eek+sW8=
+-----END CERTIFICATE-----
+&lt;/clientcert&gt;&lt;clientkey&gt;-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEA04fnzu7fhAKXWVLhirGAp/9NQ4r1gpk34dJkjdyz+8fuOqRd
+3Z0fboYiKjh65hI7CUazYM0dU3sZMp2FeKaaV4uko6vk/Yj4vgDNR2HsLB1KqJZk
+YTtreQqoNWLqyGFUpg5tsnr1w6Ulta0xuy0IS6O+ymKud+yZFaOSOhR3vB+YNoZC
+ZZPz5bxNdD6QiWfyy1Q1zOHrjmfhVB3DjpBKQgGzBjd2v313XSXda/76d5KAZ8/r
+LziO6wwxpzRGLQYjsvwMXNciZo3+X+yo4htasoEGbH37HzZnubMWiajjI4XCLgiT
++7aYqh6ptwSoex1USUSGv+tyfZFpJBaSmYGGrQIDAQABAoIBAF3tkjxsC6pFsEkE
+qYv5h8SRdBCS6rOkL5FB6E6p+u3JeHpntBqNA4EDZLZUwBXbcIWM9Gf+jJAeMDEu
+iy7o484N/vyCfrsqEDHmj0CsNb/c/eLgbRBT30QvPEQAeXqi5YCbFZDUUr8eXSFQ
+F64ir/VOb5DUwt4TnGJkcLEDl6tbmWoAOWCmHpOqdR4BU2tqIWZXqeUPIxfDAq72
+xpFdPhW3/XbGBFiRPkNrckarlK06xUWZyKr+kQCc8rVKCAiVwVkZAHbZTusQzC4Y
+3lCEzg2ToU7az2+HRMMbJYFt0bxnGFytgFSrNdUOdXB3oPj0FpDTdhK9W63tjAu5
+lTuul60CgYEA8Cp+B8bFJsNMbLyLCrE+Te/3N2GD+1tPhaXt2WIXkSSxpjzlKRo9
+cygdbVjgguEXSwjX7b5Nbus8dG1XwF3RxprfjJoz1G0WFRsuSQEaQUpqIMXBD29v
+pPxS0U8CDnop9dwQ9DMotfz0tuaULbSVHvFta5j6JjcQ0Gmbj+OuSPMCgYEA4Xoc
+ji8FR2D5ZwQ7FsAAXIz0m24F+evNw89kQHz3H1ydaKDuM6d4c0oIqQ9vMZVXsNd4
+BLfWX356q3sBTwZ+xxKDbV4AuK/d6N+j0BtjerKO8zZCV2b7+IwhrLzce1pdDKL9
+BoD+vvMdWM6DIlEr43z/kqprAAMbXs6TdSo+2d8CgYEAyv7/m88UoRj+JgKPe7Ao
+u3OS/8p65iBd7Nc9XTqeNN5REfPytnUpb4Z+qQgwbC+ZoqCM8rShepl2depd+4jR
+YQ9S2OMV3/18ZsacrrQx3vHpFl5QOp20Pj3QOn6PfHEhumASLHZ5eKmgpl/q617x
+lD/4frPE7DwrCB3bkRmfHKUCgYBgu1aM2TdWjA/zVilTdUOycPZvyB/gPH2mR88m
+q3YJil4tiP0oQ+y06UoV3X1CtGNOhuIChCwAA+70qmzBTnQNS6/+t5lvomN9iJRq
+r5VaCkixptGHVbM7ykKYLN4aPYY16abLp4OiwAITG2W+zzwY+INclKga9TpEzjMM
+zPbx2QKBgGbn+Rop8m09d/xaiRdoedRuaaIf5fH/nGb3BpUXe6Y3PYwbl5lXb41M
+UKdjr/S+rl1rVJOq0en8uVNOh+nPeBfd5DQ6v6zk679X6nuLxzlHUlhpN3Y6QFR7
+ZtikyjWc7jNdm495jW3lRTmI/LvFTjGB9LSp0/E76euOYa1tItaj
+-----END RSA PRIVATE KEY-----
+&lt;/clientkey&gt;&lt;/repository&gt;&lt;/repositories&gt;&lt;/template&gt;</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>template numeric identifier</p>
+
+        <br>
+        Value: number.
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

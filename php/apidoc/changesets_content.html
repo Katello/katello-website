@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Changesets content</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Changesets content
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Changesets content<br>
+    Changesets content
+    <br>
     <small></small>
   </h1>
 </div>
@@ -59,12 +62,12 @@
 
 
         <h3>Examples</h3>
-          <pre>POST /api/changesets/1/products/
+          <pre class="prettyprint">POST /api/changesets/1/products/
 {
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1363808411864&quot;
 }
 200
-Added product 'fewups_product_227e003'</pre>
+Added product 'fewups_product_q5ktCr6jM1oN'</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -84,7 +87,8 @@ Added product 'fewups_product_227e003'</pre>
       </small>
     </td>
     <td>
-      <p>The id of the product which should be added</p>
+      
+<p>The id of the product which should be added</p>
 
         <br>
         Value: number.
@@ -119,12 +123,12 @@ Added product 'fewups_product_227e003'</pre>
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/changesets/1/products/1344606167242/
+          <pre class="prettyprint">DELETE /api/changesets/1/products/1363808411864/
 {
-  &quot;content_id&quot;: &quot;1344606167242&quot;
+  &quot;content_id&quot;: &quot;1363808411864&quot;
 }
 200
-Removed product '1344606167242'</pre>
+Removed product '1363808411864'</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -144,7 +148,8 @@ Removed product '1344606167242'</pre>
       </small>
     </td>
     <td>
-      <p>The id of the product to remove</p>
+      
+<p>The id of the product to remove</p>
 
         <br>
         Value: number.
@@ -179,13 +184,13 @@ Removed product '1344606167242'</pre>
 
 
         <h3>Examples</h3>
-          <pre>POST /api/changesets/2/packages/
+          <pre class="prettyprint">POST /api/changesets/2/packages/
 {
-  &quot;product_id&quot;: &quot;1344606167242&quot;,
-  &quot;name&quot;: &quot;monkey-0.3-0.8.noarch.rpm&quot;
+  &quot;name&quot;: &quot;monkey-0.3-0.8.noarch&quot;,
+  &quot;product_id&quot;: &quot;1363808411864&quot;
 }
 200
-Added package 'monkey-0.3-0.8.noarch.rpm'</pre>
+Added package 'monkey-0.3-0.8.noarch'</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -205,7 +210,8 @@ Added package 'monkey-0.3-0.8.noarch.rpm'</pre>
       </small>
     </td>
     <td>
-      <p>The nvrea of the package to add</p>
+      
+<p>The nvrea of the package to add</p>
 
         <br>
         Value: String
@@ -222,7 +228,8 @@ Added package 'monkey-0.3-0.8.noarch.rpm'</pre>
       </small>
     </td>
     <td>
-      <p>The id of the product which contains the package</p>
+      
+<p>The id of the product which contains the package</p>
 
         <br>
         Value: number.
@@ -257,13 +264,13 @@ Added package 'monkey-0.3-0.8.noarch.rpm'</pre>
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/changesets/2/packages/monkey-0.3-0.8.noarch.rpm/
+          <pre class="prettyprint">DELETE /api/changesets/2/packages/monkey-0.3-0.8.noarch/
 {
-  &quot;content_id&quot;: &quot;monkey-0.3-0.8.noarch.rpm&quot;,
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1363808411864&quot;,
+  &quot;content_id&quot;: &quot;monkey-0.3-0.8.noarch&quot;
 }
 200
-Package 'monkey-0.3-0.8.noarch.rpm' not found in the changeset</pre>
+Removed package 'monkey-0.3-0.8.noarch'</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -283,7 +290,8 @@ Package 'monkey-0.3-0.8.noarch.rpm' not found in the changeset</pre>
       </small>
     </td>
     <td>
-      <p>The id of the product which contains the package</p>
+      
+<p>The id of the product which contains the package</p>
 
         <br>
         Value: number.
@@ -318,9 +326,9 @@ Package 'monkey-0.3-0.8.noarch.rpm' not found in the changeset</pre>
 
 
         <h3>Examples</h3>
-          <pre>POST /api/changesets/2/errata/
+          <pre class="prettyprint">POST /api/changesets/2/errata/
 {
-  &quot;product_id&quot;: &quot;1344606167242&quot;,
+  &quot;product_id&quot;: &quot;1363808411864&quot;,
   &quot;erratum_id&quot;: &quot;RHEA-2010:0001&quot;
 }
 200
@@ -344,7 +352,8 @@ Added erratum 'RHEA-2010:0001'</pre>
       </small>
     </td>
     <td>
-      <p>The id of the errata to add</p>
+      
+<p>The id of the errata to add</p>
 
         <br>
         Value: number.
@@ -361,7 +370,8 @@ Added erratum 'RHEA-2010:0001'</pre>
       </small>
     </td>
     <td>
-      <p>The product which contains the errata</p>
+      
+<p>The product which contains the errata</p>
 
         <br>
         Value: number.
@@ -396,13 +406,13 @@ Added erratum 'RHEA-2010:0001'</pre>
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/changesets/2/errata/RHEA-2010:9984/
+          <pre class="prettyprint">DELETE /api/changesets/2/errata/RHEA-2010:0001/
 {
-  &quot;content_id&quot;: &quot;RHEA-2010:9984&quot;,
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1363808411864&quot;,
+  &quot;content_id&quot;: &quot;RHEA-2010:0001&quot;
 }
 200
-Erratum 'RHEA-2010:9984' not found in the changeset</pre>
+Removed erratum 'RHEA-2010:0001'</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -422,7 +432,8 @@ Erratum 'RHEA-2010:9984' not found in the changeset</pre>
       </small>
     </td>
     <td>
-      <p>The product which contains the errata</p>
+      
+<p>The product which contains the errata</p>
 
         <br>
         Value: number.
@@ -446,7 +457,7 @@ Erratum 'RHEA-2010:9984' not found in the changeset</pre>
            data-parent='#accordion'>
             POST /api/changesets/:changeset_id/repositories
           </a><br>
-          <small>Add a repository to a changset</small>
+          <small>Add a repository to a changeset</small>
         </h2>
     </div>
 
@@ -457,13 +468,13 @@ Erratum 'RHEA-2010:9984' not found in the changeset</pre>
 
 
         <h3>Examples</h3>
-          <pre>POST /api/changesets/2/repositories/
+          <pre class="prettyprint">POST /api/changesets/2/repositories/
 {
-  &quot;product_id&quot;: &quot;1344606167242&quot;,
-  &quot;repository_id&quot;: 2
+  &quot;repository_id&quot;: 4,
+  &quot;product_id&quot;: &quot;1363808411864&quot;
 }
 200
-Added repository 'repo_227e003'</pre>
+Added repository 'repo_q5ktCr6jM1oN'</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -483,7 +494,8 @@ Added repository 'repo_227e003'</pre>
       </small>
     </td>
     <td>
-      <p>The id of the repository to add</p>
+      
+<p>The id of the repository to add</p>
 
         <br>
         Value: number.
@@ -518,44 +530,37 @@ Added repository 'repo_227e003'</pre>
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/changesets/2/repositories/2/
+          <pre class="prettyprint">DELETE /api/changesets/2/repositories/4/
 {
-  &quot;content_id&quot;: 2,
-  &quot;product_id&quot;: &quot;1344606167242&quot;
+  &quot;product_id&quot;: &quot;1363808411864&quot;,
+  &quot;content_id&quot;: 4
 }
 200
-Removed repository'2'</pre>
+Removed repository '4'</pre>
 
     </div>
     <hr>
     <div class='pull-right small'>
-      <a href='../apidoc/changesets_content/add_template.html'> >>> </a>
+      <a href='../apidoc/changesets_content/add_content_view.html'> >>> </a>
     </div>
     <div>
         <h2>
-          <a href='#description-add_template'
+          <a href='#description-add_content_view'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            POST /api/changesets/:changeset_id/templates
+            POST /api/changesets/:changeset_id/content_views
           </a><br>
-          <small>Add a template to a changeset</small>
+          <small>Add a content view to a changeset</small>
         </h2>
     </div>
 
 
-    <div id='description-add_template' class='collapse accordion-body'>
+    <div id='description-add_content_view' class='collapse accordion-body'>
       
 
 
 
-        <h3>Examples</h3>
-          <pre>POST /api/changesets/3/templates/
-{
-  &quot;template_id&quot;: 1
-}
-200
-Added template 'promotion_test_tpl_227e003'</pre>
 
         <h3>Params</h3>
         <table class='table'>
@@ -568,14 +573,15 @@ Added template 'promotion_test_tpl_227e003'</pre>
           <tbody>
               <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>template_id </strong><br>
+      <strong>content_view_id </strong><br>
       <small>
         optional
         
       </small>
     </td>
     <td>
-      <p>The id of the template to add</p>
+      
+<p>The id of the content view to add</p>
 
         <br>
         Value: number.
@@ -589,33 +595,26 @@ Added template 'promotion_test_tpl_227e003'</pre>
     </div>
     <hr>
     <div class='pull-right small'>
-      <a href='../apidoc/changesets_content/remove_template.html'> >>> </a>
+      <a href='../apidoc/changesets_content/remove_content_view.html'> >>> </a>
     </div>
     <div>
         <h2>
-          <a href='#description-remove_template'
+          <a href='#description-remove_content_view'
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            DELETE /api/changesets/:changeset_id/templates/:id
+            DELETE /api/changesets/:changeset_id/content_views/:id
           </a><br>
-          <small>Remove a template from a changeset</small>
+          <small>Remove a content_view from a changeset</small>
         </h2>
     </div>
 
 
-    <div id='description-remove_template' class='collapse accordion-body'>
+    <div id='description-remove_content_view' class='collapse accordion-body'>
       
 
 
 
-        <h3>Examples</h3>
-          <pre>DELETE /api/changesets/3/templates/1/
-{
-  &quot;content_id&quot;: 1
-}
-200
-Removed template '1'</pre>
 
     </div>
     <hr>
@@ -659,7 +658,8 @@ Removed template '1'</pre>
       </small>
     </td>
     <td>
-      <p>The id of the distribution to add</p>
+      
+<p>The id of the distribution to add</p>
 
         <br>
         Value: number.
@@ -676,7 +676,8 @@ Removed template '1'</pre>
       </small>
     </td>
     <td>
-      <p>The product which contains the distribution</p>
+      
+<p>The product which contains the distribution</p>
 
         <br>
         Value: number.
@@ -715,19 +716,16 @@ Removed template '1'</pre>
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

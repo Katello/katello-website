@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/products.html'>Products</a>
+    <a href='../../apidoc/products.html'>
+      Products
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>update</li>
@@ -44,7 +43,7 @@
   
 
     <h2>Examples</h2>
-      <pre>PUT /api/organizations/org_227e003/products/1344606356883/
+      <pre class="prettyprint">PUT /api/organizations/org_q5ktCr6jM1oN/products/1363808564411/
 {
   &quot;product&quot;: {
     &quot;gpg_key_name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;
@@ -52,53 +51,57 @@
 }
 200
 {
+  &quot;id&quot;: &quot;1363808564411&quot;,
+  &quot;attributes&quot;: [],
+  &quot;sync_plan_id&quot;: null,
+  &quot;name&quot;: &quot;GPG-product-q5ktCr6jM1oN&quot;,
+  &quot;cdn_import_success&quot;: true,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:42:51Z&quot;,
+  &quot;provider_id&quot;: 6,
+  &quot;marketing_product&quot;: false,
+  &quot;sync_plan_name&quot;: null,
+  &quot;gpg_key_id&quot;: 2,
+  &quot;last_sync&quot;: null,
   &quot;multiplier&quot;: 1,
-  &quot;created_at&quot;: &quot;2012-08-10T13:45:57Z&quot;,
-  &quot;provider_id&quot;: 3,
+  &quot;label&quot;: &quot;GPG-product-q5ktCr6jM1oN_1363808564411&quot;,
+  &quot;created_at&quot;: &quot;2013-03-20T19:42:44Z&quot;,
+  &quot;gpg_key_name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;,
+  &quot;sync_state&quot;: &quot;not_synced&quot;,
+  &quot;description&quot;: null,
   &quot;productContent&quot;: [
     {
-      &quot;enabled&quot;: true,
       &quot;content&quot;: {
-        &quot;modifiedProductIds&quot;: [],
+        &quot;gpgUrl&quot;: &quot;&quot;,
+        &quot;id&quot;: &quot;1363808567833&quot;,
+        &quot;name&quot;: &quot;GPG-repo-2-q5ktCr6jM1oN&quot;,
+        &quot;updated&quot;: &quot;2013-03-20T19:42:47.833+0000&quot;,
+        &quot;created&quot;: &quot;2013-03-20T19:42:47.833+0000&quot;,
+        &quot;label&quot;: &quot;org_label_q5ktCr6jM1oN_GPG-product-q5ktCr6jM1oN_GPG-repo-2-q5ktCr6jM1oN&quot;,
         &quot;type&quot;: &quot;yum&quot;,
+        &quot;modifiedProductIds&quot;: [],
         &quot;vendor&quot;: &quot;Custom&quot;,
-        &quot;updated&quot;: &quot;2012-08-10T13:46:07.395+0000&quot;,
-        &quot;id&quot;: &quot;1344606367395&quot;,
-        &quot;label&quot;: &quot;org_227e003_GPG-product-227e003_GPG-repo-2-227e003&quot;,
-        &quot;contentUrl&quot;: &quot;/custom/GPG-product-227e003/GPG-repo-2-227e003&quot;,
-        &quot;gpgUrl&quot;: &quot;https://katello.example.com/katello/api/repositories/6/gpg_key_content&quot;,
-        &quot;created&quot;: &quot;2012-08-10T13:46:07.395+0000&quot;,
-        &quot;name&quot;: &quot;GPG-repo-2-227e003&quot;
-      }
+        &quot;contentUrl&quot;: &quot;/custom/GPG-product-q5ktCr6jM1oN/GPG-repo-2-q5ktCr6jM1oN&quot;
+      },
+      &quot;product_id&quot;: 3,
+      &quot;enabled&quot;: true
     },
     {
-      &quot;enabled&quot;: true,
       &quot;content&quot;: {
-        &quot;modifiedProductIds&quot;: [],
+        &quot;gpgUrl&quot;: &quot;&quot;,
+        &quot;id&quot;: &quot;1363808565431&quot;,
+        &quot;name&quot;: &quot;GPG-repo-q5ktCr6jM1oN&quot;,
+        &quot;updated&quot;: &quot;2013-03-20T19:42:45.431+0000&quot;,
+        &quot;created&quot;: &quot;2013-03-20T19:42:45.431+0000&quot;,
+        &quot;label&quot;: &quot;org_label_q5ktCr6jM1oN_GPG-product-q5ktCr6jM1oN_GPG-repo-q5ktCr6jM1oN&quot;,
         &quot;type&quot;: &quot;yum&quot;,
+        &quot;modifiedProductIds&quot;: [],
         &quot;vendor&quot;: &quot;Custom&quot;,
-        &quot;updated&quot;: &quot;2012-08-10T13:46:00.376+0000&quot;,
-        &quot;id&quot;: &quot;1344606360376&quot;,
-        &quot;label&quot;: &quot;org_227e003_GPG-product-227e003_GPG-repo-227e003&quot;,
-        &quot;contentUrl&quot;: &quot;/custom/GPG-product-227e003/GPG-repo-227e003&quot;,
-        &quot;gpgUrl&quot;: &quot;https://katello.example.com/katello/api/repositories/5/gpg_key_content&quot;,
-        &quot;created&quot;: &quot;2012-08-10T13:46:00.376+0000&quot;,
-        &quot;name&quot;: &quot;GPG-repo-227e003&quot;
-      }
+        &quot;contentUrl&quot;: &quot;/custom/GPG-product-q5ktCr6jM1oN/GPG-repo-q5ktCr6jM1oN&quot;
+      },
+      &quot;product_id&quot;: 3,
+      &quot;enabled&quot;: true
     }
-  ],
-  &quot;gpg_key_id&quot;: 2,
-  &quot;attributes&quot;: [],
-  &quot;id&quot;: &quot;1344606356883&quot;,
-  &quot;gpg_key_name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:46:09Z&quot;,
-  &quot;description&quot;: null,
-  &quot;sync_plan_id&quot;: null,
-  &quot;name&quot;: &quot;GPG-product-227e003&quot;,
-  &quot;sync_plan_name&quot;: null,
-  &quot;last_sync&quot;: null,
-  &quot;marketing_product&quot;: false,
-  &quot;sync_state&quot;: &quot;not_synced&quot;
+  ]
 }</pre>
 
 
@@ -121,7 +124,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -138,7 +142,8 @@
       </small>
     </td>
     <td>
-      <p>product numeric identifier</p>
+      
+<p>product numeric identifier</p>
 
         <br>
         Value: number.
@@ -150,7 +155,7 @@
     <td>
       <strong>product </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -166,14 +171,33 @@
       <strong>product[gpg_key_name] </strong><br>
       <small>
         optional
-        
+        , nil allowed
       </small>
     </td>
     <td>
-      <p>identifier of the gpg key</p>
+      
+<p>identifier of the gpg key</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>product[description] </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Product description</p>
+
+        <br>
+        Value: String
     </td>
   </tr>
 
@@ -188,6 +212,8 @@
     </td>
     <td>
       
+<p>set to true to recursive update gpg key</p>
+
         <br>
         Value: boolean
     </td>
@@ -201,19 +227,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

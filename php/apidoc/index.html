@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,16 +17,19 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li class='active'><a href='../apidoc.html'>Katello</a></li>
+  <li class='active'><a href='../apidoc.html'>Katello 1.0</a></li>
 </ul>
 
-<div><p>The sysadmin&#39;s fortress.</p>
+<div>
+<p>The sysadmin’s fortress.</p>
 </div>
 
 <h1 class='page-header'>Resources</h1>
 
   <h2>
-    <a href='../apidoc/activation_keys.html'>Activation keys</a><br>
+    <a href='../apidoc/activation_keys.html'>
+      Activation keys
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -92,7 +91,45 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/changesets.html'>Changesets</a><br>
+    <a href='../apidoc/architectures.html'>
+      Architectures
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/architectures/index.html'>GET /api/architectures</a></td>
+            <td width='60%'>Get list of architectures available in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/architectures/show.html'>GET /api/architectures/:id</a></td>
+            <td width='60%'>Show an architecture</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/architectures/create.html'>POST /api/architecture</a></td>
+            <td width='60%'>Create new architecture in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/architectures/update.html'>PUT /api/architectures/:id</a></td>
+            <td width='60%'>Update an architecture record in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/architectures/destroy.html'>DELETE /api/architectures/:id</a></td>
+            <td width='60%'>Remove an architecture from Foreman</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/changesets.html'>
+      Changesets
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -125,7 +162,7 @@
           </tr>
           <tr>
             <td><a href='../apidoc/changesets/promote.html'>POST /api/changesets/:id/promote</a></td>
-            <td width='60%'>Promote a changeset into a new envrionment</td>
+            <td width='60%'>Promote a changeset into a new envrionment.</td>
           </tr>
           <tr>
             <td><a href='../apidoc/changesets/destroy.html'>DELETE /api/changesets/:id</a></td>
@@ -134,7 +171,9 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/changesets_content.html'>Changesets content</a><br>
+    <a href='../apidoc/changesets_content.html'>
+      Changesets content
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -171,19 +210,19 @@
           </tr>
           <tr>
             <td><a href='../apidoc/changesets_content/add_repo.html'>POST /api/changesets/:changeset_id/repositories</a></td>
-            <td width='60%'>Add a repository to a changset</td>
+            <td width='60%'>Add a repository to a changeset</td>
           </tr>
           <tr>
             <td><a href='../apidoc/changesets_content/remove_repo.html'>DELETE /api/changesets/:changeset_id/repositories/:id</a></td>
             <td width='60%'>Remove a repository from a changeset</td>
           </tr>
           <tr>
-            <td><a href='../apidoc/changesets_content/add_template.html'>POST /api/changesets/:changeset_id/templates</a></td>
-            <td width='60%'>Add a template to a changeset</td>
+            <td><a href='../apidoc/changesets_content/add_content_view.html'>POST /api/changesets/:changeset_id/content_views</a></td>
+            <td width='60%'>Add a content view to a changeset</td>
           </tr>
           <tr>
-            <td><a href='../apidoc/changesets_content/remove_template.html'>DELETE /api/changesets/:changeset_id/templates/:id</a></td>
-            <td width='60%'>Remove a template from a changeset</td>
+            <td><a href='../apidoc/changesets_content/remove_content_view.html'>DELETE /api/changesets/:changeset_id/content_views/:id</a></td>
+            <td width='60%'>Remove a content_view from a changeset</td>
           </tr>
           <tr>
             <td><a href='../apidoc/changesets_content/add_distribution.html'>POST /api/changesets/:changeset_id/distributions</a></td>
@@ -196,7 +235,169 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/crls.html'>Crls</a><br>
+    <a href='../apidoc/compute_resources.html'>
+      Compute resources
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/compute_resources/index.html'>GET /api/compute_resources</a></td>
+            <td width='60%'>Get list of compute resources available in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/compute_resources/show.html'>GET /api/compute_resources/:id</a></td>
+            <td width='60%'>Show an compute resource</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/compute_resources/create.html'>POST /api/compute_resources</a></td>
+            <td width='60%'>Create new compute resource in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/compute_resources/update.html'>PUT /api/compute_resources/:id</a></td>
+            <td width='60%'>Update an compute resource record in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/compute_resources/destroy.html'>DELETE /api/compute_resources/:id</a></td>
+            <td width='60%'>Remove an compute resource from Foreman</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/config_templates.html'>
+      Config templates
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/config_templates/index.html'>GET /api/config_templates</a></td>
+            <td width='60%'>List templates</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/config_templates/show.html'>GET /api/config_templates/:id</a></td>
+            <td width='60%'>Show template details</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/config_templates/create.html'>POST /api/config_templates</a></td>
+            <td width='60%'>Create a template</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/config_templates/update.html'>PUT /api/config_templates/:id</a></td>
+            <td width='60%'>Update a template</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/config_templates/destroy.html'>DELETE /api/config_templates/:id</a></td>
+            <td width='60%'>Delete a template</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/config_templates/revision.html'>GET /api/config_templates/revision</a></td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/config_templates/build_pxe_default.html'>GET /api/config_templates/build_pxe_default</a></td>
+            <td width='60%'>Change the default PXE menu on all configured TFTP servers</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/content_view_definitions.html'>
+      Content view definitions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/content_view_definitions/index.html'>GET /api/organizations/:organization_id/content_view_definitions</a></td>
+            <td width='60%'>List content view definitions</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/content_view_definitions/create.html'>POST /api/content_view_definitions</a></td>
+            <td width='60%'>Create a content view definition</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/content_view_definitions/update.html'>PUT /api/organizations/:org/content_view_definitions/:id</a></td>
+            <td width='60%'>Update a definition</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/content_view_definitions/show.html'>GET /api/content_view_definitions/:id</a></td>
+            <td width='60%'>Show definition info</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/content_view_definitions/publish.html'>POST /api/organizations/:name/content_view_definitions/:id/publish</a></td>
+            <td width='60%'>Publish a content view</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/content_view_definitions/destroy.html'>DELETE /api/content_view_definitions/:id</a></td>
+            <td width='60%'>Delete a cv definition</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/content_view_definitions/content_views.html'>GET /api/content_view_definitions/:id/content_views</a></td>
+            <td width='60%'>List a definition's content views</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/content_view_definitions/update_content_views.html'>PUT /api/content_view_definitions/:id/content_views</a></td>
+            <td width='60%'>Update a definition's content views</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/content_views.html'>
+      Content views
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/content_views/index.html'>GET /api/organizations/:organization_id/content_views</a></td>
+            <td width='60%'>List content views</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/content_views/show.html'>GET /api/content_views/:id</a></td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/content_views/promote.html'>POST /api/content_views/:id/promote</a></td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/content_views/refresh.html'>POST /api/content_views/:id/refresh</a></td>
+            <td width='60%'></td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/crls.html'>
+      Crls
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -214,7 +415,9 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/distributions.html'>Distributions</a><br>
+    <a href='../apidoc/distributions.html'>
+      Distributions
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -236,7 +439,105 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/environments.html'>Environments</a><br>
+    <a href='../apidoc/distributors.html'>
+      Distributors
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/distributors/create.html'>POST /api/environments/:environment_id/distributors</a></td>
+            <td width='60%'>Register a distributor in environment</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/distributors/update.html'>PUT /api/distributors/:id</a></td>
+            <td width='60%'>Update distributor information</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/distributors/index.html'>GET /api/environments/:environment_id/distributors</a></td>
+            <td width='60%'>List distributors in environment</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/distributors/index.html'>GET /api/organizations/:organization_id/distributors</a></td>
+            <td width='60%'>List distributors in organization</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/distributors/show.html'>GET /api/distributors/:id</a></td>
+            <td width='60%'>Show a distributor</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/distributors/destroy.html'>DELETE /api/distributors/:id</a></td>
+            <td width='60%'>Unregister a distributor</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/distributors/pools.html'>GET /api/distributors/:id/pools</a></td>
+            <td width='60%'>List pools a distributor is subscribed to</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/distributors/report.html'>GET /api/environments/:environment_id/distributors/report</a></td>
+            <td width='60%'>Get distributor reports for the environment</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/distributors/report.html'>GET /api/organizations/:organization_id/distributors/report</a></td>
+            <td width='60%'>Get distributor reports for the organization</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/distributors/tasks.html'>GET /api/organizations/:organization_id/distributors/tasks</a></td>
+            <td width='60%'>List async tasks for the distributor</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/distributors/task_show.html'>GET /api/distributors/tasks/:id</a></td>
+            <td width='60%'>Show details of the async task</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/domains.html'>
+      Domains
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/domains/index.html'>GET /api/domains</a></td>
+            <td width='60%'>List of domains</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/domains/show.html'>GET /api/domains/:id</a></td>
+            <td width='60%'>Show a domain.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/domains/create.html'>POST /api/domains</a></td>
+            <td width='60%'>Create a domain.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/domains/update.html'>PUT /api/domains/:id</a></td>
+            <td width='60%'>Update a domain.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/domains/destroy.html'>DELETE /api/domains/:id</a></td>
+            <td width='60%'>Delete a domain.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/environments.html'>
+      Environments
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -252,7 +553,7 @@
             <td width='60%'>List environments in an organization</td>
           </tr>
           <tr>
-            <td><a href='../apidoc/environments/index.html'>GET /api/owners/:organization_id/environments</a></td>
+            <td><a href='../apidoc/environments/rhsm_index.html'>GET /api/owners/:organization_id/environments</a></td>
             <td width='60%'>List environments for RHSM</td>
           </tr>
           <tr>
@@ -262,10 +563,6 @@
           <tr>
             <td><a href='../apidoc/environments/show.html'>GET /api/organizations/:organization_id/environments/:id</a></td>
             <td width='60%'>Show an environment</td>
-          </tr>
-          <tr>
-            <td><a href='../apidoc/environments/create.html'>POST /api/organizations/:organization_id/environments</a></td>
-            <td width='60%'>Create an environment in an organization</td>
           </tr>
           <tr>
             <td><a href='../apidoc/environments/create.html'>POST /api/organizations/:organization_id/environments</a></td>
@@ -298,7 +595,9 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/errata.html'>Errata</a><br>
+    <a href='../apidoc/errata.html'>
+      Errata
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -324,7 +623,9 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/gpg_keys.html'>Gpg keys</a><br>
+    <a href='../apidoc/gpg_keys.html'>
+      Gpg keys
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -362,7 +663,45 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/organizations.html'>Organizations</a><br>
+    <a href='../apidoc/hardware_models.html'>
+      Hardware models
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/hardware_models/index.html'>GET /api/hardware_models</a></td>
+            <td width='60%'>Get list of hardware models available in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/hardware_models/show.html'>GET /api/hardware_models/:id</a></td>
+            <td width='60%'>Show an hardware model</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/hardware_models/create.html'>POST /api/hardware_models</a></td>
+            <td width='60%'>Create new hardware model in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/hardware_models/update.html'>PUT /api/hardware_models/:id</a></td>
+            <td width='60%'>Update an hardware model record in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/hardware_models/destroy.html'>DELETE /api/hardware_models/:id</a></td>
+            <td width='60%'>Remove an hardware model from Foreman</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/organizations.html'>
+      Organizations
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -396,7 +735,9 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/packages.html'>Packages</a><br>
+    <a href='../apidoc/packages.html'>
+      Packages
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -422,7 +763,9 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/permissions.html'>Permissions</a><br>
+    <a href='../apidoc/permissions.html'>
+      Permissions
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -452,7 +795,9 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/ping.html'>Ping</a><br>
+    <a href='../apidoc/ping.html'>
+      Ping
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -478,7 +823,9 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/products.html'>Products</a><br>
+    <a href='../apidoc/products.html'>
+      Products
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -529,10 +876,84 @@
             <td><a href='../apidoc/products/remove_sync_plan.html'>DELETE /api/organizations/:organization_id/products/:id/sync_plan</a></td>
             <td width='60%'>Delete assignment sync plan and product</td>
           </tr>
+          <tr>
+            <td><a href='../apidoc/products/list_content_view_definition_products.html'>GET /api/content_view_definitions/:content_view_definition_id/products</a></td>
+            <td width='60%'>Get products for content view definition</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/products/update_content_view_definition_products.html'>PUT /api/content_view_definitions/:content_view_definition_id/products</a></td>
+            <td width='60%'>Update products for content view definition</td>
+          </tr>
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/repositories.html'>Repositories</a><br>
+    <a href='../apidoc/providers.html'>
+      Providers
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/providers/index.html'>GET /api/organizations/:organization_id/providers</a></td>
+            <td width='60%'>List providers</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/show.html'>GET /api/providers/:id</a></td>
+            <td width='60%'>Show a provider</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/create.html'>POST /api/providers</a></td>
+            <td width='60%'>Create a provider</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/update.html'>PUT /api/providers/:id</a></td>
+            <td width='60%'>Update a provider</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/destroy.html'>DELETE /api/providers/:id</a></td>
+            <td width='60%'>Destroy a provider</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/products.html'>GET /api/providers/:id/products</a></td>
+            <td width='60%'>List of provider's products</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/discovery.html'>POST /api/providers/:id/discovery</a></td>
+            <td width='60%'>Discover repository urls with metadata and find candidate repos. Supports http, https and file based urls. Async task, returns the delayed job.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/import_manifest.html'>POST /api/providers/:id/import_manifest</a></td>
+            <td width='60%'>Import manifest for Red Hat provider</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/delete_manifest.html'>POST /api/providers/:id/delete_manifest</a></td>
+            <td width='60%'>Delete manifest from Red Hat provider</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/refresh_products.html'>POST /api/providers/:id/refresh_products</a></td>
+            <td width='60%'>Refresh products for Red Hat provider</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/import_products.html'>POST /api/providers/:id/import_products</a></td>
+            <td width='60%'>Import products</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/providers/product_create.html'>POST /api/providers/:id/product_create</a></td>
+            <td width='60%'>Create a new product in custom provider</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/repositories.html'>
+      Repositories
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -568,10 +989,6 @@
             <td width='60%'></td>
           </tr>
           <tr>
-            <td><a href='../apidoc/repositories/discovery.html'>POST /api/organizations/:organization_id/repositories/discovery</a></td>
-            <td width='60%'>Discover repository urls with metadata and find candidate repos. Supports http, https and file based urls. Async task, returns the delayed job.</td>
-          </tr>
-          <tr>
             <td><a href='../apidoc/repositories/package_groups.html'>GET /api/repositories/:id/package_groups</a></td>
             <td width='60%'>List all package groups in a repository</td>
           </tr>
@@ -583,10 +1000,76 @@
             <td><a href='../apidoc/repositories/gpg_key_content.html'>GET /api/repositories/:id/gpg_key_content</a></td>
             <td width='60%'>Return the content of a repo gpg key, used directly by yum</td>
           </tr>
+          <tr>
+            <td><a href='../apidoc/repositories/list_content_view_definition_repositories.html'>GET /api/content_view_definitions/%s/repositories</a></td>
+            <td width='60%'>List all the repositories for a content view definition</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/repositories/update_content_view_definition_repositories.html'>PUT /api/content_view_definitions/:content_view_definition_id/repositories</a></td>
+            <td width='60%'>Update repositories for content view definition</td>
+          </tr>
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/roles.html'>Roles</a><br>
+    <a href='../apidoc/repository_sets.html'>
+      Repository sets
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/repository_sets/enable.html'>POST /api/product/:product_id/repository_set/:id/enable</a></td>
+            <td width='60%'>Enable a repository set for a product.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/repository_sets/disable.html'>POST /api/product/:product_id/repository_set/:id/disable</a></td>
+            <td width='60%'>Enable a repository set for a product.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/repository_sets/index.html'>GET /api/product/:product_id/repository_set</a></td>
+            <td width='60%'>List repository sets for a product.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/role_ldap_groups.html'>
+      Role ldap groups
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/role_ldap_groups/create.html'>POST /api/roles/:role_id/ldap_groups</a></td>
+            <td width='60%'>Add group to list of LDAP groups associated with the role</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/role_ldap_groups/destroy.html'>DELETE /api/roles/:role_id/ldap_groups/:id</a></td>
+            <td width='60%'>Remove group from the list of LDAP groups associated with the role</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/role_ldap_groups/index.html'>GET /api/roles/:role_id/ldap_groups</a></td>
+            <td width='60%'>List LDAP groups associated with the role</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/roles.html'>
+      Roles
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -644,7 +1127,45 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/status.html'>Status</a><br>
+    <a href='../apidoc/smart_proxies.html'>
+      Smart proxies
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/smart_proxies/index.html'>GET /api/smart_proxies</a></td>
+            <td width='60%'>List of smart proxies</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/smart_proxies/show.html'>GET /api/smart_proxies/:id</a></td>
+            <td width='60%'>Show a smart proxy.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/smart_proxies/create.html'>POST /api/smart_proxies</a></td>
+            <td width='60%'>Create a smart proxy.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/smart_proxies/update.html'>PUT /api/smart_proxies/:id</a></td>
+            <td width='60%'>Update a smart proxy.</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/smart_proxies/destroy.html'>DELETE /api/smart_proxies/:id</a></td>
+            <td width='60%'>Delete a domain.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/status.html'>
+      Status
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -662,7 +1183,221 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/system_groups.html'>System groups</a><br>
+    <a href='../apidoc/subnets.html'>
+      Subnets
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/subnets/index.html'>GET /api/subnets</a></td>
+            <td width='60%'>Get list of subnets available in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/subnets/show.html'>GET /api/subnets/:id</a></td>
+            <td width='60%'>Show an subnet</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/subnets/create.html'>POST /api/subnet</a></td>
+            <td width='60%'>Create new subnet in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/subnets/update.html'>PUT /api/subnets/:id</a></td>
+            <td width='60%'>Update an subnet record in Foreman</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/subnets/destroy.html'>DELETE /api/subnets/:id</a></td>
+            <td width='60%'>Remove an subnet from Foreman</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/subscriptions.html'>
+      Subscriptions
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/subscriptions/index.html'>GET /api/systems/:system_id/subscriptions</a></td>
+            <td width='60%'>List subscriptions</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/subscriptions/create.html'>POST /api/systems/:system_id/subscriptions</a></td>
+            <td width='60%'>Create a subscription</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/subscriptions/destroy.html'>DELETE /api/systems/:system_id/subscriptions/:id</a></td>
+            <td width='60%'>Delete a subscription</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/subscriptions/destroy_all.html'>DELETE /api/systems/:system_id/subscriptions</a></td>
+            <td width='60%'>Delete all system subscriptions</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/subscriptions/destroy_by_serial.html'>DELETE /api/systems/:system_id/subscriptions/serials/:serial_id</a></td>
+            <td width='60%'>Delete a subscription by serial id</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/sync.html'>
+      Sync
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/sync/index.html'>GET /api/providers/:provider_id/sync</a></td>
+            <td width='60%'>Get status of repo synchronisation for given provider</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync/index.html'>GET /api/organizations/:organization_id/products/:product_id/sync</a></td>
+            <td width='60%'>Get status of repo synchronisation for given product</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync/index.html'>GET /api/repositories/:repository_id/sync</a></td>
+            <td width='60%'>Get status of synchronisation for given repository</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync/create.html'>POST /api/providers/:provider_id/sync</a></td>
+            <td width='60%'>Synchronize all provider's repositories</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync/create.html'>POST /apiorganizations/:organization_id/products/:product_id/sync</a></td>
+            <td width='60%'>Synchronise all repositories for given product</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync/create.html'>POST /api/repositories/:repository_id/sync</a></td>
+            <td width='60%'>Synchronise repository</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync/cancel.html'>DELETE /api/providers/:provider_id/sync</a></td>
+            <td width='60%'>Cancel running synchronisation for given provider</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync/cancel.html'>DELETE /api/organizations/:organization_id/products/:product_id/sync</a></td>
+            <td width='60%'>Cancel running synchronisations for given product</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync/cancel.html'>DELETE /api/repositories/:repository_id/sync</a></td>
+            <td width='60%'>Cancel running synchronisation</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/sync_plans.html'>
+      Sync plans
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/sync_plans/index.html'>GET /api/organizations/:organization_id/sync_plans</a></td>
+            <td width='60%'>List sync plans</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync_plans/show.html'>GET /api/organizations/:organization_id/sync_plans/:id</a></td>
+            <td width='60%'>Show a sync plan</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync_plans/create.html'>POST /api/organizations/:organization_id/sync_plans</a></td>
+            <td width='60%'>Create a sync plan</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync_plans/update.html'>PUT /api/organizations/:organization_id/sync_plans/:id</a></td>
+            <td width='60%'>Update a sync plan</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/sync_plans/destroy.html'>DELETE /api/organizations/:organization_id/sync_plans/:id</a></td>
+            <td width='60%'>Destroy a sync plan</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/system_group_errata.html'>
+      System group errata
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/system_group_errata/index.html'>GET /api/organizations/:organization_id/system_groups/:system_group_id/errata</a></td>
+            <td width='60%'>Get list of errata associated with the group</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/system_group_errata/create.html'>POST /api/organizations/:organization_id/system_groups/:system_group_id/errata</a></td>
+            <td width='60%'>Install errata remotely</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/system_group_packages.html'>
+      System group packages
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/system_group_packages/create.html'>POST /api/organizations/:organization_id/system_groups/:system_group_id/packages</a></td>
+            <td width='60%'>Install packages remotely</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/system_group_packages/update.html'>PUT /api/organizations/:organization_id/system_groups/:system_group_id/packages</a></td>
+            <td width='60%'>Update packages remotely</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/system_group_packages/destroy.html'>DELETE /api/organizations/:organization_id/system_groups/:system_group_id/packages</a></td>
+            <td width='60%'>Uninstall packages remotely</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/system_groups.html'>
+      System groups
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -716,7 +1451,189 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/uebercerts.html'>Uebercerts</a><br>
+    <a href='../apidoc/system_packages.html'>
+      System packages
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/system_packages/create.html'>POST /api/systems/:system_id/packages</a></td>
+            <td width='60%'>Install packages remotely</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/system_packages/update.html'>PUT /api/systems/:system_id/packages</a></td>
+            <td width='60%'>Update packages remotely</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/system_packages/destroy.html'>DELETE /api/systems/:system_id/packages</a></td>
+            <td width='60%'>Uninstall packages remotely</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/systems.html'>
+      Systems
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/systems/create.html'>POST /api/environments/:environment_id/consumers</a></td>
+            <td width='60%'>Register a system in environment (compatibility reason)</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/create.html'>POST /api/environments/:environment_id/systems</a></td>
+            <td width='60%'>Register a system in environment</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/hypervisors_update.html'>POST /api/hypervisors</a></td>
+            <td width='60%'>Update the hypervisors information for environment</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/activate.html'>POST /api/consumers</a></td>
+            <td width='60%'>Register a system with activation key (compatibility)</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/activate.html'>POST /api/organizations/:organization_id/systems</a></td>
+            <td width='60%'>Register a system with activation key</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/regenerate_identity_certificates.html'>POST /api/consumers/:id</a></td>
+            <td width='60%'>Regenerate consumer identity</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/update.html'>PUT /api/consumers/:id</a></td>
+            <td width='60%'>Update system information (compatibility)</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/update.html'>PUT /api/systems/:id</a></td>
+            <td width='60%'>Update system information</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/index.html'>GET /api/environments/:environment_id/consumers</a></td>
+            <td width='60%'>List systems (compatibilty)</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/index.html'>GET /api/environments/:environment_id/systems</a></td>
+            <td width='60%'>List systems in environment</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/index.html'>GET /api/organizations/:organization_id/systems</a></td>
+            <td width='60%'>List systems in organization</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/show.html'>GET /api/consumers/:id</a></td>
+            <td width='60%'>Show a system (compatibility)</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/show.html'>GET /api/systems/:id</a></td>
+            <td width='60%'>Show a system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/destroy.html'>DELETE /api/consumers/:id</a></td>
+            <td width='60%'>Unregister a system (compatibility)</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/destroy.html'>DELETE /api/systems/:id</a></td>
+            <td width='60%'>Unregister a system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/pools.html'>GET /api/systems/:id/pools</a></td>
+            <td width='60%'>List pools a system is subscribed to</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/releases.html'>GET /api/systems/:id/releases</a></td>
+            <td width='60%'>Show releases available for the system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/package_profile.html'>GET /api/systems/:id/packages</a></td>
+            <td width='60%'>List packages installed on the system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/errata.html'>GET /api/systems/:id/errata</a></td>
+            <td width='60%'>List errata available for the system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/upload_package_profile.html'>PUT /api/consumers/:id/packages</a></td>
+            <td width='60%'>Update installed packages</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/upload_package_profile.html'>PUT /api/consumers/:id/profile</a></td>
+            <td width='60%'>Update installed packages</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/report.html'>GET /api/environments/:environment_id/systems/report</a></td>
+            <td width='60%'>Get system reports for the environment</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/report.html'>GET /api/organizations/:organization_id/systems/report</a></td>
+            <td width='60%'>Get system reports for the organization</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/tasks.html'>GET /api/organizations/:organization_id/systems/tasks</a></td>
+            <td width='60%'>List async tasks for the system</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/task_show.html'>GET /api/systems/tasks/:id</a></td>
+            <td width='60%'>Show details of the async task</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/enabled_repos.html'>PUT /api/systems/:id/enabled_repos</a></td>
+            <td width='60%'>Update the information about enabled repositories</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/add_system_groups.html'>POST /api/systems/:id/system_groups</a></td>
+            <td width='60%'>Add a system to groups</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/systems/remove_system_groups.html'>DELETE /api/systems/:id/system_groups</a></td>
+            <td width='60%'>Remove a system from groups</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/tasks.html'>
+      Tasks
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href='../apidoc/tasks/index.html'>GET /api/organizations/:organization_id/tasks</a></td>
+            <td width='60%'>List tasks of given organization</td>
+          </tr>
+          <tr>
+            <td><a href='../apidoc/tasks/show.html'>GET /api/tasks/:id</a></td>
+            <td width='60%'>Show a task info</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='../apidoc/uebercerts.html'>
+      Uebercerts
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -734,7 +1651,9 @@
     </tbody>
   </table>
   <h2>
-    <a href='../apidoc/users.html'>Users</a><br>
+    <a href='../apidoc/users.html'>
+      Users
+    </a><br>
     <small></small>
   </h2>
   <table class='table'>
@@ -790,19 +1709,16 @@
   </table>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

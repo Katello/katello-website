@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,13 +17,20 @@
     <div class="row">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
-  <li class='active'>Gpg keys</li>
+  <li>
+    <a href='../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Gpg keys
+    
+  </li>
 </ul>
 
 <div class='page-header'>
   <h1>
-    Gpg keys<br>
+    Gpg keys
+    <br>
     <small></small>
   </h1>
 </div>
@@ -59,16 +62,16 @@
 
 
         <h3>Examples</h3>
-          <pre>GET /api/organizations/org_227e003/gpg_keys/
+          <pre class="prettyprint">GET /api/organizations/org_q5ktCr6jM1oN/gpg_keys/
 200
 [
   {
-    &quot;id&quot;: 2,
-    &quot;name&quot;: &quot;Another-Dummy-Package-Generator&quot;
+    &quot;name&quot;: &quot;Another-Dummy-Package-Generator&quot;,
+    &quot;id&quot;: 2
   },
   {
-    &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Dummy-Package-Generator&quot;
+    &quot;name&quot;: &quot;Dummy-Package-Generator&quot;,
+    &quot;id&quot;: 1
   }
 ]</pre>
 
@@ -90,7 +93,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -107,7 +111,8 @@
       </small>
     </td>
     <td>
-      <p>identifier of the gpg key</p>
+      
+<p>identifier of the gpg key</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -142,17 +147,17 @@
 
 
         <h3>Examples</h3>
-          <pre>GET /api/gpg_keys/1/
+          <pre class="prettyprint">GET /api/gpg_keys/1/
 200
 {
-  &quot;created_at&quot;: &quot;2012-08-10T13:45:52Z&quot;,
-  &quot;content&quot;: &quot;-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v1.4.11 (GNU/Linux)\n\nmQENBE8NW6EBCAC/ht3UujFwxol44zilXcwI8v15gf6X4u3A5Oo2FCEweQfbZw8q\nlPGjzRNHcNVO4NIZ+G1fHyWAgcs/xa4fTju4LOJU2OWfbkvGA7tlIIREkEQ9IgMI\ni0LJzsHyqhWhJ0S5POCLFyH27R0Vh2wPMwZawoomRVDsghIE8TAJVKIHICVObvGE\nVqBGSY1OHvGfZ0ZsnQv3hDmxnyywJkJ96HGVqStS2sW0YkQ77dRY0u6eSI55vwBQ\niV9dCSMs43LpoBL9pFj0ESM76G0GSGF5G9PH2b//y8ehepdS30otiqgjag5Zw76b\nqFMHFyq1o5hXJpIPiZaagU1X+wMixPOlqE5LABEBAAG0MER1bW15IFBhY2thZ2Vz\nIEdlbmVyYXRvciA8YWRtaW5Aem9vLmV4YW1wbGUuY29tPokBOAQTAQIAIgUCTw1b\noQIbAwYLCQgHAwIGFQgCCQoLBBYCAwECHgECF4AACgkQ74XM4/ePsZVeCgf+L+HW\nf0K7/uzu3Q7G+aOu7qwu0iUK64SEAgtoMdjpjkq+YYxPS60zP7QS3pAzL4N31kT/\nkHQ+OJAg5Z0oegXu9mdhIenks2DaEzN6P2jAhWoRa/az5F9AaJ01WSsspsBpcAyt\n3NB2iGNtzs4v6saUz5mTp1bgmsXolzClHlTSUnjjCfuk7HgzJcCpRxb49tQ5Lo3b\n9k0XPvhhgSdiTFM+CfPl3qgHPENZqyoDOnhvKbMHZg8NCf1NLf8edlk5nWDjHti8\nVfkuCSgRzR15SgyEUU1MCQBPEYKy8U6LoOwX8Rl3+lCf9D7rReP74wSEdr9p9cFi\nSCFpN6IUJ9pN0tDU3rkBDQRPDVuhAQgAmZB+DKbraTgeW1UOYS/HWzGOR21NR3nq\nsxeG249W3OlsZbk/8BJP/DqFAhVbdxvISFkSKURoVXxUwoKx36KZHXIOgCt3vsj5\nu2mxF2ajrHBwzM8jrrNy8xdd4DplOP2D0DbuswDi5pqmd/Cd0EdC88ZIPt3Ox/GH\n4uCJOzkCRFcFRZhOT+YC+A3YaVg4UoR3AMup8K81Nm2y8q1pUy/gZvkWMONy5iDX\nlyU6enBNv+vmhumyYJT8+rPRW/ztsaBzkvpuXkQTJdWDQbigeK1hBNV5PCjyQydj\nP+sKrMxKjyyZ0rcGP1hcCqZuBHZlW0O2WJFKsZv+fY8UJfU08FeAqQARAQABiQEf\nBBgBAgAJBQJPDVuhAhsMAAoJEO+FzOP3j7GVhlsH/0emlW/Nk0bSUG4jfAeJAB7H\nKRYbr5P/YbbFLEOb4yi2DlPxUac0JoXCMLha9G9LBmQ4IL4qPHdycSlEs4cGBX6W\nxn1ti6rJ3LWm5Hb7iUBfIeuKW31thTJK7SAruiBk7g1/I55HlFW0LEfgfVUQf6hJ\n9Rnw6YVXyQAod1x/QmLWw5aQcoksHL/4eRpU74EjuKQdZMLuaherKtY6OTtEDTdm\nbEdEINVqR5hYEHgDEPPrPb5MDbQsrMEAwdWPqC2/9cgacO33/VuvXDu74X+TwE/c\nOGRCb385XPNS9KApQ4iRTZ6ccOnSJumZbeTTd9DBFwa+T1/xD96yabnaOdJqf6Y=\n=RrIG\n-----END PGP PUBLIC KEY BLOCK-----\n&quot;,
-  &quot;organization_id&quot;: 2,
+  &quot;name&quot;: &quot;Dummy-Package-Generator&quot;,
   &quot;id&quot;: 1,
-  &quot;products&quot;: [],
-  &quot;updated_at&quot;: &quot;2012-08-10T13:45:52Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:42:40Z&quot;,
+  &quot;content&quot;: &quot;-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v1.4.11 (GNU/Linux)\n\nmQENBE8NW6EBCAC/ht3UujFwxol44zilXcwI8v15gf6X4u3A5Oo2FCEweQfbZw8q\nlPGjzRNHcNVO4NIZ+G1fHyWAgcs/xa4fTju4LOJU2OWfbkvGA7tlIIREkEQ9IgMI\ni0LJzsHyqhWhJ0S5POCLFyH27R0Vh2wPMwZawoomRVDsghIE8TAJVKIHICVObvGE\nVqBGSY1OHvGfZ0ZsnQv3hDmxnyywJkJ96HGVqStS2sW0YkQ77dRY0u6eSI55vwBQ\niV9dCSMs43LpoBL9pFj0ESM76G0GSGF5G9PH2b//y8ehepdS30otiqgjag5Zw76b\nqFMHFyq1o5hXJpIPiZaagU1X+wMixPOlqE5LABEBAAG0MER1bW15IFBhY2thZ2Vz\nIEdlbmVyYXRvciA8YWRtaW5Aem9vLmV4YW1wbGUuY29tPokBOAQTAQIAIgUCTw1b\noQIbAwYLCQgHAwIGFQgCCQoLBBYCAwECHgECF4AACgkQ74XM4/ePsZVeCgf+L+HW\nf0K7/uzu3Q7G+aOu7qwu0iUK64SEAgtoMdjpjkq+YYxPS60zP7QS3pAzL4N31kT/\nkHQ+OJAg5Z0oegXu9mdhIenks2DaEzN6P2jAhWoRa/az5F9AaJ01WSsspsBpcAyt\n3NB2iGNtzs4v6saUz5mTp1bgmsXolzClHlTSUnjjCfuk7HgzJcCpRxb49tQ5Lo3b\n9k0XPvhhgSdiTFM+CfPl3qgHPENZqyoDOnhvKbMHZg8NCf1NLf8edlk5nWDjHti8\nVfkuCSgRzR15SgyEUU1MCQBPEYKy8U6LoOwX8Rl3+lCf9D7rReP74wSEdr9p9cFi\nSCFpN6IUJ9pN0tDU3rkBDQRPDVuhAQgAmZB+DKbraTgeW1UOYS/HWzGOR21NR3nq\nsxeG249W3OlsZbk/8BJP/DqFAhVbdxvISFkSKURoVXxUwoKx36KZHXIOgCt3vsj5\nu2mxF2ajrHBwzM8jrrNy8xdd4DplOP2D0DbuswDi5pqmd/Cd0EdC88ZIPt3Ox/GH\n4uCJOzkCRFcFRZhOT+YC+A3YaVg4UoR3AMup8K81Nm2y8q1pUy/gZvkWMONy5iDX\nlyU6enBNv+vmhumyYJT8+rPRW/ztsaBzkvpuXkQTJdWDQbigeK1hBNV5PCjyQydj\nP+sKrMxKjyyZ0rcGP1hcCqZuBHZlW0O2WJFKsZv+fY8UJfU08FeAqQARAQABiQEf\nBBgBAgAJBQJPDVuhAhsMAAoJEO+FzOP3j7GVhlsH/0emlW/Nk0bSUG4jfAeJAB7H\nKRYbr5P/YbbFLEOb4yi2DlPxUac0JoXCMLha9G9LBmQ4IL4qPHdycSlEs4cGBX6W\nxn1ti6rJ3LWm5Hb7iUBfIeuKW31thTJK7SAruiBk7g1/I55HlFW0LEfgfVUQf6hJ\n9Rnw6YVXyQAod1x/QmLWw5aQcoksHL/4eRpU74EjuKQdZMLuaherKtY6OTtEDTdm\nbEdEINVqR5hYEHgDEPPrPb5MDbQsrMEAwdWPqC2/9cgacO33/VuvXDu74X+TwE/c\nOGRCb385XPNS9KApQ4iRTZ6ccOnSJumZbeTTd9DBFwa+T1/xD96yabnaOdJqf6Y=\n=RrIG\n-----END PGP PUBLIC KEY BLOCK-----\n&quot;,
   &quot;repositories&quot;: [],
-  &quot;name&quot;: &quot;Dummy-Package-Generator&quot;
+  &quot;organization_id&quot;: 4,
+  &quot;created_at&quot;: &quot;2013-03-20T19:42:40Z&quot;,
+  &quot;products&quot;: []
 }</pre>
 
         <h3>Params</h3>
@@ -173,7 +178,8 @@
       </small>
     </td>
     <td>
-      <p>gpg key numeric identifier</p>
+      
+<p>gpg key numeric identifier</p>
 
         <br>
         Value: number.
@@ -208,21 +214,21 @@
 
 
         <h3>Examples</h3>
-          <pre>POST /api/organizations/org_227e003/gpg_keys
+          <pre class="prettyprint">POST /api/organizations/org_q5ktCr6jM1oN/gpg_keys
 {
   &quot;gpg_key&quot;: {
-    &quot;content&quot;: &quot;-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v1.4.11 (GNU/Linux)\n\nmQENBE8NW6EBCAC/ht3UujFwxol44zilXcwI8v15gf6X4u3A5Oo2FCEweQfbZw8q\nlPGjzRNHcNVO4NIZ+G1fHyWAgcs/xa4fTju4LOJU2OWfbkvGA7tlIIREkEQ9IgMI\ni0LJzsHyqhWhJ0S5POCLFyH27R0Vh2wPMwZawoomRVDsghIE8TAJVKIHICVObvGE\nVqBGSY1OHvGfZ0ZsnQv3hDmxnyywJkJ96HGVqStS2sW0YkQ77dRY0u6eSI55vwBQ\niV9dCSMs43LpoBL9pFj0ESM76G0GSGF5G9PH2b//y8ehepdS30otiqgjag5Zw76b\nqFMHFyq1o5hXJpIPiZaagU1X+wMixPOlqE5LABEBAAG0MER1bW15IFBhY2thZ2Vz\nIEdlbmVyYXRvciA8YWRtaW5Aem9vLmV4YW1wbGUuY29tPokBOAQTAQIAIgUCTw1b\noQIbAwYLCQgHAwIGFQgCCQoLBBYCAwECHgECF4AACgkQ74XM4/ePsZVeCgf+L+HW\nf0K7/uzu3Q7G+aOu7qwu0iUK64SEAgtoMdjpjkq+YYxPS60zP7QS3pAzL4N31kT/\nkHQ+OJAg5Z0oegXu9mdhIenks2DaEzN6P2jAhWoRa/az5F9AaJ01WSsspsBpcAyt\n3NB2iGNtzs4v6saUz5mTp1bgmsXolzClHlTSUnjjCfuk7HgzJcCpRxb49tQ5Lo3b\n9k0XPvhhgSdiTFM+CfPl3qgHPENZqyoDOnhvKbMHZg8NCf1NLf8edlk5nWDjHti8\nVfkuCSgRzR15SgyEUU1MCQBPEYKy8U6LoOwX8Rl3+lCf9D7rReP74wSEdr9p9cFi\nSCFpN6IUJ9pN0tDU3rkBDQRPDVuhAQgAmZB+DKbraTgeW1UOYS/HWzGOR21NR3nq\nsxeG249W3OlsZbk/8BJP/DqFAhVbdxvISFkSKURoVXxUwoKx36KZHXIOgCt3vsj5\nu2mxF2ajrHBwzM8jrrNy8xdd4DplOP2D0DbuswDi5pqmd/Cd0EdC88ZIPt3Ox/GH\n4uCJOzkCRFcFRZhOT+YC+A3YaVg4UoR3AMup8K81Nm2y8q1pUy/gZvkWMONy5iDX\nlyU6enBNv+vmhumyYJT8+rPRW/ztsaBzkvpuXkQTJdWDQbigeK1hBNV5PCjyQydj\nP+sKrMxKjyyZ0rcGP1hcCqZuBHZlW0O2WJFKsZv+fY8UJfU08FeAqQARAQABiQEf\nBBgBAgAJBQJPDVuhAhsMAAoJEO+FzOP3j7GVhlsH/0emlW/Nk0bSUG4jfAeJAB7H\nKRYbr5P/YbbFLEOb4yi2DlPxUac0JoXCMLha9G9LBmQ4IL4qPHdycSlEs4cGBX6W\nxn1ti6rJ3LWm5Hb7iUBfIeuKW31thTJK7SAruiBk7g1/I55HlFW0LEfgfVUQf6hJ\n9Rnw6YVXyQAod1x/QmLWw5aQcoksHL/4eRpU74EjuKQdZMLuaherKtY6OTtEDTdm\nbEdEINVqR5hYEHgDEPPrPb5MDbQsrMEAwdWPqC2/9cgacO33/VuvXDu74X+TwE/c\nOGRCb385XPNS9KApQ4iRTZ6ccOnSJumZbeTTd9DBFwa+T1/xD96yabnaOdJqf6Y=\n=RrIG\n-----END PGP PUBLIC KEY BLOCK-----\n&quot;,
-    &quot;name&quot;: &quot;Dummy-Package-Generator&quot;
+    &quot;name&quot;: &quot;Dummy-Package-Generator&quot;,
+    &quot;content&quot;: &quot;-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v1.4.11 (GNU/Linux)\n\nmQENBE8NW6EBCAC/ht3UujFwxol44zilXcwI8v15gf6X4u3A5Oo2FCEweQfbZw8q\nlPGjzRNHcNVO4NIZ+G1fHyWAgcs/xa4fTju4LOJU2OWfbkvGA7tlIIREkEQ9IgMI\ni0LJzsHyqhWhJ0S5POCLFyH27R0Vh2wPMwZawoomRVDsghIE8TAJVKIHICVObvGE\nVqBGSY1OHvGfZ0ZsnQv3hDmxnyywJkJ96HGVqStS2sW0YkQ77dRY0u6eSI55vwBQ\niV9dCSMs43LpoBL9pFj0ESM76G0GSGF5G9PH2b//y8ehepdS30otiqgjag5Zw76b\nqFMHFyq1o5hXJpIPiZaagU1X+wMixPOlqE5LABEBAAG0MER1bW15IFBhY2thZ2Vz\nIEdlbmVyYXRvciA8YWRtaW5Aem9vLmV4YW1wbGUuY29tPokBOAQTAQIAIgUCTw1b\noQIbAwYLCQgHAwIGFQgCCQoLBBYCAwECHgECF4AACgkQ74XM4/ePsZVeCgf+L+HW\nf0K7/uzu3Q7G+aOu7qwu0iUK64SEAgtoMdjpjkq+YYxPS60zP7QS3pAzL4N31kT/\nkHQ+OJAg5Z0oegXu9mdhIenks2DaEzN6P2jAhWoRa/az5F9AaJ01WSsspsBpcAyt\n3NB2iGNtzs4v6saUz5mTp1bgmsXolzClHlTSUnjjCfuk7HgzJcCpRxb49tQ5Lo3b\n9k0XPvhhgSdiTFM+CfPl3qgHPENZqyoDOnhvKbMHZg8NCf1NLf8edlk5nWDjHti8\nVfkuCSgRzR15SgyEUU1MCQBPEYKy8U6LoOwX8Rl3+lCf9D7rReP74wSEdr9p9cFi\nSCFpN6IUJ9pN0tDU3rkBDQRPDVuhAQgAmZB+DKbraTgeW1UOYS/HWzGOR21NR3nq\nsxeG249W3OlsZbk/8BJP/DqFAhVbdxvISFkSKURoVXxUwoKx36KZHXIOgCt3vsj5\nu2mxF2ajrHBwzM8jrrNy8xdd4DplOP2D0DbuswDi5pqmd/Cd0EdC88ZIPt3Ox/GH\n4uCJOzkCRFcFRZhOT+YC+A3YaVg4UoR3AMup8K81Nm2y8q1pUy/gZvkWMONy5iDX\nlyU6enBNv+vmhumyYJT8+rPRW/ztsaBzkvpuXkQTJdWDQbigeK1hBNV5PCjyQydj\nP+sKrMxKjyyZ0rcGP1hcCqZuBHZlW0O2WJFKsZv+fY8UJfU08FeAqQARAQABiQEf\nBBgBAgAJBQJPDVuhAhsMAAoJEO+FzOP3j7GVhlsH/0emlW/Nk0bSUG4jfAeJAB7H\nKRYbr5P/YbbFLEOb4yi2DlPxUac0JoXCMLha9G9LBmQ4IL4qPHdycSlEs4cGBX6W\nxn1ti6rJ3LWm5Hb7iUBfIeuKW31thTJK7SAruiBk7g1/I55HlFW0LEfgfVUQf6hJ\n9Rnw6YVXyQAod1x/QmLWw5aQcoksHL/4eRpU74EjuKQdZMLuaherKtY6OTtEDTdm\nbEdEINVqR5hYEHgDEPPrPb5MDbQsrMEAwdWPqC2/9cgacO33/VuvXDu74X+TwE/c\nOGRCb385XPNS9KApQ4iRTZ6ccOnSJumZbeTTd9DBFwa+T1/xD96yabnaOdJqf6Y=\n=RrIG\n-----END PGP PUBLIC KEY BLOCK-----\n&quot;
   }
 }
 200
 {
-  &quot;created_at&quot;: &quot;2012-08-10T13:45:52Z&quot;,
-  &quot;content&quot;: &quot;-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v1.4.11 (GNU/Linux)\n\nmQENBE8NW6EBCAC/ht3UujFwxol44zilXcwI8v15gf6X4u3A5Oo2FCEweQfbZw8q\nlPGjzRNHcNVO4NIZ+G1fHyWAgcs/xa4fTju4LOJU2OWfbkvGA7tlIIREkEQ9IgMI\ni0LJzsHyqhWhJ0S5POCLFyH27R0Vh2wPMwZawoomRVDsghIE8TAJVKIHICVObvGE\nVqBGSY1OHvGfZ0ZsnQv3hDmxnyywJkJ96HGVqStS2sW0YkQ77dRY0u6eSI55vwBQ\niV9dCSMs43LpoBL9pFj0ESM76G0GSGF5G9PH2b//y8ehepdS30otiqgjag5Zw76b\nqFMHFyq1o5hXJpIPiZaagU1X+wMixPOlqE5LABEBAAG0MER1bW15IFBhY2thZ2Vz\nIEdlbmVyYXRvciA8YWRtaW5Aem9vLmV4YW1wbGUuY29tPokBOAQTAQIAIgUCTw1b\noQIbAwYLCQgHAwIGFQgCCQoLBBYCAwECHgECF4AACgkQ74XM4/ePsZVeCgf+L+HW\nf0K7/uzu3Q7G+aOu7qwu0iUK64SEAgtoMdjpjkq+YYxPS60zP7QS3pAzL4N31kT/\nkHQ+OJAg5Z0oegXu9mdhIenks2DaEzN6P2jAhWoRa/az5F9AaJ01WSsspsBpcAyt\n3NB2iGNtzs4v6saUz5mTp1bgmsXolzClHlTSUnjjCfuk7HgzJcCpRxb49tQ5Lo3b\n9k0XPvhhgSdiTFM+CfPl3qgHPENZqyoDOnhvKbMHZg8NCf1NLf8edlk5nWDjHti8\nVfkuCSgRzR15SgyEUU1MCQBPEYKy8U6LoOwX8Rl3+lCf9D7rReP74wSEdr9p9cFi\nSCFpN6IUJ9pN0tDU3rkBDQRPDVuhAQgAmZB+DKbraTgeW1UOYS/HWzGOR21NR3nq\nsxeG249W3OlsZbk/8BJP/DqFAhVbdxvISFkSKURoVXxUwoKx36KZHXIOgCt3vsj5\nu2mxF2ajrHBwzM8jrrNy8xdd4DplOP2D0DbuswDi5pqmd/Cd0EdC88ZIPt3Ox/GH\n4uCJOzkCRFcFRZhOT+YC+A3YaVg4UoR3AMup8K81Nm2y8q1pUy/gZvkWMONy5iDX\nlyU6enBNv+vmhumyYJT8+rPRW/ztsaBzkvpuXkQTJdWDQbigeK1hBNV5PCjyQydj\nP+sKrMxKjyyZ0rcGP1hcCqZuBHZlW0O2WJFKsZv+fY8UJfU08FeAqQARAQABiQEf\nBBgBAgAJBQJPDVuhAhsMAAoJEO+FzOP3j7GVhlsH/0emlW/Nk0bSUG4jfAeJAB7H\nKRYbr5P/YbbFLEOb4yi2DlPxUac0JoXCMLha9G9LBmQ4IL4qPHdycSlEs4cGBX6W\nxn1ti6rJ3LWm5Hb7iUBfIeuKW31thTJK7SAruiBk7g1/I55HlFW0LEfgfVUQf6hJ\n9Rnw6YVXyQAod1x/QmLWw5aQcoksHL/4eRpU74EjuKQdZMLuaherKtY6OTtEDTdm\nbEdEINVqR5hYEHgDEPPrPb5MDbQsrMEAwdWPqC2/9cgacO33/VuvXDu74X+TwE/c\nOGRCb385XPNS9KApQ4iRTZ6ccOnSJumZbeTTd9DBFwa+T1/xD96yabnaOdJqf6Y=\n=RrIG\n-----END PGP PUBLIC KEY BLOCK-----\n&quot;,
-  &quot;organization_id&quot;: 2,
+  &quot;name&quot;: &quot;Dummy-Package-Generator&quot;,
   &quot;id&quot;: 1,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:45:52Z&quot;,
-  &quot;name&quot;: &quot;Dummy-Package-Generator&quot;
+  &quot;updated_at&quot;: &quot;2013-03-20T19:42:40Z&quot;,
+  &quot;content&quot;: &quot;-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: GnuPG v1.4.11 (GNU/Linux)\n\nmQENBE8NW6EBCAC/ht3UujFwxol44zilXcwI8v15gf6X4u3A5Oo2FCEweQfbZw8q\nlPGjzRNHcNVO4NIZ+G1fHyWAgcs/xa4fTju4LOJU2OWfbkvGA7tlIIREkEQ9IgMI\ni0LJzsHyqhWhJ0S5POCLFyH27R0Vh2wPMwZawoomRVDsghIE8TAJVKIHICVObvGE\nVqBGSY1OHvGfZ0ZsnQv3hDmxnyywJkJ96HGVqStS2sW0YkQ77dRY0u6eSI55vwBQ\niV9dCSMs43LpoBL9pFj0ESM76G0GSGF5G9PH2b//y8ehepdS30otiqgjag5Zw76b\nqFMHFyq1o5hXJpIPiZaagU1X+wMixPOlqE5LABEBAAG0MER1bW15IFBhY2thZ2Vz\nIEdlbmVyYXRvciA8YWRtaW5Aem9vLmV4YW1wbGUuY29tPokBOAQTAQIAIgUCTw1b\noQIbAwYLCQgHAwIGFQgCCQoLBBYCAwECHgECF4AACgkQ74XM4/ePsZVeCgf+L+HW\nf0K7/uzu3Q7G+aOu7qwu0iUK64SEAgtoMdjpjkq+YYxPS60zP7QS3pAzL4N31kT/\nkHQ+OJAg5Z0oegXu9mdhIenks2DaEzN6P2jAhWoRa/az5F9AaJ01WSsspsBpcAyt\n3NB2iGNtzs4v6saUz5mTp1bgmsXolzClHlTSUnjjCfuk7HgzJcCpRxb49tQ5Lo3b\n9k0XPvhhgSdiTFM+CfPl3qgHPENZqyoDOnhvKbMHZg8NCf1NLf8edlk5nWDjHti8\nVfkuCSgRzR15SgyEUU1MCQBPEYKy8U6LoOwX8Rl3+lCf9D7rReP74wSEdr9p9cFi\nSCFpN6IUJ9pN0tDU3rkBDQRPDVuhAQgAmZB+DKbraTgeW1UOYS/HWzGOR21NR3nq\nsxeG249W3OlsZbk/8BJP/DqFAhVbdxvISFkSKURoVXxUwoKx36KZHXIOgCt3vsj5\nu2mxF2ajrHBwzM8jrrNy8xdd4DplOP2D0DbuswDi5pqmd/Cd0EdC88ZIPt3Ox/GH\n4uCJOzkCRFcFRZhOT+YC+A3YaVg4UoR3AMup8K81Nm2y8q1pUy/gZvkWMONy5iDX\nlyU6enBNv+vmhumyYJT8+rPRW/ztsaBzkvpuXkQTJdWDQbigeK1hBNV5PCjyQydj\nP+sKrMxKjyyZ0rcGP1hcCqZuBHZlW0O2WJFKsZv+fY8UJfU08FeAqQARAQABiQEf\nBBgBAgAJBQJPDVuhAhsMAAoJEO+FzOP3j7GVhlsH/0emlW/Nk0bSUG4jfAeJAB7H\nKRYbr5P/YbbFLEOb4yi2DlPxUac0JoXCMLha9G9LBmQ4IL4qPHdycSlEs4cGBX6W\nxn1ti6rJ3LWm5Hb7iUBfIeuKW31thTJK7SAruiBk7g1/I55HlFW0LEfgfVUQf6hJ\n9Rnw6YVXyQAod1x/QmLWw5aQcoksHL/4eRpU74EjuKQdZMLuaherKtY6OTtEDTdm\nbEdEINVqR5hYEHgDEPPrPb5MDbQsrMEAwdWPqC2/9cgacO33/VuvXDu74X+TwE/c\nOGRCb385XPNS9KApQ4iRTZ6ccOnSJumZbeTTd9DBFwa+T1/xD96yabnaOdJqf6Y=\n=RrIG\n-----END PGP PUBLIC KEY BLOCK-----\n&quot;,
+  &quot;organization_id&quot;: 4,
+  &quot;created_at&quot;: &quot;2013-03-20T19:42:40Z&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -243,7 +249,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -255,7 +262,7 @@
     <td>
       <strong>gpg_key </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
@@ -270,12 +277,13 @@
     <td>
       <strong>gpg_key[name] </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
     <td>
-      <p>identifier of the gpg key</p>
+      
+<p>identifier of the gpg key</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -287,12 +295,13 @@
     <td>
       <strong>gpg_key[content] </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
     <td>
-      <p>public key block in DER encoding</p>
+      
+<p>public key block in DER encoding</p>
 
         <br>
         Value: String
@@ -321,7 +330,6 @@
         </h2>
     </div>
 
-      Also see <a href="../apidoc/gpg_keys/create">gpg_keys#create</a>
 
     <div id='description-update' class='collapse accordion-body'>
       
@@ -329,7 +337,7 @@
 
 
         <h3>Examples</h3>
-          <pre>PUT /api/gpg_keys/2/
+          <pre class="prettyprint">PUT /api/gpg_keys/2/
 {
   &quot;gpg_key&quot;: {
     &quot;name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;
@@ -337,14 +345,78 @@
 }
 200
 {
-  &quot;created_at&quot;: &quot;2012-08-10T13:45:53Z&quot;,
-  &quot;content&quot;: &quot;gpg create from input                   [ \u001b[32mOK\u001b[m\u000f ]\n&quot;,
-  &quot;organization_id&quot;: 2,
+  &quot;name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;,
   &quot;id&quot;: 2,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:45:54Z&quot;,
-  &quot;name&quot;: &quot;Renamed-Dummy-Package-Generator&quot;
+  &quot;updated_at&quot;: &quot;2013-03-20T19:42:42Z&quot;,
+  &quot;content&quot;: &quot;gpg create from input                                                                                                                                                   [ \u001b[32mOK\u001b[m\u000f ]\n&quot;,
+  &quot;organization_id&quot;: 4,
+  &quot;created_at&quot;: &quot;2013-03-20T19:42:40Z&quot;
 }</pre>
 
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>gpg_key </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: Hash
+    </td>
+  </tr>
+
+    <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>gpg_key[name] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>identifier of the gpg key</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(250,250,250);'>
+    <td>
+      <strong>gpg_key[content] </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>public key block in DER encoding</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+
+          </tbody>
+        </table>
     </div>
     <hr>
     <div class='pull-right small'>
@@ -369,7 +441,7 @@
 
 
         <h3>Examples</h3>
-          <pre>DELETE /api/gpg_keys/1/
+          <pre class="prettyprint">DELETE /api/gpg_keys/1/
 204</pre>
 
         <h3>Params</h3>
@@ -390,7 +462,8 @@
       </small>
     </td>
     <td>
-      <p>gpg key numeric identifier</p>
+      
+<p>gpg key numeric identifier</p>
 
         <br>
         Value: number.
@@ -420,10 +493,12 @@
 
 
     <div id='description-content' class='collapse accordion-body'>
-      <p>Returns the content of a repo gpg key, used directly by yum
-We&#39;ve amended REST best practices (e.g. not using the show action) as we don&#39;t want to
-authenticate, authorize etc, trying to distinquse between a yum request and normal api request
-might not always be 100% bullet proof, and its more important that yum can fetch the key.</p>
+      
+<p>Returns the content of a repo gpg key, used directly by yum We’ve amended
+REST best practices (e.g. not using the show action) as we don’t want to
+authenticate, authorize etc, trying to distinquse between a yum request and
+normal api request might not always be 100% bullet proof, and its more
+important that yum can fetch the key.</p>
 
 
 
@@ -447,7 +522,8 @@ might not always be 100% bullet proof, and its more important that yum can fetch
       </small>
     </td>
     <td>
-      <p>gpg key numeric identifier</p>
+      
+<p>gpg key numeric identifier</p>
 
         <br>
         Value: number.
@@ -462,19 +538,16 @@ might not always be 100% bullet proof, and its more important that yum can fetch
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

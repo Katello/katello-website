@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/organizations.html'>Organizations</a>
+    <a href='../../apidoc/organizations.html'>
+      Organizations
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>create</li>
@@ -44,21 +43,25 @@
   
 
     <h2>Examples</h2>
-      <pre>POST /api/organizations/
+      <pre class="prettyprint">POST /api/organizations/
 {
-  &quot;description&quot;: &quot;org description&quot;,
-  &quot;name&quot;: &quot;org_227e003&quot;
+  &quot;name&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+  &quot;label&quot;: &quot;org_label_q5ktCr6jM1oN&quot;,
+  &quot;description&quot;: &quot;org description&quot;
 }
 200
 {
-  &quot;cp_key&quot;: &quot;org_227e003&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
-  &quot;task_id&quot;: null,
+  &quot;name&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 4,
   &quot;service_levels&quot;: [],
-  &quot;id&quot;: 2,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:39Z&quot;,
-  &quot;description&quot;: &quot;org description&quot;,
-  &quot;name&quot;: &quot;org_227e003&quot;
+  &quot;updated_at&quot;: &quot;2013-03-20T19:40:05Z&quot;,
+  &quot;label&quot;: &quot;org_label_q5ktCr6jM1oN&quot;,
+  &quot;task_id&quot;: null,
+  &quot;default_info&quot;: {
+    &quot;system&quot;: []
+  },
+  &quot;created_at&quot;: &quot;2013-03-20T19:40:05Z&quot;,
+  &quot;description&quot;: &quot;org description&quot;
 }</pre>
 
 
@@ -76,12 +79,13 @@
     <td>
       <strong>name </strong><br>
       <small>
-        optional
+        required
         
       </small>
     </td>
     <td>
-      <p>name for the organization</p>
+      
+<p>name for the organization</p>
 
         <br>
         Value: String
@@ -98,8 +102,7 @@
       </small>
     </td>
     <td>
-      <p>description</p>
-
+      
         <br>
         Value: String
     </td>
@@ -112,19 +115,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

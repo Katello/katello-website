@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/systems.html'>
+      Systems
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>activate</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      POST /api/consumers<br>
+      <small>Register a system with activation key (compatibility)</small>
+    </h1>
+  </div>
+  <div class='page-header'>
+    <h1>
+      POST /api/organizations/:organization_id/systems<br>
+      <small>Register a system with activation key</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre class="prettyprint">POST /api/environments/11/systems
+{
+  &quot;name&quot;: &quot;katello2_q5ktCr6jM1oN&quot;,
+  &quot;serviceLevel&quot;: &quot;SELF-SUPPORT&quot;,
+  &quot;cp_type&quot;: &quot;system&quot;,
+  &quot;facts&quot;: {
+    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;,
+    &quot;distribution.name&quot;: &quot;Unknown&quot;
+  }
+}
+200
+{
+  &quot;name&quot;: &quot;katello2_q5ktCr6jM1oN&quot;,
+  &quot;id&quot;: 1,
+  &quot;uuid&quot;: &quot;99911dd0-cd39-4808-ae6f-94e0e31acb77&quot;,
+  &quot;updated_at&quot;: &quot;2013-03-20T19:45:13Z&quot;,
+  &quot;guests&quot;: [],
+  &quot;ipv4_address&quot;: null,
+  &quot;environment&quot;: {
+    &quot;name&quot;: &quot;env_manifest_q5ktCr6jM1oN&quot;,
+    &quot;id&quot;: 11,
+    &quot;updated_at&quot;: &quot;2013-03-20T19:43:34Z&quot;,
+    &quot;prior_id&quot;: 10,
+    &quot;label&quot;: &quot;env_manifest_q5ktCr6jM1oN&quot;,
+    &quot;organization&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;organization_id&quot;: 5,
+    &quot;created_at&quot;: &quot;2013-03-20T19:43:34Z&quot;,
+    &quot;prior&quot;: &quot;Library&quot;,
+    &quot;library&quot;: false,
+    &quot;description&quot;: null
+  },
+  &quot;idCert&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d895577c50098&quot;,
+    &quot;updated&quot;: &quot;2013-03-20T19:45:12.645+0000&quot;,
+    &quot;created&quot;: &quot;2013-03-20T19:45:12.645+0000&quot;,
+    &quot;cert&quot;: &quot;-----BEGIN CERTIFICATE-----\nMIIERDCCAyygAwIBAgIIItQbbMBAcRYwDQYJKoZIhvcNAQEFBQAwbDELMAkGA1UE\nBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRAwDgYDVQQHEwdSYWxlaWdo\nMRAwDgYDVQQKEwdSZWQgSGF0MREwDwYDVQQLEwhDbG91ZCBCVTENMAsGA1UEAxME\ndm0xNjAeFw0xMzAzMjAxOTQ1MTFaFw0yOTAzMjAxOTQ1MTFaMC8xLTArBgNVBAMT\nJDk5OTExZGQwLWNkMzktNDgwOC1hZTZmLTk0ZTBlMzFhY2I3NzCCASIwDQYJKoZI\nhvcNAQEBBQADggEPADCCAQoCggEBAJwEIpGwaYRexGozE1HFKd1ezWu1H8+Ei512\nkTaC+B9KkBUoOzCiqsOq/Hn6In0mCQjKcWFOAoXlXAcutQDpExCIiU4Be2J3OXVR\nwE/C/O9jCuFCBvc93Cw2t7weiuJGnyzdqyhkfrGSncH/h4gUrVEIXdT/TFy9897U\nQsJoRfHXLuoVX+wowmcGvlYcKdoB8G2OJvj6VnHBhDu7BeUn6USk0Pw+rLLg7xzN\nmdowgnnRYezKipX2kPI3f4Un7mtoGRJHFQ+rrpfza7HRGO9/JtFtI/EXrNUDHb9y\nfZhR9Bs3WwNWRsNJziR5xK3DDwY7gKug2eWSEiRa5gt76rUaYzECAwEAAaOCASUw\nggEhMBEGCWCGSAGG+EIBAQQEAwIFoDALBgNVHQ8EBAMCBLAwgZ4GA1UdIwSBljCB\nk4AUUpS69JtZPdsFTyVQYBDAwLX8PX6hcKRuMGwxCzAJBgNVBAYTAlVTMRcwFQYD\nVQQIEw5Ob3J0aCBDYXJvbGluYTEQMA4GA1UEBxMHUmFsZWlnaDEQMA4GA1UEChMH\nUmVkIEhhdDERMA8GA1UECxMIQ2xvdWQgQlUxDTALBgNVBAMTBHZtMTaCCQDEm+bk\nF7paPjAdBgNVHQ4EFgQUnee7jecoW1gcoUAIX3q6gt99MAcwEwYDVR0lBAwwCgYI\nKwYBBQUHAwIwKgYDVR0RBCMwIaQfMB0xGzAZBgNVBAMMEmYxNnAyX3E1a3RDcjZq\nTTFvTjANBgkqhkiG9w0BAQUFAAOCAQEAM6jtTyMKXaDk/xNjfbHhDKyTuKyAhAFs\niUPwLwaMTESi5XAvuH6SdZBEngxaFn1gLwcbhLsto8KdSccqVGmtwJcbc9Ga7Eln\nu23IcbQCneZcd3d+Jg4MeKx8+Ma4evHxywzVlBqqhPlYoYhe+rf7f0sgMU/5W4pq\nbH3mlIUvaLw5TZNOH6VjqNO783r5lThOqgSHZ8PXrfrZh5DlyywgZT8xmYGVm4VN\nz4eBob6S+mYt3Jd7vugpjWmj6rYtJjnSlaA/R7OoGO/1JAnj4sfJ0Hhlg+/M2HxN\nvpKeNqOEuj+I6wo1s40umj9SgXSw4Dn6K9FAF/1jDoD0w/00ZP5kHA==\n-----END CERTIFICATE-----\n&quot;,
+    &quot;key&quot;: &quot;-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAnAQikbBphF7EajMTUcUp3V7Na7Ufz4SLnXaRNoL4H0qQFSg7\nMKKqw6r8efoifSYJCMpxYU4CheVcBy61AOkTEIiJTgF7Ync5dVHAT8L872MK4UIG\n9z3cLDa3vB6K4kafLN2rKGR+sZKdwf+HiBStUQhd1P9MXL3z3tRCwmhF8dcu6hVf\n7CjCZwa+Vhwp2gHwbY4m+PpWccGEO7sF5SfpRKTQ/D6ssuDvHM2Z2jCCedFh7MqK\nlfaQ8jd/hSfua2gZEkcVD6uul/NrsdEY738m0W0j8Res1QMdv3J9mFH0GzdbA1ZG\nw0nOJHnErcMPBjuAq6DZ5ZISJFrmC3vqtRpjMQIDAQABAoIBAQCH+y6qLsl5HyQw\nr/25upAnqvZ+Vyq3s34Aq5QboAFlPJbiaeNVG6Kc0o4mPncK/zjGmbRCrDyUuXkB\npZsLhRohwe9ytuX0x5ekArIMkxXkDD4yYVsy6Y7aVoLECxbf68/WygnhNd4bJYAs\n02wslmENjK5D9JR5DPLel8DsMvgrtQvLJ0Q+mMvE4iH8sqtane5qzVlnmT1mt4w9\nvs9Ul1HQQxZ9xtgTNS5h8p4F4r/8ApdIe9KTJcccUxDVkCvQLK+U5m+E00FW4RVc\nJcNcXichrkrSuQqvjquOckPW5KNKywIaPCtlYxj3dqwmPfpzrddgYc4cQMPy9bUv\nzxKjWTBBAoGBAP/6QFB26boGRw6cZ901auhWTITyrtDLCCIPgjYWCyFxxIv01trH\n2nLJlAmn+Ybbp/aFnknvC+JjiPcy50jET+lciwUSV2V3H4EUSpdZ7peCTRXX7K7V\nheW6nutw1YfE+mVDy3P37bfDwZTAUJHa+LNfQhaL/2rU/vK4adRs57x5AoGBAJwH\no4yR9LX4N7v07oMboKPnP9JFPgXtVXNOFeT1/1IIX+2Kv+ij31uN4awo6EMcd6WE\nXungkD1d4SzXmxz/zH7r7EZdcxeb8pMmL48D7dgtkr1o0nHzYeb635SkEQuDET7r\nib2RBN8lqmF7cyPhnt6bDy3YGMEnHWvDhlBWFT55AoGBAO58tl0BXSMu5BcNy4sC\nULdkZ+hZvlvTPaGWN2eyw+4F8+u9UkwFdVYKzrzsXgOyNNvug5o4eCcVOy+somVe\nWWF/EhrIitqC0LxPLmuyoyNPiAg440/EqfpuE9AhkR/seqnMLwq9zCGw5XN0ddxe\nWeWsc4NULcTX6ywyeo8qZAFpAoGAaQOnKvwtVLAsat+uDCXzF32T8eTSmtCi+4kp\nqUF8R20Fi24gPebVdNxocCPUNx8Y1BjkfMq8qeDepfyzFHCB5UbKbo2E4fX+7NT9\nm2cMlLwPkFXVlgY19W0SQAuwwSvE1rFWsnTBb6L9KsEYvKSk9bQtIjDYcF/wKFCf\nvMBDahkCgYBoH0XsOHVwVaNHGICgpMiR5iXkenGMQRUvsSGBniHaDa449LPJYjQr\nkDzHql8w3sy7JWqinBI2WUt8NXA1T2styaJxRlgITUZNSRm95l0IQVr34zkCbsdc\nGJDbZb4oxsymc06DwhTPhbfajTg8jZS6vZplKiD6MbQlGGYRW6lZxQ==\n-----END RSA PRIVATE KEY-----\n&quot;,
+    &quot;serial&quot;: {
+      &quot;id&quot;: 2509661046248075542,
+      &quot;updated&quot;: &quot;2013-03-20T19:45:11.805+0000&quot;,
+      &quot;created&quot;: &quot;2013-03-20T19:45:11.805+0000&quot;,
+      &quot;expiration&quot;: &quot;2029-03-20T19:45:11.805+0000&quot;,
+      &quot;collected&quot;: false,
+      &quot;revoked&quot;: false,
+      &quot;serial&quot;: 2509661046248075542
+    }
+  },
+  &quot;release&quot;: &quot;&quot;,
+  &quot;releaseVer&quot;: {
+    &quot;id&quot;: null,
+    &quot;releaseVer&quot;: &quot;&quot;
+  },
+  &quot;href&quot;: &quot;/consumers/99911dd0-cd39-4808-ae6f-94e0e31acb77&quot;,
+  &quot;owner&quot;: {
+    &quot;id&quot;: &quot;ff8080813d88c59c013d8953f47b007a&quot;,
+    &quot;href&quot;: &quot;/owners/org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;displayName&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;,
+    &quot;key&quot;: &quot;org_manifest_q5ktCr6jM1oN&quot;
+  },
+  &quot;created_at&quot;: &quot;2013-03-20T19:45:13Z&quot;,
+  &quot;serviceLevel&quot;: &quot;&quot;,
+  &quot;activation_key&quot;: [],
+  &quot;autoheal&quot;: true,
+  &quot;facts&quot;: {
+    &quot;cpu.cpu_socket(s)&quot;: &quot;1&quot;,
+    &quot;distribution.name&quot;: &quot;Unknown&quot;,
+    &quot;network.hostname&quot;: &quot;katello2_q5ktCr6jM1oN&quot;
+  },
+  &quot;location&quot;: &quot;None&quot;,
+  &quot;description&quot;: &quot;Initial Registration Params&quot;,
+  &quot;environment_id&quot;: 11,
+  &quot;content_view_id&quot;: null
+}</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>activation_keys </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>facts </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>Key-value hash of system-specific facts</p>
+
+        <br>
+        Value: Hash
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>installedProducts </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>List of products installed on the system</p>
+
+        <br>
+        Value: Array
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Name of the system</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>type </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Type of the system, it should always be ‘system’</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>serviceLevel </strong><br>
+      <small>
+        optional
+        , nil allowed
+      </small>
+    </td>
+    <td>
+      
+<p>A service level for auto-healing process, e.g. SELF-SUPPORT</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Physical of the system</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>content_view_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>environment_id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

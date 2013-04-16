@@ -6,15 +6,15 @@ if ( !defined('ABSPATH')) exit;
 /**
  * Full Content Template
  *
-   Template Name:  Full Width Page (no sidebar)
+   Template Name:  Full Width Page (no sidebar, no comments)
  *
- * @file           full-width-page.php
+ * @file           full-width-page-no-comments.php
  * @package        Responsive 
  * @author         Emil Uzelac 
  * @copyright      2003 - 2011 ThemeID
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/full-width-page.php
+ * @filesource     wp-content/themes/responsive/full-width-page-no-comments.php
  * @link           http://codex.wordpress.org/Theme_Development#Pages_.28page.php.29
  * @since          available since Release 1.0
  */

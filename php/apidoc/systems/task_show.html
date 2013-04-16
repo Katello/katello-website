@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/systems.html'>
+      Systems
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>task_show</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/systems/tasks/:id<br>
+      <small>Show details of the async task</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre class="prettyprint">GET /api/systems/tasks/d03b47f5-e2f1-11e1-b07c-525400b68f90
+200
+{
+  &quot;id&quot;: 10,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:46:42Z&quot;,
+  &quot;uuid&quot;: &quot;d03b47f5-e2f1-11e1-b07c-525400b68f90&quot;,
+  &quot;progress&quot;: null,
+  &quot;user_id&quot;: 1,
+  &quot;pending?&quot;: true,
+  &quot;start_time&quot;: null,
+  &quot;system_name&quot;: &quot;katello.example.com_227e003&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:46:40Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;task_owner_type&quot;: &quot;System&quot;,
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;task_owner_id&quot;: 1,
+  &quot;parameters&quot;: {
+    &quot;packages&quot;: [
+      &quot;cheetah&quot;
+    ]
+  },
+  &quot;result&quot;: {
+    &quot;errors&quot;: [
+      null,
+      null
+    ]
+  },
+  &quot;description&quot;: &quot;Package Install: cheetah&quot;,
+  &quot;result_description&quot;: &quot;&quot;,
+  &quot;finish_time&quot;: null,
+  &quot;task_type&quot;: &quot;package_install&quot;
+}</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the task</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

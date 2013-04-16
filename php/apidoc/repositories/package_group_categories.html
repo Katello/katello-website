@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <a href='../../apidoc/repositories.html'>
+      Repositories
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>package_group_categories</li>
@@ -44,23 +43,25 @@
   
 
     <h2>Examples</h2>
-      <pre>GET /api/repositories/2/package_group_categories/
+      <pre class="prettyprint">GET /api/repositories/4/package_group_categories/
 200
 [
   {
+    &quot;id&quot;: &quot;all&quot;,
+    &quot;_id&quot;: &quot;997f9224-cd15-4cda-aeda-59e63cad77e9&quot;,
+    &quot;name&quot;: &quot;all&quot;,
+    &quot;repo_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+    &quot;_content_type_id&quot;: &quot;package_category&quot;,
+    &quot;translated_description&quot;: {},
+    &quot;_ns&quot;: &quot;units_package_category&quot;,
     &quot;packagegroupids&quot;: [
       &quot;mammal&quot;,
       &quot;bird&quot;
     ],
-    &quot;repo_defined&quot;: true,
-    &quot;display_order&quot;: 99,
-    &quot;immutable&quot;: true,
-    &quot;_id&quot;: &quot;all&quot;,
-    &quot;id&quot;: &quot;all&quot;,
-    &quot;translated_description&quot;: {},
+    &quot;translated_name&quot;: {},
+    &quot;_storage_path&quot;: null,
     &quot;description&quot;: null,
-    &quot;name&quot;: &quot;all&quot;,
-    &quot;translated_name&quot;: {}
+    &quot;display_order&quot;: 99
   }
 ]</pre>
 
@@ -97,19 +98,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

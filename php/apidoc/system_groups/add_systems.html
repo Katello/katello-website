@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/system_groups.html'>System groups</a>
+    <a href='../../apidoc/system_groups.html'>
+      System groups
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>add_systems</li>
@@ -44,21 +43,21 @@
   
 
     <h2>Examples</h2>
-      <pre>POST /api/organizations/org_227e003/system_groups/1/add_systems
+      <pre class="prettyprint">POST /api/organizations/org_q5ktCr6jM1oN/system_groups/1/add_systems
 {
   &quot;system_group&quot;: {
     &quot;system_ids&quot;: [
-      &quot;3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;
+      &quot;dont_exist&quot;
     ]
   }
 }
-200
-[
-  {
-    &quot;id&quot;: &quot;3050eb45-0ec4-43ea-8913-83635f06a2b7&quot;,
-    &quot;name&quot;: &quot;katello.example.com_227e003&quot;
-  }
-]</pre>
+404
+{
+  &quot;errors&quot;: [
+    &quot;Systems [dont_exist] not found.&quot;
+  ],
+  &quot;displayMessage&quot;: &quot;Systems [dont_exist] not found.&quot;
+}</pre>
 
 
 
@@ -80,7 +79,8 @@
       </small>
     </td>
     <td>
-      <p>organization identifier</p>
+      
+<p>organization identifier</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -97,7 +97,8 @@
       </small>
     </td>
     <td>
-      <p>Id of the system group</p>
+      
+<p>Id of the system group</p>
 
         <br>
         Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
@@ -129,7 +130,8 @@
       </small>
     </td>
     <td>
-      <p>Array of system ids</p>
+      
+<p>Array of system ids</p>
 
         <br>
         Value: Array
@@ -144,19 +146,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

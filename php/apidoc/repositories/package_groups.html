@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,11 +18,14 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../../apidoc.html'>Katello</a>
+    <a href='../../apidoc.html'>Katello 1.0</a>
     <span class='divider'>/</span>
   </li>
   <li>
-    <a href='../../apidoc/repositories.html'>Repositories</a>
+    <a href='../../apidoc/repositories.html'>
+      Repositories
+      
+    </a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>package_groups</li>
@@ -44,49 +43,53 @@
   
 
     <h2>Examples</h2>
-      <pre>GET /api/repositories/2/package_groups
+      <pre class="prettyprint">GET /api/repositories/4/package_groups
 200
 [
   {
-    &quot;langonly&quot;: null,
-    &quot;optional_package_names&quot;: [],
-    &quot;user_visible&quot;: true,
-    &quot;conditional_package_names&quot;: {},
+    &quot;name&quot;: &quot;bird&quot;,
+    &quot;id&quot;: &quot;bird&quot;,
+    &quot;_id&quot;: &quot;cff91b6b-e415-4076-984d-8fb991f77763&quot;,
     &quot;default&quot;: true,
-    &quot;repo_defined&quot;: true,
-    &quot;display_order&quot;: 1024,
-    &quot;immutable&quot;: true,
-    &quot;default_package_names&quot;: [],
-    &quot;_id&quot;: &quot;mammal&quot;,
-    &quot;id&quot;: &quot;mammal&quot;,
+    &quot;user_visible&quot;: true,
+    &quot;repo_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+    &quot;_content_type_id&quot;: &quot;package_group&quot;,
     &quot;translated_description&quot;: {},
-    &quot;description&quot;: &quot;&quot;,
-    &quot;name&quot;: &quot;mammal&quot;,
+    &quot;_ns&quot;: &quot;units_package_group&quot;,
+    &quot;langonly&quot;: null,
     &quot;translated_name&quot;: {},
+    &quot;conditional_package_names&quot;: [],
+    &quot;optional_package_names&quot;: [],
+    &quot;mandatory_package_names&quot;: [
+      &quot;penguin&quot;
+    ],
+    &quot;_storage_path&quot;: null,
+    &quot;default_package_names&quot;: [],
+    &quot;description&quot;: &quot;&quot;,
+    &quot;display_order&quot;: 1024
+  },
+  {
+    &quot;name&quot;: &quot;mammal&quot;,
+    &quot;id&quot;: &quot;mammal&quot;,
+    &quot;_id&quot;: &quot;b45659d6-df2e-4067-a071-2efd58272bbe&quot;,
+    &quot;default&quot;: true,
+    &quot;user_visible&quot;: true,
+    &quot;repo_id&quot;: &quot;org_label_q5ktCr6jM1oN-fewups_product_q5ktCr6jM1oN-repo_q5ktCr6jM1oN&quot;,
+    &quot;_content_type_id&quot;: &quot;package_group&quot;,
+    &quot;translated_description&quot;: {},
+    &quot;_ns&quot;: &quot;units_package_group&quot;,
+    &quot;langonly&quot;: null,
+    &quot;translated_name&quot;: {},
+    &quot;conditional_package_names&quot;: [],
+    &quot;optional_package_names&quot;: [],
     &quot;mandatory_package_names&quot;: [
       &quot;elephant,giraffe,cheetah,lion,monkey,penguin,squirrel,walrus&quot;,
       &quot;penguin&quot;
-    ]
-  },
-  {
-    &quot;langonly&quot;: null,
-    &quot;optional_package_names&quot;: [],
-    &quot;user_visible&quot;: true,
-    &quot;conditional_package_names&quot;: {},
-    &quot;default&quot;: true,
-    &quot;repo_defined&quot;: true,
-    &quot;display_order&quot;: 1024,
-    &quot;immutable&quot;: true,
+    ],
+    &quot;_storage_path&quot;: null,
     &quot;default_package_names&quot;: [],
-    &quot;_id&quot;: &quot;bird&quot;,
-    &quot;id&quot;: &quot;bird&quot;,
-    &quot;translated_description&quot;: {},
     &quot;description&quot;: &quot;&quot;,
-    &quot;name&quot;: &quot;bird&quot;,
-    &quot;translated_name&quot;: {},
-    &quot;mandatory_package_names&quot;: [
-      &quot;penguin&quot;
-    ]
+    &quot;display_order&quot;: 1024
   }
 ]</pre>
 
@@ -123,19 +126,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

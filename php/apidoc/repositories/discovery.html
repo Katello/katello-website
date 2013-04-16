@@ -3,14 +3,10 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/application.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/prettify.css"/>
-    <link type="text/css" rel="stylesheet"
-          href="../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,39 +40,39 @@
   
 
     <h2>Examples</h2>
-      <pre>POST /api/organizations/org_227e003/repositories/discovery
+      <pre class="prettyprint">POST /api/organizations/org_227e003/repositories/discovery
 {
-  &quot;type&quot;: &quot;yum&quot;,
-  &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;
+  &quot;url&quot;: &quot;http://lzap.fedorapeople.org/fakerepos/zoo5/&quot;,
+  &quot;type&quot;: &quot;yum&quot;
 }
 200
 {
-  &quot;uuid&quot;: &quot;45f57d6b-e2f1-11e1-a64d-525400b68f90&quot;,
-  &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
-  &quot;task_owner_id&quot;: null,
-  &quot;task_owner_type&quot;: null,
-  &quot;pending?&quot;: true,
-  &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
-  &quot;organization_id&quot;: 2,
-  &quot;id&quot;: 1,
-  &quot;state&quot;: &quot;waiting&quot;,
-  &quot;updated_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
-  &quot;start_time&quot;: null,
-  &quot;finish_time&quot;: null,
-  &quot;progress&quot;: {
-    &quot;items_left&quot;: 0,
-    &quot;total_size&quot;: 0,
-    &quot;size_left&quot;: 0,
-    &quot;total_count&quot;: 0
-  },
-  &quot;user_id&quot;: 1,
   &quot;result&quot;: {
     &quot;errors&quot;: [
       null,
       null
     ]
   },
-  &quot;parameters&quot;: null
+  &quot;task_owner_type&quot;: null,
+  &quot;user_id&quot;: 1,
+  &quot;parameters&quot;: null,
+  &quot;id&quot;: 1,
+  &quot;uuid&quot;: &quot;45f57d6b-e2f1-11e1-a64d-525400b68f90&quot;,
+  &quot;start_time&quot;: null,
+  &quot;task_owner_id&quot;: null,
+  &quot;state&quot;: &quot;waiting&quot;,
+  &quot;task_type&quot;: &quot;PulpSyncStatus&quot;,
+  &quot;finish_time&quot;: null,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+  &quot;pending?&quot;: true,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:48Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;progress&quot;: {
+    &quot;total_count&quot;: 0,
+    &quot;total_size&quot;: 0,
+    &quot;items_left&quot;: 0,
+    &quot;size_left&quot;: 0
+  }
 }</pre>
 
 
@@ -130,19 +126,16 @@
 </div>
 
 
+        
       </div>
     </div>
     <hr>
     <footer>  Copyright © 2012 Red Hat, Inc.
 </footer>
   </div>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/bootstrap-collapse.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/bundled/prettify.js"></script>
-    <script type="text/javascript"
-            src="../../apidoc/javascripts/apipie.js"></script>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
 </body>
 </html>

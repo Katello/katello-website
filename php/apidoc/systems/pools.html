@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../../apidoc.html'>Katello 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li>
+    <a href='../../apidoc/systems.html'>
+      Systems
+      
+    </a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>pools</li>
+</ul>
+
+  <div class='page-header'>
+    <h1>
+      GET /api/systems/:id/pools<br>
+      <small>List pools a system is subscribed to</small>
+    </h1>
+  </div>
+
+<div>
+
+  
+
+    <h2>Examples</h2>
+      <pre class="prettyprint">GET /api/systems/a4359041-7d76-4e08-8dbe-324fdb6a8545/pools?no_overlap=False&amp;match_system=False&amp;match_installed=False
+200
+{
+  &quot;pools&quot;: [
+    {
+      &quot;consumed&quot;: 0,
+      &quot;attributes&quot;: [],
+      &quot;providedProducts&quot;: [],
+      &quot;quantity&quot;: -1,
+      &quot;activeSubscription&quot;: true,
+      &quot;id&quot;: &quot;ff8080813d88c59c013d8950e19f0072&quot;,
+      &quot;productAttributes&quot;: [],
+      &quot;productId&quot;: &quot;1363808411864&quot;,
+      &quot;accountNumber&quot;: &quot;&quot;,
+      &quot;subscriptionSubKey&quot;: &quot;master&quot;,
+      &quot;updated&quot;: &quot;2013-03-20T19:40:12.063+0000&quot;,
+      &quot;contractNumber&quot;: &quot;&quot;,
+      &quot;endDate&quot;: &quot;2043-03-13T00:00:00.000+0000&quot;,
+      &quot;created&quot;: &quot;2013-03-20T19:40:12.063+0000&quot;,
+      &quot;restrictedToUsername&quot;: null,
+      &quot;startDate&quot;: &quot;2013-03-20T00:00:00.000+0000&quot;,
+      &quot;sourceEntitlement&quot;: null,
+      &quot;href&quot;: &quot;/pools/ff8080813d88c59c013d8950e19f0072&quot;,
+      &quot;subscriptionId&quot;: &quot;ff8080813d88c59c013d8950e12b0071&quot;,
+      &quot;owner&quot;: {
+        &quot;id&quot;: &quot;ff8080813d88c59c013d8950c6400068&quot;,
+        &quot;href&quot;: &quot;/owners/org_label_q5ktCr6jM1oN&quot;,
+        &quot;displayName&quot;: &quot;org_q5ktCr6jM1oN&quot;,
+        &quot;key&quot;: &quot;org_label_q5ktCr6jM1oN&quot;
+      },
+      &quot;productName&quot;: &quot;fewups_product_q5ktCr6jM1oN&quot;,
+      &quot;exported&quot;: 0
+    }
+  ]
+}</pre>
+
+
+
+    <h2>Params</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Param name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>UUID of the system</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+      </tbody>
+    </table>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+  <script type='text/javascript' src='../../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

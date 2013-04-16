@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li><a href='../apidoc.html'>Katello</a><span class='divider'>/</span></li>
+  <li class='active'>Filters</li>
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Filters<br>
+    <small></small>
+  </h1>
+</div>
+
+  <div><p>methods for setting package filters for repository, product or organization</p>
+</div>
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/filters/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/filters
+          </a><br>
+          <small>List package filters for an organization</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/organizations/org_227e003/filters
+200
+[
+  {
+    &quot;name&quot;: &quot;filter_227e003&quot;,
+    &quot;id&quot;: 1,
+    &quot;package_list&quot;: [
+      &quot;package1&quot;,
+      &quot;package2&quot;
+    ],
+    &quot;description&quot;: &quot;description&quot;,
+    &quot;created_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+    &quot;organization_id&quot;: 2,
+    &quot;pulp_id&quot;: &quot;org_227e003-filter_227e003-940caf37&quot;
+  }
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/filters/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/organizations/:organization_id/filters
+          </a><br>
+          <small>Create package filter for an organization</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">POST /api/organizations/org_227e003/filters
+{
+  &quot;name&quot;: &quot;filter_227e003&quot;,
+  &quot;package_list&quot;: [
+    &quot;package1&quot;,
+    &quot;package2&quot;
+  ],
+  &quot;description&quot;: &quot;description&quot;
+}
+200
+{
+  &quot;name&quot;: &quot;filter_227e003&quot;,
+  &quot;id&quot;: 1,
+  &quot;package_list&quot;: [
+    &quot;package1&quot;,
+    &quot;package2&quot;
+  ],
+  &quot;description&quot;: &quot;description&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;pulp_id&quot;: &quot;org_227e003-filter_227e003-940caf37&quot;
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>package_list </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>List of the packages to filter</p>
+
+        <br>
+        Value: Array
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Name of the filter</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>Description of the filter</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/filters/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/organizations/:organization_id/filters/:id
+          </a><br>
+          <small>Update package filter for an organization</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">PUT /api/organizations/org_227e003/filters/filter2_227e003
+{
+  &quot;packages&quot;: [
+    &quot;package3&quot;,
+    &quot;package4&quot;,
+    &quot;package5&quot;
+  ]
+}
+200
+{
+  &quot;name&quot;: &quot;filter2_227e003&quot;,
+  &quot;id&quot;: 2,
+  &quot;package_list&quot;: [
+    &quot;package3&quot;,
+    &quot;package4&quot;,
+    &quot;package5&quot;
+  ],
+  &quot;description&quot;: &quot;description&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:45:49Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:45:49Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;pulp_id&quot;: &quot;org_227e003-filter2_227e003-814619c9&quot;
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>filter identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      <p>filter&#39;s new name</p>
+
+        <br>
+        Value: String
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>packages </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Updated list of the packages to filter</p>
+
+        <br>
+        Value: Array
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/filters/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/filters/:id
+          </a><br>
+          <small>Show package filter details</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/organizations/org_227e003/filters/filter_227e003
+200
+{
+  &quot;name&quot;: &quot;filter_227e003&quot;,
+  &quot;id&quot;: 1,
+  &quot;package_list&quot;: [
+    &quot;package1&quot;,
+    &quot;package2&quot;
+  ],
+  &quot;description&quot;: &quot;description&quot;,
+  &quot;created_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+  &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+  &quot;organization_id&quot;: 2,
+  &quot;pulp_id&quot;: &quot;org_227e003-filter_227e003-940caf37&quot;
+}</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>filter identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/filters/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /api/organizations/:organization_id/filters/:id
+          </a><br>
+          <small>Delete package filter</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">DELETE /api/organizations/org_227e003/filters/filter2_227e003
+200
+Deleted filter 'filter2_227e003'</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>filter identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/filters/list_product_filters.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-list_product_filters'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/organizations/:organization_id/products/:product_id/filters
+          </a><br>
+          <small>List package filters for product</small>
+        </h2>
+    </div>
+
+
+    <div id='description-list_product_filters' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/organizations/org_227e003/products/1344606167242/filters
+200
+[
+
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>product identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/filters/update_product_filters.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update_product_filters'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/organizations/:organization_id/products/:product_id/filters
+          </a><br>
+          <small>Update package filters for product</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update_product_filters' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">PUT /api/organizations/org_227e003/products/1344606167242/filters
+{
+  &quot;filters&quot;: [
+    &quot;filter_227e003&quot;
+  ]
+}
+200
+[
+  {
+    &quot;name&quot;: &quot;filter_227e003&quot;,
+    &quot;id&quot;: 1,
+    &quot;package_list&quot;: [
+      &quot;package1&quot;,
+      &quot;package2&quot;
+    ],
+    &quot;description&quot;: &quot;description&quot;,
+    &quot;created_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+    &quot;organization_id&quot;: 2,
+    &quot;pulp_id&quot;: &quot;org_227e003-filter_227e003-940caf37&quot;
+  }
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>organization_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>oranization identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>product_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>product identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>filters </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Updated list of filters</p>
+
+        <br>
+        Value: Array
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/filters/list_repository_filters.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-list_repository_filters'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/repositories/:repository_id/filters
+          </a><br>
+          <small>Get package filters for repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-list_repository_filters' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">GET /api/repositories/2/filters?inherit=False
+200
+[
+
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>repository identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/filters/update_repository_filters.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update_repository_filters'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/repositories/:repository_id/filters
+          </a><br>
+          <small>Update package filters for repository</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update_repository_filters' class='collapse accordion-body'>
+      
+
+
+
+        <h3>Examples</h3>
+          <pre class="prettyprint">PUT /api/repositories/2/filters
+{
+  &quot;filters&quot;: [
+    &quot;filter_227e003&quot;
+  ]
+}
+200
+[
+  {
+    &quot;name&quot;: &quot;filter_227e003&quot;,
+    &quot;id&quot;: 1,
+    &quot;package_list&quot;: [
+      &quot;package1&quot;,
+      &quot;package2&quot;
+    ],
+    &quot;description&quot;: &quot;description&quot;,
+    &quot;created_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+    &quot;updated_at&quot;: &quot;2012-08-10T13:42:58Z&quot;,
+    &quot;organization_id&quot;: 2,
+    &quot;pulp_id&quot;: &quot;org_227e003-filter_227e003-940caf37&quot;
+  }
+]</pre>
+
+        <h3>Params</h3>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th>Param name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>repository_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>repository identifier</p>
+
+        <br>
+        Value: string from 2 to 128 characters containting only alphanumeric characters, space, '_', '-' with no leading or trailing space..
+    </td>
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>filters </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      <p>Updated list of filters</p>
+
+        <br>
+        Value: Array
+    </td>
+  </tr>
+
+  
+
+          </tbody>
+        </table>
+    </div>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer>  Copyright © 2012 Red Hat, Inc.
+</footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
