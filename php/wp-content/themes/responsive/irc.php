@@ -25,7 +25,7 @@ if ( !defined('ABSPATH')) exit;
         
           <?php $options = get_option('responsive_theme_options'); ?>
 
-          <iframe src="http://webchat.freenode.net/?channels=#katello" id="irc-iframe" />
+          <iframe src="http://webchat.freenode.net/?channels=#theforeman" id="irc-iframe" />
 
         </div><!-- end of #content-full -->
 
